@@ -2,6 +2,8 @@
 
     Private currentChildForm As Form
     Private btnDashboardWasClicked As Boolean = False
+    Private btnThesisWasClicked As Boolean = False
+
 
     Public Sub OpenChildForm(childForm As Form)
         'Open only form'
@@ -28,5 +30,10 @@
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         OpenChildForm(New dashboard)
         btnDashboardWasClicked = True
+    End Sub
+
+    Private Sub btnThesis_Click(sender As Object, e As EventArgs) Handles btnThesis.Click
+        OpenChildForm(New thesis)
+        btnThesisWasClicked = True
     End Sub
 End Class

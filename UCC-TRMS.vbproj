@@ -105,6 +105,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="thesis.Designer.vb">
+      <DependentUpon>thesis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="thesis.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="dashboard.resx">
@@ -118,6 +124,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thesis.resx">
+      <DependentUpon>thesis.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
