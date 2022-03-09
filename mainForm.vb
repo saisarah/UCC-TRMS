@@ -3,6 +3,8 @@
     Private currentChildForm As Form
     Private btnDashboardWasClicked As Boolean = False
     Private btnThesisWasClicked As Boolean = False
+    Private btnBorrowersWasClicked As Boolean = False
+
 
 
     Public Sub OpenChildForm(childForm As Form)
@@ -35,5 +37,10 @@
     Private Sub btnThesis_Click(sender As Object, e As EventArgs) Handles btnThesis.Click
         OpenChildForm(New thesis)
         btnThesisWasClicked = True
+    End Sub
+
+    Private Sub btnBorrowers_Click(sender As Object, e As EventArgs) Handles btnBorrowers.Click
+        OpenChildForm(New borrowers)
+        btnBorrowersWasClicked = True
     End Sub
 End Class
