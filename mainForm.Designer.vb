@@ -66,18 +66,21 @@ Partial Class mainForm
         '
         Me.btnUsers.BackColor = System.Drawing.Color.Transparent
         Me.btnUsers.CheckedState.Parent = Me.btnUsers
+        Me.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUsers.CustomImages.Parent = Me.btnUsers
         Me.btnUsers.FillColor = System.Drawing.Color.Transparent
         Me.btnUsers.FillColor2 = System.Drawing.Color.Transparent
         Me.btnUsers.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUsers.ForeColor = System.Drawing.Color.White
+        Me.btnUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnUsers.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnUsers.HoverState.Parent = Me.btnUsers
         Me.btnUsers.Image = CType(resources.GetObject("btnUsers.Image"), System.Drawing.Image)
         Me.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnUsers.ImageSize = New System.Drawing.Size(25, 25)
         Me.btnUsers.Location = New System.Drawing.Point(0, 477)
         Me.btnUsers.Name = "btnUsers"
-        Me.btnUsers.PressedColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.btnUsers.PressedColor = System.Drawing.Color.Transparent
         Me.btnUsers.ShadowDecoration.Parent = Me.btnUsers
         Me.btnUsers.Size = New System.Drawing.Size(158, 45)
         Me.btnUsers.TabIndex = 7
@@ -88,18 +91,21 @@ Partial Class mainForm
         '
         Me.btnReports.BackColor = System.Drawing.Color.Transparent
         Me.btnReports.CheckedState.Parent = Me.btnReports
+        Me.btnReports.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnReports.CustomImages.Parent = Me.btnReports
         Me.btnReports.FillColor = System.Drawing.Color.Transparent
         Me.btnReports.FillColor2 = System.Drawing.Color.Transparent
         Me.btnReports.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReports.ForeColor = System.Drawing.Color.White
+        Me.btnReports.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnReports.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnReports.HoverState.Parent = Me.btnReports
         Me.btnReports.Image = CType(resources.GetObject("btnReports.Image"), System.Drawing.Image)
         Me.btnReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnReports.ImageSize = New System.Drawing.Size(25, 25)
         Me.btnReports.Location = New System.Drawing.Point(0, 426)
         Me.btnReports.Name = "btnReports"
-        Me.btnReports.PressedColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.btnReports.PressedColor = System.Drawing.Color.Transparent
         Me.btnReports.ShadowDecoration.Parent = Me.btnReports
         Me.btnReports.Size = New System.Drawing.Size(158, 45)
         Me.btnReports.TabIndex = 6
@@ -110,18 +116,21 @@ Partial Class mainForm
         '
         Me.btnIssuing.BackColor = System.Drawing.Color.Transparent
         Me.btnIssuing.CheckedState.Parent = Me.btnIssuing
+        Me.btnIssuing.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnIssuing.CustomImages.Parent = Me.btnIssuing
         Me.btnIssuing.FillColor = System.Drawing.Color.Transparent
         Me.btnIssuing.FillColor2 = System.Drawing.Color.Transparent
         Me.btnIssuing.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIssuing.ForeColor = System.Drawing.Color.White
+        Me.btnIssuing.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnIssuing.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnIssuing.HoverState.Parent = Me.btnIssuing
         Me.btnIssuing.Image = CType(resources.GetObject("btnIssuing.Image"), System.Drawing.Image)
         Me.btnIssuing.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnIssuing.ImageSize = New System.Drawing.Size(25, 25)
         Me.btnIssuing.Location = New System.Drawing.Point(0, 377)
         Me.btnIssuing.Name = "btnIssuing"
-        Me.btnIssuing.PressedColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.btnIssuing.PressedColor = System.Drawing.Color.Transparent
         Me.btnIssuing.ShadowDecoration.Parent = Me.btnIssuing
         Me.btnIssuing.Size = New System.Drawing.Size(158, 45)
         Me.btnIssuing.TabIndex = 5
@@ -132,18 +141,21 @@ Partial Class mainForm
         '
         Me.btnBorrowers.BackColor = System.Drawing.Color.Transparent
         Me.btnBorrowers.CheckedState.Parent = Me.btnBorrowers
+        Me.btnBorrowers.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBorrowers.CustomImages.Parent = Me.btnBorrowers
         Me.btnBorrowers.FillColor = System.Drawing.Color.Transparent
         Me.btnBorrowers.FillColor2 = System.Drawing.Color.Transparent
         Me.btnBorrowers.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBorrowers.ForeColor = System.Drawing.Color.White
+        Me.btnBorrowers.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnBorrowers.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBorrowers.HoverState.Parent = Me.btnBorrowers
         Me.btnBorrowers.Image = CType(resources.GetObject("btnBorrowers.Image"), System.Drawing.Image)
         Me.btnBorrowers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnBorrowers.ImageSize = New System.Drawing.Size(25, 25)
         Me.btnBorrowers.Location = New System.Drawing.Point(0, 330)
         Me.btnBorrowers.Name = "btnBorrowers"
-        Me.btnBorrowers.PressedColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.btnBorrowers.PressedColor = System.Drawing.Color.Transparent
         Me.btnBorrowers.ShadowDecoration.Parent = Me.btnBorrowers
         Me.btnBorrowers.Size = New System.Drawing.Size(158, 45)
         Me.btnBorrowers.TabIndex = 4
@@ -154,18 +166,21 @@ Partial Class mainForm
         '
         Me.btnThesis.BackColor = System.Drawing.Color.Transparent
         Me.btnThesis.CheckedState.Parent = Me.btnThesis
+        Me.btnThesis.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnThesis.CustomImages.Parent = Me.btnThesis
         Me.btnThesis.FillColor = System.Drawing.Color.Transparent
         Me.btnThesis.FillColor2 = System.Drawing.Color.Transparent
         Me.btnThesis.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnThesis.ForeColor = System.Drawing.Color.White
+        Me.btnThesis.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnThesis.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnThesis.HoverState.Parent = Me.btnThesis
         Me.btnThesis.Image = CType(resources.GetObject("btnThesis.Image"), System.Drawing.Image)
         Me.btnThesis.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnThesis.ImageSize = New System.Drawing.Size(25, 25)
         Me.btnThesis.Location = New System.Drawing.Point(0, 282)
         Me.btnThesis.Name = "btnThesis"
-        Me.btnThesis.PressedColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.btnThesis.PressedColor = System.Drawing.Color.Transparent
         Me.btnThesis.ShadowDecoration.Parent = Me.btnThesis
         Me.btnThesis.Size = New System.Drawing.Size(158, 45)
         Me.btnThesis.TabIndex = 3
@@ -176,18 +191,21 @@ Partial Class mainForm
         '
         Me.btnDashboard.BackColor = System.Drawing.Color.Transparent
         Me.btnDashboard.CheckedState.Parent = Me.btnDashboard
+        Me.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDashboard.CustomImages.Parent = Me.btnDashboard
         Me.btnDashboard.FillColor = System.Drawing.Color.Transparent
         Me.btnDashboard.FillColor2 = System.Drawing.Color.Transparent
         Me.btnDashboard.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDashboard.ForeColor = System.Drawing.Color.White
+        Me.btnDashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnDashboard.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnDashboard.HoverState.Parent = Me.btnDashboard
         Me.btnDashboard.Image = CType(resources.GetObject("btnDashboard.Image"), System.Drawing.Image)
         Me.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnDashboard.ImageSize = New System.Drawing.Size(25, 25)
         Me.btnDashboard.Location = New System.Drawing.Point(0, 233)
         Me.btnDashboard.Name = "btnDashboard"
-        Me.btnDashboard.PressedColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.btnDashboard.PressedColor = System.Drawing.Color.Transparent
         Me.btnDashboard.ShadowDecoration.Parent = Me.btnDashboard
         Me.btnDashboard.Size = New System.Drawing.Size(158, 45)
         Me.btnDashboard.TabIndex = 1
@@ -240,7 +258,6 @@ Partial Class mainForm
         Me.Name = "mainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnlSide.ResumeLayout(False)
         Me.Guna2Panel5.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
