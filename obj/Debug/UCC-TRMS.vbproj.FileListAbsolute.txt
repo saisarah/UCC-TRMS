@@ -31,3 +31,5 @@ C:\Users\Asus\source\repos\thesis-record-management-system\obj\Debug\UCC-TRMS.vb
 C:\Users\Asus\source\repos\thesis-record-management-system\obj\Debug\UCC-TRMS.exe
 C:\Users\Asus\source\repos\thesis-record-management-system\obj\Debug\UCC-TRMS.xml
 C:\Users\Asus\source\repos\thesis-record-management-system\obj\Debug\UCC-TRMS.pdb
+C:\Users\Asus\source\repos\thesis-record-management-system\obj\Debug\UCC_TRMS.issuing.resources
+C:\Users\Asus\source\repos\thesis-record-management-system\obj\Debug\UCC_TRMS.borrowers.resources

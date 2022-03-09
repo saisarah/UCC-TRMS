@@ -26,8 +26,8 @@ Partial Class borrowers
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.pnlTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         Me.pnlTop.SuspendLayout()
         Me.SuspendLayout()
@@ -46,8 +46,8 @@ Partial Class borrowers
         'pnlTop
         '
         Me.pnlTop.BackColor = System.Drawing.Color.White
+        Me.pnlTop.Controls.Add(Me.Label1)
         Me.pnlTop.Controls.Add(Me.Guna2Button1)
-        Me.pnlTop.Controls.Add(Me.Guna2TextBox1)
         Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
         Me.pnlTop.Name = "pnlTop"
@@ -57,6 +57,7 @@ Partial Class borrowers
         '
         'Guna2Button1
         '
+        Me.Guna2Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Button1.BorderRadius = 20
         Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
         Me.Guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand
@@ -72,37 +73,22 @@ Partial Class borrowers
         Me.Guna2Button1.TabIndex = 2
         Me.Guna2Button1.Text = "Add Student"
         '
-        'Guna2TextBox1
-        '
-        Me.Guna2TextBox1.BackColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox1.BorderThickness = 0
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = "Borrowers"
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TextBox1.ForeColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.HoverState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(7, 15)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(7, 10, 7, 10)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox1.PlaceholderText = ""
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.ShadowDecoration.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(136, 42)
-        Me.Guna2TextBox1.TabIndex = 0
-        '
         'Guna2Elipse1
         '
         Me.Guna2Elipse1.BorderRadius = 3
         Me.Guna2Elipse1.TargetControl = Me
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gray
+        Me.Label1.Location = New System.Drawing.Point(3, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(121, 37)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Borrowers"
         '
         'borrowers
         '
@@ -115,6 +101,7 @@ Partial Class borrowers
         Me.Text = "borrowers"
         Me.Guna2Panel1.ResumeLayout(False)
         Me.pnlTop.ResumeLayout(False)
+        Me.pnlTop.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -122,6 +109,6 @@ Partial Class borrowers
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents pnlTop As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Label1 As Label
 End Class

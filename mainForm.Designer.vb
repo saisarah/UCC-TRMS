@@ -240,6 +240,7 @@ Partial Class mainForm
         Me.Name = "mainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnlSide.ResumeLayout(False)
         Me.Guna2Panel5.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

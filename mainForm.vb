@@ -4,6 +4,8 @@
     Private btnDashboardWasClicked As Boolean = False
     Private btnThesisWasClicked As Boolean = False
     Private btnBorrowersWasClicked As Boolean = False
+    Private btnIssuingWasClicked As Boolean = False
+
 
 
 
@@ -42,5 +44,10 @@
     Private Sub btnBorrowers_Click(sender As Object, e As EventArgs) Handles btnBorrowers.Click
         OpenChildForm(New borrowers)
         btnBorrowersWasClicked = True
+    End Sub
+
+    Private Sub btnIssuing_Click(sender As Object, e As EventArgs) Handles btnIssuing.Click
+        OpenChildForm(New issuing)
+        btnIssuingWasClicked = True
     End Sub
 End Class

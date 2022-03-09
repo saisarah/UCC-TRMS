@@ -90,6 +90,12 @@
     <Compile Include="dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="issuing.Designer.vb">
+      <DependentUpon>issuing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="issuing.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -121,8 +127,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="borrowers.resx">
+      <DependentUpon>borrowers.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issuing.resx">
+      <DependentUpon>issuing.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.vb</DependentUpon>
