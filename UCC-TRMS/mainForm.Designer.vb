@@ -257,7 +257,7 @@ Partial Class mainForm
         Me.MaximizeBox = False
         Me.Name = "mainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Thesis Record Management System"
         Me.pnlSide.ResumeLayout(False)
         Me.Guna2Panel5.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

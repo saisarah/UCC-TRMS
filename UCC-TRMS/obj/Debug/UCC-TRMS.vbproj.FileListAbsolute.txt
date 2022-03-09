@@ -51,3 +51,4 @@ C:\Users\Asus\source\repos\thesis-record-management-system\UCC-TRMS\obj\Debug\UC
 C:\Users\Asus\source\repos\thesis-record-management-system\UCC-TRMS\obj\Debug\UCC-TRMS.exe
 C:\Users\Asus\source\repos\thesis-record-management-system\UCC-TRMS\obj\Debug\UCC-TRMS.xml
 C:\Users\Asus\source\repos\thesis-record-management-system\UCC-TRMS\obj\Debug\UCC-TRMS.pdb
+C:\Users\Asus\source\repos\thesis-record-management-system\UCC-TRMS\obj\Debug\UCC_TRMS.addThesis.resources

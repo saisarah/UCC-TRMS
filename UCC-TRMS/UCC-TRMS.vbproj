@@ -78,6 +78,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addThesis.Designer.vb">
+      <DependentUpon>addThesis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addThesis.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="borrowers.Designer.vb">
       <DependentUpon>borrowers.vb</DependentUpon>
     </Compile>
@@ -127,6 +133,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="addThesis.resx">
+      <DependentUpon>addThesis.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="borrowers.resx">
       <DependentUpon>borrowers.vb</DependentUpon>
     </EmbeddedResource>

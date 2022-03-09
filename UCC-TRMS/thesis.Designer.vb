@@ -26,8 +26,8 @@ Partial Class thesis
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.pnlTop = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnAddThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnAddThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.pnlTop.SuspendLayout()
         Me.SuspendLayout()
@@ -60,6 +60,18 @@ Partial Class thesis
         Me.pnlTop.Size = New System.Drawing.Size(516, 67)
         Me.pnlTop.TabIndex = 4
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gray
+        Me.Label1.Location = New System.Drawing.Point(3, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 37)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Thesis"
+        '
         'btnAddThesis
         '
         Me.btnAddThesis.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -77,18 +89,6 @@ Partial Class thesis
         Me.btnAddThesis.Size = New System.Drawing.Size(90, 45)
         Me.btnAddThesis.TabIndex = 2
         Me.btnAddThesis.Text = "Add Thesis"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Gray
-        Me.Label1.Location = New System.Drawing.Point(3, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 37)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Thesis"
         '
         'thesis
         '
