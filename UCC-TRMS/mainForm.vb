@@ -246,7 +246,7 @@
     End Sub
 
     Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
-
+        OpenChildForm(New reports)
         btnReportsWasClicked = True
 
         If btnReportsWasClicked = True Then
@@ -288,7 +288,7 @@
     End Sub
 
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
-
+        OpenChildForm(New users)
         btnUsersWasClicked = True
 
         If btnUsersWasClicked = True Then
