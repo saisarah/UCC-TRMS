@@ -26,7 +26,7 @@ Partial Class thesis
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.pnlTop = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnAddThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         Me.pnlTop.SuspendLayout()
@@ -52,7 +52,7 @@ Partial Class thesis
         '
         Me.pnlTop.BackColor = System.Drawing.Color.White
         Me.pnlTop.Controls.Add(Me.Label1)
-        Me.pnlTop.Controls.Add(Me.Guna2Button1)
+        Me.pnlTop.Controls.Add(Me.btnAddThesis)
         Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
         Me.pnlTop.Name = "pnlTop"
@@ -60,23 +60,23 @@ Partial Class thesis
         Me.pnlTop.Size = New System.Drawing.Size(516, 67)
         Me.pnlTop.TabIndex = 4
         '
-        'Guna2Button1
+        'btnAddThesis
         '
-        Me.Guna2Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2Button1.BorderRadius = 20
-        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
-        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.Guna2Button1.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Location = New System.Drawing.Point(414, 12)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Size = New System.Drawing.Size(90, 45)
-        Me.Guna2Button1.TabIndex = 2
-        Me.Guna2Button1.Text = "Add Thesis"
+        Me.btnAddThesis.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAddThesis.BorderRadius = 20
+        Me.btnAddThesis.CheckedState.Parent = Me.btnAddThesis
+        Me.btnAddThesis.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddThesis.CustomImages.Parent = Me.btnAddThesis
+        Me.btnAddThesis.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.btnAddThesis.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddThesis.ForeColor = System.Drawing.Color.White
+        Me.btnAddThesis.HoverState.Parent = Me.btnAddThesis
+        Me.btnAddThesis.Location = New System.Drawing.Point(414, 12)
+        Me.btnAddThesis.Name = "btnAddThesis"
+        Me.btnAddThesis.ShadowDecoration.Parent = Me.btnAddThesis
+        Me.btnAddThesis.Size = New System.Drawing.Size(90, 45)
+        Me.btnAddThesis.TabIndex = 2
+        Me.btnAddThesis.Text = "Add Thesis"
         '
         'Label1
         '
@@ -109,6 +109,6 @@ Partial Class thesis
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents pnlTop As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnAddThesis As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label1 As Label
 End Class
