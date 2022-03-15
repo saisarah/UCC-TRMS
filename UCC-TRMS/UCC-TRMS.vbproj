@@ -102,6 +102,12 @@
     <Compile Include="issuing.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="issuing.resx">
       <DependentUpon>issuing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.vb</DependentUpon>
