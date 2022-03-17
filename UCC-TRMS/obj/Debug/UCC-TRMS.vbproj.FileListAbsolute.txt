@@ -55,3 +55,4 @@ C:\Users\Asus\source\repos\thesis-record-management-system\UCC-TRMS\obj\Debug\UC
 C:\Users\Asus\source\repos\thesis-record-management-system\UCC-TRMS\obj\Debug\UCC_TRMS.reports.resources
 C:\Users\Asus\source\repos\thesis-record-management-system\UCC-TRMS\obj\Debug\UCC_TRMS.users.resources
 C:\Users\Asus\source\repos\thesis-record-management-system\UCC-TRMS\obj\Debug\UCC_TRMS.login.resources
+C:\Users\Asus\source\repos\thesis-record-management-system\UCC-TRMS\bin\Debug\Bunifu_UI_v1.52.dll

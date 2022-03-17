@@ -27,47 +27,44 @@ Partial Class issuing
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.pnlTop = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnSearchStud = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.dgvRecentlyBorrowed = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.btnProcess = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Guna2DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnSearchTitle = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.dgvRecentlyBorrowed = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Guna2DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.btnProcess = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnSearchStud = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel1.SuspendLayout()
-        Me.pnlTop.SuspendLayout()
-        Me.Guna2Panel2.SuspendLayout()
+        Me.Guna2Panel7.SuspendLayout()
+        CType(Me.dgvRecentlyBorrowed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         Me.Guna2Panel6.SuspendLayout()
-        CType(Me.dgvRecentlyBorrowed, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Guna2Panel7.SuspendLayout()
+        Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Panel1
@@ -79,220 +76,123 @@ Partial Class issuing
         Me.Guna2Panel1.Controls.Add(Me.Guna2Panel7)
         Me.Guna2Panel1.Controls.Add(Me.Panel1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Panel2)
-        Me.Guna2Panel1.Controls.Add(Me.pnlTop)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(516, 578)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(690, 578)
         Me.Guna2Panel1.TabIndex = 4
         '
-        'pnlTop
+        'btnProcess
         '
-        Me.pnlTop.BackColor = System.Drawing.Color.White
-        Me.pnlTop.Controls.Add(Me.Label1)
-        Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlTop.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTop.Name = "pnlTop"
-        Me.pnlTop.ShadowDecoration.Parent = Me.pnlTop
-        Me.pnlTop.Size = New System.Drawing.Size(516, 67)
-        Me.pnlTop.TabIndex = 4
+        Me.btnProcess.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btnProcess.BackColor = System.Drawing.Color.Transparent
+        Me.btnProcess.BorderRadius = 15
+        Me.btnProcess.CheckedState.Parent = Me.btnProcess
+        Me.btnProcess.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnProcess.CustomImages.Parent = Me.btnProcess
+        Me.btnProcess.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.btnProcess.Font = New System.Drawing.Font("Poppins", 10.0!)
+        Me.btnProcess.ForeColor = System.Drawing.Color.White
+        Me.btnProcess.HoverState.Parent = Me.btnProcess
+        Me.btnProcess.Location = New System.Drawing.Point(599, 370)
+        Me.btnProcess.Name = "btnProcess"
+        Me.btnProcess.ShadowDecoration.Parent = Me.btnProcess
+        Me.btnProcess.Size = New System.Drawing.Size(79, 37)
+        Me.btnProcess.TabIndex = 20
+        Me.btnProcess.Text = "Process"
         '
-        'Guna2Elipse1
+        'Label15
         '
-        Me.Guna2Elipse1.BorderRadius = 3
-        Me.Guna2Elipse1.TargetControl = Me
+        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label15.Location = New System.Drawing.Point(599, 305)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(67, 19)
+        Me.Label15.TabIndex = 18
+        Me.Label15.Text = "Issue Date"
         '
-        'Label1
+        'Guna2DateTimePicker1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Gray
-        Me.Label1.Location = New System.Drawing.Point(3, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 37)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Issuing"
+        Me.Guna2DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Guna2DateTimePicker1.BorderRadius = 10
+        Me.Guna2DateTimePicker1.CheckedState.Parent = Me.Guna2DateTimePicker1
+        Me.Guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DateTimePicker1.ForeColor = System.Drawing.Color.White
+        Me.Guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.Guna2DateTimePicker1.HoverState.Parent = Me.Guna2DateTimePicker1
+        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(479, 328)
+        Me.Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        Me.Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
+        Me.Guna2DateTimePicker1.ShadowDecoration.Parent = Me.Guna2DateTimePicker1
+        Me.Guna2DateTimePicker1.Size = New System.Drawing.Size(199, 36)
+        Me.Guna2DateTimePicker1.TabIndex = 16
+        Me.Guna2DateTimePicker1.Value = New Date(2022, 3, 9, 17, 56, 30, 651)
         '
-        'Guna2Panel2
+        'Guna2Panel7
         '
-        Me.Guna2Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Guna2Panel7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2Panel2.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Controls.Add(Me.Label6)
-        Me.Guna2Panel2.Controls.Add(Me.Label5)
-        Me.Guna2Panel2.Controls.Add(Me.Label4)
-        Me.Guna2Panel2.Controls.Add(Me.Label3)
-        Me.Guna2Panel2.Controls.Add(Me.Label2)
-        Me.Guna2Panel2.Controls.Add(Me.btnSearchStud)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox1)
-        Me.Guna2Panel2.Location = New System.Drawing.Point(12, 77)
-        Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
-        Me.Guna2Panel2.Size = New System.Drawing.Size(268, 172)
-        Me.Guna2Panel2.TabIndex = 5
+        Me.Guna2Panel7.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel7.Controls.Add(Me.btnSearchTitle)
+        Me.Guna2Panel7.Controls.Add(Me.Guna2TextBox2)
+        Me.Guna2Panel7.Controls.Add(Me.dgvRecentlyBorrowed)
+        Me.Guna2Panel7.Location = New System.Drawing.Point(12, 216)
+        Me.Guna2Panel7.Name = "Guna2Panel7"
+        Me.Guna2Panel7.ShadowDecoration.Parent = Me.Guna2Panel7
+        Me.Guna2Panel7.Size = New System.Drawing.Size(442, 255)
+        Me.Guna2Panel7.TabIndex = 15
         '
-        'Panel1
+        'btnSearchTitle
         '
-        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Guna2Panel4)
-        Me.Panel1.Controls.Add(Me.Guna2Panel3)
-        Me.Panel1.Controls.Add(Me.Guna2Panel5)
-        Me.Panel1.Controls.Add(Me.Guna2Panel6)
-        Me.Panel1.Location = New System.Drawing.Point(288, 77)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(216, 269)
-        Me.Panel1.TabIndex = 6
+        Me.btnSearchTitle.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSearchTitle.BackColor = System.Drawing.Color.Transparent
+        Me.btnSearchTitle.BorderRadius = 10
+        Me.btnSearchTitle.CheckedState.Parent = Me.btnSearchTitle
+        Me.btnSearchTitle.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSearchTitle.CustomImages.Parent = Me.btnSearchTitle
+        Me.btnSearchTitle.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.btnSearchTitle.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearchTitle.ForeColor = System.Drawing.Color.White
+        Me.btnSearchTitle.HoverState.Parent = Me.btnSearchTitle
+        Me.btnSearchTitle.Location = New System.Drawing.Point(378, 12)
+        Me.btnSearchTitle.Name = "btnSearchTitle"
+        Me.btnSearchTitle.ShadowDecoration.Parent = Me.btnSearchTitle
+        Me.btnSearchTitle.Size = New System.Drawing.Size(58, 32)
+        Me.btnSearchTitle.TabIndex = 16
+        Me.btnSearchTitle.Text = "Search"
         '
-        'Guna2Panel4
+        'Guna2TextBox2
         '
-        Me.Guna2Panel4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.Guna2Panel4.Controls.Add(Me.Label10)
-        Me.Guna2Panel4.Controls.Add(Me.Label14)
-        Me.Guna2Panel4.Location = New System.Drawing.Point(110, 137)
-        Me.Guna2Panel4.Name = "Guna2Panel4"
-        Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
-        Me.Guna2Panel4.Size = New System.Drawing.Size(100, 125)
-        Me.Guna2Panel4.TabIndex = 1
-        '
-        'Guna2Panel3
-        '
-        Me.Guna2Panel3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Guna2Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.Guna2Panel3.Controls.Add(Me.Label9)
-        Me.Guna2Panel3.Controls.Add(Me.Label13)
-        Me.Guna2Panel3.Location = New System.Drawing.Point(6, 137)
-        Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
-        Me.Guna2Panel3.Size = New System.Drawing.Size(100, 125)
-        Me.Guna2Panel3.TabIndex = 2
-        '
-        'Guna2Panel5
-        '
-        Me.Guna2Panel5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(68, Byte), Integer))
-        Me.Guna2Panel5.Controls.Add(Me.Label8)
-        Me.Guna2Panel5.Controls.Add(Me.Label12)
-        Me.Guna2Panel5.Location = New System.Drawing.Point(110, 6)
-        Me.Guna2Panel5.Name = "Guna2Panel5"
-        Me.Guna2Panel5.ShadowDecoration.Parent = Me.Guna2Panel5
-        Me.Guna2Panel5.Size = New System.Drawing.Size(100, 125)
-        Me.Guna2Panel5.TabIndex = 1
-        '
-        'Guna2Panel6
-        '
-        Me.Guna2Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.Guna2Panel6.Controls.Add(Me.Label7)
-        Me.Guna2Panel6.Controls.Add(Me.Label11)
-        Me.Guna2Panel6.Location = New System.Drawing.Point(6, 6)
-        Me.Guna2Panel6.Name = "Guna2Panel6"
-        Me.Guna2Panel6.ShadowDecoration.Parent = Me.Guna2Panel6
-        Me.Guna2Panel6.Size = New System.Drawing.Size(100, 125)
-        Me.Guna2Panel6.TabIndex = 0
-        '
-        'Guna2TextBox1
-        '
-        Me.Guna2TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Guna2TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2TextBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox1.BorderColor = System.Drawing.Color.Silver
-        Me.Guna2TextBox1.BorderRadius = 10
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox1.FocusedState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox1.HoverState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(12, 8)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox1.PlaceholderText = "Student Number"
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.ShadowDecoration.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(191, 32)
-        Me.Guna2TextBox1.TabIndex = 7
-        '
-        'btnSearchStud
-        '
-        Me.btnSearchStud.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSearchStud.BackColor = System.Drawing.Color.Transparent
-        Me.btnSearchStud.BorderRadius = 10
-        Me.btnSearchStud.CheckedState.Parent = Me.btnSearchStud
-        Me.btnSearchStud.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSearchStud.CustomImages.Parent = Me.btnSearchStud
-        Me.btnSearchStud.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.btnSearchStud.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchStud.ForeColor = System.Drawing.Color.White
-        Me.btnSearchStud.HoverState.Parent = Me.btnSearchStud
-        Me.btnSearchStud.Location = New System.Drawing.Point(204, 8)
-        Me.btnSearchStud.Name = "btnSearchStud"
-        Me.btnSearchStud.ShadowDecoration.Parent = Me.btnSearchStud
-        Me.btnSearchStud.Size = New System.Drawing.Size(58, 32)
-        Me.btnSearchStud.TabIndex = 8
-        Me.btnSearchStud.Text = "Search"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label2.Location = New System.Drawing.Point(15, 47)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 19)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Student Number:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label3.Location = New System.Drawing.Point(15, 74)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 19)
-        Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Full Name:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label4.Location = New System.Drawing.Point(15, 99)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(111, 19)
-        Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Course/Yr/Section:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label5.Location = New System.Drawing.Point(15, 124)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 19)
-        Me.Label5.TabIndex = 12
-        Me.Label5.Text = "Email:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label6.Location = New System.Drawing.Point(15, 149)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(73, 19)
-        Me.Label6.TabIndex = 13
-        Me.Label6.Text = "Contact No:"
+        Me.Guna2TextBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2TextBox2.BorderColor = System.Drawing.Color.Silver
+        Me.Guna2TextBox2.BorderRadius = 10
+        Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TextBox2.DefaultText = ""
+        Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox2.DisabledState.Parent = Me.Guna2TextBox2
+        Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.Guna2TextBox2.FocusedState.Parent = Me.Guna2TextBox2
+        Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.Guna2TextBox2.HoverState.Parent = Me.Guna2TextBox2
+        Me.Guna2TextBox2.Location = New System.Drawing.Point(12, 12)
+        Me.Guna2TextBox2.Name = "Guna2TextBox2"
+        Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TextBox2.PlaceholderText = "Thesis Title"
+        Me.Guna2TextBox2.SelectedText = ""
+        Me.Guna2TextBox2.ShadowDecoration.Parent = Me.Guna2TextBox2
+        Me.Guna2TextBox2.Size = New System.Drawing.Size(365, 32)
+        Me.Guna2TextBox2.TabIndex = 15
         '
         'dgvRecentlyBorrowed
         '
@@ -329,7 +229,7 @@ Partial Class issuing
         Me.dgvRecentlyBorrowed.Name = "dgvRecentlyBorrowed"
         Me.dgvRecentlyBorrowed.RowHeadersVisible = False
         Me.dgvRecentlyBorrowed.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRecentlyBorrowed.Size = New System.Drawing.Size(237, 185)
+        Me.dgvRecentlyBorrowed.Size = New System.Drawing.Size(411, 185)
         Me.dgvRecentlyBorrowed.TabIndex = 14
         Me.dgvRecentlyBorrowed.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
         Me.dgvRecentlyBorrowed.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -354,102 +254,30 @@ Partial Class issuing
         Me.dgvRecentlyBorrowed.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvRecentlyBorrowed.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'Guna2Panel7
+        'Panel1
         '
-        Me.Guna2Panel7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2Panel7.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel7.Controls.Add(Me.btnSearchTitle)
-        Me.Guna2Panel7.Controls.Add(Me.Guna2TextBox2)
-        Me.Guna2Panel7.Controls.Add(Me.dgvRecentlyBorrowed)
-        Me.Guna2Panel7.Location = New System.Drawing.Point(12, 271)
-        Me.Guna2Panel7.Name = "Guna2Panel7"
-        Me.Guna2Panel7.ShadowDecoration.Parent = Me.Guna2Panel7
-        Me.Guna2Panel7.Size = New System.Drawing.Size(268, 255)
-        Me.Guna2Panel7.TabIndex = 15
+        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Guna2Panel4)
+        Me.Panel1.Controls.Add(Me.Guna2Panel3)
+        Me.Panel1.Controls.Add(Me.Guna2Panel5)
+        Me.Panel1.Controls.Add(Me.Guna2Panel6)
+        Me.Panel1.Location = New System.Drawing.Point(462, 22)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(216, 269)
+        Me.Panel1.TabIndex = 6
         '
-        'btnSearchTitle
+        'Guna2Panel4
         '
-        Me.btnSearchTitle.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSearchTitle.BackColor = System.Drawing.Color.Transparent
-        Me.btnSearchTitle.BorderRadius = 10
-        Me.btnSearchTitle.CheckedState.Parent = Me.btnSearchTitle
-        Me.btnSearchTitle.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSearchTitle.CustomImages.Parent = Me.btnSearchTitle
-        Me.btnSearchTitle.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.btnSearchTitle.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchTitle.ForeColor = System.Drawing.Color.White
-        Me.btnSearchTitle.HoverState.Parent = Me.btnSearchTitle
-        Me.btnSearchTitle.Location = New System.Drawing.Point(204, 12)
-        Me.btnSearchTitle.Name = "btnSearchTitle"
-        Me.btnSearchTitle.ShadowDecoration.Parent = Me.btnSearchTitle
-        Me.btnSearchTitle.Size = New System.Drawing.Size(58, 32)
-        Me.btnSearchTitle.TabIndex = 16
-        Me.btnSearchTitle.Text = "Search"
-        '
-        'Guna2TextBox2
-        '
-        Me.Guna2TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2TextBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox2.BorderColor = System.Drawing.Color.Silver
-        Me.Guna2TextBox2.BorderRadius = 10
-        Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox2.DefaultText = ""
-        Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.Parent = Me.Guna2TextBox2
-        Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox2.FocusedState.Parent = Me.Guna2TextBox2
-        Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox2.HoverState.Parent = Me.Guna2TextBox2
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(12, 12)
-        Me.Guna2TextBox2.Name = "Guna2TextBox2"
-        Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox2.PlaceholderText = "Thesis Title"
-        Me.Guna2TextBox2.SelectedText = ""
-        Me.Guna2TextBox2.ShadowDecoration.Parent = Me.Guna2TextBox2
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(191, 32)
-        Me.Guna2TextBox2.TabIndex = 15
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Poppins Light", 13.0!)
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(5, 80)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(90, 32)
-        Me.Label7.TabIndex = 5
-        Me.Label7.Text = "Overdue"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Poppins Light", 13.0!)
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(0, 80)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(101, 32)
-        Me.Label8.TabIndex = 6
-        Me.Label8.Text = "Borrowed"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Poppins ExtraLight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(-1, 89)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(103, 19)
-        Me.Label9.TabIndex = 7
-        Me.Label9.Text = "Pending Payment"
+        Me.Guna2Panel4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.Guna2Panel4.Controls.Add(Me.Label10)
+        Me.Guna2Panel4.Controls.Add(Me.Label14)
+        Me.Guna2Panel4.Location = New System.Drawing.Point(110, 137)
+        Me.Guna2Panel4.Name = "Guna2Panel4"
+        Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
+        Me.Guna2Panel4.Size = New System.Drawing.Size(100, 125)
+        Me.Guna2Panel4.TabIndex = 1
         '
         'Label10
         '
@@ -462,45 +290,6 @@ Partial Class issuing
         Me.Label10.Size = New System.Drawing.Size(102, 19)
         Me.Label10.TabIndex = 8
         Me.Label10.Text = "Cleared Payment"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Poppins", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(27, 36)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(51, 65)
-        Me.Label11.TabIndex = 6
-        Me.Label11.Text = "0"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Poppins", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(26, 36)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(51, 65)
-        Me.Label12.TabIndex = 7
-        Me.Label12.Text = "0"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Poppins", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(27, 36)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(51, 65)
-        Me.Label13.TabIndex = 8
-        Me.Label13.Text = "0"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label14
         '
@@ -515,61 +304,245 @@ Partial Class issuing
         Me.Label14.Text = "0"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2DateTimePicker1
+        'Guna2Panel3
         '
-        Me.Guna2DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Guna2DateTimePicker1.BorderRadius = 10
-        Me.Guna2DateTimePicker1.CheckedState.Parent = Me.Guna2DateTimePicker1
-        Me.Guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2DateTimePicker1.ForeColor = System.Drawing.Color.White
-        Me.Guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.Guna2DateTimePicker1.HoverState.Parent = Me.Guna2DateTimePicker1
-        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(305, 383)
-        Me.Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        Me.Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
-        Me.Guna2DateTimePicker1.ShadowDecoration.Parent = Me.Guna2DateTimePicker1
-        Me.Guna2DateTimePicker1.Size = New System.Drawing.Size(199, 36)
-        Me.Guna2DateTimePicker1.TabIndex = 16
-        Me.Guna2DateTimePicker1.Value = New Date(2022, 3, 9, 17, 56, 30, 651)
+        Me.Guna2Panel3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Guna2Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.Guna2Panel3.Controls.Add(Me.Label9)
+        Me.Guna2Panel3.Controls.Add(Me.Label13)
+        Me.Guna2Panel3.Location = New System.Drawing.Point(6, 137)
+        Me.Guna2Panel3.Name = "Guna2Panel3"
+        Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
+        Me.Guna2Panel3.Size = New System.Drawing.Size(100, 125)
+        Me.Guna2Panel3.TabIndex = 2
         '
-        'Label15
+        'Label9
         '
-        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label15.Location = New System.Drawing.Point(425, 360)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(67, 19)
-        Me.Label15.TabIndex = 18
-        Me.Label15.Text = "Issue Date"
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Poppins ExtraLight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(-1, 89)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(103, 19)
+        Me.Label9.TabIndex = 7
+        Me.Label9.Text = "Pending Payment"
         '
-        'btnProcess
+        'Label13
         '
-        Me.btnProcess.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.btnProcess.BackColor = System.Drawing.Color.Transparent
-        Me.btnProcess.BorderRadius = 15
-        Me.btnProcess.CheckedState.Parent = Me.btnProcess
-        Me.btnProcess.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnProcess.CustomImages.Parent = Me.btnProcess
-        Me.btnProcess.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.btnProcess.Font = New System.Drawing.Font("Poppins", 10.0!)
-        Me.btnProcess.ForeColor = System.Drawing.Color.White
-        Me.btnProcess.HoverState.Parent = Me.btnProcess
-        Me.btnProcess.Location = New System.Drawing.Point(425, 425)
-        Me.btnProcess.Name = "btnProcess"
-        Me.btnProcess.ShadowDecoration.Parent = Me.btnProcess
-        Me.btnProcess.Size = New System.Drawing.Size(79, 37)
-        Me.btnProcess.TabIndex = 20
-        Me.btnProcess.Text = "Process"
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Poppins", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.White
+        Me.Label13.Location = New System.Drawing.Point(27, 36)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(51, 65)
+        Me.Label13.TabIndex = 8
+        Me.Label13.Text = "0"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.Guna2Panel5.Controls.Add(Me.Label8)
+        Me.Guna2Panel5.Controls.Add(Me.Label12)
+        Me.Guna2Panel5.Location = New System.Drawing.Point(110, 6)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.ShadowDecoration.Parent = Me.Guna2Panel5
+        Me.Guna2Panel5.Size = New System.Drawing.Size(100, 125)
+        Me.Guna2Panel5.TabIndex = 1
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Poppins Light", 13.0!)
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(0, 80)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(101, 32)
+        Me.Label8.TabIndex = 6
+        Me.Label8.Text = "Borrowed"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Poppins", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(26, 36)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(51, 65)
+        Me.Label12.TabIndex = 7
+        Me.Label12.Text = "0"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Guna2Panel6
+        '
+        Me.Guna2Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.Guna2Panel6.Controls.Add(Me.Label7)
+        Me.Guna2Panel6.Controls.Add(Me.Label11)
+        Me.Guna2Panel6.Location = New System.Drawing.Point(6, 6)
+        Me.Guna2Panel6.Name = "Guna2Panel6"
+        Me.Guna2Panel6.ShadowDecoration.Parent = Me.Guna2Panel6
+        Me.Guna2Panel6.Size = New System.Drawing.Size(100, 125)
+        Me.Guna2Panel6.TabIndex = 0
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Poppins Light", 13.0!)
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(5, 80)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(90, 32)
+        Me.Label7.TabIndex = 5
+        Me.Label7.Text = "Overdue"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Poppins", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(27, 36)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(51, 65)
+        Me.Label11.TabIndex = 6
+        Me.Label11.Text = "0"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel2.Controls.Add(Me.Label6)
+        Me.Guna2Panel2.Controls.Add(Me.Label5)
+        Me.Guna2Panel2.Controls.Add(Me.Label4)
+        Me.Guna2Panel2.Controls.Add(Me.Label3)
+        Me.Guna2Panel2.Controls.Add(Me.Label2)
+        Me.Guna2Panel2.Controls.Add(Me.btnSearchStud)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox1)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(12, 22)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
+        Me.Guna2Panel2.Size = New System.Drawing.Size(442, 172)
+        Me.Guna2Panel2.TabIndex = 5
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label6.Location = New System.Drawing.Point(15, 149)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(73, 19)
+        Me.Label6.TabIndex = 13
+        Me.Label6.Text = "Contact No:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label5.Location = New System.Drawing.Point(15, 124)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(41, 19)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "Email:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label4.Location = New System.Drawing.Point(15, 99)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(111, 19)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Course/Yr/Section:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label3.Location = New System.Drawing.Point(15, 74)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(65, 19)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "Full Name:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label2.Location = New System.Drawing.Point(15, 47)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(100, 19)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Student Number:"
+        '
+        'btnSearchStud
+        '
+        Me.btnSearchStud.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSearchStud.BackColor = System.Drawing.Color.Transparent
+        Me.btnSearchStud.BorderRadius = 10
+        Me.btnSearchStud.CheckedState.Parent = Me.btnSearchStud
+        Me.btnSearchStud.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSearchStud.CustomImages.Parent = Me.btnSearchStud
+        Me.btnSearchStud.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.btnSearchStud.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearchStud.ForeColor = System.Drawing.Color.White
+        Me.btnSearchStud.HoverState.Parent = Me.btnSearchStud
+        Me.btnSearchStud.Location = New System.Drawing.Point(378, 8)
+        Me.btnSearchStud.Name = "btnSearchStud"
+        Me.btnSearchStud.ShadowDecoration.Parent = Me.btnSearchStud
+        Me.btnSearchStud.Size = New System.Drawing.Size(58, 32)
+        Me.btnSearchStud.TabIndex = 8
+        Me.btnSearchStud.Text = "Search"
+        '
+        'Guna2TextBox1
+        '
+        Me.Guna2TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2TextBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2TextBox1.BorderColor = System.Drawing.Color.Silver
+        Me.Guna2TextBox1.BorderRadius = 10
+        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TextBox1.DefaultText = ""
+        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.Guna2TextBox1.FocusedState.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.Guna2TextBox1.HoverState.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(12, 8)
+        Me.Guna2TextBox1.Name = "Guna2TextBox1"
+        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TextBox1.PlaceholderText = "Student Number"
+        Me.Guna2TextBox1.SelectedText = ""
+        Me.Guna2TextBox1.ShadowDecoration.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(365, 32)
+        Me.Guna2TextBox1.TabIndex = 7
+        '
+        'Guna2Elipse1
+        '
+        Me.Guna2Elipse1.BorderRadius = 3
+        Me.Guna2Elipse1.TargetControl = Me
         '
         'issuing
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(516, 578)
+        Me.ClientSize = New System.Drawing.Size(690, 578)
         Me.ControlBox = False
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -577,10 +550,8 @@ Partial Class issuing
         Me.Text = "issuing"
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        Me.pnlTop.ResumeLayout(False)
-        Me.pnlTop.PerformLayout()
-        Me.Guna2Panel2.ResumeLayout(False)
-        Me.Guna2Panel2.PerformLayout()
+        Me.Guna2Panel7.ResumeLayout(False)
+        CType(Me.dgvRecentlyBorrowed, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Guna2Panel4.ResumeLayout(False)
         Me.Guna2Panel4.PerformLayout()
@@ -590,16 +561,14 @@ Partial Class issuing
         Me.Guna2Panel5.PerformLayout()
         Me.Guna2Panel6.ResumeLayout(False)
         Me.Guna2Panel6.PerformLayout()
-        CType(Me.dgvRecentlyBorrowed, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Guna2Panel7.ResumeLayout(False)
+        Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents pnlTop As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel

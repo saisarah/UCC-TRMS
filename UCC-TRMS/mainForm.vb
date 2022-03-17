@@ -32,6 +32,7 @@
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
         btnDashboardWasClicked = True
         OpenChildForm(New dashboard)
+        Label1.Text = "Dashboard"
         If btnDashboardWasClicked = True Then
             btnThesisWasClicked = False
             btnBorrowersWasClicked = False
@@ -73,9 +74,12 @@
     End Sub
 
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Timer1.Start()
         Me.MaximumSize = Screen.FromRectangle(Me.DesktopBounds).WorkingArea.Size
         Me.WindowState = FormWindowState.Maximized
         OpenChildForm(New dashboard)
+        Label1.Text = "Dashboard"
+
         btnDashboardWasClicked = True
         If btnDashboardWasClicked = True Then
             btnThesisWasClicked = False
@@ -120,6 +124,7 @@
     Private Sub btnThesis_Click(sender As Object, e As EventArgs) Handles btnThesis.Click
         OpenChildForm(New thesis)
         btnThesisWasClicked = True
+        Label1.Text = "Thesis"
 
         If btnThesisWasClicked = True Then
             btnDashboardWasClicked = False
@@ -164,6 +169,7 @@
     Private Sub btnBorrowers_Click(sender As Object, e As EventArgs) Handles btnBorrowers.Click
         OpenChildForm(New borrowers)
         btnBorrowersWasClicked = True
+        Label1.Text = "Borrowers"
 
         If btnBorrowersWasClicked = True Then
             btnDashboardWasClicked = False
@@ -206,6 +212,7 @@
     Private Sub btnIssuing_Click(sender As Object, e As EventArgs) Handles btnIssuing.Click
         OpenChildForm(New issuing)
         btnIssuingWasClicked = True
+        Label1.Text = "Issuing"
 
         If btnIssuingWasClicked = True Then
             btnDashboardWasClicked = False
@@ -248,6 +255,7 @@
     Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
         OpenChildForm(New reports)
         btnReportsWasClicked = True
+        Label1.Text = "Reports"
 
         If btnReportsWasClicked = True Then
             btnDashboardWasClicked = False
@@ -290,6 +298,7 @@
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
         OpenChildForm(New users)
         btnUsersWasClicked = True
+        Label1.Text = "Users"
 
         If btnUsersWasClicked = True Then
             btnDashboardWasClicked = False
@@ -327,5 +336,11 @@
                 btnReports.HoverState.FillColor2 = Color.FromArgb(64, 64, 64)
             End If
         End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim CurrentDateTime As DateTime
+        CurrentDateTime = DateTime.Now
+        Label3.Text = CurrentDateTime.ToString("dddd, d MMMM yyyy  |  hh:mm:ss tt")
     End Sub
 End Class

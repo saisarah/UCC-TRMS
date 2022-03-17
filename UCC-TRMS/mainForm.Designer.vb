@@ -35,9 +35,16 @@ Partial Class mainForm
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlBody = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.pnlTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.pnlSide.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlBody.SuspendLayout()
+        Me.pnlTop.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -238,12 +245,64 @@ Partial Class mainForm
         'pnlBody
         '
         Me.pnlBody.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlBody.Controls.Add(Me.pnlTop)
         Me.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlBody.Location = New System.Drawing.Point(158, 0)
         Me.pnlBody.Name = "pnlBody"
         Me.pnlBody.ShadowDecoration.Parent = Me.pnlBody
         Me.pnlBody.Size = New System.Drawing.Size(516, 578)
         Me.pnlBody.TabIndex = 0
+        '
+        'Timer1
+        '
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Poppins Medium", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(3, 68)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(91, 37)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Label 1"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(5, 4)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(38, 23)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "user"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.DimGray
+        Me.Label3.Location = New System.Drawing.Point(309, 81)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(182, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = """dddd, d MMMM yyyy  |  hh:mm:ss tt"""
+        '
+        'pnlTop
+        '
+        Me.pnlTop.BackColor = System.Drawing.Color.White
+        Me.pnlTop.Controls.Add(Me.Label3)
+        Me.pnlTop.Controls.Add(Me.Label2)
+        Me.pnlTop.Controls.Add(Me.Label1)
+        Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlTop.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTop.Name = "pnlTop"
+        Me.pnlTop.ShadowDecoration.Parent = Me.pnlTop
+        Me.pnlTop.Size = New System.Drawing.Size(516, 106)
+        Me.pnlTop.TabIndex = 5
         '
         'mainForm
         '
@@ -261,6 +320,9 @@ Partial Class mainForm
         Me.pnlSide.ResumeLayout(False)
         Me.Guna2Panel5.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlBody.ResumeLayout(False)
+        Me.pnlTop.ResumeLayout(False)
+        Me.pnlTop.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -276,4 +338,9 @@ Partial Class mainForm
     Friend WithEvents btnUsers As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents btnReports As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents btnIssuing As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents pnlTop As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class
