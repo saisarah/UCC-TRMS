@@ -4,3 +4,4 @@
 - Mary Joy Lacopanto
 - Jessica Joy S. Gapusan
 - Ahmad E. Pendi
+- Jimuel Sanchez
