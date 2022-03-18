@@ -1,4 +1,7 @@
-﻿Public Class mainForm
+﻿Imports MySql.Data.MySqlClient
+
+Public Class mainForm
+    Dim conn As New MySqlConnection("datasource = db4free.net;port=3306;username=thesismanagement;password=Jesuschrist23;database=dbtrms")
 
     Private currentChildForm As Form
     Private btnDashboardWasClicked As Boolean = False
@@ -75,6 +78,23 @@
 
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
+        Dim reader As MySqlDataReader
+
+        Try
+            conn.Open()
+            Dim sql As String
+            sql = "SELECT `username` FROM `tblusers` WHERE `Username` = '" & login.tbEnterCredentials.Text & "' "
+            cmdd = New MySqlCommand(sql, conn)
+            reader = cmdd.ExecuteReader
+            While reader.Read
+                lblUser.Text = reader(0)
+            End While
+
+        Catch ex As Exception
+
+
+        End Try
+
         Me.MaximumSize = Screen.FromRectangle(Me.DesktopBounds).WorkingArea.Size
         Me.WindowState = FormWindowState.Maximized
         OpenChildForm(New dashboard)
