@@ -34,7 +34,7 @@ Partial Class users
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(516, 578)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(891, 578)
         Me.Guna2Panel1.TabIndex = 4
         '
         'Guna2Elipse1
@@ -46,7 +46,7 @@ Partial Class users
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(516, 578)
+        Me.ClientSize = New System.Drawing.Size(891, 578)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "users"
