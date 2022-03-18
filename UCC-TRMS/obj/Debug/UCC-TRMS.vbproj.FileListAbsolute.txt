@@ -127,3 +127,4 @@ C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC-TRMS.vbproj.CopyCompl
 C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC-TRMS.exe
 C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC-TRMS.xml
 C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC-TRMS.pdb
+C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.addStudent.resources

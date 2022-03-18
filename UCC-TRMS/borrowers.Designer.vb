@@ -23,14 +23,14 @@ Partial Class borrowers
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.btnAddThesis = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnAddStudent = New Guna.UI2.WinForms.Guna2Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -48,7 +48,6 @@ Partial Class borrowers
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -108,23 +107,23 @@ Partial Class borrowers
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Student Details"
         '
-        'btnAddThesis
+        'btnAddStudent
         '
-        Me.btnAddThesis.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddThesis.BorderRadius = 5
-        Me.btnAddThesis.CheckedState.Parent = Me.btnAddThesis
-        Me.btnAddThesis.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddThesis.CustomImages.Parent = Me.btnAddThesis
-        Me.btnAddThesis.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.btnAddThesis.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddThesis.ForeColor = System.Drawing.Color.White
-        Me.btnAddThesis.HoverState.Parent = Me.btnAddThesis
-        Me.btnAddThesis.Location = New System.Drawing.Point(791, 12)
-        Me.btnAddThesis.Name = "btnAddThesis"
-        Me.btnAddThesis.ShadowDecoration.Parent = Me.btnAddThesis
-        Me.btnAddThesis.Size = New System.Drawing.Size(88, 36)
-        Me.btnAddThesis.TabIndex = 2
-        Me.btnAddThesis.Text = "Add Student"
+        Me.btnAddStudent.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAddStudent.BorderRadius = 5
+        Me.btnAddStudent.CheckedState.Parent = Me.btnAddStudent
+        Me.btnAddStudent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddStudent.CustomImages.Parent = Me.btnAddStudent
+        Me.btnAddStudent.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.btnAddStudent.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddStudent.ForeColor = System.Drawing.Color.White
+        Me.btnAddStudent.HoverState.Parent = Me.btnAddStudent
+        Me.btnAddStudent.Location = New System.Drawing.Point(791, 12)
+        Me.btnAddStudent.Name = "btnAddStudent"
+        Me.btnAddStudent.ShadowDecoration.Parent = Me.btnAddStudent
+        Me.btnAddStudent.Size = New System.Drawing.Size(88, 36)
+        Me.btnAddStudent.TabIndex = 2
+        Me.btnAddStudent.Text = "Add Student"
         '
         'Label14
         '
@@ -172,8 +171,8 @@ Partial Class borrowers
         '
         'Guna2DataGridView1
         '
-        DataGridViewCellStyle46.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle46
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.Guna2DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
@@ -181,23 +180,23 @@ Partial Class borrowers
         Me.Guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.Guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle47.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle47.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle47
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.Guna2DataGridView1.ColumnHeadersHeight = 4
-        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle48.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle48.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle48.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle48
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle9
         Me.Guna2DataGridView1.EnableHeadersVisualStyles = False
         Me.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2DataGridView1.Location = New System.Drawing.Point(384, 54)
@@ -233,7 +232,7 @@ Partial Class borrowers
         '
         Me.thesisPanel.Controls.Add(Me.Guna2DataGridView1)
         Me.thesisPanel.Controls.Add(Me.pnlThesisDetails)
-        Me.thesisPanel.Controls.Add(Me.btnAddThesis)
+        Me.thesisPanel.Controls.Add(Me.btnAddStudent)
         Me.thesisPanel.Controls.Add(Me.Guna2ComboBox1)
         Me.thesisPanel.Controls.Add(Me.Guna2TextBox1)
         Me.thesisPanel.Dock = System.Windows.Forms.DockStyle.Fill
@@ -388,10 +387,6 @@ Partial Class borrowers
         Me.Guna2Panel2.Size = New System.Drawing.Size(891, 578)
         Me.Guna2Panel2.TabIndex = 4
         '
-        'Guna2Elipse2
-        '
-        Me.Guna2Elipse2.BorderRadius = 3
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -465,10 +460,9 @@ Partial Class borrowers
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnAddThesis As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnAddStudent As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Label1 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label15 As Label

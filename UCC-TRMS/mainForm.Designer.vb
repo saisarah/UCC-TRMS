@@ -37,7 +37,7 @@ Partial Class mainForm
         Me.pnlBody = New Guna.UI2.WinForms.Guna2Panel()
         Me.pnlTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblUser = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.pnlSide.SuspendLayout()
@@ -269,7 +269,7 @@ Partial Class mainForm
         '
         Me.pnlTop.BackColor = System.Drawing.Color.White
         Me.pnlTop.Controls.Add(Me.Label3)
-        Me.pnlTop.Controls.Add(Me.Label2)
+        Me.pnlTop.Controls.Add(Me.lblUser)
         Me.pnlTop.Controls.Add(Me.Label1)
         Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
@@ -290,17 +290,17 @@ Partial Class mainForm
         Me.Label3.TabIndex = 5
         Me.Label3.Text = """dddd, d MMMM yyyy  |  hh:mm:ss tt"""
         '
-        'Label2
+        'lblUser
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(5, 4)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 23)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "user"
+        Me.lblUser.AutoSize = True
+        Me.lblUser.BackColor = System.Drawing.Color.Transparent
+        Me.lblUser.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.ForeColor = System.Drawing.Color.Black
+        Me.lblUser.Location = New System.Drawing.Point(5, 4)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(38, 23)
+        Me.lblUser.TabIndex = 4
+        Me.lblUser.Text = "user"
         '
         'Label1
         '
@@ -354,6 +354,6 @@ Partial Class mainForm
     Friend WithEvents Timer1 As Timer
     Friend WithEvents pnlTop As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblUser As Label
     Friend WithEvents Label1 As Label
 End Class

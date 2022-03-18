@@ -35,7 +35,7 @@ Partial Class addThesis
         Me.Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnAddStudent = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSaveThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.btnAddThesisClose = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -79,7 +79,7 @@ Partial Class addThesis
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox3)
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox2)
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox1)
-        Me.Guna2Panel2.Controls.Add(Me.btnAddStudent)
+        Me.Guna2Panel2.Controls.Add(Me.btnSaveThesis)
         Me.Guna2Panel2.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel2.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 1)
         Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -295,24 +295,24 @@ Partial Class addThesis
         Me.Guna2TextBox1.Size = New System.Drawing.Size(368, 36)
         Me.Guna2TextBox1.TabIndex = 4
         '
-        'btnAddStudent
+        'btnSaveThesis
         '
-        Me.btnAddStudent.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddStudent.BackColor = System.Drawing.Color.Transparent
-        Me.btnAddStudent.BorderRadius = 10
-        Me.btnAddStudent.CheckedState.Parent = Me.btnAddStudent
-        Me.btnAddStudent.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddStudent.CustomImages.Parent = Me.btnAddStudent
-        Me.btnAddStudent.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.btnAddStudent.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddStudent.ForeColor = System.Drawing.Color.White
-        Me.btnAddStudent.HoverState.Parent = Me.btnAddStudent
-        Me.btnAddStudent.Location = New System.Drawing.Point(319, 342)
-        Me.btnAddStudent.Name = "btnAddStudent"
-        Me.btnAddStudent.ShadowDecoration.Parent = Me.btnAddStudent
-        Me.btnAddStudent.Size = New System.Drawing.Size(62, 34)
-        Me.btnAddStudent.TabIndex = 3
-        Me.btnAddStudent.Text = "Save"
+        Me.btnSaveThesis.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSaveThesis.BackColor = System.Drawing.Color.Transparent
+        Me.btnSaveThesis.BorderRadius = 10
+        Me.btnSaveThesis.CheckedState.Parent = Me.btnSaveThesis
+        Me.btnSaveThesis.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSaveThesis.CustomImages.Parent = Me.btnSaveThesis
+        Me.btnSaveThesis.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.btnSaveThesis.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSaveThesis.ForeColor = System.Drawing.Color.White
+        Me.btnSaveThesis.HoverState.Parent = Me.btnSaveThesis
+        Me.btnSaveThesis.Location = New System.Drawing.Point(319, 342)
+        Me.btnSaveThesis.Name = "btnSaveThesis"
+        Me.btnSaveThesis.ShadowDecoration.Parent = Me.btnSaveThesis
+        Me.btnSaveThesis.Size = New System.Drawing.Size(62, 34)
+        Me.btnSaveThesis.TabIndex = 3
+        Me.btnSaveThesis.Text = "Save"
         '
         'btnAddThesisClose
         '
@@ -348,7 +348,7 @@ Partial Class addThesis
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents btnAddStudent As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSaveThesis As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
