@@ -244,7 +244,7 @@ Partial Class mainForm
         '
         'pnlBody
         '
-        Me.pnlBody.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlBody.BackColor = System.Drawing.Color.White
         Me.pnlBody.Controls.Add(Me.pnlTop)
         Me.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlBody.Location = New System.Drawing.Point(248, 0)

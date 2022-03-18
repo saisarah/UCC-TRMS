@@ -23,9 +23,9 @@ Partial Class issuing
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
@@ -94,11 +94,9 @@ Partial Class issuing
         '
         'Guna2TextBox1
         '
-        Me.Guna2TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2TextBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox1.BorderColor = System.Drawing.Color.Silver
-        Me.Guna2TextBox1.BorderRadius = 10
+        Me.Guna2TextBox1.BorderRadius = 2
         Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox1.DefaultText = ""
         Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -116,14 +114,13 @@ Partial Class issuing
         Me.Guna2TextBox1.PlaceholderText = "Student Number"
         Me.Guna2TextBox1.SelectedText = ""
         Me.Guna2TextBox1.ShadowDecoration.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(487, 32)
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(447, 32)
         Me.Guna2TextBox1.TabIndex = 7
         '
         'btnSearchStud
         '
-        Me.btnSearchStud.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSearchStud.BackColor = System.Drawing.Color.Transparent
-        Me.btnSearchStud.BorderRadius = 10
+        Me.btnSearchStud.BorderRadius = 2
         Me.btnSearchStud.CheckedState.Parent = Me.btnSearchStud
         Me.btnSearchStud.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSearchStud.CustomImages.Parent = Me.btnSearchStud
@@ -131,10 +128,10 @@ Partial Class issuing
         Me.btnSearchStud.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSearchStud.ForeColor = System.Drawing.Color.White
         Me.btnSearchStud.HoverState.Parent = Me.btnSearchStud
-        Me.btnSearchStud.Location = New System.Drawing.Point(500, 8)
+        Me.btnSearchStud.Location = New System.Drawing.Point(465, 8)
         Me.btnSearchStud.Name = "btnSearchStud"
         Me.btnSearchStud.ShadowDecoration.Parent = Me.btnSearchStud
-        Me.btnSearchStud.Size = New System.Drawing.Size(58, 32)
+        Me.btnSearchStud.Size = New System.Drawing.Size(93, 32)
         Me.btnSearchStud.TabIndex = 8
         Me.btnSearchStud.Text = "Search"
         '
@@ -210,8 +207,8 @@ Partial Class issuing
         '
         'dgvRecentlyBorrowed
         '
-        DataGridViewCellStyle40.BackColor = System.Drawing.Color.White
-        Me.dgvRecentlyBorrowed.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgvRecentlyBorrowed.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvRecentlyBorrowed.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -220,23 +217,23 @@ Partial Class issuing
         Me.dgvRecentlyBorrowed.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvRecentlyBorrowed.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvRecentlyBorrowed.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle41.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRecentlyBorrowed.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle41
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRecentlyBorrowed.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvRecentlyBorrowed.ColumnHeadersHeight = 4
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle42.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle42.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle42.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvRecentlyBorrowed.DefaultCellStyle = DataGridViewCellStyle42
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvRecentlyBorrowed.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvRecentlyBorrowed.EnableHeadersVisualStyles = False
         Me.dgvRecentlyBorrowed.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvRecentlyBorrowed.Location = New System.Drawing.Point(16, 59)
@@ -270,11 +267,9 @@ Partial Class issuing
         '
         'Guna2TextBox2
         '
-        Me.Guna2TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2TextBox2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox2.BorderColor = System.Drawing.Color.Silver
-        Me.Guna2TextBox2.BorderRadius = 10
+        Me.Guna2TextBox2.BorderRadius = 2
         Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox2.DefaultText = ""
         Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -292,14 +287,13 @@ Partial Class issuing
         Me.Guna2TextBox2.PlaceholderText = "Thesis Title"
         Me.Guna2TextBox2.SelectedText = ""
         Me.Guna2TextBox2.ShadowDecoration.Parent = Me.Guna2TextBox2
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(487, 32)
+        Me.Guna2TextBox2.Size = New System.Drawing.Size(447, 32)
         Me.Guna2TextBox2.TabIndex = 15
         '
         'btnSearchTitle
         '
-        Me.btnSearchTitle.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSearchTitle.BackColor = System.Drawing.Color.Transparent
-        Me.btnSearchTitle.BorderRadius = 10
+        Me.btnSearchTitle.BorderRadius = 2
         Me.btnSearchTitle.CheckedState.Parent = Me.btnSearchTitle
         Me.btnSearchTitle.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSearchTitle.CustomImages.Parent = Me.btnSearchTitle
@@ -307,10 +301,10 @@ Partial Class issuing
         Me.btnSearchTitle.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSearchTitle.ForeColor = System.Drawing.Color.White
         Me.btnSearchTitle.HoverState.Parent = Me.btnSearchTitle
-        Me.btnSearchTitle.Location = New System.Drawing.Point(500, 12)
+        Me.btnSearchTitle.Location = New System.Drawing.Point(465, 12)
         Me.btnSearchTitle.Name = "btnSearchTitle"
         Me.btnSearchTitle.ShadowDecoration.Parent = Me.btnSearchTitle
-        Me.btnSearchTitle.Size = New System.Drawing.Size(58, 32)
+        Me.btnSearchTitle.Size = New System.Drawing.Size(93, 32)
         Me.btnSearchTitle.TabIndex = 16
         Me.btnSearchTitle.Text = "Search"
         '
