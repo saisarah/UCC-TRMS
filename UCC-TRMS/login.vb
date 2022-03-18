@@ -5,50 +5,65 @@ Public Class login
     Dim attempt As Integer = 0
     Dim cmdd As New MySqlCommand
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If tbEnterCredentials.Text = "" Then
-            MessageBox.Show("PLEASE FILL EMPTY BOX!", "LOGIN", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Else
-            Dim reader As MySqlDataReader
 
-            Try
-                conn.Open()
-                Dim sql As String
-                sql = "SELECT `username` FROM `tblusers` WHERE `Username` = '" & tbEnterCredentials.Text & "' "
-                cmdd = New MySqlCommand(sql, conn)
-                reader = cmdd.ExecuteReader
 
-                Dim count As Integer = 0
-                While reader.Read
-                    count += 1
-                End While
+    Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim cm As New MySqlCommand("SELECT username FROM tblusers", conn)
+        Dim dr As MySqlDataReader
+        conn.Open()
 
-                If count = 1 Then
-                    mainForm.Show()
-                    Me.Hide()
-                    tbEnterCredentials.Clear()
+        dr = cm.ExecuteReader
+        If dr.Read Then
+            cbCredentials.Items.Add(dr(0))
+        End If
+        dr.Close()
 
-                    conn.Close()
-                    conn.Dispose()
-                Else
-                    MsgBox(“User does not exist!”)
-                    attempt = attempt + 1
-                    conn.Close()
+    End Sub
 
-                    tbEnterCredentials.Clear()
+    Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-                    If attempt = 3 Then
-                        Application.Exit()
-                    End If
+        Dim reader As MySqlDataReader
+        MessageBox.Show(cbCredentials.Text)
 
+        Try
+            conn.Open()
+            Dim sql As String
+            sql = "SELECT `username` FROM `tblusers` WHERE `username` = '" & cbCredentials.Text & "' "
+            cmdd = New MySqlCommand(sql, conn)
+            reader = cmdd.ExecuteReader
+
+            Dim count As Integer = 0
+            While reader.Read
+                count += 1
+            End While
+
+            If count = 1 Then
+                mainForm.Show()
+                Me.Hide()
+
+                conn.Close()
+                conn.Dispose()
+            Else
+                attempt = attempt + 1
+                conn.Close()
+
+
+                If attempt = 3 Then
+                    Application.Exit()
                 End If
 
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            Finally
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
 
 
-            End Try
-        End If
+        End Try
+    End Sub
+
+    Private Sub btnCloseLogin_Click_1(sender As Object, e As EventArgs) Handles btnCloseLogin.Click
+        Application.Exit()
+
     End Sub
 End Class

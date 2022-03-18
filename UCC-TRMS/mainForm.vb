@@ -83,7 +83,7 @@ Public Class mainForm
         Try
             conn.Open()
             Dim sql As String
-            sql = "SELECT `username` FROM `tblusers` WHERE `Username` = '" & login.tbEnterCredentials.Text & "' "
+            sql = "SELECT `username` FROM `tblusers` WHERE `Username` = '" & login.cbCredentials.Text & "' "
             cmdd = New MySqlCommand(sql, conn)
             reader = cmdd.ExecuteReader
             While reader.Read
