@@ -2,9 +2,7 @@
 
 Public Class login
     Dim conn As New MySqlConnection("datasource = db4free.net;port=3306;username=thesismanagement;password=Jesuschrist23;database=dbtrms")
-    Dim attempt As Integer = 0
     Dim cmdd As New MySqlCommand
-
 
 
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -25,45 +23,17 @@ Public Class login
         Dim reader As MySqlDataReader
         MessageBox.Show(cbCredentials.Text)
 
-        Try
-            conn.Open()
-            Dim sql As String
-            sql = "SELECT `username` FROM `tblusers` WHERE `username` = '" & cbCredentials.Text & "' "
-            cmdd = New MySqlCommand(sql, conn)
-            reader = cmdd.ExecuteReader
+        Dim sql As String
+        sql = "SELECT `username` FROM `tblusers` WHERE `username` = '" & cbCredentials.Text & "' "
+        cmdd = New MySqlCommand(sql, conn)
+        reader = cmdd.ExecuteReader
 
-            Dim count As Integer = 0
-            While reader.Read
-                count += 1
-            End While
+        mainForm.Show()
+        Me.Hide()
 
-            If count = 1 Then
-                mainForm.Show()
-                Me.Hide()
-
-                conn.Close()
-                conn.Dispose()
-            Else
-                attempt = attempt + 1
-                conn.Close()
-
-
-                If attempt = 3 Then
-                    Application.Exit()
-                End If
-
-            End If
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-
-
-        End Try
     End Sub
 
     Private Sub btnCloseLogin_Click_1(sender As Object, e As EventArgs) Handles btnCloseLogin.Click
         Application.Exit()
-
     End Sub
 End Class
