@@ -21,7 +21,6 @@ Public Class login
     Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
 
         Dim reader As MySqlDataReader
-        MessageBox.Show(cbCredentials.Text)
 
         Dim sql As String
         sql = "SELECT `username` FROM `tblusers` WHERE `username` = '" & cbCredentials.Text & "' "
