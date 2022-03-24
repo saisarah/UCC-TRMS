@@ -142,7 +142,16 @@ Public Class mainForm
     End Sub
 
     Private Sub btnThesis_Click(sender As Object, e As EventArgs) Handles btnThesis.Click
-        OpenChildForm(New thesis)
+        With thesis
+            thesis.TopLevel = False
+            thesis.FormBorderStyle = FormBorderStyle.None
+            thesis.Dock = DockStyle.Fill
+            pnlBody.Controls.Add(thesis)
+            pnlBody.Tag = thesis
+            .LoadRecords()
+            thesis.BringToFront()
+            thesis.Show()
+        End With
         btnThesisWasClicked = True
         Label1.Text = "Thesis"
 

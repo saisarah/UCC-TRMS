@@ -26,17 +26,17 @@ Partial Class addThesis
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Guna2TextBox6 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox7 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox5 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnSaveThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.btnAddThesisClose = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.cbCategory = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.tbPanel = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbMembers = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbTeam = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbLimitation = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbScope = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbObjectives = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbTitle = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.btnSaveThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,14 +71,14 @@ Partial Class addThesis
         Me.Guna2Panel2.Controls.Add(Me.btnAddThesisClose)
         Me.Guna2Panel2.Controls.Add(Me.Guna2Panel3)
         Me.Guna2Panel2.Controls.Add(Me.Label1)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2ComboBox1)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox6)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox7)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox5)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox4)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox3)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox2)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox1)
+        Me.Guna2Panel2.Controls.Add(Me.cbCategory)
+        Me.Guna2Panel2.Controls.Add(Me.tbPanel)
+        Me.Guna2Panel2.Controls.Add(Me.tbMembers)
+        Me.Guna2Panel2.Controls.Add(Me.tbTeam)
+        Me.Guna2Panel2.Controls.Add(Me.tbLimitation)
+        Me.Guna2Panel2.Controls.Add(Me.tbScope)
+        Me.Guna2Panel2.Controls.Add(Me.tbObjectives)
+        Me.Guna2Panel2.Controls.Add(Me.tbTitle)
         Me.Guna2Panel2.Controls.Add(Me.btnSaveThesis)
         Me.Guna2Panel2.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel2.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 1)
@@ -90,6 +90,21 @@ Partial Class addThesis
         Me.Guna2Panel2.Size = New System.Drawing.Size(393, 384)
         Me.Guna2Panel2.TabIndex = 1
         '
+        'btnAddThesisClose
+        '
+        Me.btnAddThesisClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAddThesisClose.CheckedState.Parent = Me.btnAddThesisClose
+        Me.btnAddThesisClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddThesisClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.btnAddThesisClose.HoverState.Parent = Me.btnAddThesisClose
+        Me.btnAddThesisClose.Image = CType(resources.GetObject("btnAddThesisClose.Image"), System.Drawing.Image)
+        Me.btnAddThesisClose.ImageSize = New System.Drawing.Size(15, 15)
+        Me.btnAddThesisClose.Location = New System.Drawing.Point(362, 8)
+        Me.btnAddThesisClose.Name = "btnAddThesisClose"
+        Me.btnAddThesisClose.PressedState.Parent = Me.btnAddThesisClose
+        Me.btnAddThesisClose.Size = New System.Drawing.Size(15, 15)
+        Me.btnAddThesisClose.TabIndex = 13
+        '
         'Guna2Panel3
         '
         Me.Guna2Panel3.BackColor = System.Drawing.Color.Gray
@@ -99,201 +114,202 @@ Partial Class addThesis
         Me.Guna2Panel3.Size = New System.Drawing.Size(360, 1)
         Me.Guna2Panel3.TabIndex = 12
         '
-        'Guna2ComboBox1
+        'cbCategory
         '
-        Me.Guna2ComboBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ComboBox1.BorderRadius = 5
-        Me.Guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.Guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty
-        Me.Guna2ComboBox1.FocusedState.Parent = Me.Guna2ComboBox1
-        Me.Guna2ComboBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.Guna2ComboBox1.FormattingEnabled = True
-        Me.Guna2ComboBox1.HoverState.Parent = Me.Guna2ComboBox1
-        Me.Guna2ComboBox1.ItemHeight = 30
-        Me.Guna2ComboBox1.ItemsAppearance.Parent = Me.Guna2ComboBox1
-        Me.Guna2ComboBox1.Location = New System.Drawing.Point(198, 298)
-        Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Me.Guna2ComboBox1.ShadowDecoration.Parent = Me.Guna2ComboBox1
-        Me.Guna2ComboBox1.Size = New System.Drawing.Size(183, 36)
-        Me.Guna2ComboBox1.TabIndex = 11
+        Me.cbCategory.BackColor = System.Drawing.Color.Transparent
+        Me.cbCategory.BorderRadius = 5
+        Me.cbCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbCategory.FocusedColor = System.Drawing.Color.Empty
+        Me.cbCategory.FocusedState.Parent = Me.cbCategory
+        Me.cbCategory.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cbCategory.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cbCategory.FormattingEnabled = True
+        Me.cbCategory.HoverState.Parent = Me.cbCategory
+        Me.cbCategory.ItemHeight = 30
+        Me.cbCategory.Items.AddRange(New Object() {"WEB DEVELOPMENT", "APP DEVELOPMENT", "MOBILE DEVELOPMENT", "GAME DEVELOPMENT"})
+        Me.cbCategory.ItemsAppearance.Parent = Me.cbCategory
+        Me.cbCategory.Location = New System.Drawing.Point(198, 298)
+        Me.cbCategory.Name = "cbCategory"
+        Me.cbCategory.ShadowDecoration.Parent = Me.cbCategory
+        Me.cbCategory.Size = New System.Drawing.Size(183, 36)
+        Me.cbCategory.TabIndex = 11
         '
-        'Guna2TextBox6
+        'tbPanel
         '
-        Me.Guna2TextBox6.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox6.BorderRadius = 5
-        Me.Guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox6.DefaultText = ""
-        Me.Guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox6.DisabledState.Parent = Me.Guna2TextBox6
-        Me.Guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox6.FocusedState.Parent = Me.Guna2TextBox6
-        Me.Guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox6.HoverState.Parent = Me.Guna2TextBox6
-        Me.Guna2TextBox6.Location = New System.Drawing.Point(13, 298)
-        Me.Guna2TextBox6.Margin = New System.Windows.Forms.Padding(4)
-        Me.Guna2TextBox6.Name = "Guna2TextBox6"
-        Me.Guna2TextBox6.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox6.PlaceholderText = "Panel"
-        Me.Guna2TextBox6.SelectedText = ""
-        Me.Guna2TextBox6.ShadowDecoration.Parent = Me.Guna2TextBox6
-        Me.Guna2TextBox6.Size = New System.Drawing.Size(183, 36)
-        Me.Guna2TextBox6.TabIndex = 10
+        Me.tbPanel.BackColor = System.Drawing.Color.Transparent
+        Me.tbPanel.BorderRadius = 5
+        Me.tbPanel.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbPanel.DefaultText = ""
+        Me.tbPanel.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbPanel.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbPanel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbPanel.DisabledState.Parent = Me.tbPanel
+        Me.tbPanel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbPanel.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.tbPanel.FocusedState.Parent = Me.tbPanel
+        Me.tbPanel.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.tbPanel.HoverState.Parent = Me.tbPanel
+        Me.tbPanel.Location = New System.Drawing.Point(13, 298)
+        Me.tbPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbPanel.Name = "tbPanel"
+        Me.tbPanel.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbPanel.PlaceholderText = "Panel"
+        Me.tbPanel.SelectedText = ""
+        Me.tbPanel.ShadowDecoration.Parent = Me.tbPanel
+        Me.tbPanel.Size = New System.Drawing.Size(183, 36)
+        Me.tbPanel.TabIndex = 10
         '
-        'Guna2TextBox7
+        'tbMembers
         '
-        Me.Guna2TextBox7.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox7.BorderRadius = 5
-        Me.Guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox7.DefaultText = ""
-        Me.Guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox7.DisabledState.Parent = Me.Guna2TextBox7
-        Me.Guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox7.FocusedState.Parent = Me.Guna2TextBox7
-        Me.Guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox7.HoverState.Parent = Me.Guna2TextBox7
-        Me.Guna2TextBox7.Location = New System.Drawing.Point(198, 254)
-        Me.Guna2TextBox7.Margin = New System.Windows.Forms.Padding(4)
-        Me.Guna2TextBox7.Name = "Guna2TextBox7"
-        Me.Guna2TextBox7.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox7.PlaceholderText = "Members"
-        Me.Guna2TextBox7.SelectedText = ""
-        Me.Guna2TextBox7.ShadowDecoration.Parent = Me.Guna2TextBox7
-        Me.Guna2TextBox7.Size = New System.Drawing.Size(183, 36)
-        Me.Guna2TextBox7.TabIndex = 9
+        Me.tbMembers.BackColor = System.Drawing.Color.Transparent
+        Me.tbMembers.BorderRadius = 5
+        Me.tbMembers.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbMembers.DefaultText = ""
+        Me.tbMembers.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbMembers.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbMembers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbMembers.DisabledState.Parent = Me.tbMembers
+        Me.tbMembers.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbMembers.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.tbMembers.FocusedState.Parent = Me.tbMembers
+        Me.tbMembers.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.tbMembers.HoverState.Parent = Me.tbMembers
+        Me.tbMembers.Location = New System.Drawing.Point(198, 254)
+        Me.tbMembers.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbMembers.Name = "tbMembers"
+        Me.tbMembers.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbMembers.PlaceholderText = "Members"
+        Me.tbMembers.SelectedText = ""
+        Me.tbMembers.ShadowDecoration.Parent = Me.tbMembers
+        Me.tbMembers.Size = New System.Drawing.Size(183, 36)
+        Me.tbMembers.TabIndex = 9
         '
-        'Guna2TextBox5
+        'tbTeam
         '
-        Me.Guna2TextBox5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox5.BorderRadius = 5
-        Me.Guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox5.DefaultText = ""
-        Me.Guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.Parent = Me.Guna2TextBox5
-        Me.Guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox5.FocusedState.Parent = Me.Guna2TextBox5
-        Me.Guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox5.HoverState.Parent = Me.Guna2TextBox5
-        Me.Guna2TextBox5.Location = New System.Drawing.Point(13, 254)
-        Me.Guna2TextBox5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Guna2TextBox5.Name = "Guna2TextBox5"
-        Me.Guna2TextBox5.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox5.PlaceholderText = "Team Name"
-        Me.Guna2TextBox5.SelectedText = ""
-        Me.Guna2TextBox5.ShadowDecoration.Parent = Me.Guna2TextBox5
-        Me.Guna2TextBox5.Size = New System.Drawing.Size(183, 36)
-        Me.Guna2TextBox5.TabIndex = 8
+        Me.tbTeam.BackColor = System.Drawing.Color.Transparent
+        Me.tbTeam.BorderRadius = 5
+        Me.tbTeam.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbTeam.DefaultText = ""
+        Me.tbTeam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbTeam.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbTeam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbTeam.DisabledState.Parent = Me.tbTeam
+        Me.tbTeam.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbTeam.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.tbTeam.FocusedState.Parent = Me.tbTeam
+        Me.tbTeam.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.tbTeam.HoverState.Parent = Me.tbTeam
+        Me.tbTeam.Location = New System.Drawing.Point(13, 254)
+        Me.tbTeam.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbTeam.Name = "tbTeam"
+        Me.tbTeam.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbTeam.PlaceholderText = "Team Name"
+        Me.tbTeam.SelectedText = ""
+        Me.tbTeam.ShadowDecoration.Parent = Me.tbTeam
+        Me.tbTeam.Size = New System.Drawing.Size(183, 36)
+        Me.tbTeam.TabIndex = 8
         '
-        'Guna2TextBox4
+        'tbLimitation
         '
-        Me.Guna2TextBox4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox4.BorderRadius = 5
-        Me.Guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox4.DefaultText = ""
-        Me.Guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.Parent = Me.Guna2TextBox4
-        Me.Guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox4.FocusedState.Parent = Me.Guna2TextBox4
-        Me.Guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox4.HoverState.Parent = Me.Guna2TextBox4
-        Me.Guna2TextBox4.Location = New System.Drawing.Point(198, 210)
-        Me.Guna2TextBox4.Margin = New System.Windows.Forms.Padding(4)
-        Me.Guna2TextBox4.Name = "Guna2TextBox4"
-        Me.Guna2TextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox4.PlaceholderText = "Limitation"
-        Me.Guna2TextBox4.SelectedText = ""
-        Me.Guna2TextBox4.ShadowDecoration.Parent = Me.Guna2TextBox4
-        Me.Guna2TextBox4.Size = New System.Drawing.Size(183, 36)
-        Me.Guna2TextBox4.TabIndex = 7
+        Me.tbLimitation.BackColor = System.Drawing.Color.Transparent
+        Me.tbLimitation.BorderRadius = 5
+        Me.tbLimitation.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbLimitation.DefaultText = ""
+        Me.tbLimitation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbLimitation.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbLimitation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbLimitation.DisabledState.Parent = Me.tbLimitation
+        Me.tbLimitation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbLimitation.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.tbLimitation.FocusedState.Parent = Me.tbLimitation
+        Me.tbLimitation.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.tbLimitation.HoverState.Parent = Me.tbLimitation
+        Me.tbLimitation.Location = New System.Drawing.Point(198, 210)
+        Me.tbLimitation.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbLimitation.Name = "tbLimitation"
+        Me.tbLimitation.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbLimitation.PlaceholderText = "Limitation"
+        Me.tbLimitation.SelectedText = ""
+        Me.tbLimitation.ShadowDecoration.Parent = Me.tbLimitation
+        Me.tbLimitation.Size = New System.Drawing.Size(183, 36)
+        Me.tbLimitation.TabIndex = 7
         '
-        'Guna2TextBox3
+        'tbScope
         '
-        Me.Guna2TextBox3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox3.BorderRadius = 5
-        Me.Guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox3.DefaultText = ""
-        Me.Guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.Parent = Me.Guna2TextBox3
-        Me.Guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox3.FocusedState.Parent = Me.Guna2TextBox3
-        Me.Guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox3.HoverState.Parent = Me.Guna2TextBox3
-        Me.Guna2TextBox3.Location = New System.Drawing.Point(13, 210)
-        Me.Guna2TextBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Guna2TextBox3.Name = "Guna2TextBox3"
-        Me.Guna2TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox3.PlaceholderText = "Scope"
-        Me.Guna2TextBox3.SelectedText = ""
-        Me.Guna2TextBox3.ShadowDecoration.Parent = Me.Guna2TextBox3
-        Me.Guna2TextBox3.Size = New System.Drawing.Size(183, 36)
-        Me.Guna2TextBox3.TabIndex = 6
+        Me.tbScope.BackColor = System.Drawing.Color.Transparent
+        Me.tbScope.BorderRadius = 5
+        Me.tbScope.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbScope.DefaultText = ""
+        Me.tbScope.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbScope.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbScope.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbScope.DisabledState.Parent = Me.tbScope
+        Me.tbScope.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbScope.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.tbScope.FocusedState.Parent = Me.tbScope
+        Me.tbScope.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.tbScope.HoverState.Parent = Me.tbScope
+        Me.tbScope.Location = New System.Drawing.Point(13, 210)
+        Me.tbScope.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbScope.Name = "tbScope"
+        Me.tbScope.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbScope.PlaceholderText = "Scope"
+        Me.tbScope.SelectedText = ""
+        Me.tbScope.ShadowDecoration.Parent = Me.tbScope
+        Me.tbScope.Size = New System.Drawing.Size(183, 36)
+        Me.tbScope.TabIndex = 6
         '
-        'Guna2TextBox2
+        'tbObjectives
         '
-        Me.Guna2TextBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox2.BorderRadius = 5
-        Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox2.DefaultText = ""
-        Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.Parent = Me.Guna2TextBox2
-        Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox2.FocusedState.Parent = Me.Guna2TextBox2
-        Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox2.HoverState.Parent = Me.Guna2TextBox2
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(13, 122)
-        Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Guna2TextBox2.Multiline = True
-        Me.Guna2TextBox2.Name = "Guna2TextBox2"
-        Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox2.PlaceholderText = "Objectives"
-        Me.Guna2TextBox2.SelectedText = ""
-        Me.Guna2TextBox2.ShadowDecoration.Parent = Me.Guna2TextBox2
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(368, 80)
-        Me.Guna2TextBox2.TabIndex = 5
+        Me.tbObjectives.BackColor = System.Drawing.Color.Transparent
+        Me.tbObjectives.BorderRadius = 5
+        Me.tbObjectives.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbObjectives.DefaultText = ""
+        Me.tbObjectives.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbObjectives.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbObjectives.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbObjectives.DisabledState.Parent = Me.tbObjectives
+        Me.tbObjectives.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbObjectives.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.tbObjectives.FocusedState.Parent = Me.tbObjectives
+        Me.tbObjectives.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.tbObjectives.HoverState.Parent = Me.tbObjectives
+        Me.tbObjectives.Location = New System.Drawing.Point(13, 122)
+        Me.tbObjectives.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbObjectives.Multiline = True
+        Me.tbObjectives.Name = "tbObjectives"
+        Me.tbObjectives.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbObjectives.PlaceholderText = "Objectives"
+        Me.tbObjectives.SelectedText = ""
+        Me.tbObjectives.ShadowDecoration.Parent = Me.tbObjectives
+        Me.tbObjectives.Size = New System.Drawing.Size(368, 80)
+        Me.tbObjectives.TabIndex = 5
         '
-        'Guna2TextBox1
+        'tbTitle
         '
-        Me.Guna2TextBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox1.BorderRadius = 5
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox1.FocusedState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.Guna2TextBox1.HoverState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(13, 78)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox1.PlaceholderText = "Title"
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.ShadowDecoration.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(368, 36)
-        Me.Guna2TextBox1.TabIndex = 4
+        Me.tbTitle.BackColor = System.Drawing.Color.Transparent
+        Me.tbTitle.BorderRadius = 5
+        Me.tbTitle.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbTitle.DefaultText = ""
+        Me.tbTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbTitle.DisabledState.Parent = Me.tbTitle
+        Me.tbTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbTitle.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.tbTitle.FocusedState.Parent = Me.tbTitle
+        Me.tbTitle.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.tbTitle.HoverState.Parent = Me.tbTitle
+        Me.tbTitle.Location = New System.Drawing.Point(13, 78)
+        Me.tbTitle.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbTitle.Name = "tbTitle"
+        Me.tbTitle.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbTitle.PlaceholderText = "Title"
+        Me.tbTitle.SelectedText = ""
+        Me.tbTitle.ShadowDecoration.Parent = Me.tbTitle
+        Me.tbTitle.Size = New System.Drawing.Size(368, 36)
+        Me.tbTitle.TabIndex = 4
         '
         'btnSaveThesis
         '
@@ -313,21 +329,6 @@ Partial Class addThesis
         Me.btnSaveThesis.Size = New System.Drawing.Size(62, 34)
         Me.btnSaveThesis.TabIndex = 3
         Me.btnSaveThesis.Text = "Save"
-        '
-        'btnAddThesisClose
-        '
-        Me.btnAddThesisClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddThesisClose.CheckedState.Parent = Me.btnAddThesisClose
-        Me.btnAddThesisClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddThesisClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.btnAddThesisClose.HoverState.Parent = Me.btnAddThesisClose
-        Me.btnAddThesisClose.Image = CType(resources.GetObject("btnAddThesisClose.Image"), System.Drawing.Image)
-        Me.btnAddThesisClose.ImageSize = New System.Drawing.Size(15, 15)
-        Me.btnAddThesisClose.Location = New System.Drawing.Point(362, 8)
-        Me.btnAddThesisClose.Name = "btnAddThesisClose"
-        Me.btnAddThesisClose.PressedState.Parent = Me.btnAddThesisClose
-        Me.btnAddThesisClose.Size = New System.Drawing.Size(15, 15)
-        Me.btnAddThesisClose.TabIndex = 13
         '
         'addThesis
         '
@@ -349,14 +350,14 @@ Partial Class addThesis
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnSaveThesis As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox3 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox5 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox6 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox7 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents tbTitle As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbObjectives As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbLimitation As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbScope As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbTeam As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbPanel As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbMembers As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents cbCategory As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnAddThesisClose As Guna.UI2.WinForms.Guna2ImageButton
 End Class

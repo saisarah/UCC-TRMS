@@ -6,15 +6,20 @@ Public Class login
 
 
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim cm As New MySqlCommand("SELECT username FROM tblusers", conn)
-        Dim dr As MySqlDataReader
-        conn.Open()
+        Try
+            Dim cm As New MySqlCommand("SELECT username FROM tblusers", conn)
+            Dim dr As MySqlDataReader
+            conn.Open()
 
-        dr = cm.ExecuteReader
-        If dr.Read Then
-            cbCredentials.Items.Add(dr(0))
-        End If
-        dr.Close()
+            dr = cm.ExecuteReader
+            If dr.Read Then
+                cbCredentials.Items.Add(dr(0))
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical)
+        End Try
+
 
     End Sub
 
