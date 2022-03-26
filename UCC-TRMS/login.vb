@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class login
-    Dim conn As New MySqlConnection("datasource = db4free.net;port=3306;username=thesismanagement;password=Jesuschrist23;database=dbtrms")
+    Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
     Dim cmdd As New MySqlCommand
 
 

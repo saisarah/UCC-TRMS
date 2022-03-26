@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class addThesis
-    Dim conn As New MySqlConnection("datasource = db4free.net;port=3306;username=thesismanagement;password=Jesuschrist23;database=dbtrms")
+    Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
     Private Sub btnAddThesisClose_Click(sender As Object, e As EventArgs) Handles btnAddThesisClose.Click
         Me.Close()
     End Sub
@@ -24,15 +24,7 @@ Public Class addThesis
                 MsgBox("Record has been saved!", vbInformation)
                 clear()
                 With thesis
-                    thesis.TopLevel = False
-                    thesis.FormBorderStyle = FormBorderStyle.None
-                    thesis.Dock = DockStyle.Fill
-                    mainForm.pnlBody.Controls.Add(thesis)
-                    mainForm.pnlBody.Tag = thesis
-                    .LoadRecords()
-                    thesis.BringToFront()
-                    thesis.Show()
-                    conn.Close()
+                    mainForm.OpenChildForm(New thesis)
                 End With
             End If
 

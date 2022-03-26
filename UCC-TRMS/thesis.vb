@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class thesis
-    Dim conn As New MySqlConnection("datasource = db4free.net;port=3306;username=thesismanagement;password=Jesuschrist23;database=dbtrms")
+    Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
     Private Sub btnAddThesis_Click(sender As Object, e As EventArgs) Handles btnAddThesis.Click
         addThesis.BringToFront()
         addThesis.Show()
@@ -9,7 +9,6 @@ Public Class thesis
     Sub LoadRecords()
 
         Try
-            Dim i As Integer
             dgvThesis.Rows.Clear()
             conn.Open()
             Dim cm As New MySqlCommand("SELECT * FROM tblthesis", conn)
@@ -48,5 +47,9 @@ Public Class thesis
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub thesis_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadRecords()
     End Sub
 End Class
