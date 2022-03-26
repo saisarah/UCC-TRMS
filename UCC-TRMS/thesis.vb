@@ -24,4 +24,29 @@ Public Class thesis
             MsgBox(ex.Message, vbCritical)
         End Try
     End Sub
+
+    Private Sub dgvThesis_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvThesis.CellClick
+        Try
+            If e.RowIndex > -1 Then
+                dgvThesis.Rows(e.RowIndex).Selected = True
+            End If
+
+            Dim j As Integer
+            Dim s As String
+            j = dgvThesis.CurrentRow.Index
+            s = dgvThesis.Item(2, j).Value.ToString()
+
+            Dim i As Integer
+            i = dgvThesis.CurrentRow.Index
+            lblTitle.Text = dgvThesis.Item(1, i).Value.ToString
+            lblScope.Text = dgvThesis.Item(3, i).Value.ToString
+            lblLimit.Text = dgvThesis.Item(4, i).Value.ToString
+            lblCategory.Text = dgvThesis.Item(8, i).Value.ToString
+            lblObjectives.Text = dgvThesis.Item(2, i).Value.ToString
+            lblTeam.Text = dgvThesis.Item(5, i).Value.ToString
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
