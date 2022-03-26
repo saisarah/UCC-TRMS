@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2022 at 07:05 PM
+-- Generation Time: Mar 26, 2022 at 07:10 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -55,22 +55,6 @@ CREATE TABLE `tblthesis` (
   `category` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `tblthesis`
---
-
-INSERT INTO `tblthesis` (`ID`, `title`, `objectives`, `scope`, `limitations`, `teamname`, `members`, `panels`, `category`) VALUES
-(1, 'TRMS', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'WEB DEVELOPMENT'),
-(2, 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', '', 'LOREM IPSUM', 'WEB DEVELOPMENT'),
-(3, 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'APP DEVELOPMENT'),
-(4, 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'WEB DEVELOPMENT'),
-(5, '', '', '', '', '', '', '', ''),
-(6, 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'WEB DEVELOPMENT'),
-(7, 'SAS', '', '', '', '', '', '', ''),
-(8, 'SASASADA', '', '', '', '', '', '', ''),
-(9, 'SASA', '', '', '', '', '', '', ''),
-(10, '', 'SASA', '', '', '', '', '', 'WEB DEVELOPMENT');
-
 -- --------------------------------------------------------
 
 --
@@ -106,7 +90,7 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT for table `tblthesis`
 --
 ALTER TABLE `tblthesis`
-  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
