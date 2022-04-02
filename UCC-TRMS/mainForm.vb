@@ -2,6 +2,7 @@
 
 Public Class mainForm
     Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
+    Public Property SelectedRows As DataGridViewSelectedRowCollection
 
     Private currentChildForm As Form
     Private btnDashboardWasClicked As Boolean = False
@@ -142,16 +143,10 @@ Public Class mainForm
     End Sub
 
     Private Sub btnThesis_Click(sender As Object, e As EventArgs) Handles btnThesis.Click
-        With thesis
-            thesis.TopLevel = False
-            thesis.FormBorderStyle = FormBorderStyle.None
-            thesis.Dock = DockStyle.Fill
-            pnlBody.Controls.Add(thesis)
-            pnlBody.Tag = thesis
-            .LoadRecords()
-            thesis.BringToFront()
-            thesis.Show()
-        End With
+        OpenChildForm(New thesis)
+        thesis.cbCategories.SelectedIndex = -1
+        thesis.tbSearch.Clear()
+
         btnThesisWasClicked = True
         Label1.Text = "Thesis"
 
@@ -371,5 +366,21 @@ Public Class mainForm
         Dim CurrentDateTime As DateTime
         CurrentDateTime = DateTime.Now
         Label3.Text = CurrentDateTime.ToString("dddd, d MMMM yyyy  |  hh:mm:ss tt")
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
+        If WindowState = FormWindowState.Normal Then
+            WindowState = FormWindowState.Maximized
+        Else
+            WindowState = FormWindowState.Normal
+        End If
+    End Sub
+
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+        WindowState = FormWindowState.Minimized
     End Sub
 End Class

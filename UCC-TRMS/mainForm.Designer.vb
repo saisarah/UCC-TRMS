@@ -40,11 +40,17 @@ Partial Class mainForm
         Me.lblUser = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnMinimize = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.btnMaximize = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.btnClose = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.pnlSide.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlBody.SuspendLayout()
         Me.pnlTop.SuspendLayout()
+        CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMaximize, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -66,7 +72,7 @@ Partial Class mainForm
         Me.pnlSide.Location = New System.Drawing.Point(0, 0)
         Me.pnlSide.Name = "pnlSide"
         Me.pnlSide.ShadowDecoration.Parent = Me.pnlSide
-        Me.pnlSide.Size = New System.Drawing.Size(248, 578)
+        Me.pnlSide.Size = New System.Drawing.Size(248, 653)
         Me.pnlSide.TabIndex = 0
         '
         'btnUsers
@@ -262,12 +268,15 @@ Partial Class mainForm
         Me.pnlBody.Location = New System.Drawing.Point(248, 0)
         Me.pnlBody.Name = "pnlBody"
         Me.pnlBody.ShadowDecoration.Parent = Me.pnlBody
-        Me.pnlBody.Size = New System.Drawing.Size(891, 578)
+        Me.pnlBody.Size = New System.Drawing.Size(891, 653)
         Me.pnlBody.TabIndex = 0
         '
         'pnlTop
         '
         Me.pnlTop.BackColor = System.Drawing.Color.White
+        Me.pnlTop.Controls.Add(Me.btnClose)
+        Me.pnlTop.Controls.Add(Me.btnMaximize)
+        Me.pnlTop.Controls.Add(Me.btnMinimize)
         Me.pnlTop.Controls.Add(Me.Label3)
         Me.pnlTop.Controls.Add(Me.lblUser)
         Me.pnlTop.Controls.Add(Me.Label1)
@@ -317,11 +326,50 @@ Partial Class mainForm
         'Timer1
         '
         '
+        'btnMinimize
+        '
+        Me.btnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMinimize.Image = CType(resources.GetObject("btnMinimize.Image"), System.Drawing.Image)
+        Me.btnMinimize.Location = New System.Drawing.Point(816, 2)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.ShadowDecoration.Parent = Me.btnMinimize
+        Me.btnMinimize.Size = New System.Drawing.Size(23, 22)
+        Me.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMinimize.TabIndex = 6
+        Me.btnMinimize.TabStop = False
+        '
+        'btnMaximize
+        '
+        Me.btnMaximize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMaximize.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMaximize.Image = CType(resources.GetObject("btnMaximize.Image"), System.Drawing.Image)
+        Me.btnMaximize.Location = New System.Drawing.Point(841, 2)
+        Me.btnMaximize.Name = "btnMaximize"
+        Me.btnMaximize.ShadowDecoration.Parent = Me.btnMaximize
+        Me.btnMaximize.Size = New System.Drawing.Size(23, 22)
+        Me.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMaximize.TabIndex = 7
+        Me.btnMaximize.TabStop = False
+        '
+        'btnClose
+        '
+        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
+        Me.btnClose.Location = New System.Drawing.Point(866, 2)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.ShadowDecoration.Parent = Me.btnClose
+        Me.btnClose.Size = New System.Drawing.Size(23, 22)
+        Me.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnClose.TabIndex = 8
+        Me.btnClose.TabStop = False
+        '
         'mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1139, 578)
+        Me.ClientSize = New System.Drawing.Size(1139, 653)
         Me.ControlBox = False
         Me.Controls.Add(Me.pnlBody)
         Me.Controls.Add(Me.pnlSide)
@@ -336,6 +384,9 @@ Partial Class mainForm
         Me.pnlBody.ResumeLayout(False)
         Me.pnlTop.ResumeLayout(False)
         Me.pnlTop.PerformLayout()
+        CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMaximize, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -356,4 +407,7 @@ Partial Class mainForm
     Friend WithEvents Label3 As Label
     Friend WithEvents lblUser As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnMaximize As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents btnMinimize As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2PictureBox
 End Class
