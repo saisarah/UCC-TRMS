@@ -28,6 +28,7 @@ Public Class addThesis
                 With thesis
                     mainForm.OpenChildForm(New thesis)
                 End With
+                Me.Close()
             End If
 
         Catch ex As Exception

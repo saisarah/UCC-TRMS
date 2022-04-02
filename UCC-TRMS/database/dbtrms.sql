@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2022 at 07:10 PM
+-- Generation Time: Apr 02, 2022 at 06:26 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -20,6 +20,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `dbtrms`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblarchive`
+--
+
+CREATE TABLE `tblarchive` (
+  `ID` int(20) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `objectives` varchar(255) NOT NULL,
+  `scope` varchar(255) NOT NULL,
+  `limitations` varchar(255) NOT NULL,
+  `teamname` varchar(255) NOT NULL,
+  `members` varchar(255) NOT NULL,
+  `panels` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -67,8 +85,21 @@ CREATE TABLE `tblusers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `tblusers`
+--
+
+INSERT INTO `tblusers` (`ID`, `username`) VALUES
+(1, 'Admin');
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `tblarchive`
+--
+ALTER TABLE `tblarchive`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `tblthesis`
@@ -87,6 +118,12 @@ ALTER TABLE `tblusers`
 --
 
 --
+-- AUTO_INCREMENT for table `tblarchive`
+--
+ALTER TABLE `tblarchive`
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tblthesis`
 --
 ALTER TABLE `tblthesis`
@@ -96,7 +133,7 @@ ALTER TABLE `tblthesis`
 -- AUTO_INCREMENT for table `tblusers`
 --
 ALTER TABLE `tblusers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
