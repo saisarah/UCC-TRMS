@@ -153,6 +153,12 @@
     <Compile Include="thesis.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="thesisArchived.Designer.vb">
+      <DependentUpon>thesisArchived.vb</DependentUpon>
+    </Compile>
+    <Compile Include="thesisArchived.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="users.Designer.vb">
       <DependentUpon>users.vb</DependentUpon>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="thesis.resx">
       <DependentUpon>thesis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thesisArchived.resx">
+      <DependentUpon>thesisArchived.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="users.resx">
       <DependentUpon>users.vb</DependentUpon>

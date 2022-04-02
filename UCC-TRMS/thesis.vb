@@ -161,4 +161,8 @@ Public Class thesis
         Dim totalWidth = dgv.Columns.GetColumnsWidth(states) + dgv.RowHeadersWidth
         dgv.ClientSize = New Size(totalWidth, totalHeight)
     End Sub
+
+    Private Sub btnArchived_Click(sender As Object, e As EventArgs) Handles btnArchived.Click
+        thesisArchived.Show()
+    End Sub
 End Class
