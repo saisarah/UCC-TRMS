@@ -121,6 +121,18 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAOsAAADrASts18IAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABP0lEQVRYR+3WPUoDURiF4VGxiY2d7sMibRCxt7DSNSi6An/AwtaoCC5BsREFbSy01tLCNYgrUN9D
+        uHAZvpnMzzdXkBx4yBBIzmGSXJJN8p+yiPnRZdrM4R4/+MYQs0iWQ6g8doVkI+6QH5B0xD6sAZJkRA+v
+        sAZI5yOW8AmrPLhGJyOqlAfuI/r4glVW5BSVM4NVHOMWj7iBfnabqFsuOicqHVbr+ID1Jm0toDD6jC5h
+        vbAu3aG33HO6k6VZQfyCplSu74h+ontQ8QF0bJdmCiew3rSqUN44bUa0Lg/RiDNYJWU24JYmI/Q5u6bu
+        CJ377tGIZ1iFeQ9wzy50gr3AKo3pvHfNDlSuR92Jc1jFwRHcEpeHjBsxgEu2kS8PKRrxjmm45Albo0sz
+        1og1JE084kJP/EU0Yhmd//GcpKNk2S/+OwuMB7H+fwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

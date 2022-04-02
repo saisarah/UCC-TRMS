@@ -200,6 +200,22 @@
         SZL0H/P6FM7HFpLsAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnAddThesis.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5gQCDygUH5sBngAAAhhJREFU
+        WEfllrtLHEEAhy8+EMTjSCMoAQ8DKYOSIogWgibcn2AndoIQUohgYXFdKmtTCKliryJYCTYWV0iK2BpF
+        UEQUDXmDl+83M3fu7Y33cjhEP/hg5/3b3dlHQuTz+V78hGcoVl39O1u8M/NmIR809uCh6XZDUwMs2T4l
+        NDXAN9unhKYGuLR9Srj3AT7jB4/b6CN4gFEzOAb1C7a5jOAB1vCjxxz6eDh7YAV9Zx53C6MEC9BvBlWB
+        fpO2e5FgAfTS8u3+uOsY5eHsgUZ53AF+4nuzmA8aQwf4jcuYwZRZpBJ0ChlAz3+fmRg41r/GEA6gPwwN
+        oQLoJdWGLaj3wBeM8g83cdgsXICKEAH0FWzFJG6oogLXmDWLCwp3DfAH06gzr7Z4lNlQAZZd3ylbrBkF
+        fx4iQMb1jd9zceHaBm2xjEU1HmAWX2E3PsUuN7DDlSupS6/f+jjnuO/meenK3zHKnhp71ElwrAD9dZh2
+        415jnHYzaQTq3tqmIj8KDbp/R6aqPnQfn6DvEivUgJu/E3WFZzDKuRon7HHD6PKnUM95nGp7YEeNu/a4
+        yDH6vvG3+cItopdMHN3zcZw2pXLmNPDKHhfJacJ6YdwI6iVTKyeY1MAdU7zhFH3/eZUccSH0NNXCXxwr
+        JH+D9ST3oQ3c7eabRW3O29CZ28ULUKEQuhK/sFG+4jM3nx7RRVen/4EL1PxzmDSLGhKJ/5wjYyNFRupg
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="tbSearch.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB

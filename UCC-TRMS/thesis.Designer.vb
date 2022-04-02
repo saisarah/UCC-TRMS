@@ -83,7 +83,7 @@ Partial Class thesis
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(1059, 578)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1190, 578)
         Me.Guna2Panel1.TabIndex = 2
         '
         'thesisPanel
@@ -98,7 +98,7 @@ Partial Class thesis
         Me.thesisPanel.Location = New System.Drawing.Point(0, 0)
         Me.thesisPanel.Name = "thesisPanel"
         Me.thesisPanel.ShadowDecoration.Parent = Me.thesisPanel
-        Me.thesisPanel.Size = New System.Drawing.Size(1059, 578)
+        Me.thesisPanel.Size = New System.Drawing.Size(1190, 578)
         Me.thesisPanel.TabIndex = 9
         '
         'dgvThesis
@@ -160,7 +160,7 @@ Partial Class thesis
         Me.dgvThesis.RowTemplate.Height = 30
         Me.dgvThesis.RowTemplate.ReadOnly = True
         Me.dgvThesis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvThesis.Size = New System.Drawing.Size(663, 468)
+        Me.dgvThesis.Size = New System.Drawing.Size(794, 468)
         Me.dgvThesis.TabIndex = 9
         Me.dgvThesis.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.SunFlower
         Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(183, Byte), Integer))
@@ -466,10 +466,11 @@ Partial Class thesis
         Me.btnAddThesis.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddThesis.ForeColor = System.Drawing.Color.White
         Me.btnAddThesis.HoverState.Parent = Me.btnAddThesis
-        Me.btnAddThesis.Location = New System.Drawing.Point(959, 12)
+        Me.btnAddThesis.Image = CType(resources.GetObject("btnAddThesis.Image"), System.Drawing.Image)
+        Me.btnAddThesis.Location = New System.Drawing.Point(1066, 12)
         Me.btnAddThesis.Name = "btnAddThesis"
         Me.btnAddThesis.ShadowDecoration.Parent = Me.btnAddThesis
-        Me.btnAddThesis.Size = New System.Drawing.Size(88, 36)
+        Me.btnAddThesis.Size = New System.Drawing.Size(112, 36)
         Me.btnAddThesis.TabIndex = 2
         Me.btnAddThesis.Text = "Add Thesis"
         '
@@ -487,10 +488,10 @@ Partial Class thesis
         Me.cbCategories.ItemHeight = 30
         Me.cbCategories.Items.AddRange(New Object() {"WEB DEVELOPMENT", "APPLICATION DEVELOPMENT", "MOBILE DEVELOPMENT", "GAME DEVELOPMENT"})
         Me.cbCategories.ItemsAppearance.Parent = Me.cbCategories
-        Me.cbCategories.Location = New System.Drawing.Point(621, 12)
+        Me.cbCategories.Location = New System.Drawing.Point(686, 12)
         Me.cbCategories.Name = "cbCategories"
         Me.cbCategories.ShadowDecoration.Parent = Me.cbCategories
-        Me.cbCategories.Size = New System.Drawing.Size(223, 36)
+        Me.cbCategories.Size = New System.Drawing.Size(256, 36)
         Me.cbCategories.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbCategories.TabIndex = 8
         '
@@ -514,7 +515,7 @@ Partial Class thesis
         Me.tbSearch.PlaceholderText = ""
         Me.tbSearch.SelectedText = ""
         Me.tbSearch.ShadowDecoration.Parent = Me.tbSearch
-        Me.tbSearch.Size = New System.Drawing.Size(231, 36)
+        Me.tbSearch.Size = New System.Drawing.Size(296, 36)
         Me.tbSearch.TabIndex = 7
         '
         'btnArchived
@@ -530,10 +531,10 @@ Partial Class thesis
         Me.btnArchived.HoverState.Parent = Me.btnArchived
         Me.btnArchived.Image = CType(resources.GetObject("btnArchived.Image"), System.Drawing.Image)
         Me.btnArchived.ImageSize = New System.Drawing.Size(18, 18)
-        Me.btnArchived.Location = New System.Drawing.Point(850, 12)
+        Me.btnArchived.Location = New System.Drawing.Point(948, 12)
         Me.btnArchived.Name = "btnArchived"
         Me.btnArchived.ShadowDecoration.Parent = Me.btnArchived
-        Me.btnArchived.Size = New System.Drawing.Size(103, 36)
+        Me.btnArchived.Size = New System.Drawing.Size(112, 36)
         Me.btnArchived.TabIndex = 10
         Me.btnArchived.Text = "Archived"
         '
@@ -541,7 +542,7 @@ Partial Class thesis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1059, 578)
+        Me.ClientSize = New System.Drawing.Size(1190, 578)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "thesis"
