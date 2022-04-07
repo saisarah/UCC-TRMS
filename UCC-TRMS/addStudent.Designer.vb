@@ -34,7 +34,8 @@ Partial Class addStudent
         Me.Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnAddSaveStud = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnUpdateStudent = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSaveStudent = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,15 +61,17 @@ Partial Class addStudent
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(12, 24)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 35)
+        Me.Label1.Size = New System.Drawing.Size(71, 35)
         Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Add Student"
+        Me.Label1.Text = "Label"
         '
         'Guna2Panel2
         '
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.Guna2Panel2.Controls.Add(Me.btnUpdateStudent)
+        Me.Guna2Panel2.Controls.Add(Me.btnSaveStudent)
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox2)
         Me.Guna2Panel2.Controls.Add(Me.btnAddStudentClose)
         Me.Guna2Panel2.Controls.Add(Me.Guna2Panel3)
@@ -78,7 +81,6 @@ Partial Class addStudent
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox4)
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox3)
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox1)
-        Me.Guna2Panel2.Controls.Add(Me.btnAddSaveStud)
         Me.Guna2Panel2.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel2.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 1)
         Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -274,25 +276,45 @@ Partial Class addStudent
         Me.Guna2TextBox1.Size = New System.Drawing.Size(475, 36)
         Me.Guna2TextBox1.TabIndex = 4
         '
-        'btnAddSaveStud
+        'btnUpdateStudent
         '
-        Me.btnAddSaveStud.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.btnUpdateStudent.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddSaveStud.BackColor = System.Drawing.Color.Transparent
-        Me.btnAddSaveStud.BorderRadius = 10
-        Me.btnAddSaveStud.CheckedState.Parent = Me.btnAddSaveStud
-        Me.btnAddSaveStud.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddSaveStud.CustomImages.Parent = Me.btnAddSaveStud
-        Me.btnAddSaveStud.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.btnAddSaveStud.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddSaveStud.ForeColor = System.Drawing.Color.White
-        Me.btnAddSaveStud.HoverState.Parent = Me.btnAddSaveStud
-        Me.btnAddSaveStud.Location = New System.Drawing.Point(401, 256)
-        Me.btnAddSaveStud.Name = "btnAddSaveStud"
-        Me.btnAddSaveStud.ShadowDecoration.Parent = Me.btnAddSaveStud
-        Me.btnAddSaveStud.Size = New System.Drawing.Size(87, 34)
-        Me.btnAddSaveStud.TabIndex = 3
-        Me.btnAddSaveStud.Text = "Save"
+        Me.btnUpdateStudent.BackColor = System.Drawing.Color.Transparent
+        Me.btnUpdateStudent.BorderRadius = 10
+        Me.btnUpdateStudent.CheckedState.Parent = Me.btnUpdateStudent
+        Me.btnUpdateStudent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnUpdateStudent.CustomImages.Parent = Me.btnUpdateStudent
+        Me.btnUpdateStudent.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.btnUpdateStudent.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdateStudent.ForeColor = System.Drawing.Color.White
+        Me.btnUpdateStudent.HoverState.Parent = Me.btnUpdateStudent
+        Me.btnUpdateStudent.Location = New System.Drawing.Point(308, 253)
+        Me.btnUpdateStudent.Name = "btnUpdateStudent"
+        Me.btnUpdateStudent.ShadowDecoration.Parent = Me.btnUpdateStudent
+        Me.btnUpdateStudent.Size = New System.Drawing.Size(87, 34)
+        Me.btnUpdateStudent.TabIndex = 16
+        Me.btnUpdateStudent.Text = "Update"
+        '
+        'btnSaveStudent
+        '
+        Me.btnSaveStudent.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSaveStudent.BackColor = System.Drawing.Color.Transparent
+        Me.btnSaveStudent.BorderRadius = 10
+        Me.btnSaveStudent.CheckedState.Parent = Me.btnSaveStudent
+        Me.btnSaveStudent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSaveStudent.CustomImages.Parent = Me.btnSaveStudent
+        Me.btnSaveStudent.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.btnSaveStudent.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSaveStudent.ForeColor = System.Drawing.Color.White
+        Me.btnSaveStudent.HoverState.Parent = Me.btnSaveStudent
+        Me.btnSaveStudent.Location = New System.Drawing.Point(401, 253)
+        Me.btnSaveStudent.Name = "btnSaveStudent"
+        Me.btnSaveStudent.ShadowDecoration.Parent = Me.btnSaveStudent
+        Me.btnSaveStudent.Size = New System.Drawing.Size(87, 34)
+        Me.btnSaveStudent.TabIndex = 15
+        Me.btnSaveStudent.Text = "Save"
         '
         'addStudent
         '
@@ -321,6 +343,7 @@ Partial Class addStudent
     Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2TextBox3 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents btnAddSaveStud As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents btnUpdateStudent As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSaveStudent As Guna.UI2.WinForms.Guna2Button
 End Class

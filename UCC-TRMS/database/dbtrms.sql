@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2022 at 06:26 PM
+-- Generation Time: Apr 07, 2022 at 02:44 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -38,6 +38,30 @@ CREATE TABLE `tblarchive` (
   `panels` varchar(255) NOT NULL,
   `category` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblenrolled`
+--
+
+CREATE TABLE `tblenrolled` (
+  `ID` int(20) NOT NULL,
+  `studno` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `fname` varchar(255) NOT NULL,
+  `midname` varchar(255) NOT NULL,
+  `contact` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblenrolled`
+--
+
+INSERT INTO `tblenrolled` (`ID`, `studno`, `lname`, `fname`, `midname`, `contact`, `email`) VALUES
+(1, '20191940', 'OBEN', 'SARAH GRACE ARLYN', '-', '09469103169', 'oben.sarah.bscs2019@gmail.com'),
+(2, '20192509', 'SANCHEZ', 'JIMUEL', 'LAPIDES', '09123456789', 'sanchez.jimuel.bscs2019@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -102,6 +126,12 @@ ALTER TABLE `tblarchive`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `tblenrolled`
+--
+ALTER TABLE `tblenrolled`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `tblthesis`
 --
 ALTER TABLE `tblthesis`
@@ -122,6 +152,12 @@ ALTER TABLE `tblusers`
 --
 ALTER TABLE `tblarchive`
   MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tblenrolled`
+--
+ALTER TABLE `tblenrolled`
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tblthesis`
