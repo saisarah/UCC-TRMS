@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2022 at 02:44 PM
+-- Generation Time: Apr 07, 2022 at 02:51 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -42,6 +42,22 @@ CREATE TABLE `tblarchive` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tblarchivedstud`
+--
+
+CREATE TABLE `tblarchivedstud` (
+  `ID` int(20) NOT NULL,
+  `fullname` varchar(255) NOT NULL,
+  `studentno` int(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `course` varchar(255) NOT NULL,
+  `year` int(255) NOT NULL,
+  `contact` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tblenrolled`
 --
 
@@ -72,11 +88,11 @@ INSERT INTO `tblenrolled` (`ID`, `studno`, `lname`, `fname`, `midname`, `contact
 CREATE TABLE `tblstudents` (
   `ID` int(11) NOT NULL,
   `fullname` varchar(100) NOT NULL,
-  `studentno` varchar(20) NOT NULL,
+  `studentno` int(20) NOT NULL,
   `email` varchar(20) NOT NULL,
   `course` varchar(20) NOT NULL,
-  `year` varchar(20) NOT NULL,
-  `contact` int(11) NOT NULL
+  `year` int(20) NOT NULL,
+  `contact` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -126,6 +142,12 @@ ALTER TABLE `tblarchive`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `tblarchivedstud`
+--
+ALTER TABLE `tblarchivedstud`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `tblenrolled`
 --
 ALTER TABLE `tblenrolled`
@@ -151,6 +173,12 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT for table `tblarchive`
 --
 ALTER TABLE `tblarchive`
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tblarchivedstud`
+--
+ALTER TABLE `tblarchivedstud`
   MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
 
 --
