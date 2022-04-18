@@ -25,15 +25,15 @@ Partial Class login
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
-        Me.btnCloseLogin = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.cbCredentials = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.btnLogin = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2GradientPanel2 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCloseLogin = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.cbCredentials = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.btnLogin = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2GradientPanel1.SuspendLayout()
-        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2GradientPanel2.SuspendLayout()
+        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Panel4
@@ -60,18 +60,30 @@ Partial Class login
         Me.Guna2GradientPanel1.Size = New System.Drawing.Size(632, 239)
         Me.Guna2GradientPanel1.TabIndex = 16
         '
-        'Guna2CirclePictureBox1
+        'Guna2GradientPanel2
         '
-        Me.Guna2CirclePictureBox1.BackColor = System.Drawing.Color.White
-        Me.Guna2CirclePictureBox1.Image = CType(resources.GetObject("Guna2CirclePictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(37, 27)
-        Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CirclePictureBox1.ShadowDecoration.Parent = Me.Guna2CirclePictureBox1
-        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(195, 172)
-        Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2CirclePictureBox1.TabIndex = 15
-        Me.Guna2CirclePictureBox1.TabStop = False
+        Me.Guna2GradientPanel2.BackColor = System.Drawing.Color.White
+        Me.Guna2GradientPanel2.Controls.Add(Me.Panel1)
+        Me.Guna2GradientPanel2.Controls.Add(Me.btnCloseLogin)
+        Me.Guna2GradientPanel2.Controls.Add(Me.cbCredentials)
+        Me.Guna2GradientPanel2.Controls.Add(Me.Guna2CirclePictureBox1)
+        Me.Guna2GradientPanel2.Controls.Add(Me.btnLogin)
+        Me.Guna2GradientPanel2.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.Guna2GradientPanel2.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 1)
+        Me.Guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Guna2GradientPanel2.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2GradientPanel2.Name = "Guna2GradientPanel2"
+        Me.Guna2GradientPanel2.ShadowDecoration.Parent = Me.Guna2GradientPanel2
+        Me.Guna2GradientPanel2.Size = New System.Drawing.Size(632, 239)
+        Me.Guna2GradientPanel2.TabIndex = 19
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Silver
+        Me.Panel1.Location = New System.Drawing.Point(262, 15)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1, 195)
+        Me.Panel1.TabIndex = 19
         '
         'btnCloseLogin
         '
@@ -107,6 +119,19 @@ Partial Class login
         Me.cbCredentials.Size = New System.Drawing.Size(288, 36)
         Me.cbCredentials.TabIndex = 17
         '
+        'Guna2CirclePictureBox1
+        '
+        Me.Guna2CirclePictureBox1.BackColor = System.Drawing.Color.White
+        Me.Guna2CirclePictureBox1.Image = CType(resources.GetObject("Guna2CirclePictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(37, 27)
+        Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
+        Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.Guna2CirclePictureBox1.ShadowDecoration.Parent = Me.Guna2CirclePictureBox1
+        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(195, 172)
+        Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2CirclePictureBox1.TabIndex = 15
+        Me.Guna2CirclePictureBox1.TabStop = False
+        '
         'btnLogin
         '
         Me.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
@@ -125,31 +150,6 @@ Partial Class login
         Me.btnLogin.TabIndex = 16
         Me.btnLogin.Tag = ""
         '
-        'Guna2GradientPanel2
-        '
-        Me.Guna2GradientPanel2.BackColor = System.Drawing.Color.White
-        Me.Guna2GradientPanel2.Controls.Add(Me.Panel1)
-        Me.Guna2GradientPanel2.Controls.Add(Me.btnCloseLogin)
-        Me.Guna2GradientPanel2.Controls.Add(Me.cbCredentials)
-        Me.Guna2GradientPanel2.Controls.Add(Me.Guna2CirclePictureBox1)
-        Me.Guna2GradientPanel2.Controls.Add(Me.btnLogin)
-        Me.Guna2GradientPanel2.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.Guna2GradientPanel2.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Guna2GradientPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2GradientPanel2.Name = "Guna2GradientPanel2"
-        Me.Guna2GradientPanel2.ShadowDecoration.Parent = Me.Guna2GradientPanel2
-        Me.Guna2GradientPanel2.Size = New System.Drawing.Size(632, 239)
-        Me.Guna2GradientPanel2.TabIndex = 19
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Silver
-        Me.Panel1.Location = New System.Drawing.Point(262, 15)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1, 195)
-        Me.Panel1.TabIndex = 19
-        '
         'login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -162,8 +162,8 @@ Partial Class login
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "login"
         Me.Guna2GradientPanel1.ResumeLayout(False)
-        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2GradientPanel2.ResumeLayout(False)
+        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

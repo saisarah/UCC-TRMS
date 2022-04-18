@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2022 at 02:51 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.15
+-- Generation Time: Apr 18, 2022 at 12:01 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,6 +39,13 @@ CREATE TABLE `tblarchive` (
   `category` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tblarchive`
+--
+
+INSERT INTO `tblarchive` (`ID`, `title`, `objectives`, `scope`, `limitations`, `teamname`, `members`, `panels`, `category`) VALUES
+(1, 'TRMS', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'APPLICATION DEVELOPMENT');
+
 -- --------------------------------------------------------
 
 --
@@ -52,8 +59,16 @@ CREATE TABLE `tblarchivedstud` (
   `email` varchar(255) NOT NULL,
   `course` varchar(255) NOT NULL,
   `year` int(255) NOT NULL,
+  `section` varchar(10) NOT NULL,
   `contact` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblarchivedstud`
+--
+
+INSERT INTO `tblarchivedstud` (`ID`, `fullname`, `studentno`, `email`, `course`, `year`, `section`, `contact`) VALUES
+(3, 'JIMUEL SANCHEZ', 20192509, 'sanchez.jimuel.bscs2019@gmail.com', 'BSCS', 3, 'C', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -77,7 +92,8 @@ CREATE TABLE `tblenrolled` (
 
 INSERT INTO `tblenrolled` (`ID`, `studno`, `lname`, `fname`, `midname`, `contact`, `email`) VALUES
 (1, '20191940', 'OBEN', 'SARAH GRACE ARLYN', '-', '09469103169', 'oben.sarah.bscs2019@gmail.com'),
-(2, '20192509', 'SANCHEZ', 'JIMUEL', 'LAPIDES', '09123456789', 'sanchez.jimuel.bscs2019@gmail.com');
+(2, '20192509', 'SANCHEZ', 'JIMUEL', 'LAPIDES', '09123456789', 'sanchez.jimuel.bscs2019@gmail.com'),
+(3, '20192091', 'GAPUSAN', 'JESSICA JOY', 'SUMODEBILA', '09381731409', 'jessicagapusan23@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -89,11 +105,20 @@ CREATE TABLE `tblstudents` (
   `ID` int(11) NOT NULL,
   `fullname` varchar(100) NOT NULL,
   `studentno` int(20) NOT NULL,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `course` varchar(20) NOT NULL,
   `year` int(20) NOT NULL,
-  `contact` int(20) NOT NULL
+  `section` varchar(20) NOT NULL,
+  `contact` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tblstudents`
+--
+
+INSERT INTO `tblstudents` (`ID`, `fullname`, `studentno`, `email`, `course`, `year`, `section`, `contact`) VALUES
+(1, 'SARAH GRACE ARLYN OBEN', 20191940, 'oben.sarah.bscs2019@gmail.com', 'BSCS', 3, 'C', '09469103169'),
+(2, 'JESSICA JOY S. GAPUSAN', 20192091, 'gapusan.jessica.bscs2019@gmail.com', 'BSCS', 3, 'C', '09381731409');
 
 -- --------------------------------------------------------
 
@@ -112,6 +137,13 @@ CREATE TABLE `tblthesis` (
   `panels` varchar(255) NOT NULL,
   `category` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblthesis`
+--
+
+INSERT INTO `tblthesis` (`ID`, `title`, `objectives`, `scope`, `limitations`, `teamname`, `members`, `panels`, `category`) VALUES
+(2, 'SIS', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'LOREM IPSUM', 'MOBILE DEVELOPMENT');
 
 -- --------------------------------------------------------
 
@@ -154,6 +186,12 @@ ALTER TABLE `tblenrolled`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `tblstudents`
+--
+ALTER TABLE `tblstudents`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `tblthesis`
 --
 ALTER TABLE `tblthesis`
@@ -173,25 +211,31 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT for table `tblarchive`
 --
 ALTER TABLE `tblarchive`
-  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tblarchivedstud`
 --
 ALTER TABLE `tblarchivedstud`
-  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tblenrolled`
 --
 ALTER TABLE `tblenrolled`
-  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tblstudents`
+--
+ALTER TABLE `tblstudents`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tblthesis`
 --
 ALTER TABLE `tblthesis`
-  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
