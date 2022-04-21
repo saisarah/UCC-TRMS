@@ -75,29 +75,29 @@ Public Class addStudent
         If result = DialogResult.Yes Then
 
 
-            If result = DialogResult.No Then
+
+            Dim i As String
+            i = SelectedRows(0).Cells(2).Value
+
+            conn.Open()
+            Dim comm As New MySqlCommand("UPDATE tblstudents SET fullname=@fullname, studentno=@studentno, email=@email, course=@course, section=@section, year=@year, contact=@contact WHERE id = '" & i & "'", conn)
+            With comm
+                .Parameters.AddWithValue("@fullname", tbfullname.Text.ToUpper())
+                .Parameters.AddWithValue("@studentno", tbstudentno.Text.ToUpper())
+                .Parameters.AddWithValue("@course", tbcourse.Text.ToUpper())
+                .Parameters.AddWithValue("@section", tbsection.Text.ToUpper())
+                .Parameters.AddWithValue("@year", cbyear.Text.ToUpper())
+                .Parameters.AddWithValue("@contact", tbcontact.Text)
+                .Parameters.AddWithValue("@email", tbemail.Text)
+            End With
+            If comm.ExecuteNonQuery Then
+                MessageBox.Show("Updated Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                mainForm.OpenChildForm(New borrowers)
                 Me.Hide()
             End If
-        End If
-        Dim i As String
-        i = SelectedRows(0).Cells(2).Value
+            conn.Close()
+        ElseIf result = DialogResult.No Then
 
-        conn.Open()
-        Dim comm As New MySqlCommand("UPDATE tblstudents SET fullname=@fullname, studentno=@studentno, email=@email, course=@course, section=@section, year=@year, contact=@contact WHERE id = '" & i & "'", conn)
-        With comm
-            .Parameters.AddWithValue("@fullname", tbfullname.Text.ToUpper())
-            .Parameters.AddWithValue("@studentno", tbstudentno.Text.ToUpper())
-            .Parameters.AddWithValue("@course", tbcourse.Text.ToUpper())
-            .Parameters.AddWithValue("@section", tbsection.Text.ToUpper())
-            .Parameters.AddWithValue("@year", cbyear.Text.ToUpper())
-            .Parameters.AddWithValue("@contact", tbcontact.Text)
-            .Parameters.AddWithValue("@email", tbemail.Text)
-        End With
-        If comm.ExecuteNonQuery Then
-            MessageBox.Show("Updated Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            mainForm.OpenChildForm(New borrowers)
-            Me.Hide()
         End If
-        conn.Close()
     End Sub
 End Class
