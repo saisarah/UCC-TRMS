@@ -62,7 +62,7 @@ Partial Class studentArchive
         Me.Guna2Panel2.Location = New System.Drawing.Point(0, 10)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
-        Me.Guna2Panel2.Size = New System.Drawing.Size(800, 440)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(823, 479)
         Me.Guna2Panel2.TabIndex = 15
         '
         'dgvStudentArchived
@@ -103,7 +103,7 @@ Partial Class studentArchive
         Me.dgvStudentArchived.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvStudentArchived.EnableHeadersVisualStyles = False
         Me.dgvStudentArchived.GridColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.dgvStudentArchived.Location = New System.Drawing.Point(28, 69)
+        Me.dgvStudentArchived.Location = New System.Drawing.Point(16, 69)
         Me.dgvStudentArchived.Name = "dgvStudentArchived"
         Me.dgvStudentArchived.ReadOnly = True
         Me.dgvStudentArchived.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -122,7 +122,7 @@ Partial Class studentArchive
         Me.dgvStudentArchived.RowTemplate.Height = 30
         Me.dgvStudentArchived.RowTemplate.ReadOnly = True
         Me.dgvStudentArchived.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvStudentArchived.Size = New System.Drawing.Size(771, 383)
+        Me.dgvStudentArchived.Size = New System.Drawing.Size(790, 359)
         Me.dgvStudentArchived.TabIndex = 17
         Me.dgvStudentArchived.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.SunFlower
         Me.dgvStudentArchived.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(183, Byte), Integer))
@@ -224,7 +224,7 @@ Partial Class studentArchive
         Me.btnStudentArchivedClose.Location = New System.Drawing.Point(777, 3)
         Me.btnStudentArchivedClose.Name = "btnStudentArchivedClose"
         Me.btnStudentArchivedClose.PressedState.Parent = Me.btnStudentArchivedClose
-        Me.btnStudentArchivedClose.Size = New System.Drawing.Size(20, 27)
+        Me.btnStudentArchivedClose.Size = New System.Drawing.Size(43, 27)
         Me.btnStudentArchivedClose.TabIndex = 13
         '
         'Guna2Panel3
@@ -235,7 +235,7 @@ Partial Class studentArchive
         Me.Guna2Panel3.Location = New System.Drawing.Point(16, 62)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
-        Me.Guna2Panel3.Size = New System.Drawing.Size(767, 1)
+        Me.Guna2Panel3.Size = New System.Drawing.Size(790, 1)
         Me.Guna2Panel3.TabIndex = 12
         '
         'Label1
@@ -260,18 +260,19 @@ Partial Class studentArchive
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(800, 10)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(823, 10)
         Me.Guna2Panel1.TabIndex = 16
         '
         'studentArchive
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(823, 489)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "studentArchive"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "studentArchive"
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()

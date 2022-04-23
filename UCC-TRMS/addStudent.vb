@@ -97,7 +97,7 @@ Public Class addStudent
             End If
             conn.Close()
         ElseIf result = DialogResult.No Then
-
+            Me.Hide()
         End If
     End Sub
 End Class

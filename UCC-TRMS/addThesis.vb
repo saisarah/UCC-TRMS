@@ -9,10 +9,29 @@ Public Class addThesis
 
     Private Sub btnSaveThesis_Click(sender As Object, e As EventArgs) Handles btnSaveThesis.Click
         Try
+            Dim dn, dn1 As String
+            dn = Date.Now().ToString("MMddyy000")
+            conn.Open()
+            Dim y As New MySqlCommand("SELECT thesis_id FROM tblthesis ORDER BY thesis_id DESC LIMIT 1;", conn)
+            Dim dr As MySqlDataReader
+            Dim f As Integer
+            Dim tid, id As Integer
+            id = 1
+            dr = y.ExecuteReader
+            If dr.Read() Then
+                tid = dr(0)
+                f = tid + id
+                dr.Close()
+            Else
+                f = dn.ToString() + tid + id
+            End If
+            conn.Close()
+
+            conn.Open()
             If MsgBox("Do you want to save this record?", vbYesNo + vbQuestion) = vbYes Then
-                conn.Open()
-                Dim comm As New MySqlCommand("INSERT INTO tblthesis(title, objectives, scope, limitations, teamname, members, panels, category) VALUES (@title, @objectives, @scope, @limitations, @teamname, @members, @panels, @category)", conn)
+                Dim comm As New MySqlCommand("INSERT INTO tblthesis(thesis_id, title, objectives, scope, limitations, teamname, members, panels, category) VALUES (@thesis_id, @title, @objectives, @scope, @limitations, @teamname, @members, @panels, @category)", conn)
                 With comm
+                    .Parameters.AddWithValue("@thesis_id", f)
                     .Parameters.AddWithValue("@title", tbTitle.Text.ToUpper())
                     .Parameters.AddWithValue("@objectives", tbObjectives.Text.ToUpper())
                     .Parameters.AddWithValue("@scope", tbScope.Text.ToUpper())
@@ -30,7 +49,7 @@ Public Class addThesis
                 End With
                 Me.Close()
             End If
-
+            conn.Close()
         Catch ex As Exception
 
         End Try
@@ -54,7 +73,7 @@ Public Class addThesis
         If result = DialogResult.Yes Then
 
             conn.Open()
-            Dim comm As New MySqlCommand("UPDATE tblthesis SET title=@title, objectives=@objectives, scope=@scope, limitations=@limitations, teamname=@teamname, members=@members, panels=@panels, category=@category WHERE id = '" & i & "'", conn)
+            Dim comm As New MySqlCommand("UPDATE tblthesis SET title=@title, objectives=@objectives, scope=@scope, limitations=@limitations, teamname=@teamname, members=@members, panels=@panels, category=@category WHERE thesis_id = '" & i & "'", conn)
             With comm
                 .Parameters.AddWithValue("@title", tbTitle.Text.ToUpper())
                 .Parameters.AddWithValue("@objectives", tbObjectives.Text.ToUpper())
@@ -73,9 +92,11 @@ Public Class addThesis
             End If
             conn.Close()
         ElseIf result = DialogResult.No Then
-
+        Else
+            MsgBox("ERROR")
         End If
 
 
     End Sub
+
 End Class

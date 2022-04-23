@@ -22,6 +22,7 @@ Partial Class addThesis
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(addThesis))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -38,6 +39,7 @@ Partial Class addThesis
         Me.tbObjectives = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbTitle = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnSaveThesis = New Guna.UI2.WinForms.Guna2Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -374,6 +376,9 @@ Partial Class addThesis
         Me.btnSaveThesis.TabIndex = 3
         Me.btnSaveThesis.Text = "Save"
         '
+        'Timer1
+        '
+        '
         'addThesis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -405,4 +410,5 @@ Partial Class addThesis
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnAddThesisClose As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Timer1 As Timer
 End Class
