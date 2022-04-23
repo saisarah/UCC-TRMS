@@ -24,20 +24,24 @@ Partial Class issuing
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(issuing))
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblCN = New System.Windows.Forms.Label()
+        Me.lblEm = New System.Windows.Forms.Label()
+        Me.lblCYS = New System.Windows.Forms.Label()
+        Me.lblFN = New System.Windows.Forms.Label()
+        Me.lblSN = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnSearchStud = New Guna.UI2.WinForms.Guna2Button()
-        Me.tbSearchStudNo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
         Me.cbCategory = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.tbSearchThesis = New Guna.UI2.WinForms.Guna2TextBox()
@@ -45,6 +49,15 @@ Partial Class issuing
         Me.Label15 = New System.Windows.Forms.Label()
         Me.btnProcess = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.dgvThesis = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.title = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OBJECTIVES = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SCOPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LIMITATION = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TEAMNAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MEMBERS = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PANEL = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CATEGORY = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -58,25 +71,16 @@ Partial Class issuing
         Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.dgvThesis = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.title = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OBJECTIVES = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SCOPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LIMITATION = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TEAMNAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MEMBERS = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PANEL = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CATEGORY = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tbSearchStudNo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel7.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.dgvThesis, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         Me.Guna2Panel6.SuspendLayout()
-        CType(Me.dgvThesis, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -89,25 +93,80 @@ Partial Class issuing
         Me.Guna2Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel2.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel2.Controls.Add(Me.tbSearchStudNo)
+        Me.Guna2Panel2.Controls.Add(Me.lblCN)
+        Me.Guna2Panel2.Controls.Add(Me.lblEm)
+        Me.Guna2Panel2.Controls.Add(Me.lblCYS)
+        Me.Guna2Panel2.Controls.Add(Me.lblFN)
+        Me.Guna2Panel2.Controls.Add(Me.lblSN)
         Me.Guna2Panel2.Controls.Add(Me.Label6)
         Me.Guna2Panel2.Controls.Add(Me.Label5)
         Me.Guna2Panel2.Controls.Add(Me.Label4)
         Me.Guna2Panel2.Controls.Add(Me.Label3)
         Me.Guna2Panel2.Controls.Add(Me.Label2)
         Me.Guna2Panel2.Controls.Add(Me.btnSearchStud)
-        Me.Guna2Panel2.Controls.Add(Me.tbSearchStudNo)
         Me.Guna2Panel2.Location = New System.Drawing.Point(12, 12)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
         Me.Guna2Panel2.Size = New System.Drawing.Size(863, 199)
         Me.Guna2Panel2.TabIndex = 5
         '
+        'lblCN
+        '
+        Me.lblCN.AutoSize = True
+        Me.lblCN.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCN.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblCN.Location = New System.Drawing.Point(138, 159)
+        Me.lblCN.Name = "lblCN"
+        Me.lblCN.Size = New System.Drawing.Size(0, 19)
+        Me.lblCN.TabIndex = 18
+        '
+        'lblEm
+        '
+        Me.lblEm.AutoSize = True
+        Me.lblEm.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEm.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblEm.Location = New System.Drawing.Point(138, 134)
+        Me.lblEm.Name = "lblEm"
+        Me.lblEm.Size = New System.Drawing.Size(0, 19)
+        Me.lblEm.TabIndex = 17
+        '
+        'lblCYS
+        '
+        Me.lblCYS.AutoSize = True
+        Me.lblCYS.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCYS.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblCYS.Location = New System.Drawing.Point(138, 109)
+        Me.lblCYS.Name = "lblCYS"
+        Me.lblCYS.Size = New System.Drawing.Size(0, 19)
+        Me.lblCYS.TabIndex = 16
+        '
+        'lblFN
+        '
+        Me.lblFN.AutoSize = True
+        Me.lblFN.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFN.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblFN.Location = New System.Drawing.Point(138, 84)
+        Me.lblFN.Name = "lblFN"
+        Me.lblFN.Size = New System.Drawing.Size(0, 19)
+        Me.lblFN.TabIndex = 15
+        '
+        'lblSN
+        '
+        Me.lblSN.AutoSize = True
+        Me.lblSN.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSN.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblSN.Location = New System.Drawing.Point(138, 57)
+        Me.lblSN.Name = "lblSN"
+        Me.lblSN.Size = New System.Drawing.Size(0, 19)
+        Me.lblSN.TabIndex = 14
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label6.Location = New System.Drawing.Point(15, 149)
+        Me.Label6.Location = New System.Drawing.Point(21, 159)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(73, 19)
         Me.Label6.TabIndex = 13
@@ -118,7 +177,7 @@ Partial Class issuing
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label5.Location = New System.Drawing.Point(15, 124)
+        Me.Label5.Location = New System.Drawing.Point(21, 134)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(41, 19)
         Me.Label5.TabIndex = 12
@@ -129,7 +188,7 @@ Partial Class issuing
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label4.Location = New System.Drawing.Point(15, 99)
+        Me.Label4.Location = New System.Drawing.Point(21, 109)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 19)
         Me.Label4.TabIndex = 11
@@ -140,7 +199,7 @@ Partial Class issuing
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label3.Location = New System.Drawing.Point(15, 74)
+        Me.Label3.Location = New System.Drawing.Point(21, 84)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(65, 19)
         Me.Label3.TabIndex = 10
@@ -151,7 +210,7 @@ Partial Class issuing
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Poppins Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label2.Location = New System.Drawing.Point(15, 47)
+        Me.Label2.Location = New System.Drawing.Point(21, 57)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 19)
         Me.Label2.TabIndex = 9
@@ -174,33 +233,6 @@ Partial Class issuing
         Me.btnSearchStud.Size = New System.Drawing.Size(97, 32)
         Me.btnSearchStud.TabIndex = 8
         Me.btnSearchStud.Text = "Search"
-        '
-        'tbSearchStudNo
-        '
-        Me.tbSearchStudNo.BackColor = System.Drawing.Color.Transparent
-        Me.tbSearchStudNo.BorderColor = System.Drawing.Color.Silver
-        Me.tbSearchStudNo.BorderRadius = 2
-        Me.tbSearchStudNo.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbSearchStudNo.DefaultText = ""
-        Me.tbSearchStudNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbSearchStudNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbSearchStudNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbSearchStudNo.DisabledState.Parent = Me.tbSearchStudNo
-        Me.tbSearchStudNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbSearchStudNo.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.tbSearchStudNo.FocusedState.Parent = Me.tbSearchStudNo
-        Me.tbSearchStudNo.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.tbSearchStudNo.HoverState.Parent = Me.tbSearchStudNo
-        Me.tbSearchStudNo.IconLeft = CType(resources.GetObject("tbSearchStudNo.IconLeft"), System.Drawing.Image)
-        Me.tbSearchStudNo.Location = New System.Drawing.Point(16, 8)
-        Me.tbSearchStudNo.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.tbSearchStudNo.Name = "tbSearchStudNo"
-        Me.tbSearchStudNo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbSearchStudNo.PlaceholderText = "Student Number"
-        Me.tbSearchStudNo.SelectedText = ""
-        Me.tbSearchStudNo.ShadowDecoration.Parent = Me.tbSearchStudNo
-        Me.tbSearchStudNo.Size = New System.Drawing.Size(440, 32)
-        Me.tbSearchStudNo.TabIndex = 7
         '
         'Guna2Panel7
         '
@@ -332,6 +364,154 @@ Partial Class issuing
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
         Me.Guna2Panel1.Size = New System.Drawing.Size(1190, 578)
         Me.Guna2Panel1.TabIndex = 4
+        '
+        'dgvThesis
+        '
+        Me.dgvThesis.AllowUserToAddRows = False
+        Me.dgvThesis.AllowUserToDeleteRows = False
+        Me.dgvThesis.AllowUserToResizeColumns = False
+        Me.dgvThesis.AllowUserToResizeRows = False
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(183, Byte), Integer))
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvThesis.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        Me.dgvThesis.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvThesis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvThesis.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvThesis.BackgroundColor = System.Drawing.Color.White
+        Me.dgvThesis.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvThesis.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvThesis.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable
+        Me.dgvThesis.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvThesis.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        Me.dgvThesis.ColumnHeadersHeight = 50
+        Me.dgvThesis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvThesis.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.title, Me.OBJECTIVES, Me.SCOPE, Me.LIMITATION, Me.TEAMNAME, Me.MEMBERS, Me.PANEL, Me.CATEGORY})
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvThesis.DefaultCellStyle = DataGridViewCellStyle18
+        Me.dgvThesis.EnableHeadersVisualStyles = False
+        Me.dgvThesis.GridColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvThesis.Location = New System.Drawing.Point(28, 276)
+        Me.dgvThesis.Name = "dgvThesis"
+        Me.dgvThesis.ReadOnly = True
+        Me.dgvThesis.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvThesis.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
+        Me.dgvThesis.RowHeadersVisible = False
+        Me.dgvThesis.RowHeadersWidth = 55
+        Me.dgvThesis.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvThesis.RowsDefaultCellStyle = DataGridViewCellStyle20
+        Me.dgvThesis.RowTemplate.Height = 30
+        Me.dgvThesis.RowTemplate.ReadOnly = True
+        Me.dgvThesis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvThesis.Size = New System.Drawing.Size(832, 182)
+        Me.dgvThesis.TabIndex = 16
+        Me.dgvThesis.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.SunFlower
+        Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(183, Byte), Integer))
+        Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvThesis.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvThesis.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvThesis.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
+        Me.dgvThesis.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvThesis.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.dgvThesis.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvThesis.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvThesis.ThemeStyle.HeaderStyle.Height = 50
+        Me.dgvThesis.ThemeStyle.ReadOnly = True
+        Me.dgvThesis.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
+        Me.dgvThesis.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvThesis.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.dgvThesis.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
+        Me.dgvThesis.ThemeStyle.RowsStyle.Height = 30
+        Me.dgvThesis.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
+        Me.dgvThesis.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
+        '
+        'title
+        '
+        Me.title.DataPropertyName = "title"
+        Me.title.FillWeight = 103.4432!
+        Me.title.HeaderText = "TITLE"
+        Me.title.Name = "title"
+        Me.title.ReadOnly = True
+        '
+        'OBJECTIVES
+        '
+        Me.OBJECTIVES.DataPropertyName = "objectives"
+        Me.OBJECTIVES.FillWeight = 103.4432!
+        Me.OBJECTIVES.HeaderText = "OBJECTIVES"
+        Me.OBJECTIVES.Name = "OBJECTIVES"
+        Me.OBJECTIVES.ReadOnly = True
+        '
+        'SCOPE
+        '
+        Me.SCOPE.DataPropertyName = "scope"
+        Me.SCOPE.FillWeight = 103.4432!
+        Me.SCOPE.HeaderText = "SCOPE"
+        Me.SCOPE.Name = "SCOPE"
+        Me.SCOPE.ReadOnly = True
+        '
+        'LIMITATION
+        '
+        Me.LIMITATION.DataPropertyName = "limitations"
+        Me.LIMITATION.FillWeight = 103.4432!
+        Me.LIMITATION.HeaderText = "LIMITATION"
+        Me.LIMITATION.Name = "LIMITATION"
+        Me.LIMITATION.ReadOnly = True
+        '
+        'TEAMNAME
+        '
+        Me.TEAMNAME.DataPropertyName = "teamname"
+        Me.TEAMNAME.FillWeight = 103.4432!
+        Me.TEAMNAME.HeaderText = "TEAM NAME"
+        Me.TEAMNAME.Name = "TEAMNAME"
+        Me.TEAMNAME.ReadOnly = True
+        '
+        'MEMBERS
+        '
+        Me.MEMBERS.DataPropertyName = "members"
+        Me.MEMBERS.FillWeight = 103.4432!
+        Me.MEMBERS.HeaderText = "MEMBERS"
+        Me.MEMBERS.Name = "MEMBERS"
+        Me.MEMBERS.ReadOnly = True
+        '
+        'PANEL
+        '
+        Me.PANEL.DataPropertyName = "panels"
+        Me.PANEL.FillWeight = 103.4432!
+        Me.PANEL.HeaderText = "PANEL"
+        Me.PANEL.Name = "PANEL"
+        Me.PANEL.ReadOnly = True
+        '
+        'CATEGORY
+        '
+        Me.CATEGORY.DataPropertyName = "category"
+        Me.CATEGORY.FillWeight = 103.4432!
+        Me.CATEGORY.HeaderText = "CATEGORY"
+        Me.CATEGORY.Name = "CATEGORY"
+        Me.CATEGORY.ReadOnly = True
         '
         'Panel1
         '
@@ -512,161 +692,31 @@ Partial Class issuing
         Me.Label16.Text = "0"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'dgvThesis
+        'tbSearchStudNo
         '
-        Me.dgvThesis.AllowUserToAddRows = False
-        Me.dgvThesis.AllowUserToDeleteRows = False
-        Me.dgvThesis.AllowUserToResizeColumns = False
-        Me.dgvThesis.AllowUserToResizeRows = False
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(183, Byte), Integer))
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvThesis.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
-        Me.dgvThesis.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvThesis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvThesis.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.dgvThesis.BackgroundColor = System.Drawing.Color.White
-        Me.dgvThesis.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvThesis.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvThesis.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable
-        Me.dgvThesis.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvThesis.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
-        Me.dgvThesis.ColumnHeadersHeight = 50
-        Me.dgvThesis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvThesis.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.title, Me.OBJECTIVES, Me.SCOPE, Me.LIMITATION, Me.TEAMNAME, Me.MEMBERS, Me.PANEL, Me.CATEGORY})
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvThesis.DefaultCellStyle = DataGridViewCellStyle23
-        Me.dgvThesis.EnableHeadersVisualStyles = False
-        Me.dgvThesis.GridColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.dgvThesis.Location = New System.Drawing.Point(28, 276)
-        Me.dgvThesis.Name = "dgvThesis"
-        Me.dgvThesis.ReadOnly = True
-        Me.dgvThesis.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvThesis.RowHeadersDefaultCellStyle = DataGridViewCellStyle24
-        Me.dgvThesis.RowHeadersVisible = False
-        Me.dgvThesis.RowHeadersWidth = 55
-        Me.dgvThesis.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvThesis.RowsDefaultCellStyle = DataGridViewCellStyle25
-        Me.dgvThesis.RowTemplate.Height = 30
-        Me.dgvThesis.RowTemplate.ReadOnly = True
-        Me.dgvThesis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvThesis.Size = New System.Drawing.Size(832, 182)
-        Me.dgvThesis.TabIndex = 16
-        Me.dgvThesis.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.SunFlower
-        Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(183, Byte), Integer))
-        Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.dgvThesis.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dgvThesis.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.dgvThesis.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.dgvThesis.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
-        Me.dgvThesis.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvThesis.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.dgvThesis.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dgvThesis.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvThesis.ThemeStyle.HeaderStyle.Height = 50
-        Me.dgvThesis.ThemeStyle.ReadOnly = True
-        Me.dgvThesis.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
-        Me.dgvThesis.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvThesis.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.dgvThesis.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
-        Me.dgvThesis.ThemeStyle.RowsStyle.Height = 30
-        Me.dgvThesis.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
-        Me.dgvThesis.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
-        '
-        'id
-        '
-        Me.id.DataPropertyName = "id"
-        Me.id.FillWeight = 103.4432!
-        Me.id.HeaderText = "#"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        '
-        'title
-        '
-        Me.title.DataPropertyName = "title"
-        Me.title.FillWeight = 103.4432!
-        Me.title.HeaderText = "TITLE"
-        Me.title.Name = "title"
-        Me.title.ReadOnly = True
-        '
-        'OBJECTIVES
-        '
-        Me.OBJECTIVES.DataPropertyName = "objectives"
-        Me.OBJECTIVES.FillWeight = 103.4432!
-        Me.OBJECTIVES.HeaderText = "OBJECTIVES"
-        Me.OBJECTIVES.Name = "OBJECTIVES"
-        Me.OBJECTIVES.ReadOnly = True
-        '
-        'SCOPE
-        '
-        Me.SCOPE.DataPropertyName = "scope"
-        Me.SCOPE.FillWeight = 103.4432!
-        Me.SCOPE.HeaderText = "SCOPE"
-        Me.SCOPE.Name = "SCOPE"
-        Me.SCOPE.ReadOnly = True
-        '
-        'LIMITATION
-        '
-        Me.LIMITATION.DataPropertyName = "limitations"
-        Me.LIMITATION.FillWeight = 103.4432!
-        Me.LIMITATION.HeaderText = "LIMITATION"
-        Me.LIMITATION.Name = "LIMITATION"
-        Me.LIMITATION.ReadOnly = True
-        '
-        'TEAMNAME
-        '
-        Me.TEAMNAME.DataPropertyName = "teamname"
-        Me.TEAMNAME.FillWeight = 103.4432!
-        Me.TEAMNAME.HeaderText = "TEAM NAME"
-        Me.TEAMNAME.Name = "TEAMNAME"
-        Me.TEAMNAME.ReadOnly = True
-        '
-        'MEMBERS
-        '
-        Me.MEMBERS.DataPropertyName = "members"
-        Me.MEMBERS.FillWeight = 103.4432!
-        Me.MEMBERS.HeaderText = "MEMBERS"
-        Me.MEMBERS.Name = "MEMBERS"
-        Me.MEMBERS.ReadOnly = True
-        '
-        'PANEL
-        '
-        Me.PANEL.DataPropertyName = "panels"
-        Me.PANEL.FillWeight = 103.4432!
-        Me.PANEL.HeaderText = "PANEL"
-        Me.PANEL.Name = "PANEL"
-        Me.PANEL.ReadOnly = True
-        '
-        'CATEGORY
-        '
-        Me.CATEGORY.DataPropertyName = "category"
-        Me.CATEGORY.FillWeight = 103.4432!
-        Me.CATEGORY.HeaderText = "CATEGORY"
-        Me.CATEGORY.Name = "CATEGORY"
-        Me.CATEGORY.ReadOnly = True
+        Me.tbSearchStudNo.BackColor = System.Drawing.Color.Transparent
+        Me.tbSearchStudNo.BorderColor = System.Drawing.Color.Silver
+        Me.tbSearchStudNo.BorderRadius = 2
+        Me.tbSearchStudNo.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbSearchStudNo.DefaultText = ""
+        Me.tbSearchStudNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbSearchStudNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbSearchStudNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbSearchStudNo.DisabledState.Parent = Me.tbSearchStudNo
+        Me.tbSearchStudNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbSearchStudNo.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.tbSearchStudNo.FocusedState.Parent = Me.tbSearchStudNo
+        Me.tbSearchStudNo.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.tbSearchStudNo.HoverState.Parent = Me.tbSearchStudNo
+        Me.tbSearchStudNo.Location = New System.Drawing.Point(16, 8)
+        Me.tbSearchStudNo.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.tbSearchStudNo.Name = "tbSearchStudNo"
+        Me.tbSearchStudNo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbSearchStudNo.PlaceholderText = "Student Number"
+        Me.tbSearchStudNo.SelectedText = ""
+        Me.tbSearchStudNo.ShadowDecoration.Parent = Me.tbSearchStudNo
+        Me.tbSearchStudNo.Size = New System.Drawing.Size(434, 32)
+        Me.tbSearchStudNo.TabIndex = 19
         '
         'issuing
         '
@@ -682,6 +732,7 @@ Partial Class issuing
         Me.Guna2Panel7.ResumeLayout(False)
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        CType(Me.dgvThesis, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Guna2Panel4.ResumeLayout(False)
         Me.Guna2Panel4.PerformLayout()
@@ -691,7 +742,6 @@ Partial Class issuing
         Me.Guna2Panel5.PerformLayout()
         Me.Guna2Panel6.ResumeLayout(False)
         Me.Guna2Panel6.PerformLayout()
-        CType(Me.dgvThesis, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -721,11 +771,9 @@ Partial Class issuing
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnSearchStud As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents tbSearchStudNo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents cbCategory As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents dgvThesis As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents title As DataGridViewTextBoxColumn
     Friend WithEvents OBJECTIVES As DataGridViewTextBoxColumn
     Friend WithEvents SCOPE As DataGridViewTextBoxColumn
@@ -734,4 +782,10 @@ Partial Class issuing
     Friend WithEvents MEMBERS As DataGridViewTextBoxColumn
     Friend WithEvents PANEL As DataGridViewTextBoxColumn
     Friend WithEvents CATEGORY As DataGridViewTextBoxColumn
+    Friend WithEvents lblCN As Label
+    Friend WithEvents lblEm As Label
+    Friend WithEvents lblCYS As Label
+    Friend WithEvents lblFN As Label
+    Friend WithEvents lblSN As Label
+    Friend WithEvents tbSearchStudNo As Guna.UI2.WinForms.Guna2TextBox
 End Class
