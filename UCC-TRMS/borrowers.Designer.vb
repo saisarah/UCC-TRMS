@@ -50,26 +50,24 @@ Partial Class borrowers
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.dgvStudent = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.title = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OBJECTIVES = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SCOPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LIMITATION = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TEAMNAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MEMBERS = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PANEL = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Edit = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Delete = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.cbCategories = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cbYear = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.btnAddStudent = New Guna.UI2.WinForms.Guna2Button()
         Me.tbSearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.dgvStudent = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.PANEL = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MEMBERS = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TEAMNAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LIMITATION = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SCOPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OBJECTIVES = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.title = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.thesisPanel.SuspendLayout()
         Me.pnlThesisDetails.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
-        CType(Me.dgvStudent, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
+        CType(Me.dgvStudent, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Panel1
@@ -93,7 +91,7 @@ Partial Class borrowers
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(3, 5)
+        Me.Label8.Location = New System.Drawing.Point(3, 9)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(107, 18)
         Me.Label8.TabIndex = 1
@@ -106,9 +104,8 @@ Partial Class borrowers
         Me.contact.ForeColor = System.Drawing.Color.Black
         Me.contact.Location = New System.Drawing.Point(129, 265)
         Me.contact.Name = "contact"
-        Me.contact.Size = New System.Drawing.Size(80, 15)
+        Me.contact.Size = New System.Drawing.Size(0, 15)
         Me.contact.TabIndex = 13
-        Me.contact.Text = "Lorem Ipsum"
         '
         'year
         '
@@ -117,9 +114,8 @@ Partial Class borrowers
         Me.year.ForeColor = System.Drawing.Color.Black
         Me.year.Location = New System.Drawing.Point(129, 178)
         Me.year.Name = "year"
-        Me.year.Size = New System.Drawing.Size(80, 15)
+        Me.year.Size = New System.Drawing.Size(0, 15)
         Me.year.TabIndex = 11
-        Me.year.Text = "Lorem Ipsum"
         '
         'course
         '
@@ -128,9 +124,8 @@ Partial Class borrowers
         Me.course.ForeColor = System.Drawing.Color.Black
         Me.course.Location = New System.Drawing.Point(129, 140)
         Me.course.Name = "course"
-        Me.course.Size = New System.Drawing.Size(80, 15)
+        Me.course.Size = New System.Drawing.Size(0, 15)
         Me.course.TabIndex = 10
-        Me.course.Text = "Lorem Ipsum"
         '
         'studentno
         '
@@ -139,16 +134,15 @@ Partial Class borrowers
         Me.studentno.ForeColor = System.Drawing.Color.Black
         Me.studentno.Location = New System.Drawing.Point(129, 100)
         Me.studentno.Name = "studentno"
-        Me.studentno.Size = New System.Drawing.Size(80, 15)
+        Me.studentno.Size = New System.Drawing.Size(0, 15)
         Me.studentno.TabIndex = 9
-        Me.studentno.Text = "Lorem Ipsum"
         '
         'thesisPanel
         '
         Me.thesisPanel.Controls.Add(Me.btnArchived)
         Me.thesisPanel.Controls.Add(Me.pnlThesisDetails)
         Me.thesisPanel.Controls.Add(Me.dgvStudent)
-        Me.thesisPanel.Controls.Add(Me.cbCategories)
+        Me.thesisPanel.Controls.Add(Me.cbYear)
         Me.thesisPanel.Controls.Add(Me.btnAddStudent)
         Me.thesisPanel.Controls.Add(Me.tbSearch)
         Me.thesisPanel.Dock = System.Windows.Forms.DockStyle.Fill
@@ -211,9 +205,8 @@ Partial Class borrowers
         Me.email.ForeColor = System.Drawing.Color.Black
         Me.email.Location = New System.Drawing.Point(131, 311)
         Me.email.Name = "email"
-        Me.email.Size = New System.Drawing.Size(80, 15)
+        Me.email.Size = New System.Drawing.Size(0, 15)
         Me.email.TabIndex = 16
-        Me.email.Text = "Lorem Ipsum"
         '
         'section
         '
@@ -222,9 +215,8 @@ Partial Class borrowers
         Me.section.ForeColor = System.Drawing.Color.Black
         Me.section.Location = New System.Drawing.Point(129, 223)
         Me.section.Name = "section"
-        Me.section.Size = New System.Drawing.Size(80, 15)
+        Me.section.Size = New System.Drawing.Size(0, 15)
         Me.section.TabIndex = 15
-        Me.section.Text = "Lorem Ipsum"
         '
         'Label1
         '
@@ -233,9 +225,9 @@ Partial Class borrowers
         Me.Label1.ForeColor = System.Drawing.Color.Gray
         Me.Label1.Location = New System.Drawing.Point(12, 265)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 15)
+        Me.Label1.Size = New System.Drawing.Size(99, 15)
         Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Conract Number:"
+        Me.Label1.Text = "Contact Number:"
         '
         'fullname
         '
@@ -244,9 +236,8 @@ Partial Class borrowers
         Me.fullname.ForeColor = System.Drawing.Color.Black
         Me.fullname.Location = New System.Drawing.Point(129, 61)
         Me.fullname.Name = "fullname"
-        Me.fullname.Size = New System.Drawing.Size(80, 15)
+        Me.fullname.Size = New System.Drawing.Size(0, 15)
         Me.fullname.TabIndex = 8
-        Me.fullname.Text = "Lorem Ipsum"
         '
         'Guna2Panel3
         '
@@ -325,198 +316,26 @@ Partial Class borrowers
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Fullname:"
         '
-        'dgvStudent
+        'cbYear
         '
-        Me.dgvStudent.AllowUserToAddRows = False
-        Me.dgvStudent.AllowUserToDeleteRows = False
-        Me.dgvStudent.AllowUserToResizeColumns = False
-        Me.dgvStudent.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(183, Byte), Integer))
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStudent.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvStudent.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvStudent.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.dgvStudent.BackgroundColor = System.Drawing.Color.White
-        Me.dgvStudent.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvStudent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvStudent.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable
-        Me.dgvStudent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStudent.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvStudent.ColumnHeadersHeight = 50
-        Me.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvStudent.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.title, Me.OBJECTIVES, Me.SCOPE, Me.LIMITATION, Me.TEAMNAME, Me.MEMBERS, Me.PANEL, Me.Edit, Me.Delete})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStudent.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvStudent.EnableHeadersVisualStyles = False
-        Me.dgvStudent.GridColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.dgvStudent.Location = New System.Drawing.Point(384, 54)
-        Me.dgvStudent.Name = "dgvStudent"
-        Me.dgvStudent.ReadOnly = True
-        Me.dgvStudent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStudent.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvStudent.RowHeadersVisible = False
-        Me.dgvStudent.RowHeadersWidth = 55
-        Me.dgvStudent.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvStudent.RowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.dgvStudent.RowTemplate.Height = 30
-        Me.dgvStudent.RowTemplate.ReadOnly = True
-        Me.dgvStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvStudent.Size = New System.Drawing.Size(794, 468)
-        Me.dgvStudent.TabIndex = 20
-        Me.dgvStudent.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.SunFlower
-        Me.dgvStudent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(183, Byte), Integer))
-        Me.dgvStudent.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.dgvStudent.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.dgvStudent.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.dgvStudent.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dgvStudent.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.dgvStudent.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.dgvStudent.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
-        Me.dgvStudent.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvStudent.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.dgvStudent.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dgvStudent.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvStudent.ThemeStyle.HeaderStyle.Height = 50
-        Me.dgvStudent.ThemeStyle.ReadOnly = True
-        Me.dgvStudent.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
-        Me.dgvStudent.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvStudent.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.dgvStudent.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
-        Me.dgvStudent.ThemeStyle.RowsStyle.Height = 30
-        Me.dgvStudent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
-        Me.dgvStudent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
-        '
-        'id
-        '
-        Me.id.DataPropertyName = "id"
-        Me.id.FillWeight = 103.4432!
-        Me.id.HeaderText = "#"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        '
-        'title
-        '
-        Me.title.DataPropertyName = "fullname"
-        Me.title.FillWeight = 103.4432!
-        Me.title.HeaderText = "NAME"
-        Me.title.Name = "title"
-        Me.title.ReadOnly = True
-        '
-        'OBJECTIVES
-        '
-        Me.OBJECTIVES.DataPropertyName = "studentno"
-        Me.OBJECTIVES.FillWeight = 103.4432!
-        Me.OBJECTIVES.HeaderText = "STUDENT NUMBER"
-        Me.OBJECTIVES.Name = "OBJECTIVES"
-        Me.OBJECTIVES.ReadOnly = True
-        '
-        'SCOPE
-        '
-        Me.SCOPE.DataPropertyName = "course"
-        Me.SCOPE.FillWeight = 103.4432!
-        Me.SCOPE.HeaderText = "COURSE"
-        Me.SCOPE.Name = "SCOPE"
-        Me.SCOPE.ReadOnly = True
-        '
-        'LIMITATION
-        '
-        Me.LIMITATION.DataPropertyName = "year"
-        Me.LIMITATION.FillWeight = 103.4432!
-        Me.LIMITATION.HeaderText = "YEAR"
-        Me.LIMITATION.Name = "LIMITATION"
-        Me.LIMITATION.ReadOnly = True
-        '
-        'TEAMNAME
-        '
-        Me.TEAMNAME.DataPropertyName = "section"
-        Me.TEAMNAME.FillWeight = 103.4432!
-        Me.TEAMNAME.HeaderText = "SECTION"
-        Me.TEAMNAME.Name = "TEAMNAME"
-        Me.TEAMNAME.ReadOnly = True
-        '
-        'MEMBERS
-        '
-        Me.MEMBERS.DataPropertyName = "contact"
-        Me.MEMBERS.FillWeight = 103.4432!
-        Me.MEMBERS.HeaderText = "CONTACT NUMBER"
-        Me.MEMBERS.Name = "MEMBERS"
-        Me.MEMBERS.ReadOnly = True
-        '
-        'PANEL
-        '
-        Me.PANEL.DataPropertyName = "email"
-        Me.PANEL.FillWeight = 103.4432!
-        Me.PANEL.HeaderText = "EMAIL"
-        Me.PANEL.Name = "PANEL"
-        Me.PANEL.ReadOnly = True
-        '
-        'Edit
-        '
-        Me.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Edit.FillWeight = 85.25535!
-        Me.Edit.HeaderText = ""
-        Me.Edit.Image = CType(resources.GetObject("Edit.Image"), System.Drawing.Image)
-        Me.Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.Edit.Name = "Edit"
-        Me.Edit.ReadOnly = True
-        Me.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Edit.Width = 36
-        '
-        'Delete
-        '
-        Me.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Delete.FillWeight = 85.25535!
-        Me.Delete.HeaderText = ""
-        Me.Delete.Image = CType(resources.GetObject("Delete.Image"), System.Drawing.Image)
-        Me.Delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.Delete.Name = "Delete"
-        Me.Delete.ReadOnly = True
-        Me.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Delete.Width = 36
-        '
-        'cbCategories
-        '
-        Me.cbCategories.BackColor = System.Drawing.Color.Transparent
-        Me.cbCategories.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbCategories.FocusedColor = System.Drawing.Color.Empty
-        Me.cbCategories.FocusedState.Parent = Me.cbCategories
-        Me.cbCategories.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cbCategories.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cbCategories.FormattingEnabled = True
-        Me.cbCategories.HoverState.Parent = Me.cbCategories
-        Me.cbCategories.ItemHeight = 30
-        Me.cbCategories.Items.AddRange(New Object() {"WEB DEVELOPMENT", "APPLICATION DEVELOPMENT", "MOBILE DEVELOPMENT", "GAME DEVELOPMENT"})
-        Me.cbCategories.ItemsAppearance.Parent = Me.cbCategories
-        Me.cbCategories.Location = New System.Drawing.Point(685, 12)
-        Me.cbCategories.Name = "cbCategories"
-        Me.cbCategories.ShadowDecoration.Parent = Me.cbCategories
-        Me.cbCategories.Size = New System.Drawing.Size(256, 36)
-        Me.cbCategories.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbCategories.TabIndex = 19
+        Me.cbYear.BackColor = System.Drawing.Color.Transparent
+        Me.cbYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbYear.FocusedColor = System.Drawing.Color.Empty
+        Me.cbYear.FocusedState.Parent = Me.cbYear
+        Me.cbYear.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cbYear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cbYear.FormattingEnabled = True
+        Me.cbYear.HoverState.Parent = Me.cbYear
+        Me.cbYear.ItemHeight = 30
+        Me.cbYear.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.cbYear.ItemsAppearance.Parent = Me.cbYear
+        Me.cbYear.Location = New System.Drawing.Point(685, 12)
+        Me.cbYear.Name = "cbYear"
+        Me.cbYear.ShadowDecoration.Parent = Me.cbYear
+        Me.cbYear.Size = New System.Drawing.Size(256, 36)
+        Me.cbYear.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.cbYear.TabIndex = 19
         '
         'btnAddStudent
         '
@@ -571,6 +390,154 @@ Partial Class borrowers
         Me.Guna2Panel2.Size = New System.Drawing.Size(1190, 578)
         Me.Guna2Panel2.TabIndex = 4
         '
+        'dgvStudent
+        '
+        Me.dgvStudent.AllowUserToAddRows = False
+        Me.dgvStudent.AllowUserToDeleteRows = False
+        Me.dgvStudent.AllowUserToResizeColumns = False
+        Me.dgvStudent.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(183, Byte), Integer))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvStudent.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvStudent.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvStudent.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvStudent.BackgroundColor = System.Drawing.Color.White
+        Me.dgvStudent.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvStudent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvStudent.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable
+        Me.dgvStudent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvStudent.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvStudent.ColumnHeadersHeight = 50
+        Me.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvStudent.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.title, Me.OBJECTIVES, Me.SCOPE, Me.LIMITATION, Me.TEAMNAME, Me.MEMBERS, Me.PANEL})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvStudent.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvStudent.EnableHeadersVisualStyles = False
+        Me.dgvStudent.GridColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvStudent.Location = New System.Drawing.Point(384, 54)
+        Me.dgvStudent.Name = "dgvStudent"
+        Me.dgvStudent.ReadOnly = True
+        Me.dgvStudent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvStudent.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvStudent.RowHeadersVisible = False
+        Me.dgvStudent.RowHeadersWidth = 55
+        Me.dgvStudent.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvStudent.RowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvStudent.RowTemplate.Height = 30
+        Me.dgvStudent.RowTemplate.ReadOnly = True
+        Me.dgvStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvStudent.Size = New System.Drawing.Size(794, 468)
+        Me.dgvStudent.TabIndex = 20
+        Me.dgvStudent.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.SunFlower
+        Me.dgvStudent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(183, Byte), Integer))
+        Me.dgvStudent.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvStudent.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvStudent.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvStudent.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvStudent.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvStudent.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvStudent.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
+        Me.dgvStudent.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvStudent.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.dgvStudent.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvStudent.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvStudent.ThemeStyle.HeaderStyle.Height = 50
+        Me.dgvStudent.ThemeStyle.ReadOnly = True
+        Me.dgvStudent.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
+        Me.dgvStudent.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvStudent.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.dgvStudent.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
+        Me.dgvStudent.ThemeStyle.RowsStyle.Height = 30
+        Me.dgvStudent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
+        Me.dgvStudent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
+        '
+        'PANEL
+        '
+        Me.PANEL.DataPropertyName = "email"
+        Me.PANEL.FillWeight = 92.40855!
+        Me.PANEL.HeaderText = "EMAIL"
+        Me.PANEL.Name = "PANEL"
+        Me.PANEL.ReadOnly = True
+        '
+        'MEMBERS
+        '
+        Me.MEMBERS.DataPropertyName = "contact"
+        Me.MEMBERS.FillWeight = 92.40855!
+        Me.MEMBERS.HeaderText = "CONTACT NUMBER"
+        Me.MEMBERS.Name = "MEMBERS"
+        Me.MEMBERS.ReadOnly = True
+        '
+        'TEAMNAME
+        '
+        Me.TEAMNAME.DataPropertyName = "section"
+        Me.TEAMNAME.FillWeight = 92.40855!
+        Me.TEAMNAME.HeaderText = "SECTION"
+        Me.TEAMNAME.Name = "TEAMNAME"
+        Me.TEAMNAME.ReadOnly = True
+        '
+        'LIMITATION
+        '
+        Me.LIMITATION.DataPropertyName = "year"
+        Me.LIMITATION.FillWeight = 92.40855!
+        Me.LIMITATION.HeaderText = "YEAR"
+        Me.LIMITATION.Name = "LIMITATION"
+        Me.LIMITATION.ReadOnly = True
+        '
+        'SCOPE
+        '
+        Me.SCOPE.DataPropertyName = "course"
+        Me.SCOPE.FillWeight = 92.40855!
+        Me.SCOPE.HeaderText = "COURSE"
+        Me.SCOPE.Name = "SCOPE"
+        Me.SCOPE.ReadOnly = True
+        '
+        'OBJECTIVES
+        '
+        Me.OBJECTIVES.DataPropertyName = "studentno"
+        Me.OBJECTIVES.FillWeight = 92.40855!
+        Me.OBJECTIVES.HeaderText = "STUDENT NUMBER"
+        Me.OBJECTIVES.Name = "OBJECTIVES"
+        Me.OBJECTIVES.ReadOnly = True
+        '
+        'title
+        '
+        Me.title.DataPropertyName = "fullname"
+        Me.title.FillWeight = 92.40855!
+        Me.title.HeaderText = "NAME"
+        Me.title.Name = "title"
+        Me.title.ReadOnly = True
+        '
+        'id
+        '
+        Me.id.DataPropertyName = "id"
+        Me.id.FillWeight = 92.40855!
+        Me.id.HeaderText = "#"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        '
         'borrowers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -586,8 +553,8 @@ Partial Class borrowers
         Me.pnlThesisDetails.PerformLayout()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
-        CType(Me.dgvStudent, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
+        CType(Me.dgvStudent, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -614,10 +581,10 @@ Partial Class borrowers
     Friend WithEvents section As Label
     Friend WithEvents email As Label
     Friend WithEvents btnArchived As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents dgvStudent As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents cbCategories As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cbYear As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents btnAddStudent As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents tbSearch As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents dgvStudent As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents title As DataGridViewTextBoxColumn
     Friend WithEvents OBJECTIVES As DataGridViewTextBoxColumn
@@ -626,6 +593,4 @@ Partial Class borrowers
     Friend WithEvents TEAMNAME As DataGridViewTextBoxColumn
     Friend WithEvents MEMBERS As DataGridViewTextBoxColumn
     Friend WithEvents PANEL As DataGridViewTextBoxColumn
-    Friend WithEvents Edit As DataGridViewImageColumn
-    Friend WithEvents Delete As DataGridViewImageColumn
 End Class
