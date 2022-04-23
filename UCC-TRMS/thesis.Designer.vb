@@ -52,7 +52,7 @@ Partial Class thesis
         Me.btnAddThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.cbCategories = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.tbSearch = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.thesis_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.title = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.OBJECTIVES = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SCOPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -150,7 +150,7 @@ Partial Class thesis
         Me.dgvThesis.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvThesis.ColumnHeadersHeight = 50
         Me.dgvThesis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvThesis.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.title, Me.OBJECTIVES, Me.SCOPE, Me.LIMITATION, Me.TEAMNAME, Me.MEMBERS, Me.PANEL, Me.CATEGORY, Me.Edit, Me.Delete})
+        Me.dgvThesis.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.thesis_id, Me.title, Me.OBJECTIVES, Me.SCOPE, Me.LIMITATION, Me.TEAMNAME, Me.MEMBERS, Me.PANEL, Me.CATEGORY, Me.Edit, Me.Delete})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -307,7 +307,7 @@ Partial Class thesis
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(3, 5)
+        Me.Label8.Location = New System.Drawing.Point(3, 8)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(101, 18)
         Me.Label8.TabIndex = 1
@@ -442,13 +442,12 @@ Partial Class thesis
         Me.tbSearch.Size = New System.Drawing.Size(296, 36)
         Me.tbSearch.TabIndex = 7
         '
-        'id
+        'thesis_id
         '
-        Me.id.DataPropertyName = "id"
-        Me.id.FillWeight = 103.4432!
-        Me.id.HeaderText = "#"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
+        Me.thesis_id.DataPropertyName = "thesis_id"
+        Me.thesis_id.HeaderText = "CODE"
+        Me.thesis_id.Name = "thesis_id"
+        Me.thesis_id.ReadOnly = True
         '
         'title
         '
@@ -581,7 +580,7 @@ Partial Class thesis
     Friend WithEvents lblScope As Label
     Friend WithEvents lblObjectives As Label
     Friend WithEvents btnArchived As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents thesis_id As DataGridViewTextBoxColumn
     Friend WithEvents title As DataGridViewTextBoxColumn
     Friend WithEvents OBJECTIVES As DataGridViewTextBoxColumn
     Friend WithEvents SCOPE As DataGridViewTextBoxColumn

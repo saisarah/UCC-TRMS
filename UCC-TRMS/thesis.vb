@@ -12,15 +12,13 @@ Public Class thesis
         addThesis.Show()
     End Sub
     Sub LoadRecords()
-
         Try
             dgvThesis.Rows.Clear()
             conn.Open()
             Dim cm As New MySqlCommand("SELECT * FROM tblthesis", conn)
             dr = cm.ExecuteReader
             While dr.Read
-
-                dgvThesis.Rows.Add(dr.Item("id").ToString, dr.Item("title").ToString, dr.Item("objectives").ToString, dr.Item("scope").ToString, dr.Item("limitations").ToString, dr.Item("teamname").ToString, dr.Item("members").ToString, dr.Item("panels").ToString, dr.Item("category").ToString)
+                dgvThesis.Rows.Add(dr.Item("thesis_id").ToString, dr.Item("title").ToString, dr.Item("objectives").ToString, dr.Item("scope").ToString, dr.Item("limitations").ToString, dr.Item("teamname").ToString, dr.Item("members").ToString, dr.Item("panels").ToString, dr.Item("category").ToString)
             End While
             dr.close()
             conn.Close()
@@ -63,12 +61,13 @@ Public Class thesis
             conn.Open()
             Dim x As String
             x = tbSearch.Text
-            Dim y As New MySqlCommand("SELECT * FROM tblthesis WHERE id LIKE '%" & x & "%' OR title LIKE '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%'", conn)
+            Dim y As New MySqlCommand("SELECT `thesis_id`, `title`, `objectives`, `scope`, `limitations`, `teamname`, `members`, `panels`, `category` FROM tblthesis WHERE title LIKE '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%'", conn)
             y.ExecuteNonQuery()
             Dim da1 As New MySqlDataAdapter(y)
             Dim dt1 As New DataTable
             da1.Fill(dt1)
             dgvThesis.DataSource = dt1
+
             conn.Close()
 
         Catch ex As Exception
@@ -82,7 +81,8 @@ Public Class thesis
             conn.Open()
             Dim x As String
             x = cbCategories.Text
-            Dim y As New MySqlCommand("SELECT * FROM tblthesis WHERE category ='" & x & "'", conn)
+
+            Dim y As New MySqlCommand("SELECT `thesis_id`, `title`, `objectives`, `scope`, `limitations`, `teamname`, `members`, `panels`, `category` FROM tblthesis WHERE category ='" & x & "'", conn)
             y.ExecuteNonQuery()
             Dim da1 As New MySqlDataAdapter(y)
             Dim dt1 As New DataTable
@@ -127,10 +127,10 @@ Public Class thesis
         If colName = "Delete" Then
             Dim result As DialogResult = MessageBox.Show("Do you want to Delete this Record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
             If result = DialogResult.Yes Then
-                Dim command As New MySqlCommand("INSERT INTO tblarchive (id, title, objectives, scope, limitations, teamname, members, panels, category) SELECT id, title, objectives, scope, limitations, teamname, members, panels, category FROM tblthesis WHERE id ='" & s & "'", conn)
+                Dim command As New MySqlCommand("INSERT INTO tblarchive (thesis_id, title, objectives, scope, limitations, teamname, members, panels, category) SELECT thesis_id, title, objectives, scope, limitations, teamname, members, panels, category FROM tblthesis WHERE thesis_id ='" & s & "'", conn)
                 command.ExecuteNonQuery()
 
-                Dim command1 As New MySqlCommand("DELETE FROM tblthesis WHERE id ='" & s & "'", conn)
+                Dim command1 As New MySqlCommand("DELETE FROM tblthesis WHERE thesis_id ='" & s & "'", conn)
                 command1.ExecuteNonQuery()
                 mainForm.OpenChildForm(New thesis)
 
@@ -165,4 +165,5 @@ Public Class thesis
 
         conn.Close()
     End Sub
+
 End Class
