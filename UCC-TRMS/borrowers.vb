@@ -14,12 +14,14 @@ Public Class borrowers
     End Sub
 
     Sub LoadRecords()
-
         Try
             dgvStudent.Rows.Clear()
             conn.Open()
-            Dim cm As New MySqlCommand("SELECT * FROM tblstudents", conn)
+            Dim cm As New MySqlCommand("SELECT studentno, fullname, course, year, section, contact, email FROM tblthesis", conn)
             dr = cm.ExecuteReader
+            While dr.Read
+                dgvStudent.Rows.Add(dr.Item("studentno").ToString, dr.Item("fullname").ToString, dr.Item("course").ToString, dr.Item("year").ToString, dr.Item("section").ToString, dr.Item("contact").ToString, dr.Item("email").ToString)
+            End While
             dr.close()
             conn.Close()
         Catch ex As Exception
@@ -31,7 +33,7 @@ Public Class borrowers
             conn.Open()
             Dim x As String
             x = tbSearch.Text
-            Dim y As New MySqlCommand("SELECT * FROM tblstudents WHERE id LIKE '%" & x & "%' OR fullname LIKE '%" & x & "%' OR studentno LIKE '%" & x & "%' OR course LIKE '%" & x & "%' OR year LIKE '%" & x & "%' OR section LIKE '%" & x & "%' OR contact LIKE '%" & x & "%' OR email LIKE '%" & x & "%'", conn)
+            Dim y As New MySqlCommand("SELECT studentno, fullname, course, year, section, contact, email FROM tblstudents WHERE id LIKE '%" & x & "%' OR fullname LIKE '%" & x & "%' OR studentno LIKE '%" & x & "%' OR course LIKE '%" & x & "%' OR year LIKE '%" & x & "%' OR section LIKE '%" & x & "%' OR contact LIKE '%" & x & "%' OR email LIKE '%" & x & "%'", conn)
             y.ExecuteNonQuery()
             Dim da1 As New MySqlDataAdapter(y)
             Dim dt1 As New DataTable
@@ -57,13 +59,13 @@ Public Class borrowers
             it = dgvStudent.CurrentRow.Index
             Dim i As Integer
             i = dgvStudent.CurrentRow.Index
-            fullname.Text = dgvStudent.Item(1, i).Value.ToString
-            studentno.Text = dgvStudent.Item(2, i).Value.ToString
-            course.Text = dgvStudent.Item(3, i).Value.ToString
-            year.Text = dgvStudent.Item(4, i).Value.ToString
-            section.Text = dgvStudent.Item(5, i).Value.ToString
-            contact.Text = dgvStudent.Item(6, i).Value.ToString
-            email.Text = dgvStudent.Item(7, i).Value.ToString
+            fullname.Text = dgvStudent.Item(2, i).Value.ToString
+            studentno.Text = dgvStudent.Item(3, i).Value.ToString
+            course.Text = dgvStudent.Item(4, i).Value.ToString
+            year.Text = dgvStudent.Item(5, i).Value.ToString
+            section.Text = dgvStudent.Item(6, i).Value.ToString
+            contact.Text = dgvStudent.Item(7, i).Value.ToString
+            email.Text = dgvStudent.Item(8, i).Value.ToString
 
         Catch ex As Exception
 
@@ -78,7 +80,7 @@ Public Class borrowers
             conn.Open()
             Dim x As String
             x = cbYear.Text
-            Dim y As New MySqlCommand("SELECT * FROM tblstudents WHERE year ='" & x & "'", conn)
+            Dim y As New MySqlCommand("SELECT studentno, fullname, course, year, section, contact, email FROM tblstudents WHERE year ='" & x & "'", conn)
             y.ExecuteNonQuery()
             Dim da1 As New MySqlDataAdapter(y)
             Dim dt1 As New DataTable
@@ -101,10 +103,10 @@ Public Class borrowers
         If colName = "Delete" Then
             Dim result As DialogResult = MessageBox.Show("Do you want to Delete this Record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
             If result = DialogResult.Yes Then
-                Dim command As New MySqlCommand("INSERT INTO tblarchivedstud (studID, fullname, studentno, email, course, year, section, contact) SELECT id, fullname, studentno, email, course, year, section, contact FROM tblstudents WHERE id ='" & s & "'", conn)
+                Dim command As New MySqlCommand("INSERT INTO tblarchivedstud (studID, fullname, studentno, email, course, year, section, contact) SELECT id, fullname, studentno, course, year, section, contact, email FROM tblstudents WHERE id ='" & s & "'", conn)
                 command.ExecuteNonQuery()
 
-                Dim command1 As New MySqlCommand("DELETE FROM tblstudents WHERE id ='" & s & "'", conn)
+                Dim command1 As New MySqlCommand("DELETE FROM tblstudents WHERE studentno ='" & s & "'", conn)
                 command1.ExecuteNonQuery()
                 mainForm.OpenChildForm(New borrowers)
 
@@ -120,12 +122,12 @@ Public Class borrowers
                 Dim newForm As New addStudent
                 newForm.SelectedRows = dgvStudent.SelectedRows
                 newForm.tbfullname.Text = dgvStudent.Item(3, i).Value.ToString
-                newForm.tbstudentno.Text = dgvStudent.Item(4, i).Value.ToString
-                newForm.tbemail.Text = dgvStudent.Item(5, i).Value.ToString
-                newForm.tbcourse.Text = dgvStudent.Item(6, i).Value.ToString
-                newForm.cbyear.Text = dgvStudent.Item(7, i).Value.ToString
-                newForm.tbsection.Text = dgvStudent.Item(8, i).Value.ToString
-                newForm.tbcontact.Text = dgvStudent.Item(9, i).Value.ToString
+                newForm.tbstudentno.Text = dgvStudent.Item(2, i).Value.ToString
+                newForm.tbcourse.Text = dgvStudent.Item(4, i).Value.ToString
+                newForm.cbyear.Text = dgvStudent.Item(5, i).Value.ToString
+                newForm.tbsection.Text = dgvStudent.Item(6, i).Value.ToString
+                newForm.tbcontact.Text = dgvStudent.Item(7, i).Value.ToString
+                newForm.tbemail.Text = dgvStudent.Item(8, i).Value.ToString
 
                 newForm.Label1.Text = "Update Student"
                 newForm.btnSaveStudent.Enabled = False
