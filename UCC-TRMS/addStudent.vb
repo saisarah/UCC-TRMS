@@ -80,10 +80,10 @@ Public Class addStudent
             i = SelectedRows(0).Cells(2).Value
 
             conn.Open()
-            Dim comm As New MySqlCommand("UPDATE tblstudents SET fullname=@fullname, studentno=@studentno, email=@email, course=@course, section=@section, year=@year, contact=@contact WHERE id = '" & i & "'", conn)
+            Dim comm As New MySqlCommand("UPDATE tblstudents SET studentno=@studentno, fullname=@fullname, email=@email, course=@course, section=@section, year=@year, contact=@contact WHERE studentno = '" & i & "'", conn)
             With comm
                 .Parameters.AddWithValue("@fullname", tbfullname.Text.ToUpper())
-                .Parameters.AddWithValue("@studentno", tbstudentno.Text.ToUpper())
+                .Parameters.AddWithValue("@studentno", tbstudentno.Text)
                 .Parameters.AddWithValue("@course", tbcourse.Text.ToUpper())
                 .Parameters.AddWithValue("@section", tbsection.Text.ToUpper())
                 .Parameters.AddWithValue("@year", cbyear.Text.ToUpper())
