@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2022 at 07:51 PM
+-- Generation Time: Apr 27, 2022 at 07:59 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -55,7 +55,7 @@ CREATE TABLE `tblarchivedstud` (
   `course` varchar(255) NOT NULL,
   `year` int(255) NOT NULL,
   `section` varchar(10) NOT NULL,
-  `contact` int(255) NOT NULL
+  `contact` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -99,13 +99,6 @@ CREATE TABLE `tblstudents` (
   `section` varchar(20) NOT NULL,
   `contact` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tblstudents`
---
-
-INSERT INTO `tblstudents` (`ID`, `fullname`, `studentno`, `email`, `course`, `year`, `section`, `contact`) VALUES
-(1, 'SARAH GRACE ARLYN OBEN', 20191940, 'sarahoben7@gmail.com', 'BSCS', 3, 'C', '09469103169');
 
 -- --------------------------------------------------------
 
@@ -203,7 +196,7 @@ ALTER TABLE `tblenrolled`
 -- AUTO_INCREMENT for table `tblstudents`
 --
 ALTER TABLE `tblstudents`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
