@@ -376,9 +376,6 @@ Partial Class addThesis
         Me.btnSaveThesis.TabIndex = 3
         Me.btnSaveThesis.Text = "Save"
         '
-        'Timer1
-        '
-        '
         'addThesis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)

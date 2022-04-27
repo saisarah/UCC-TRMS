@@ -100,6 +100,12 @@
     <Compile Include="borrowers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Confirmation.Designer.vb">
+      <DependentUpon>Confirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dashboard.Designer.vb">
       <DependentUpon>dashboard.vb</DependentUpon>
     </Compile>
@@ -140,6 +146,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="notification.Designer.vb">
+      <DependentUpon>notification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="notification.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="reports.Designer.vb">
       <DependentUpon>reports.vb</DependentUpon>
@@ -182,6 +194,9 @@
     <EmbeddedResource Include="borrowers.resx">
       <DependentUpon>borrowers.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Confirmation.resx">
+      <DependentUpon>Confirmation.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +214,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notification.resx">
+      <DependentUpon>notification.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reports.resx">
       <DependentUpon>reports.vb</DependentUpon>

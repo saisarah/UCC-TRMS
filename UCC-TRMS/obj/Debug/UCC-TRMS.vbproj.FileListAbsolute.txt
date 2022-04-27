@@ -133,3 +133,5 @@ C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.thesisArchived.r
 C:\xampp\htdocs\BSCS3C\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.thesisArchived.resources
 C:\xampp\htdocs\BSCS3C\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.studentArchive.resources
 C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.studentArchive.resources
+C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.notification.resources
+C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.Confirmation.resources

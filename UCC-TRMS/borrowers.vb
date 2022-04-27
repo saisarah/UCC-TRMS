@@ -23,6 +23,7 @@ Public Class borrowers
                 dgvStudent.Rows.Add(dr.Item("studentno").ToString, dr.Item("fullname").ToString, dr.Item("course").ToString, dr.Item("year").ToString, dr.Item("section").ToString, dr.Item("contact").ToString, dr.Item("email").ToString)
             End While
             dr.close()
+
             conn.Close()
         Catch ex As Exception
 
@@ -59,8 +60,8 @@ Public Class borrowers
             it = dgvStudent.CurrentRow.Index
             Dim i As Integer
             i = dgvStudent.CurrentRow.Index
-            fullname.Text = dgvStudent.Item(2, i).Value.ToString
-            studentno.Text = dgvStudent.Item(3, i).Value.ToString
+            fullname.Text = dgvStudent.Item(3, i).Value.ToString
+            studentno.Text = dgvStudent.Item(2, i).Value.ToString
             course.Text = dgvStudent.Item(4, i).Value.ToString
             year.Text = dgvStudent.Item(5, i).Value.ToString
             section.Text = dgvStudent.Item(6, i).Value.ToString
@@ -71,6 +72,7 @@ Public Class borrowers
 
         End Try
     End Sub
+
     Private Sub borrowers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadRecords()
     End Sub
@@ -92,28 +94,32 @@ Public Class borrowers
 
         End Try
     End Sub
-
-    Private Sub dgvStudent_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudent.CellContentClick
+    Public Sub Alert1(ByVal msg As String, ByVal type As Confirmation.enmType)
+        Dim frm As Confirmation = New Confirmation()
+        frm.showAlert(msg, type)
+    End Sub
+    Public Sub dgvStudent_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudent.CellContentClick
         conn.Open()
         Dim j As Integer
-        Dim s As String
+        Dim s As Integer
         j = dgvStudent.CurrentRow.Index
         s = dgvStudent.Item(2, j).Value.ToString()
         Dim colName As String = dgvStudent.Columns(e.ColumnIndex).Name
         If colName = "Delete" Then
-            Dim result As DialogResult = MessageBox.Show("Do you want to Delete this Record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-            If result = DialogResult.Yes Then
-                Dim command As New MySqlCommand("INSERT INTO tblarchivedstud (studID, fullname, studentno, email, course, year, section, contact) SELECT id, fullname, studentno, course, year, section, contact, email FROM tblstudents WHERE id ='" & s & "'", conn)
-                command.ExecuteNonQuery()
-
-                Dim command1 As New MySqlCommand("DELETE FROM tblstudents WHERE studentno ='" & s & "'", conn)
-                command1.ExecuteNonQuery()
-                mainForm.OpenChildForm(New borrowers)
-
-                If result = DialogResult.No Then
-                    Me.Hide()
-                End If
-            End If
+            Dim newForm As New Confirmation
+            newForm.SelectedRows = dgvStudent.SelectedRows
+            newForm.BackColor = Color.DarkOrange
+            newForm.PictureBox1.Image = My.Resources.Warning
+            newForm.PictureBox2.Image = My.Resources.warning__2_
+            newForm.btnNoCancel.Text = "Cancel"
+            newForm.lblmsg.Text = "Do you want to delete this record?"
+            newForm.Label2.ForeColor = Color.FromArgb(255, 66, 66)
+            newForm.btnYesOk.FillColor = Color.FromArgb(255, 66, 66)
+            newForm.update1 = False
+            newForm.deleteStud = True
+            newForm.addTh = False
+            newForm.deleteThesis = False
+            newForm.Show()
         ElseIf colName = "Edit" Then
 
             If dgvStudent.SelectedRows.Count > 0 Then
@@ -125,9 +131,10 @@ Public Class borrowers
                 newForm.tbstudentno.Text = dgvStudent.Item(2, i).Value.ToString
                 newForm.tbcourse.Text = dgvStudent.Item(4, i).Value.ToString
                 newForm.cbyear.Text = dgvStudent.Item(5, i).Value.ToString
-                newForm.tbsection.Text = dgvStudent.Item(6, i).Value.ToString
+                newForm.cbSection.Text = dgvStudent.Item(6, i).Value.ToString
                 newForm.tbcontact.Text = dgvStudent.Item(7, i).Value.ToString
                 newForm.tbemail.Text = dgvStudent.Item(8, i).Value.ToString
+                newForm.tbstudentno.Enabled = False
 
                 newForm.Label1.Text = "Update Student"
                 newForm.btnSaveStudent.Enabled = False
@@ -136,8 +143,6 @@ Public Class borrowers
             End If
 
         End If
-
-
         conn.Close()
     End Sub
     Private Sub dgvStudent_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudent.CellMouseEnter

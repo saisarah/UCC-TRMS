@@ -22,6 +22,7 @@ Partial Class addStudent
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(addStudent))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -34,10 +35,12 @@ Partial Class addStudent
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.cbyear = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.tbcontact = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.tbsection = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbcourse = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbfullname = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.cbSection = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2Panel2.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Panel1
@@ -71,6 +74,7 @@ Partial Class addStudent
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.Guna2Panel2.Controls.Add(Me.cbSection)
         Me.Guna2Panel2.Controls.Add(Me.tbemail)
         Me.Guna2Panel2.Controls.Add(Me.btnUpdateStudent)
         Me.Guna2Panel2.Controls.Add(Me.btnSaveStudent)
@@ -80,7 +84,6 @@ Partial Class addStudent
         Me.Guna2Panel2.Controls.Add(Me.Label1)
         Me.Guna2Panel2.Controls.Add(Me.cbyear)
         Me.Guna2Panel2.Controls.Add(Me.tbcontact)
-        Me.Guna2Panel2.Controls.Add(Me.tbsection)
         Me.Guna2Panel2.Controls.Add(Me.tbcourse)
         Me.Guna2Panel2.Controls.Add(Me.tbfullname)
         Me.Guna2Panel2.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
@@ -229,7 +232,7 @@ Partial Class addStudent
         Me.cbyear.FormattingEnabled = True
         Me.cbyear.HoverState.Parent = Me.cbyear
         Me.cbyear.ItemHeight = 30
-        Me.cbyear.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.cbyear.Items.AddRange(New Object() {"Please select year", "1", "2", "3", "4"})
         Me.cbyear.ItemsAppearance.Parent = Me.cbyear
         Me.cbyear.Location = New System.Drawing.Point(258, 122)
         Me.cbyear.Name = "cbyear"
@@ -263,33 +266,6 @@ Partial Class addStudent
         Me.tbcontact.ShadowDecoration.Parent = Me.tbcontact
         Me.tbcontact.Size = New System.Drawing.Size(238, 36)
         Me.tbcontact.TabIndex = 8
-        '
-        'tbsection
-        '
-        Me.tbsection.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbsection.BackColor = System.Drawing.Color.Transparent
-        Me.tbsection.BorderRadius = 5
-        Me.tbsection.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbsection.DefaultText = ""
-        Me.tbsection.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbsection.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbsection.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbsection.DisabledState.Parent = Me.tbsection
-        Me.tbsection.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbsection.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.tbsection.FocusedState.Parent = Me.tbsection
-        Me.tbsection.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.tbsection.HoverState.Parent = Me.tbsection
-        Me.tbsection.Location = New System.Drawing.Point(258, 166)
-        Me.tbsection.Margin = New System.Windows.Forms.Padding(4)
-        Me.tbsection.Name = "tbsection"
-        Me.tbsection.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbsection.PlaceholderText = "Section"
-        Me.tbsection.SelectedText = ""
-        Me.tbsection.ShadowDecoration.Parent = Me.tbsection
-        Me.tbsection.Size = New System.Drawing.Size(230, 36)
-        Me.tbsection.TabIndex = 7
         '
         'tbcourse
         '
@@ -345,6 +321,33 @@ Partial Class addStudent
         Me.tbfullname.Size = New System.Drawing.Size(475, 36)
         Me.tbfullname.TabIndex = 4
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'cbSection
+        '
+        Me.cbSection.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbSection.BackColor = System.Drawing.Color.Transparent
+        Me.cbSection.BorderRadius = 5
+        Me.cbSection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbSection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSection.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSection.FocusedState.Parent = Me.cbSection
+        Me.cbSection.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cbSection.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cbSection.FormattingEnabled = True
+        Me.cbSection.HoverState.Parent = Me.cbSection
+        Me.cbSection.ItemHeight = 30
+        Me.cbSection.Items.AddRange(New Object() {"Please select section", "A", "B", "C", "D"})
+        Me.cbSection.ItemsAppearance.Parent = Me.cbSection
+        Me.cbSection.Location = New System.Drawing.Point(258, 167)
+        Me.cbSection.Name = "cbSection"
+        Me.cbSection.ShadowDecoration.Parent = Me.cbSection
+        Me.cbSection.Size = New System.Drawing.Size(230, 36)
+        Me.cbSection.TabIndex = 18
+        '
         'addStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -358,6 +361,7 @@ Partial Class addStudent
         Me.Text = "addStudent"
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -369,11 +373,12 @@ Partial Class addStudent
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents cbyear As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents tbcontact As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents tbsection As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbcourse As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbfullname As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbstudentno As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnUpdateStudent As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSaveStudent As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents tbemail As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents cbSection As Guna.UI2.WinForms.Guna2ComboBox
 End Class

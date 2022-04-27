@@ -14,6 +14,7 @@ Public Class thesis
     Sub LoadRecords()
         Try
             dgvThesis.Rows.Clear()
+            cbCategories.SelectedIndex = 0
             conn.Open()
             Dim cm As New MySqlCommand("SELECT * FROM tblthesis", conn)
             dr = cm.ExecuteReader
@@ -125,21 +126,22 @@ Public Class thesis
         s = dgvThesis.Item(2, j).Value.ToString()
         Dim colName As String = dgvThesis.Columns(e.ColumnIndex).Name
         If colName = "Delete" Then
-            Dim result As DialogResult = MessageBox.Show("Do you want to Delete this Record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-            If result = DialogResult.Yes Then
-                Dim command As New MySqlCommand("INSERT INTO tblarchive (thesis_id, title, objectives, scope, limitations, teamname, members, panels, category) SELECT thesis_id, title, objectives, scope, limitations, teamname, members, panels, category FROM tblthesis WHERE thesis_id ='" & s & "'", conn)
-                command.ExecuteNonQuery()
+            Dim newForm As New Confirmation
+            newForm.SelectedRows = dgvThesis.SelectedRows
+            newForm.BackColor = Color.DarkOrange
+            newForm.PictureBox1.Image = My.Resources.Warning
+            newForm.PictureBox2.Image = My.Resources.warning__2_
+            newForm.btnNoCancel.Text = "Cancel"
+            newForm.lblmsg.Text = "Do you want to delete this record?"
+            newForm.update1 = False
+            newForm.deleteStud = False
+            newForm.addTh = False
+            newForm.deleteThesis = True
+            newForm.Label2.ForeColor = Color.FromArgb(255, 66, 66)
+            newForm.btnYesOk.FillColor = Color.FromArgb(255, 66, 66)
+            newForm.Show()
 
-                Dim command1 As New MySqlCommand("DELETE FROM tblthesis WHERE thesis_id ='" & s & "'", conn)
-                command1.ExecuteNonQuery()
-                mainForm.OpenChildForm(New thesis)
-
-                If result = DialogResult.No Then
-                    Me.Hide()
-                End If
-            End If
         ElseIf colName = "Edit" Then
-
             If dgvThesis.SelectedRows.Count > 0 Then
                 Dim i As Integer
                 i = dgvThesis.CurrentRow.Index
@@ -153,17 +155,13 @@ Public Class thesis
                 newForm.tbTeam.Text = dgvThesis.Item(7, i).Value.ToString
                 newForm.tbMembers.Text = dgvThesis.Item(8, i).Value.ToString
                 newForm.tbPanel.Text = dgvThesis.Item(9, i).Value.ToString
-
                 newForm.Label1.Text = "Update Thesis"
                 newForm.btnSaveThesis.Enabled = False
                 newForm.Show()
-
             End If
-
         End If
-
-
         conn.Close()
     End Sub
+
 
 End Class

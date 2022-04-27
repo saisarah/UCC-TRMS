@@ -94,4 +94,11 @@ Public Class issuing
 
 
     End Sub
+    Public Sub Alert(ByVal msg As String, ByVal type As notification.enmType)
+        Dim frm As notification = New notification()
+        frm.showAlert(msg, type)
+    End Sub
+    Private Sub btnProcess_Click(sender As Object, e As EventArgs) Handles btnProcess.Click
+        Me.Alert("Sample Notification", notification.enmType.Success)
+    End Sub
 End Class

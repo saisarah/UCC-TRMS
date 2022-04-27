@@ -22,18 +22,20 @@ Public Class login
 
 
     End Sub
-
+    Public Sub Alert(ByVal msg As String, ByVal type As notification.enmType)
+        Dim frm As notification = New notification()
+        frm.showAlert(msg, type)
+    End Sub
     Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
 
         Dim reader As MySqlDataReader
-
         Dim sql As String
         sql = "SELECT `username` FROM `tblusers` WHERE `username` = '" & cbCredentials.Text & "' "
         cmdd = New MySqlCommand(sql, conn)
         reader = cmdd.ExecuteReader
-
         mainForm.Show()
         Me.Hide()
+        Me.Alert("Welcome back, " + cbCredentials.Text + "!", notification.enmType.Success)
 
     End Sub
 

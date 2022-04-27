@@ -22,5 +22,45 @@ UCC-TRMS
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:UCC_TRMS.My.Resources.Resources.Dagnger">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UCC_TRMS.My.Resources.Resources.Ifo_qm">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UCC_TRMS.My.Resources.Resources.Info">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UCC_TRMS.My.Resources.Resources.info__2_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UCC_TRMS.My.Resources.Resources.question__2_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UCC_TRMS.My.Resources.Resources.Warning">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UCC_TRMS.My.Resources.Resources.warning__2_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UCC_TRMS.My.Resources.Resources.warning_qm">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
