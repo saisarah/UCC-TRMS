@@ -12,9 +12,9 @@ Public Class login
             conn.Open()
 
             dr = cm.ExecuteReader
-            If dr.Read Then
-                cbCredentials.Items.Add(dr(0))
-            End If
+            While dr.Read
+                cbCredentials.Items.Add(dr.Item("username"))
+            End While
             dr.Close()
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical)
@@ -35,7 +35,7 @@ Public Class login
         reader = cmdd.ExecuteReader
         mainForm.Show()
         Me.Hide()
-        Me.Alert("Welcome back, " + cbCredentials.Text + "!", notification.enmType.Success)
+        Me.Alert("Welcome back, " + cbCredentials.Text + "!", notification.enmType.welcome)
 
     End Sub
 

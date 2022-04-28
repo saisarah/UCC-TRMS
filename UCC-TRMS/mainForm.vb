@@ -90,11 +90,17 @@ Public Class mainForm
             While reader.Read
                 lblUser.Text = reader(0)
             End While
+            If lblUser.Text <> "Admin" Then
+                btnUsers.ForeColor = Color.FromArgb(150, 150, 150)
+                btnUsers.Image = My.Resources.user__2_
+                btnUsers.Enabled = False
 
+            End If
         Catch ex As Exception
 
 
         End Try
+
 
         Me.MaximumSize = Screen.FromRectangle(Me.DesktopBounds).WorkingArea.Size
         Me.WindowState = FormWindowState.Maximized

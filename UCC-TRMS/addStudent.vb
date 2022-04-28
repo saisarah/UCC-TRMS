@@ -49,13 +49,11 @@ Public Class addStudent
                 If dr.Read() Then
                     sn = dr(0).ToString()
                     fn = dr(1).ToString()
-                    conn.Close()
                 End If
                 dr.Close()
                 If sn = tbstudentno.Text Or fn = tbfullname.Text Then
                     Me.Alert1("Student number already existed!", Confirmation.enmType.Info)
                 Else
-                    conn.Open()
                     Dim comm As New MySqlCommand("INSERT INTO tblstudents(fullname, studentno, email, course, year, section, contact) VALUES (@fullname, @studentno, @email, @course, @year, @section, @contact)", conn)
                     With comm
                         .Parameters.AddWithValue("@fullname", tbfullname.Text.ToUpper())
@@ -104,7 +102,7 @@ Public Class addStudent
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to update this Record?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If result = DialogResult.Yes Then
             Dim i As String
-            i = SelectedRows(0).Cells(2).Value
+            i = SelectedRows(0).Cells(3).Value
 
             conn.Open()
             Dim comm As New MySqlCommand("UPDATE tblstudents SET fullname=@fullname, email=@email, course=@course, section=@section, year=@year, contact=@contact WHERE studentno = '" & i & "'", conn)
@@ -135,8 +133,10 @@ Public Class addStudent
     End Sub
 
     Private Sub addStudent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cbyear.Text = cbyear.Items.Item(0).ToString()
-        cbSection.SelectedIndex = 0
+        If Label1.Text <> "Update Student" Then
+            cbyear.Text = cbyear.Items.Item(0).ToString()
+            cbSection.SelectedIndex = 0
+        End If
 
     End Sub
 End Class

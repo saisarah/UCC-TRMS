@@ -82,17 +82,17 @@ Public Class issuing
                 lblEm.Text = dt.Rows(0).Item(6)
                 lblCN.Text = dt.Rows(0).Item(5)
             Else
+                Me.Alert1("Student number not found!", Confirmation.enmType.Info)
                 clear()
-                MessageBox.Show("STUDENT NUMBER NOT FOUND", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
             End If
             conn.close()
         Catch ex As Exception
 
         End Try
-
-
-
+    End Sub
+    Public Sub Alert1(ByVal msg As String, ByVal type As Confirmation.enmType)
+        Dim frm As Confirmation = New Confirmation()
+        frm.showAlert(msg, type)
     End Sub
     Public Sub Alert(ByVal msg As String, ByVal type As notification.enmType)
         Dim frm As notification = New notification()

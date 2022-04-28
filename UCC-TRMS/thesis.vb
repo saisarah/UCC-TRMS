@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-
 Public Class thesis
     Public Property SelectedRows As DataGridViewSelectedRowCollection
 
@@ -37,16 +36,16 @@ Public Class thesis
             Dim j As Integer
             Dim s As String
             j = dgvThesis.CurrentRow.Index
-            s = dgvThesis.Item(2, j).Value.ToString()
+            s = dgvThesis.Item(3, j).Value.ToString()
             it = dgvThesis.CurrentRow.Index
             Dim i As Integer
             i = dgvThesis.CurrentRow.Index
-            lblTitle.Text = dgvThesis.Item(3, i).Value.ToString
-            lblScope.Text = dgvThesis.Item(5, i).Value.ToString
-            lblLimit.Text = dgvThesis.Item(6, i).Value.ToString
-            lblCategory.Text = dgvThesis.Item(10, i).Value.ToString
-            lblObjectives.Text = dgvThesis.Item(4, i).Value.ToString
-            lblTeam.Text = dgvThesis.Item(7, i).Value.ToString
+            lblTitle.Text = dgvThesis.Item(4, i).Value.ToString
+            lblScope.Text = dgvThesis.Item(6, i).Value.ToString
+            lblLimit.Text = dgvThesis.Item(7, i).Value.ToString
+            lblCategory.Text = dgvThesis.Item(11, i).Value.ToString
+            lblObjectives.Text = dgvThesis.Item(5, i).Value.ToString
+            lblTeam.Text = dgvThesis.Item(8, i).Value.ToString
 
         Catch ex As Exception
 
@@ -132,7 +131,7 @@ Public Class thesis
             newForm.PictureBox1.Image = My.Resources.Warning
             newForm.PictureBox2.Image = My.Resources.warning__2_
             newForm.btnNoCancel.Text = "Cancel"
-            newForm.lblmsg.Text = "Do you want to delete this record?"
+            newForm.lblmsg.Text = "Are you sure you want to delete this record?"
             newForm.update1 = False
             newForm.deleteStud = False
             newForm.addTh = False
@@ -147,14 +146,14 @@ Public Class thesis
                 i = dgvThesis.CurrentRow.Index
                 Dim newForm As New addThesis
                 newForm.SelectedRows = dgvThesis.SelectedRows
-                newForm.tbTitle.Text = dgvThesis.Item(3, i).Value.ToString
-                newForm.tbObjectives.Text = dgvThesis.Item(4, i).Value.ToString
-                newForm.tbScope.Text = dgvThesis.Item(5, i).Value.ToString
-                newForm.tbLimitation.Text = dgvThesis.Item(6, i).Value.ToString
-                newForm.cbCategory.Text = dgvThesis.Item(10, i).Value.ToString
-                newForm.tbTeam.Text = dgvThesis.Item(7, i).Value.ToString
-                newForm.tbMembers.Text = dgvThesis.Item(8, i).Value.ToString
-                newForm.tbPanel.Text = dgvThesis.Item(9, i).Value.ToString
+                newForm.tbTitle.Text = dgvThesis.Item(4, i).Value.ToString
+                newForm.tbObjectives.Text = dgvThesis.Item(5, i).Value.ToString
+                newForm.tbScope.Text = dgvThesis.Item(6, i).Value.ToString
+                newForm.tbLimitation.Text = dgvThesis.Item(7, i).Value.ToString
+                newForm.cbCategory.Text = dgvThesis.Item(11, i).Value.ToString
+                newForm.tbTeam.Text = dgvThesis.Item(8, i).Value.ToString
+                newForm.tbMembers.Text = dgvThesis.Item(9, i).Value.ToString
+                newForm.tbPanel.Text = dgvThesis.Item(10, i).Value.ToString
                 newForm.Label1.Text = "Update Thesis"
                 newForm.btnSaveThesis.Enabled = False
                 newForm.Show()
@@ -163,5 +162,9 @@ Public Class thesis
         conn.Close()
     End Sub
 
-
+    Private Sub dgvThesis_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs) Handles dgvThesis.RowPrePaint
+        If e.RowIndex >= 0 Then
+            Me.dgvThesis.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
+        End If
+    End Sub
 End Class

@@ -22,6 +22,11 @@ UCC-TRMS
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:UCC_TRMS.My.Resources.Resources.checked">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UCC_TRMS.My.Resources.Resources.Dagnger">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -43,6 +48,16 @@ UCC-TRMS
 </summary>
 </member>
 <member name="P:UCC_TRMS.My.Resources.Resources.question__2_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UCC_TRMS.My.Resources.Resources.ucc">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UCC_TRMS.My.Resources.Resources.user__2_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

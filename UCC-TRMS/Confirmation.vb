@@ -126,7 +126,7 @@ Public Class Confirmation
                 Me.Close()
             ElseIf deleteStud = True And update1 = False And addTh = False And deleteThesis = False Then
                 Dim i As String
-                i = SelectedRows(0).Cells(2).Value
+                i = SelectedRows(0).Cells(3).Value
                 update1 = False
                 addTh = False
                 deleteThesis = False
@@ -153,7 +153,7 @@ Public Class Confirmation
                 deleteStud = False
                 addTh = False
                 Dim i As String
-                i = SelectedRows(0).Cells(2).Value
+                i = SelectedRows(0).Cells(3).Value
                 conn.Open()
                 Dim command As New MySqlCommand("INSERT INTO tblarchive (thesis_id, title, objectives, scope, limitations, teamname, members, panels, category) SELECT thesis_id, title, objectives, scope, limitations, teamname, members, panels, category FROM tblthesis WHERE thesis_id ='" & i & "'", conn)
                 command.ExecuteNonQuery()
@@ -164,7 +164,7 @@ Public Class Confirmation
                 Me.Alert(i + " deleted successfully", notification.enmType.Success)
                 Me.Close()
             Else
-                Me.Hide()
+                Me.Close()
             End If
         Catch ex As Exception
 

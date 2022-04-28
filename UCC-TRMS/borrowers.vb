@@ -56,17 +56,17 @@ Public Class borrowers
             Dim j As Integer
             Dim s As String
             j = dgvStudent.CurrentRow.Index
-            s = dgvStudent.Item(2, j).Value.ToString()
+            s = dgvStudent.Item(3, j).Value.ToString()
             it = dgvStudent.CurrentRow.Index
             Dim i As Integer
             i = dgvStudent.CurrentRow.Index
-            fullname.Text = dgvStudent.Item(3, i).Value.ToString
-            studentno.Text = dgvStudent.Item(2, i).Value.ToString
-            course.Text = dgvStudent.Item(4, i).Value.ToString
-            year.Text = dgvStudent.Item(5, i).Value.ToString
-            section.Text = dgvStudent.Item(6, i).Value.ToString
-            contact.Text = dgvStudent.Item(7, i).Value.ToString
-            email.Text = dgvStudent.Item(8, i).Value.ToString
+            fullname.Text = dgvStudent.Item(4, i).Value.ToString
+            studentno.Text = dgvStudent.Item(3, i).Value.ToString
+            course.Text = dgvStudent.Item(5, i).Value.ToString
+            year.Text = dgvStudent.Item(6, i).Value.ToString
+            section.Text = dgvStudent.Item(7, i).Value.ToString
+            contact.Text = dgvStudent.Item(8, i).Value.ToString
+            email.Text = dgvStudent.Item(9, i).Value.ToString
 
         Catch ex As Exception
 
@@ -103,7 +103,7 @@ Public Class borrowers
         Dim j As Integer
         Dim s As Integer
         j = dgvStudent.CurrentRow.Index
-        s = dgvStudent.Item(2, j).Value.ToString()
+        s = dgvStudent.Item(3, j).Value.ToString()
         Dim colName As String = dgvStudent.Columns(e.ColumnIndex).Name
         If colName = "Delete" Then
             Dim newForm As New Confirmation
@@ -112,7 +112,7 @@ Public Class borrowers
             newForm.PictureBox1.Image = My.Resources.Warning
             newForm.PictureBox2.Image = My.Resources.warning__2_
             newForm.btnNoCancel.Text = "Cancel"
-            newForm.lblmsg.Text = "Do you want to delete this record?"
+            newForm.lblmsg.Text = "Are you sure you want to delete this record?"
             newForm.Label2.ForeColor = Color.FromArgb(255, 66, 66)
             newForm.btnYesOk.FillColor = Color.FromArgb(255, 66, 66)
             newForm.update1 = False
@@ -127,13 +127,13 @@ Public Class borrowers
                 i = dgvStudent.CurrentRow.Index
                 Dim newForm As New addStudent
                 newForm.SelectedRows = dgvStudent.SelectedRows
-                newForm.tbfullname.Text = dgvStudent.Item(3, i).Value.ToString
-                newForm.tbstudentno.Text = dgvStudent.Item(2, i).Value.ToString
-                newForm.tbcourse.Text = dgvStudent.Item(4, i).Value.ToString
-                newForm.cbyear.Text = dgvStudent.Item(5, i).Value.ToString
-                newForm.cbSection.Text = dgvStudent.Item(6, i).Value.ToString
-                newForm.tbcontact.Text = dgvStudent.Item(7, i).Value.ToString
-                newForm.tbemail.Text = dgvStudent.Item(8, i).Value.ToString
+                newForm.tbfullname.Text = dgvStudent.Item(4, i).Value.ToString
+                newForm.tbstudentno.Text = dgvStudent.Item(3, i).Value.ToString
+                newForm.tbcourse.Text = dgvStudent.Item(5, i).Value.ToString
+                newForm.cbyear.Text = dgvStudent.Item(6, i).Value.ToString
+                newForm.cbSection.Text = dgvStudent.Item(7, i).Value.ToString
+                newForm.tbcontact.Text = dgvStudent.Item(8, i).Value.ToString
+                newForm.tbemail.Text = dgvStudent.Item(9, i).Value.ToString
                 newForm.tbstudentno.Enabled = False
 
                 newForm.Label1.Text = "Update Student"
@@ -165,5 +165,11 @@ Public Class borrowers
 
     Private Sub btnArchived_Click(sender As Object, e As EventArgs) Handles btnArchived.Click
         studentArchive.Show()
+    End Sub
+
+    Private Sub dgvStudent_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs) Handles dgvStudent.RowPrePaint
+        If e.RowIndex >= 0 Then
+            Me.dgvStudent.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
+        End If
     End Sub
 End Class

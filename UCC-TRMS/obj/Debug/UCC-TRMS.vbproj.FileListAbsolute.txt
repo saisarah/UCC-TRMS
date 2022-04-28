@@ -135,3 +135,5 @@ C:\xampp\htdocs\BSCS3C\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.studentArchive.resou
 C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.studentArchive.resources
 C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.notification.resources
 C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.Confirmation.resources
+C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.addUsers.resources
+C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\bin\Debug\EasyHTMLReports.dll

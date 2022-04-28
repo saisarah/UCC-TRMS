@@ -27,12 +27,21 @@
         Select Case type
             Case enmType.Success
                 Me.BackColor = Color.SeaGreen
+                Me.PictureBox1.Image = My.Resources.checked
+                Me.PictureBox1.Size = New Size(22, 23)
+                Me.PictureBox1.Location = New Point(40, 39)
+                lblMsg.TextAlign = ContentAlignment.MiddleLeft
             Case enmType.[Error]
                 Me.BackColor = Color.DarkRed
             Case enmType.Info
                 Me.BackColor = Color.RoyalBlue
             Case enmType.Warning
                 Me.BackColor = Color.DarkOrange
+            Case enmType.welcome
+                Me.PictureBox1.Image = My.Resources.user__2_
+                Me.PictureBox1.Size = New Size(50, 42)
+                Me.PictureBox1.Location = New Point(11, 27)
+                lblMsg.TextAlign = ContentAlignment.MiddleCenter
         End Select
 
         Me.lblMsg.Text = msg
@@ -51,6 +60,7 @@
         Warning
         [Error]
         Info
+        welcome
     End Enum
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

@@ -138,6 +138,9 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="DataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -238,7 +241,7 @@
   <data name="DataGridViewImageColumn1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGHSURBVEhLrZWx
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGHSURBVEhLrZWx
         SsNAHIejzyDqIoigDoo4qfgG1UH0AVxdREFBHboJig9Q1MGh4moHkTqIIAilTaGlImi1aRNpGqU2TVOo
         WIp/75LToV7T6yU/+JYk933JFMHrgTKzDcp0FbFDLnk3/dl3gMSAaTwMQyM1eEVuuZ/vUN8KXgf+5PVo
         D9TF3m/rJgB0lWq1AcMwhnhYPtX3fUc6YELhTVuOQF8QFvRqdfzDNDMl0wQeTiKGJcZM7hagby0Lt+El

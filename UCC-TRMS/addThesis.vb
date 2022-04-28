@@ -51,7 +51,7 @@ Public Class addThesis
             clear()
             Me.Close()
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
     Sub clear()
@@ -71,7 +71,7 @@ Public Class addThesis
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to update this Record?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         Dim i As String
-        i = SelectedRows(0).Cells(2).Value
+        i = SelectedRows(0).Cells(3).Value
 
         If result = DialogResult.Yes Then
 
