@@ -139,20 +139,23 @@
   <metadata name="username.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Edit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Edit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALAAAACwARRqq2kAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABh0lEQVRIS62VsUrDQByHo88g6iKIoA6KOKn4BtVB9AFcXURBQR26CYoPUNTBoeJqB5E6iCAIpU2h
-        pSJotWkTaRqlNk1TqFiKf++S06Fe0+slP/iWJPd9yRTB64Eysw3KdBWxQy55N/3Zd4DEgGk8DEMjNXhF
-        brmf71DfCl4H/uT1aA/Uxd5v6yYAdJVqtQHDMIZ4WD7V931HOmBC4U1bjkBfEBb0anX8wzQzJdMEHk4i
-        hiXGTO4WoG8tC7fhJSiLEzHr7dFDkeZDrASj/+WYUX/+xpLjoQfrzQdZaCWf2ssniNoe7XA7WskXA6+Q
-        1rQ5orZHEzjhJI9lMu4C7eSuAixy7sDFfYVJzh3YCJWZ5FyB7HsF5o/Z5JiOA6GkYcn717Mw5pdh9Uym
-        in/pOHCXLsBKUIbzuEQVNtNR4EXTqBInmAM8cgxTgFeOaRtwI8c4BtzKMbTAp1dyzKOqzhK1PSS/9Eqe
-        yOW+0O+3m6jtScXiSEpR3kTKAVZESYKkLFeeVHWBaMkE4QePLh1sKgYimgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGHSURBVEhLrZWx
+        SsNAHIejzyDqIoigDoo4qfgG1UH0AVxdREFBHboJig9Q1MGh4moHkTqIIAilTaGlImi1aRNpGqU2TVOo
+        WIp/75LToV7T6yU/+JYk933JFMHrgTKzDcp0FbFDLnk3/dl3gMSAaTwMQyM1eEVuuZ/vUN8KXgf+5PVo
+        D9TF3m/rJgB0lWq1AcMwhnhYPtX3fUc6YELhTVuOQF8QFvRqdfzDNDMl0wQeTiKGJcZM7hagby0Lt+El
+        KIsTMevt0UOR5kOsBKP/5ZhRf/7GkuOhB+vNB1loJZ/ayyeI2h7tcDtayRcDr5DWtDmitkcTOOEkj2Uy
+        7gLt5K4CLHLuwMV9hUnOHdgIlZnkXIHsewXmj9nkmI4DoaRhyfvXszDml2H1TKaKf+k4cJcuwEpQhvO4
+        RBU201HgRdOoEieYAzxyDFOAV45pG3AjxzgG3MoxtMCnV3LMo6rOErU9JL/0Sp7I5b7Q77ebqO1JxeJI
+        SlHeRMoBVkRJgqQsV55UdYFoyQThB48uHWwqBiKaAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

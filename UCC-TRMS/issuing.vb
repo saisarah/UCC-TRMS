@@ -101,4 +101,10 @@ Public Class issuing
     Private Sub btnProcess_Click(sender As Object, e As EventArgs) Handles btnProcess.Click
         Me.Alert("Sample Notification", notification.enmType.Success)
     End Sub
+
+    Private Sub dgvThesis_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs) Handles dgvThesis.RowPrePaint
+        If e.RowIndex >= 0 Then
+            Me.dgvThesis.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
+        End If
+    End Sub
 End Class

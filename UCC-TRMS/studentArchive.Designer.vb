@@ -30,7 +30,10 @@ Partial Class studentArchive
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentArchive))
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.dgvStudentArchived = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnStudentArchivedClose = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.fullname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.studentno = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.course = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,10 +41,6 @@ Partial Class studentArchive
         Me.section = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.contact = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.email = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnStudentArchivedClose = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel2.SuspendLayout()
         CType(Me.dgvStudentArchived, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -92,7 +91,7 @@ Partial Class studentArchive
         Me.dgvStudentArchived.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvStudentArchived.ColumnHeadersHeight = 50
         Me.dgvStudentArchived.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvStudentArchived.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.fullname, Me.studentno, Me.course, Me.year, Me.section, Me.contact, Me.email})
+        Me.dgvStudentArchived.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fullname, Me.studentno, Me.course, Me.year, Me.section, Me.contact, Me.email})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -147,13 +146,57 @@ Partial Class studentArchive
         Me.dgvStudentArchived.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
         Me.dgvStudentArchived.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         '
-        'id
+        'Guna2Panel3
         '
-        Me.id.DataPropertyName = "id"
-        Me.id.FillWeight = 103.4432!
-        Me.id.HeaderText = "#"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
+        Me.Guna2Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2Panel3.BackColor = System.Drawing.Color.Gray
+        Me.Guna2Panel3.Location = New System.Drawing.Point(16, 62)
+        Me.Guna2Panel3.Name = "Guna2Panel3"
+        Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
+        Me.Guna2Panel3.Size = New System.Drawing.Size(790, 1)
+        Me.Guna2Panel3.TabIndex = 12
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(22, 17)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(97, 25)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Archived"
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.Guna2Panel1.BorderRadius = 20
+        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
+        Me.Guna2Panel1.Size = New System.Drawing.Size(823, 10)
+        Me.Guna2Panel1.TabIndex = 16
+        '
+        'btnStudentArchivedClose
+        '
+        Me.btnStudentArchivedClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnStudentArchivedClose.CheckedState.Parent = Me.btnStudentArchivedClose
+        Me.btnStudentArchivedClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnStudentArchivedClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.btnStudentArchivedClose.HoverState.Parent = Me.btnStudentArchivedClose
+        Me.btnStudentArchivedClose.Image = CType(resources.GetObject("btnStudentArchivedClose.Image"), System.Drawing.Image)
+        Me.btnStudentArchivedClose.ImageSize = New System.Drawing.Size(15, 15)
+        Me.btnStudentArchivedClose.Location = New System.Drawing.Point(777, 3)
+        Me.btnStudentArchivedClose.Name = "btnStudentArchivedClose"
+        Me.btnStudentArchivedClose.PressedState.Parent = Me.btnStudentArchivedClose
+        Me.btnStudentArchivedClose.Size = New System.Drawing.Size(43, 27)
+        Me.btnStudentArchivedClose.TabIndex = 13
         '
         'fullname
         '
@@ -211,58 +254,6 @@ Partial Class studentArchive
         Me.email.Name = "email"
         Me.email.ReadOnly = True
         '
-        'btnStudentArchivedClose
-        '
-        Me.btnStudentArchivedClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnStudentArchivedClose.CheckedState.Parent = Me.btnStudentArchivedClose
-        Me.btnStudentArchivedClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnStudentArchivedClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.btnStudentArchivedClose.HoverState.Parent = Me.btnStudentArchivedClose
-        Me.btnStudentArchivedClose.Image = CType(resources.GetObject("btnStudentArchivedClose.Image"), System.Drawing.Image)
-        Me.btnStudentArchivedClose.ImageSize = New System.Drawing.Size(15, 15)
-        Me.btnStudentArchivedClose.Location = New System.Drawing.Point(777, 3)
-        Me.btnStudentArchivedClose.Name = "btnStudentArchivedClose"
-        Me.btnStudentArchivedClose.PressedState.Parent = Me.btnStudentArchivedClose
-        Me.btnStudentArchivedClose.Size = New System.Drawing.Size(43, 27)
-        Me.btnStudentArchivedClose.TabIndex = 13
-        '
-        'Guna2Panel3
-        '
-        Me.Guna2Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2Panel3.BackColor = System.Drawing.Color.Gray
-        Me.Guna2Panel3.Location = New System.Drawing.Point(16, 62)
-        Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
-        Me.Guna2Panel3.Size = New System.Drawing.Size(790, 1)
-        Me.Guna2Panel3.TabIndex = 12
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(22, 17)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 25)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Archived"
-        '
-        'Guna2Panel1
-        '
-        Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.Guna2Panel1.BorderRadius = 20
-        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(823, 10)
-        Me.Guna2Panel1.TabIndex = 16
-        '
         'studentArchive
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -271,6 +262,7 @@ Partial Class studentArchive
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "studentArchive"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "studentArchive"
@@ -287,7 +279,6 @@ Partial Class studentArchive
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents fullname As DataGridViewTextBoxColumn
     Friend WithEvents studentno As DataGridViewTextBoxColumn
     Friend WithEvents course As DataGridViewTextBoxColumn

@@ -20,6 +20,8 @@ Public Class login
             MsgBox(ex.Message, vbCritical)
         End Try
 
+        Me.MaximumSize = Screen.FromRectangle(Me.DesktopBounds).WorkingArea.Size
+        Me.WindowState = FormWindowState.Maximized
 
     End Sub
     Public Sub Alert(ByVal msg As String, ByVal type As notification.enmType)
@@ -27,19 +29,26 @@ Public Class login
         frm.showAlert(msg, type)
     End Sub
     Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
-
-        Dim reader As MySqlDataReader
-        Dim sql As String
-        sql = "SELECT `username` FROM `tblusers` WHERE `username` = '" & cbCredentials.Text & "' "
-        cmdd = New MySqlCommand(sql, conn)
-        reader = cmdd.ExecuteReader
-        mainForm.Show()
-        Me.Hide()
-        Me.Alert("Welcome back, " + cbCredentials.Text + "!", notification.enmType.welcome)
-
+        If cbCredentials.Text <> "" Then
+            Dim reader As MySqlDataReader
+            Dim sql As String
+            sql = "SELECT `username` FROM `tblusers` WHERE `username` = '" & cbCredentials.Text & "' "
+            cmdd = New MySqlCommand(sql, conn)
+            reader = cmdd.ExecuteReader
+            mainForm.Show()
+            Me.Close()
+        End If
     End Sub
 
     Private Sub btnCloseLogin_Click_1(sender As Object, e As EventArgs) Handles btnCloseLogin.Click
         Application.Exit()
+    End Sub
+
+    Private Sub btnMazimized_Click(sender As Object, e As EventArgs) Handles btnMazimized.Click
+        If WindowState = FormWindowState.Normal Then
+            WindowState = FormWindowState.Maximized
+        Else
+            WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

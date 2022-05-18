@@ -13,9 +13,6 @@ Public Class mainForm
     Private btnUsersWasClicked As Boolean = False
 
 
-
-
-
     Public Sub OpenChildForm(childForm As Form)
         'Open only form'
         If currentChildForm IsNot Nothing Then
@@ -76,7 +73,10 @@ Public Class mainForm
             End If
         End If
     End Sub
-
+    Public Sub Alert(ByVal msg As String, ByVal type As notification.enmType)
+        Dim frm As notification = New notification()
+        frm.showAlert(msg, type)
+    End Sub
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
         Dim reader As MySqlDataReader
@@ -94,8 +94,9 @@ Public Class mainForm
                 btnUsers.ForeColor = Color.FromArgb(150, 150, 150)
                 btnUsers.Image = My.Resources.user__2_
                 btnUsers.Enabled = False
-
             End If
+            Me.Alert("Welcome back, " + login.cbCredentials.Text + "!", notification.enmType.welcome)
+
         Catch ex As Exception
 
 
@@ -388,5 +389,10 @@ Public Class mainForm
 
     Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
         WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+        login.Show()
     End Sub
 End Class

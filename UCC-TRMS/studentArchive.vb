@@ -10,7 +10,7 @@ Public Class studentArchive
             dr = cm.ExecuteReader
             While dr.Read
 
-                dgvStudentArchived.Rows.Add(dr.Item("id").ToString, dr.Item("fullname").ToString, dr.Item("studentno").ToString, dr.Item("course").ToString, dr.Item("year").ToString, dr.Item("section").ToString, dr.Item("contact").ToString, dr.Item("email").ToString)
+                dgvStudentArchived.Rows.Add(dr.Item("fullname").ToString, dr.Item("studentno").ToString, dr.Item("course").ToString, dr.Item("year").ToString, dr.Item("section").ToString, dr.Item("contact").ToString, dr.Item("email").ToString)
             End While
             dr.close()
             conn.Close()

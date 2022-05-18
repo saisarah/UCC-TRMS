@@ -137,3 +137,5 @@ C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.notification.res
 C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.Confirmation.resources
 C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.addUsers.resources
 C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\bin\Debug\EasyHTMLReports.dll
+C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.SplashScreen.resources
+C:\Users\Asus\source\repos\UCC-TRMS\UCC-TRMS\obj\Debug\UCC_TRMS.ThesisUC.resources

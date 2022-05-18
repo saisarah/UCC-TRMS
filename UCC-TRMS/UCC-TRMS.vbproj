@@ -168,6 +168,12 @@
     <Compile Include="reports.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="studentArchive.Designer.vb">
       <DependentUpon>studentArchive.vb</DependentUpon>
     </Compile>
@@ -185,6 +191,12 @@
     </Compile>
     <Compile Include="thesisArchived.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThesisUC.Designer.vb">
+      <DependentUpon>ThesisUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ThesisUC.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="users.Designer.vb">
       <DependentUpon>users.vb</DependentUpon>
@@ -233,6 +245,9 @@
     <EmbeddedResource Include="reports.resx">
       <DependentUpon>reports.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="studentArchive.resx">
       <DependentUpon>studentArchive.vb</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="thesisArchived.resx">
       <DependentUpon>thesisArchived.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThesisUC.resx">
+      <DependentUpon>ThesisUC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="users.resx">
       <DependentUpon>users.vb</DependentUpon>

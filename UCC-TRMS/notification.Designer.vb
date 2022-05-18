@@ -23,11 +23,12 @@ Partial Class notification
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(notification))
         Me.lblMsg = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -60,16 +61,6 @@ Partial Class notification
         Me.Guna2Panel1.Size = New System.Drawing.Size(324, 88)
         Me.Guna2Panel1.TabIndex = 1
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.UCC_TRMS.My.Resources.Resources.user__2_
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 27)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(50, 42)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(45, Byte), Integer))
@@ -82,6 +73,16 @@ Partial Class notification
         'Timer1
         '
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.UCC_TRMS.My.Resources.Resources.user__2_
+        Me.PictureBox1.Location = New System.Drawing.Point(11, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 42)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'notification
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -89,6 +90,7 @@ Partial Class notification
         Me.ClientSize = New System.Drawing.Size(324, 88)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "notification"
         Me.Text = "notification"
         Me.TopMost = True

@@ -1,10 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
-
 Public Class borrowers
-    Public Property SelectedRows As DataGridViewSelectedRowCollection
-
     Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
     Dim it As Integer
+    Public Property SelectedRows As DataGridViewSelectedRowCollection
 
     Private Sub btnAddStudent_Click(sender As Object, e As EventArgs) Handles btnAddStudent.Click
         addStudent.Label1.Text = "Add Student"

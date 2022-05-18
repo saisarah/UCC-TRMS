@@ -9,8 +9,7 @@ Public Class thesisArchived
             Dim cm As New MySqlCommand("SELECT * FROM tblArchive", conn)
             dr = cm.ExecuteReader
             While dr.Read
-
-                dgvThesisArchived.Rows.Add(dr.Item("id").ToString, dr.Item("title").ToString, dr.Item("objectives").ToString, dr.Item("scope").ToString, dr.Item("limitations").ToString, dr.Item("teamname").ToString, dr.Item("members").ToString, dr.Item("panels").ToString, dr.Item("category").ToString)
+                dgvThesisArchived.Rows.Add(dr.Item("title").ToString, dr.Item("objectives").ToString, dr.Item("scope").ToString, dr.Item("limitations").ToString, dr.Item("teamname").ToString, dr.Item("members").ToString, dr.Item("panels").ToString, dr.Item("category").ToString)
             End While
             dr.close()
             conn.Close()

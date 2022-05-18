@@ -52,8 +52,49 @@ Public Class thesis
         End Try
     End Sub
 
-    Private Sub thesis_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadRecords()
+    Private Sub thesis_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Try
+            conn.Open()
+            Dim comm2 As New MySqlCommand("SELECT COUNT(*) FROM tblthesis", conn)
+            dr1 = comm2.ExecuteReader
+            Dim cn As Integer
+
+            While dr1.Read
+                cn = dr1(0)
+            End While
+            dr1.Close()
+            conn.Close()
+
+
+            conn.Open()
+            Dim cm As New MySqlCommand("SELECT * FROM tblthesis ORDER BY thesis_id DESC", conn)
+            dr = cm.ExecuteReader
+            Do While dr.read
+                Dim c As ThesisUC = New ThesisUC
+                For i As Integer = 0 To 20
+                    c.Dock = DockStyle.Top
+                    c.lblCode.Text = dr(0)
+                    c.lblTitle.Text = dr(1)
+                    c.lblLimi.Text = dr(4)
+                    c.lblScope.Text = dr(3)
+                    c.lblObjectives.Text = dr(2)
+                    c.lblCategory.Text = dr(8)
+                    Guna2Panel5.Controls.Add(c)
+
+                Next
+            Loop
+
+
+
+
+            dr.Close()
+
+            conn.Close()
+
+            'Dim titles As String() = {"Thesis", "Student", "Management", "Record", "Alumni"}
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub tbSearch_TextChanged(sender As Object, e As EventArgs) Handles tbSearch.TextChanged
@@ -61,7 +102,7 @@ Public Class thesis
             conn.Open()
             Dim x As String
             x = tbSearch.Text
-            Dim y As New MySqlCommand("SELECT `thesis_id`, `title`, `objectives`, `scope`, `limitations`, `teamname`, `members`, `panels`, `category` FROM tblthesis WHERE title LIKE '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%'", conn)
+            Dim y As New MySqlCommand("SELECT `thesis_id`, `title`, `objectives`, `scope`, `limitations`, `teamname`, `members`, `panels`, `category` FROM tblthesis WHERE title Like '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%'", conn)
             y.ExecuteNonQuery()
             Dim da1 As New MySqlDataAdapter(y)
             Dim dt1 As New DataTable
@@ -167,4 +208,6 @@ Public Class thesis
             Me.dgvThesis.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
         End If
     End Sub
+
+
 End Class

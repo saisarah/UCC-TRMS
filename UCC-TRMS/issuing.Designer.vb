@@ -49,14 +49,6 @@ Partial Class issuing
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.dgvThesis = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.title = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OBJECTIVES = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SCOPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LIMITATION = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TEAMNAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MEMBERS = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PANEL = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CATEGORY = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -72,6 +64,15 @@ Partial Class issuing
         Me.Label16 = New System.Windows.Forms.Label()
         Me.btnProcess = New Guna.UI2.WinForms.Guna2Button()
         Me.tbSearchThesis = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.title = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OBJECTIVES = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SCOPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LIMITATION = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TEAMNAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MEMBERS = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PANEL = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CATEGORY = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel7.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
@@ -373,7 +374,7 @@ Partial Class issuing
         Me.dgvThesis.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvThesis.ColumnHeadersHeight = 50
         Me.dgvThesis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvThesis.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.title, Me.OBJECTIVES, Me.SCOPE, Me.LIMITATION, Me.TEAMNAME, Me.MEMBERS, Me.PANEL, Me.CATEGORY})
+        Me.dgvThesis.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.title, Me.OBJECTIVES, Me.SCOPE, Me.LIMITATION, Me.TEAMNAME, Me.MEMBERS, Me.PANEL, Me.CATEGORY})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -427,70 +428,6 @@ Partial Class issuing
         Me.dgvThesis.ThemeStyle.RowsStyle.Height = 30
         Me.dgvThesis.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
         Me.dgvThesis.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
-        '
-        'title
-        '
-        Me.title.DataPropertyName = "title"
-        Me.title.FillWeight = 103.4432!
-        Me.title.HeaderText = "TITLE"
-        Me.title.Name = "title"
-        Me.title.ReadOnly = True
-        '
-        'OBJECTIVES
-        '
-        Me.OBJECTIVES.DataPropertyName = "objectives"
-        Me.OBJECTIVES.FillWeight = 103.4432!
-        Me.OBJECTIVES.HeaderText = "OBJECTIVES"
-        Me.OBJECTIVES.Name = "OBJECTIVES"
-        Me.OBJECTIVES.ReadOnly = True
-        '
-        'SCOPE
-        '
-        Me.SCOPE.DataPropertyName = "scope"
-        Me.SCOPE.FillWeight = 103.4432!
-        Me.SCOPE.HeaderText = "SCOPE"
-        Me.SCOPE.Name = "SCOPE"
-        Me.SCOPE.ReadOnly = True
-        '
-        'LIMITATION
-        '
-        Me.LIMITATION.DataPropertyName = "limitations"
-        Me.LIMITATION.FillWeight = 103.4432!
-        Me.LIMITATION.HeaderText = "LIMITATION"
-        Me.LIMITATION.Name = "LIMITATION"
-        Me.LIMITATION.ReadOnly = True
-        '
-        'TEAMNAME
-        '
-        Me.TEAMNAME.DataPropertyName = "teamname"
-        Me.TEAMNAME.FillWeight = 103.4432!
-        Me.TEAMNAME.HeaderText = "TEAM NAME"
-        Me.TEAMNAME.Name = "TEAMNAME"
-        Me.TEAMNAME.ReadOnly = True
-        '
-        'MEMBERS
-        '
-        Me.MEMBERS.DataPropertyName = "members"
-        Me.MEMBERS.FillWeight = 103.4432!
-        Me.MEMBERS.HeaderText = "MEMBERS"
-        Me.MEMBERS.Name = "MEMBERS"
-        Me.MEMBERS.ReadOnly = True
-        '
-        'PANEL
-        '
-        Me.PANEL.DataPropertyName = "panels"
-        Me.PANEL.FillWeight = 103.4432!
-        Me.PANEL.HeaderText = "PANEL"
-        Me.PANEL.Name = "PANEL"
-        Me.PANEL.ReadOnly = True
-        '
-        'CATEGORY
-        '
-        Me.CATEGORY.DataPropertyName = "category"
-        Me.CATEGORY.FillWeight = 103.4432!
-        Me.CATEGORY.HeaderText = "CATEGORY"
-        Me.CATEGORY.Name = "CATEGORY"
-        Me.CATEGORY.ReadOnly = True
         '
         'Panel1
         '
@@ -719,6 +656,76 @@ Partial Class issuing
         Me.tbSearchThesis.Size = New System.Drawing.Size(335, 36)
         Me.tbSearchThesis.TabIndex = 15
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "#"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'title
+        '
+        Me.title.DataPropertyName = "title"
+        Me.title.FillWeight = 103.4432!
+        Me.title.HeaderText = "TITLE"
+        Me.title.Name = "title"
+        Me.title.ReadOnly = True
+        '
+        'OBJECTIVES
+        '
+        Me.OBJECTIVES.DataPropertyName = "objectives"
+        Me.OBJECTIVES.FillWeight = 103.4432!
+        Me.OBJECTIVES.HeaderText = "OBJECTIVES"
+        Me.OBJECTIVES.Name = "OBJECTIVES"
+        Me.OBJECTIVES.ReadOnly = True
+        '
+        'SCOPE
+        '
+        Me.SCOPE.DataPropertyName = "scope"
+        Me.SCOPE.FillWeight = 103.4432!
+        Me.SCOPE.HeaderText = "SCOPE"
+        Me.SCOPE.Name = "SCOPE"
+        Me.SCOPE.ReadOnly = True
+        '
+        'LIMITATION
+        '
+        Me.LIMITATION.DataPropertyName = "limitations"
+        Me.LIMITATION.FillWeight = 103.4432!
+        Me.LIMITATION.HeaderText = "LIMITATION"
+        Me.LIMITATION.Name = "LIMITATION"
+        Me.LIMITATION.ReadOnly = True
+        '
+        'TEAMNAME
+        '
+        Me.TEAMNAME.DataPropertyName = "teamname"
+        Me.TEAMNAME.FillWeight = 103.4432!
+        Me.TEAMNAME.HeaderText = "TEAM NAME"
+        Me.TEAMNAME.Name = "TEAMNAME"
+        Me.TEAMNAME.ReadOnly = True
+        '
+        'MEMBERS
+        '
+        Me.MEMBERS.DataPropertyName = "members"
+        Me.MEMBERS.FillWeight = 103.4432!
+        Me.MEMBERS.HeaderText = "MEMBERS"
+        Me.MEMBERS.Name = "MEMBERS"
+        Me.MEMBERS.ReadOnly = True
+        '
+        'PANEL
+        '
+        Me.PANEL.DataPropertyName = "panels"
+        Me.PANEL.FillWeight = 103.4432!
+        Me.PANEL.HeaderText = "PANEL"
+        Me.PANEL.Name = "PANEL"
+        Me.PANEL.ReadOnly = True
+        '
+        'CATEGORY
+        '
+        Me.CATEGORY.DataPropertyName = "category"
+        Me.CATEGORY.FillWeight = 103.4432!
+        Me.CATEGORY.HeaderText = "CATEGORY"
+        Me.CATEGORY.Name = "CATEGORY"
+        Me.CATEGORY.ReadOnly = True
+        '
         'issuing
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -775,6 +782,13 @@ Partial Class issuing
     Friend WithEvents Panel1 As Panel
     Friend WithEvents cbCategory As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents dgvThesis As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents lblCN As Label
+    Friend WithEvents lblEm As Label
+    Friend WithEvents lblCYS As Label
+    Friend WithEvents lblFN As Label
+    Friend WithEvents lblSN As Label
+    Friend WithEvents tbSearchStudNo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents title As DataGridViewTextBoxColumn
     Friend WithEvents OBJECTIVES As DataGridViewTextBoxColumn
     Friend WithEvents SCOPE As DataGridViewTextBoxColumn
@@ -783,10 +797,4 @@ Partial Class issuing
     Friend WithEvents MEMBERS As DataGridViewTextBoxColumn
     Friend WithEvents PANEL As DataGridViewTextBoxColumn
     Friend WithEvents CATEGORY As DataGridViewTextBoxColumn
-    Friend WithEvents lblCN As Label
-    Friend WithEvents lblEm As Label
-    Friend WithEvents lblCYS As Label
-    Friend WithEvents lblFN As Label
-    Friend WithEvents lblSN As Label
-    Friend WithEvents tbSearchStudNo As Guna.UI2.WinForms.Guna2TextBox
 End Class

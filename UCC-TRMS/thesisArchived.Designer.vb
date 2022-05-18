@@ -31,7 +31,9 @@ Partial Class thesisArchived
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.dgvThesisArchived = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnArchivedClose = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.title = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.OBJECTIVES = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SCOPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,9 +42,6 @@ Partial Class thesisArchived
         Me.MEMBERS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PANEL = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CATEGORY = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnArchivedClose = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel2.SuspendLayout()
         CType(Me.dgvThesisArchived, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -104,7 +103,7 @@ Partial Class thesisArchived
         Me.dgvThesisArchived.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvThesisArchived.ColumnHeadersHeight = 50
         Me.dgvThesisArchived.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvThesisArchived.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.title, Me.OBJECTIVES, Me.SCOPE, Me.LIMITATION, Me.TEAMNAME, Me.MEMBERS, Me.PANEL, Me.CATEGORY})
+        Me.dgvThesisArchived.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.title, Me.OBJECTIVES, Me.SCOPE, Me.LIMITATION, Me.TEAMNAME, Me.MEMBERS, Me.PANEL, Me.CATEGORY})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -159,13 +158,46 @@ Partial Class thesisArchived
         Me.dgvThesisArchived.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(95, Byte), Integer))
         Me.dgvThesisArchived.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         '
-        'id
+        'Guna2Panel3
         '
-        Me.id.DataPropertyName = "id"
-        Me.id.FillWeight = 103.4432!
-        Me.id.HeaderText = "#"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
+        Me.Guna2Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2Panel3.BackColor = System.Drawing.Color.Gray
+        Me.Guna2Panel3.Location = New System.Drawing.Point(16, 62)
+        Me.Guna2Panel3.Name = "Guna2Panel3"
+        Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
+        Me.Guna2Panel3.Size = New System.Drawing.Size(790, 1)
+        Me.Guna2Panel3.TabIndex = 12
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(22, 17)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(97, 25)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Archived"
+        '
+        'btnArchivedClose
+        '
+        Me.btnArchivedClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnArchivedClose.CheckedState.Parent = Me.btnArchivedClose
+        Me.btnArchivedClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnArchivedClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.btnArchivedClose.HoverState.Parent = Me.btnArchivedClose
+        Me.btnArchivedClose.Image = CType(resources.GetObject("btnArchivedClose.Image"), System.Drawing.Image)
+        Me.btnArchivedClose.ImageSize = New System.Drawing.Size(15, 15)
+        Me.btnArchivedClose.Location = New System.Drawing.Point(777, 3)
+        Me.btnArchivedClose.Name = "btnArchivedClose"
+        Me.btnArchivedClose.PressedState.Parent = Me.btnArchivedClose
+        Me.btnArchivedClose.Size = New System.Drawing.Size(43, 27)
+        Me.btnArchivedClose.TabIndex = 13
         '
         'title
         '
@@ -231,47 +263,6 @@ Partial Class thesisArchived
         Me.CATEGORY.Name = "CATEGORY"
         Me.CATEGORY.ReadOnly = True
         '
-        'btnArchivedClose
-        '
-        Me.btnArchivedClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnArchivedClose.CheckedState.Parent = Me.btnArchivedClose
-        Me.btnArchivedClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnArchivedClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.btnArchivedClose.HoverState.Parent = Me.btnArchivedClose
-        Me.btnArchivedClose.Image = CType(resources.GetObject("btnArchivedClose.Image"), System.Drawing.Image)
-        Me.btnArchivedClose.ImageSize = New System.Drawing.Size(15, 15)
-        Me.btnArchivedClose.Location = New System.Drawing.Point(777, 3)
-        Me.btnArchivedClose.Name = "btnArchivedClose"
-        Me.btnArchivedClose.PressedState.Parent = Me.btnArchivedClose
-        Me.btnArchivedClose.Size = New System.Drawing.Size(43, 27)
-        Me.btnArchivedClose.TabIndex = 13
-        '
-        'Guna2Panel3
-        '
-        Me.Guna2Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2Panel3.BackColor = System.Drawing.Color.Gray
-        Me.Guna2Panel3.Location = New System.Drawing.Point(16, 62)
-        Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
-        Me.Guna2Panel3.Size = New System.Drawing.Size(790, 1)
-        Me.Guna2Panel3.TabIndex = 12
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(22, 17)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 25)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Archived"
-        '
         'thesisArchived
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -282,6 +273,7 @@ Partial Class thesisArchived
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "thesisArchived"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "thesisArchived"
@@ -298,7 +290,6 @@ Partial Class thesisArchived
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents dgvThesisArchived As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents title As DataGridViewTextBoxColumn
     Friend WithEvents OBJECTIVES As DataGridViewTextBoxColumn
     Friend WithEvents SCOPE As DataGridViewTextBoxColumn

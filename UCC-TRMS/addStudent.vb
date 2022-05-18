@@ -35,23 +35,24 @@ Public Class addStudent
     End Function
 
     Public Sub add()
+        conn.Open()
+
         Try
             Dim StudentNumber, fn As String
             Dim sn As Integer
             StudentNumber = tbstudentno.Text
-            conn.Open()
             If namedontexist(StudentNumber) Then
                 Me.Alert1("Student number not enrolled!", Confirmation.enmType.Info)
             Else
                 Dim y As New MySqlCommand("SELECT studentno, fullname FROM tblstudents WHERE studentno = '" & tbstudentno.Text & "' AND fullname = '" & tbfullname.Text.ToUpper() & "'", conn)
                 Dim dr As MySqlDataReader
                 dr = y.ExecuteReader
-                If dr.Read() Then
+                While dr.Read()
                     sn = dr(0).ToString()
                     fn = dr(1).ToString()
-                End If
+                End While
                 dr.Close()
-                If sn = tbstudentno.Text Or fn = tbfullname.Text Then
+                If sn = tbstudentno.Text Or fn = tbfullname.Text And fn <> "" Then
                     Me.Alert1("Student number already existed!", Confirmation.enmType.Info)
                 Else
                     Dim comm As New MySqlCommand("INSERT INTO tblstudents(fullname, studentno, email, course, year, section, contact) VALUES (@fullname, @studentno, @email, @course, @year, @section, @contact)", conn)
@@ -65,7 +66,6 @@ Public Class addStudent
                         .Parameters.AddWithValue("@contact", tbcontact.Text)
                         .ExecuteNonQuery()
                         Me.Alert(tbstudentno.Text + " has been save!", notification.enmType.Success)
-                        conn.Close()
                     End With
                     clear()
                     With borrowers
@@ -80,6 +80,7 @@ Public Class addStudent
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+        conn.Close()
 
 
     End Sub
@@ -87,7 +88,7 @@ Public Class addStudent
     Sub clear()
         tbfullname.Clear()
         tbstudentno.Clear()
-        tbcourse.Clear()
+        tbCourse.SelectedIndex = 0
         tbcontact.Clear()
         tbemail.Clear()
         cbyear.SelectedIndex = 0
@@ -136,6 +137,8 @@ Public Class addStudent
         If Label1.Text <> "Update Student" Then
             cbyear.Text = cbyear.Items.Item(0).ToString()
             cbSection.SelectedIndex = 0
+            tbCourse.SelectedIndex = 0
+
         End If
 
     End Sub

@@ -37,6 +37,7 @@ Partial Class users
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Edit = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Delete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Guna2Panel1.SuspendLayout()
@@ -126,7 +127,7 @@ Partial Class users
         Me.dgvUsers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvUsers.ColumnHeadersHeight = 50
         Me.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvUsers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.username, Me.Edit, Me.Delete})
+        Me.dgvUsers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.username, Me.status, Me.Edit, Me.Delete})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(207, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -216,6 +217,13 @@ Partial Class users
         Me.username.Name = "username"
         Me.username.ReadOnly = True
         '
+        'status
+        '
+        Me.status.DataPropertyName = "status"
+        Me.status.HeaderText = "STATUS"
+        Me.status.Name = "status"
+        Me.status.ReadOnly = True
+        '
         'Edit
         '
         Me.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -263,6 +271,7 @@ Partial Class users
     Friend WithEvents btnAddUser As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents username As DataGridViewTextBoxColumn
+    Friend WithEvents status As DataGridViewTextBoxColumn
     Friend WithEvents Edit As DataGridViewImageColumn
     Friend WithEvents Delete As DataGridViewImageColumn
 End Class

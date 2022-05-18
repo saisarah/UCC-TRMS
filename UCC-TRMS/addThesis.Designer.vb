@@ -28,7 +28,6 @@ Partial Class addThesis
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnUpdate = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnAddThesisClose = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.cbCategory = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.tbPanel = New Guna.UI2.WinForms.Guna2TextBox()
@@ -40,6 +39,7 @@ Partial Class addThesis
         Me.tbTitle = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnSaveThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnAddThesisClose = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -115,22 +115,6 @@ Partial Class addThesis
         Me.btnUpdate.Size = New System.Drawing.Size(87, 34)
         Me.btnUpdate.TabIndex = 14
         Me.btnUpdate.Text = "Update"
-        '
-        'btnAddThesisClose
-        '
-        Me.btnAddThesisClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddThesisClose.CheckedState.Parent = Me.btnAddThesisClose
-        Me.btnAddThesisClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddThesisClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.btnAddThesisClose.HoverState.Parent = Me.btnAddThesisClose
-        Me.btnAddThesisClose.Image = CType(resources.GetObject("btnAddThesisClose.Image"), System.Drawing.Image)
-        Me.btnAddThesisClose.ImageSize = New System.Drawing.Size(15, 15)
-        Me.btnAddThesisClose.Location = New System.Drawing.Point(455, 6)
-        Me.btnAddThesisClose.Name = "btnAddThesisClose"
-        Me.btnAddThesisClose.PressedState.Parent = Me.btnAddThesisClose
-        Me.btnAddThesisClose.Size = New System.Drawing.Size(42, 15)
-        Me.btnAddThesisClose.TabIndex = 13
         '
         'Guna2Panel3
         '
@@ -376,6 +360,22 @@ Partial Class addThesis
         Me.btnSaveThesis.TabIndex = 3
         Me.btnSaveThesis.Text = "Save"
         '
+        'btnAddThesisClose
+        '
+        Me.btnAddThesisClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAddThesisClose.CheckedState.Parent = Me.btnAddThesisClose
+        Me.btnAddThesisClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddThesisClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.btnAddThesisClose.HoverState.Parent = Me.btnAddThesisClose
+        Me.btnAddThesisClose.Image = CType(resources.GetObject("btnAddThesisClose.Image"), System.Drawing.Image)
+        Me.btnAddThesisClose.ImageSize = New System.Drawing.Size(15, 15)
+        Me.btnAddThesisClose.Location = New System.Drawing.Point(455, 6)
+        Me.btnAddThesisClose.Name = "btnAddThesisClose"
+        Me.btnAddThesisClose.PressedState.Parent = Me.btnAddThesisClose
+        Me.btnAddThesisClose.Size = New System.Drawing.Size(42, 15)
+        Me.btnAddThesisClose.TabIndex = 13
+        '
         'addThesis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -384,6 +384,7 @@ Partial Class addThesis
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "addThesis"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addThesis"

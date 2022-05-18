@@ -28,11 +28,11 @@ Partial Class addUsers
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnAddUserClose = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.tbName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnSaveUser = New Guna.UI2.WinForms.Guna2Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnAddUserClose = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -103,22 +103,6 @@ Partial Class addUsers
         Me.Guna2Panel2.Size = New System.Drawing.Size(500, 167)
         Me.Guna2Panel2.TabIndex = 3
         '
-        'btnAddUserClose
-        '
-        Me.btnAddUserClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddUserClose.CheckedState.Parent = Me.btnAddUserClose
-        Me.btnAddUserClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddUserClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.btnAddUserClose.HoverState.Parent = Me.btnAddUserClose
-        Me.btnAddUserClose.Image = CType(resources.GetObject("btnAddUserClose.Image"), System.Drawing.Image)
-        Me.btnAddUserClose.ImageSize = New System.Drawing.Size(15, 15)
-        Me.btnAddUserClose.Location = New System.Drawing.Point(458, 15)
-        Me.btnAddUserClose.Name = "btnAddUserClose"
-        Me.btnAddUserClose.PressedState.Parent = Me.btnAddUserClose
-        Me.btnAddUserClose.Size = New System.Drawing.Size(42, 15)
-        Me.btnAddUserClose.TabIndex = 13
-        '
         'Guna2Panel3
         '
         Me.Guna2Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -177,6 +161,22 @@ Partial Class addUsers
         Me.btnSaveUser.TabIndex = 3
         Me.btnSaveUser.Text = "Save"
         '
+        'btnAddUserClose
+        '
+        Me.btnAddUserClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAddUserClose.CheckedState.Parent = Me.btnAddUserClose
+        Me.btnAddUserClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddUserClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.btnAddUserClose.HoverState.Parent = Me.btnAddUserClose
+        Me.btnAddUserClose.Image = CType(resources.GetObject("btnAddUserClose.Image"), System.Drawing.Image)
+        Me.btnAddUserClose.ImageSize = New System.Drawing.Size(15, 15)
+        Me.btnAddUserClose.Location = New System.Drawing.Point(458, 15)
+        Me.btnAddUserClose.Name = "btnAddUserClose"
+        Me.btnAddUserClose.PressedState.Parent = Me.btnAddUserClose
+        Me.btnAddUserClose.Size = New System.Drawing.Size(42, 15)
+        Me.btnAddUserClose.TabIndex = 13
+        '
         'addUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -184,6 +184,7 @@ Partial Class addUsers
         Me.ClientSize = New System.Drawing.Size(500, 167)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "addUsers"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addUsers"

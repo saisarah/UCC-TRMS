@@ -105,7 +105,7 @@ Public Class Confirmation
     Sub clear()
         addStudent.tbfullname.Clear()
         addStudent.tbstudentno.Clear()
-        addStudent.tbcourse.Clear()
+        addStudent.tbCourse.SelectedIndex = 0
         addStudent.tbcontact.Clear()
         addStudent.tbemail.Clear()
         addStudent.cbyear.SelectedIndex = 0
@@ -144,9 +144,8 @@ Public Class Confirmation
                 deleteStud = False
                 deleteThesis = False
                 Me.Alert("New record added successfully!", notification.enmType.Success)
-                With thesis
-                    mainForm.OpenChildForm(New thesis)
-                End With
+                mainForm.OpenChildForm(New thesis)
+
                 Me.Close()
             ElseIf deleteThesis = True And addTh = False And deleteStud = False And update1 = False Then
                 update1 = False

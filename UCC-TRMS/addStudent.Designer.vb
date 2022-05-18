@@ -35,8 +35,8 @@ Partial Class addStudent
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.cbyear = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.tbcontact = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.tbcourse = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbfullname = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbCourse = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,6 +71,7 @@ Partial Class addStudent
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.Guna2Panel2.Controls.Add(Me.tbCourse)
         Me.Guna2Panel2.Controls.Add(Me.cbSection)
         Me.Guna2Panel2.Controls.Add(Me.tbemail)
         Me.Guna2Panel2.Controls.Add(Me.btnUpdateStudent)
@@ -81,7 +82,6 @@ Partial Class addStudent
         Me.Guna2Panel2.Controls.Add(Me.Label1)
         Me.Guna2Panel2.Controls.Add(Me.cbyear)
         Me.Guna2Panel2.Controls.Add(Me.tbcontact)
-        Me.Guna2Panel2.Controls.Add(Me.tbcourse)
         Me.Guna2Panel2.Controls.Add(Me.tbfullname)
         Me.Guna2Panel2.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel2.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 1)
@@ -287,33 +287,6 @@ Partial Class addStudent
         Me.tbcontact.Size = New System.Drawing.Size(238, 36)
         Me.tbcontact.TabIndex = 8
         '
-        'tbcourse
-        '
-        Me.tbcourse.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbcourse.BackColor = System.Drawing.Color.Transparent
-        Me.tbcourse.BorderRadius = 5
-        Me.tbcourse.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbcourse.DefaultText = ""
-        Me.tbcourse.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbcourse.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbcourse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbcourse.DisabledState.Parent = Me.tbcourse
-        Me.tbcourse.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbcourse.FocusedState.BorderColor = System.Drawing.Color.Gray
-        Me.tbcourse.FocusedState.Parent = Me.tbcourse
-        Me.tbcourse.HoverState.BorderColor = System.Drawing.Color.Gray
-        Me.tbcourse.HoverState.Parent = Me.tbcourse
-        Me.tbcourse.Location = New System.Drawing.Point(13, 166)
-        Me.tbcourse.Margin = New System.Windows.Forms.Padding(4)
-        Me.tbcourse.Name = "tbcourse"
-        Me.tbcourse.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbcourse.PlaceholderText = "Course"
-        Me.tbcourse.SelectedText = ""
-        Me.tbcourse.ShadowDecoration.Parent = Me.tbcourse
-        Me.tbcourse.Size = New System.Drawing.Size(238, 36)
-        Me.tbcourse.TabIndex = 6
-        '
         'tbfullname
         '
         Me.tbfullname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -341,6 +314,29 @@ Partial Class addStudent
         Me.tbfullname.Size = New System.Drawing.Size(475, 36)
         Me.tbfullname.TabIndex = 4
         '
+        'tbCourse
+        '
+        Me.tbCourse.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tbCourse.BackColor = System.Drawing.Color.Transparent
+        Me.tbCourse.BorderRadius = 5
+        Me.tbCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.tbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.tbCourse.FocusedColor = System.Drawing.Color.Empty
+        Me.tbCourse.FocusedState.Parent = Me.tbCourse
+        Me.tbCourse.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.tbCourse.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.tbCourse.FormattingEnabled = True
+        Me.tbCourse.HoverState.Parent = Me.tbCourse
+        Me.tbCourse.ItemHeight = 30
+        Me.tbCourse.Items.AddRange(New Object() {"Please select Program", "BSCS", "BSIT", "BSIS", "BSEMC"})
+        Me.tbCourse.ItemsAppearance.Parent = Me.tbCourse
+        Me.tbCourse.Location = New System.Drawing.Point(13, 167)
+        Me.tbCourse.Name = "tbCourse"
+        Me.tbCourse.ShadowDecoration.Parent = Me.tbCourse
+        Me.tbCourse.Size = New System.Drawing.Size(238, 36)
+        Me.tbCourse.TabIndex = 19
+        '
         'addStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -349,6 +345,7 @@ Partial Class addStudent
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "addStudent"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addStudent"
@@ -365,11 +362,11 @@ Partial Class addStudent
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents cbyear As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents tbcontact As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents tbcourse As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbfullname As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbstudentno As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnUpdateStudent As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSaveStudent As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents tbemail As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents cbSection As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents tbCourse As Guna.UI2.WinForms.Guna2ComboBox
 End Class

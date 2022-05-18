@@ -15,7 +15,7 @@ Public Class users
             Dim cm As New MySqlCommand("SELECT * FROM tblusers", conn)
             dr = cm.ExecuteReader
             While dr.Read
-                dgvUsers.Rows.Add(dr.Item("ID").ToString, dr.Item("username").ToString)
+                dgvUsers.Rows.Add(dr.Item("ID").ToString, dr.Item("username").ToString, dr.Item("status").ToString)
             End While
 
             dr.close()
@@ -46,12 +46,20 @@ Public Class users
         Dim j As Integer
         Dim s As String
         j = dgvUsers.CurrentRow.Index
-        s = dgvUsers.Item(2, j).Value.ToString()
+        s = dgvUsers.Item(3, j).Value.ToString()
         Dim colName As String = dgvUsers.Columns(e.ColumnIndex).Name
         If colName = "Delete" Then
 
         ElseIf colName = "Edit" Then
             If dgvUsers.SelectedRows.Count > 0 Then
+                Dim i As Integer
+                i = dgvUsers.CurrentRow.Index
+                Dim newForm As New addUsers
+                newForm.SelectedRows = dgvUsers.SelectedRows
+                newForm.tbName.Text = dgvUsers.Item(1, i).Value.ToString
+                newForm.Label1.Text = "Update User"
+                newForm.btnSaveUser.Enabled = False
+                newForm.Show()
 
             End If
         End If
