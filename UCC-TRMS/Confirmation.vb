@@ -143,9 +143,9 @@ Public Class Confirmation
                 update1 = False
                 deleteStud = False
                 deleteThesis = False
+
                 Me.Alert("New record added successfully!", notification.enmType.Success)
                 mainForm.OpenChildForm(New thesis)
-
                 Me.Close()
             ElseIf deleteThesis = True And addTh = False And deleteStud = False And update1 = False Then
                 update1 = False

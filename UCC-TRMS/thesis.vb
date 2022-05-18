@@ -12,13 +12,13 @@ Public Class thesis
     End Sub
     Sub LoadRecords()
         Try
-            dgvThesis.Rows.Clear()
+            '  dgvThesis.Rows.Clear()
             cbCategories.SelectedIndex = 0
             conn.Open()
             Dim cm As New MySqlCommand("SELECT * FROM tblthesis", conn)
             dr = cm.ExecuteReader
             While dr.Read
-                dgvThesis.Rows.Add(dr.Item("thesis_id").ToString, dr.Item("title").ToString, dr.Item("objectives").ToString, dr.Item("scope").ToString, dr.Item("limitations").ToString, dr.Item("teamname").ToString, dr.Item("members").ToString, dr.Item("panels").ToString, dr.Item("category").ToString)
+                '      dgvThesis.Rows.Add(dr.Item("thesis_id").ToString, dr.Item("title").ToString, dr.Item("objectives").ToString, dr.Item("scope").ToString, dr.Item("limitations").ToString, dr.Item("teamname").ToString, dr.Item("members").ToString, dr.Item("panels").ToString, dr.Item("category").ToString)
             End While
             dr.close()
             conn.Close()
@@ -27,25 +27,25 @@ Public Class thesis
         End Try
     End Sub
 
-    Private Sub dgvThesis_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvThesis.CellClick
+    Private Sub dgvThesis_CellClick(sender As Object, e As DataGridViewCellEventArgs)
         Try
             If e.RowIndex > -1 Then
-                dgvThesis.Rows(e.RowIndex).Selected = True
+                '      dgvThesis.Rows(e.RowIndex).Selected = True
             End If
 
             Dim j As Integer
             Dim s As String
-            j = dgvThesis.CurrentRow.Index
-            s = dgvThesis.Item(3, j).Value.ToString()
-            it = dgvThesis.CurrentRow.Index
+            '  j = dgvThesis.CurrentRow.Index
+            '   s = dgvThesis.Item(3, j).Value.ToString()
+            '   it = dgvThesis.CurrentRow.Index
             Dim i As Integer
-            i = dgvThesis.CurrentRow.Index
-            lblTitle.Text = dgvThesis.Item(4, i).Value.ToString
-            lblScope.Text = dgvThesis.Item(6, i).Value.ToString
-            lblLimit.Text = dgvThesis.Item(7, i).Value.ToString
-            lblCategory.Text = dgvThesis.Item(11, i).Value.ToString
-            lblObjectives.Text = dgvThesis.Item(5, i).Value.ToString
-            lblTeam.Text = dgvThesis.Item(8, i).Value.ToString
+            '   i = dgvThesis.CurrentRow.Index
+            '    lblTitle.Text = dgvThesis.Item(4, i).Value.ToString
+            '    lblScope.Text = dgvThesis.Item(6, i).Value.ToString
+            '     lblLimit.Text = dgvThesis.Item(7, i).Value.ToString
+            '     lblCategory.Text = dgvThesis.Item(11, i).Value.ToString
+            '      lblObjectives.Text = dgvThesis.Item(5, i).Value.ToString
+            '      lblTeam.Text = dgvThesis.Item(8, i).Value.ToString
 
         Catch ex As Exception
 
@@ -69,20 +69,23 @@ Public Class thesis
             conn.Open()
             Dim cm As New MySqlCommand("SELECT * FROM tblthesis ORDER BY thesis_id DESC", conn)
             dr = cm.ExecuteReader
-            Do While dr.read
+
+            While dr.read
                 Dim c As ThesisUC = New ThesisUC
-                For i As Integer = 0 To 20
-                    c.Dock = DockStyle.Top
+                c.Dock = DockStyle.Top
+
+                For i As Integer = 0 To 1000
                     c.lblCode.Text = dr(0)
                     c.lblTitle.Text = dr(1)
                     c.lblLimi.Text = dr(4)
                     c.lblScope.Text = dr(3)
                     c.lblObjectives.Text = dr(2)
                     c.lblCategory.Text = dr(8)
-                    Guna2Panel5.Controls.Add(c)
+                    pnlList.Controls.Add(c)
 
                 Next
-            Loop
+
+            End While
 
 
 
@@ -107,7 +110,7 @@ Public Class thesis
             Dim da1 As New MySqlDataAdapter(y)
             Dim dt1 As New DataTable
             da1.Fill(dt1)
-            dgvThesis.DataSource = dt1
+            '   dgvThesis.DataSource = dt1
 
             conn.Close()
 
@@ -128,7 +131,7 @@ Public Class thesis
             Dim da1 As New MySqlDataAdapter(y)
             Dim dt1 As New DataTable
             da1.Fill(dt1)
-            dgvThesis.DataSource = dt1
+            '    dgvThesis.DataSource = dt1
             conn.Close()
 
         Catch ex As Exception
@@ -136,14 +139,14 @@ Public Class thesis
         End Try
     End Sub
 
-    Private Sub dgvThesis_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvThesis.CellMouseEnter
-        Dim colname As String = dgvThesis.Columns(e.ColumnIndex).Name
+    Private Sub dgvThesis_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs)
+        '   Dim colname As String = dgvThesis.Columns(e.ColumnIndex).Name
 
-        If colname <> "Delete" AndAlso colname <> "Edit" Then
-            dgvThesis.Cursor = Cursors.[Default]
-        Else
-            dgvThesis.Cursor = Cursors.Hand
-        End If
+        ' If colname <> "Delete" AndAlso colname <> "Edit" Then
+        '       dgvThesis.Cursor = Cursors.[Default]
+        '  Else
+        '       dgvThesis.Cursor = Cursors.Hand
+        '   End If
     End Sub
     Private Sub sizeDGV(ByVal dgv As DataGridView)
         Dim states As DataGridViewElementStates = DataGridViewElementStates.None
@@ -158,16 +161,16 @@ Public Class thesis
         thesisArchived.Show()
     End Sub
 
-    Private Sub dgvThesis_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvThesis.CellContentClick
+    Private Sub dgvThesis_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
         conn.Open()
         Dim j As Integer
         Dim s As String
-        j = dgvThesis.CurrentRow.Index
-        s = dgvThesis.Item(2, j).Value.ToString()
-        Dim colName As String = dgvThesis.Columns(e.ColumnIndex).Name
+        '  j = dgvThesis.CurrentRow.Index
+        '   s = dgvThesis.Item(2, j).Value.ToString()
+        '   Dim colName As String = dgvThesis.Columns(e.ColumnIndex).Name
         If colName = "Delete" Then
             Dim newForm As New Confirmation
-            newForm.SelectedRows = dgvThesis.SelectedRows
+            '    newForm.SelectedRows = dgvThesis.SelectedRows
             newForm.BackColor = Color.DarkOrange
             newForm.PictureBox1.Image = My.Resources.Warning
             newForm.PictureBox2.Image = My.Resources.warning__2_
@@ -182,30 +185,30 @@ Public Class thesis
             newForm.Show()
 
         ElseIf colName = "Edit" Then
-            If dgvThesis.SelectedRows.Count > 0 Then
-                Dim i As Integer
-                i = dgvThesis.CurrentRow.Index
-                Dim newForm As New addThesis
-                newForm.SelectedRows = dgvThesis.SelectedRows
-                newForm.tbTitle.Text = dgvThesis.Item(4, i).Value.ToString
-                newForm.tbObjectives.Text = dgvThesis.Item(5, i).Value.ToString
-                newForm.tbScope.Text = dgvThesis.Item(6, i).Value.ToString
-                newForm.tbLimitation.Text = dgvThesis.Item(7, i).Value.ToString
-                newForm.cbCategory.Text = dgvThesis.Item(11, i).Value.ToString
-                newForm.tbTeam.Text = dgvThesis.Item(8, i).Value.ToString
-                newForm.tbMembers.Text = dgvThesis.Item(9, i).Value.ToString
-                newForm.tbPanel.Text = dgvThesis.Item(10, i).Value.ToString
-                newForm.Label1.Text = "Update Thesis"
-                newForm.btnSaveThesis.Enabled = False
-                newForm.Show()
-            End If
+            '   If dgvThesis.SelectedRows.Count > 0 Then
+            '  Dim i As Integer
+            '       i = dgvThesis.CurrentRow.Index
+            ' Dim newForm As New addThesis
+            'newForm.SelectedRows = dgvThesis.SelectedRows
+            'newForm.tbTitle.Text = dgvThesis.Item(4, i).Value.ToString
+            'newForm.tbObjectives.Text = dgvThesis.Item(5, i).Value.ToString
+            'newForm.tbScope.Text = dgvThesis.Item(6, i).Value.ToString
+            'newForm.tbLimitation.Text = dgvThesis.Item(7, i).Value.ToString
+            'newForm.cbCategory.Text = dgvThesis.Item(11, i).Value.ToString
+            'newForm.tbTeam.Text = dgvThesis.Item(8, i).Value.ToString
+            'newForm.tbMembers.Text = dgvThesis.Item(9, i).Value.ToString
+            'newForm.tbPanel.Text = dgvThesis.Item(10, i).Value.ToString
+            'newForm.Label1.Text = "Update Thesis"
+            'newForm.btnSaveThesis.Enabled = False
+            'newForm.Show()
         End If
+        '  End If
         conn.Close()
     End Sub
 
-    Private Sub dgvThesis_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs) Handles dgvThesis.RowPrePaint
+    Private Sub dgvThesis_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs)
         If e.RowIndex >= 0 Then
-            Me.dgvThesis.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
+            '  Me.dgvThesis.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
         End If
     End Sub
 
