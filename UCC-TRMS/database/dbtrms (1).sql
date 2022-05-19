@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2022 at 07:59 PM
+-- Generation Time: May 19, 2022 at 02:03 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -100,6 +100,13 @@ CREATE TABLE `tblstudents` (
   `contact` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `tblstudents`
+--
+
+INSERT INTO `tblstudents` (`ID`, `fullname`, `studentno`, `email`, `course`, `year`, `section`, `contact`) VALUES
+(1, 'SARAH GRACE ARLYN OBEN', 20191940, 'sarah@email.com', 'BSIT', 4, 'C', '09123456789');
+
 -- --------------------------------------------------------
 
 --
@@ -126,15 +133,17 @@ CREATE TABLE `tblthesis` (
 
 CREATE TABLE `tblusers` (
   `ID` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL
+  `username` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tblusers`
 --
 
-INSERT INTO `tblusers` (`ID`, `username`) VALUES
-(1, 'Admin');
+INSERT INTO `tblusers` (`ID`, `username`, `status`) VALUES
+(1, 'Admin', 'ACTIVE'),
+(2, 'Sarah', 'ACTIVE');
 
 --
 -- Indexes for dumped tables
@@ -196,13 +205,13 @@ ALTER TABLE `tblenrolled`
 -- AUTO_INCREMENT for table `tblstudents`
 --
 ALTER TABLE `tblstudents`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
 --
 ALTER TABLE `tblusers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
