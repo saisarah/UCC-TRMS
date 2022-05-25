@@ -28,30 +28,27 @@ Partial Class thesis
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.thesisPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.pnlList = New Guna.UI2.WinForms.Guna2Panel()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.Code = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Title = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Objectives = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Scope = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Limitation = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Category = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnArchived = New Guna.UI2.WinForms.Guna2Button()
         Me.pnlThesisDetails = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lblTeam = New System.Windows.Forms.Label()
         Me.lblObjectives = New System.Windows.Forms.Label()
-        Me.lblCategory = New System.Windows.Forms.Label()
-        Me.lblLimit = New System.Windows.Forms.Label()
         Me.lblScope = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblTeam = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblLimit = New System.Windows.Forms.Label()
+        Me.lblCategory = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnAddThesis = New Guna.UI2.WinForms.Guna2Button()
@@ -59,13 +56,15 @@ Partial Class thesis
         Me.tbSearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guna2Panel1.SuspendLayout()
         Me.thesisPanel.SuspendLayout()
         Me.Guna2ShadowPanel1.SuspendLayout()
-        Me.Guna2Panel2.SuspendLayout()
-        Me.Guna2Panel4.SuspendLayout()
         Me.pnlThesisDetails.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -104,139 +103,63 @@ Partial Class thesis
         Me.Guna2ShadowPanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ShadowPanel1.Controls.Add(Me.Guna2Panel2)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.ListView1)
         Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(384, 54)
+        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(432, 54)
         Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
         Me.Guna2ShadowPanel1.Padding = New System.Windows.Forms.Padding(5)
         Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black
         Me.Guna2ShadowPanel1.ShadowDepth = 40
-        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(794, 425)
+        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(746, 387)
         Me.Guna2ShadowPanel1.TabIndex = 11
         '
-        'Guna2Panel2
+        'ListView1
         '
-        Me.Guna2Panel2.AutoScroll = True
-        Me.Guna2Panel2.Controls.Add(Me.Guna2Panel4)
-        Me.Guna2Panel2.Controls.Add(Me.pnlList)
-        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Guna2Panel2.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Location = New System.Drawing.Point(5, 5)
-        Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
-        Me.Guna2Panel2.Size = New System.Drawing.Size(784, 415)
-        Me.Guna2Panel2.TabIndex = 0
+        Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Code, Me.Title, Me.Objectives, Me.Scope, Me.Limitation, Me.Category})
+        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListView1.Font = New System.Drawing.Font("Poppins SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView1.FullRowSelect = True
+        Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(5, 5)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.OwnerDraw = True
+        Me.ListView1.Size = New System.Drawing.Size(736, 377)
+        Me.ListView1.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListView1.TabIndex = 12
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
-        'Guna2Panel4
+        'Code
         '
-        Me.Guna2Panel4.Controls.Add(Me.Label15)
-        Me.Guna2Panel4.Controls.Add(Me.Label14)
-        Me.Guna2Panel4.Controls.Add(Me.Label11)
-        Me.Guna2Panel4.Controls.Add(Me.Label1)
-        Me.Guna2Panel4.Controls.Add(Me.Label10)
-        Me.Guna2Panel4.Controls.Add(Me.Label9)
-        Me.Guna2Panel4.Controls.Add(Me.Label12)
-        Me.Guna2Panel4.CustomBorderColor = System.Drawing.Color.Gainsboro
-        Me.Guna2Panel4.CustomBorderThickness = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.Guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Guna2Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel4.Name = "Guna2Panel4"
-        Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
-        Me.Guna2Panel4.Size = New System.Drawing.Size(784, 55)
-        Me.Guna2Panel4.TabIndex = 0
+        Me.Code.Text = "Code"
+        Me.Code.Width = 150
         '
-        'Label15
+        'Title
         '
-        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(677, 17)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(105, 21)
-        Me.Label15.TabIndex = 6
-        Me.Label15.Text = "ACTIONS"
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Title.Text = "Title"
+        Me.Title.Width = 275
         '
-        'Label14
+        'Objectives
         '
-        Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(566, 17)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(105, 21)
-        Me.Label14.TabIndex = 5
-        Me.Label14.Text = "CATEGORY"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Objectives.Text = "Objectives"
+        Me.Objectives.Width = 250
         '
-        'Label11
+        'Scope
         '
-        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(336, 17)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(105, 21)
-        Me.Label11.TabIndex = 3
-        Me.Label11.Text = "SCOPE"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Scope.Text = "Scope"
+        Me.Scope.Width = 200
         '
-        'Label1
+        'Limitation
         '
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(3, 17)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 21)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "CODE"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Limitation.Text = "Limitation"
+        Me.Limitation.Width = 200
         '
-        'Label10
+        'Category
         '
-        Me.Label10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(225, 17)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(105, 21)
-        Me.Label10.TabIndex = 2
-        Me.Label10.Text = "OBJECTIVES"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label9
-        '
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(114, 17)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(105, 21)
-        Me.Label9.TabIndex = 1
-        Me.Label9.Text = "TITLE"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label12
-        '
-        Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(447, 17)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(105, 21)
-        Me.Label12.TabIndex = 4
-        Me.Label12.Text = "LIMITATION"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'pnlList
-        '
-        Me.pnlList.AutoScroll = True
-        Me.pnlList.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlList.Location = New System.Drawing.Point(0, 55)
-        Me.pnlList.Name = "pnlList"
-        Me.pnlList.ShadowDecoration.Parent = Me.pnlList
-        Me.pnlList.Size = New System.Drawing.Size(784, 360)
-        Me.pnlList.TabIndex = 0
+        Me.Category.Text = "Category"
+        Me.Category.Width = 200
         '
         'btnArchived
         '
@@ -263,84 +186,99 @@ Partial Class thesis
         Me.pnlThesisDetails.BackColor = System.Drawing.Color.White
         Me.pnlThesisDetails.BorderColor = System.Drawing.Color.Gainsboro
         Me.pnlThesisDetails.BorderThickness = 1
-        Me.pnlThesisDetails.Controls.Add(Me.lblTeam)
         Me.pnlThesisDetails.Controls.Add(Me.lblObjectives)
-        Me.pnlThesisDetails.Controls.Add(Me.lblCategory)
-        Me.pnlThesisDetails.Controls.Add(Me.lblLimit)
         Me.pnlThesisDetails.Controls.Add(Me.lblScope)
+        Me.pnlThesisDetails.Controls.Add(Me.Label4)
+        Me.pnlThesisDetails.Controls.Add(Me.lblTeam)
+        Me.pnlThesisDetails.Controls.Add(Me.Label5)
+        Me.pnlThesisDetails.Controls.Add(Me.lblLimit)
+        Me.pnlThesisDetails.Controls.Add(Me.lblCategory)
         Me.pnlThesisDetails.Controls.Add(Me.lblTitle)
         Me.pnlThesisDetails.Controls.Add(Me.Guna2Panel3)
         Me.pnlThesisDetails.Controls.Add(Me.Label7)
         Me.pnlThesisDetails.Controls.Add(Me.Label6)
-        Me.pnlThesisDetails.Controls.Add(Me.Label5)
-        Me.pnlThesisDetails.Controls.Add(Me.Label4)
         Me.pnlThesisDetails.Controls.Add(Me.Label3)
         Me.pnlThesisDetails.Controls.Add(Me.Label2)
         Me.pnlThesisDetails.Location = New System.Drawing.Point(12, 12)
         Me.pnlThesisDetails.Name = "pnlThesisDetails"
         Me.pnlThesisDetails.ShadowDecoration.Parent = Me.pnlThesisDetails
-        Me.pnlThesisDetails.Size = New System.Drawing.Size(366, 467)
+        Me.pnlThesisDetails.Size = New System.Drawing.Size(414, 554)
         Me.pnlThesisDetails.TabIndex = 5
-        '
-        'lblTeam
-        '
-        Me.lblTeam.AutoSize = True
-        Me.lblTeam.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTeam.ForeColor = System.Drawing.Color.Black
-        Me.lblTeam.Location = New System.Drawing.Point(92, 276)
-        Me.lblTeam.Name = "lblTeam"
-        Me.lblTeam.Size = New System.Drawing.Size(0, 15)
-        Me.lblTeam.TabIndex = 13
         '
         'lblObjectives
         '
-        Me.lblObjectives.AutoSize = True
         Me.lblObjectives.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblObjectives.ForeColor = System.Drawing.Color.Black
-        Me.lblObjectives.Location = New System.Drawing.Point(92, 328)
+        Me.lblObjectives.Location = New System.Drawing.Point(97, 344)
         Me.lblObjectives.Name = "lblObjectives"
-        Me.lblObjectives.Size = New System.Drawing.Size(0, 15)
-        Me.lblObjectives.TabIndex = 12
-        Me.lblObjectives.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblCategory
-        '
-        Me.lblCategory.AutoSize = True
-        Me.lblCategory.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCategory.ForeColor = System.Drawing.Color.Black
-        Me.lblCategory.Location = New System.Drawing.Point(92, 219)
-        Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(0, 15)
-        Me.lblCategory.TabIndex = 11
-        '
-        'lblLimit
-        '
-        Me.lblLimit.AutoSize = True
-        Me.lblLimit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLimit.ForeColor = System.Drawing.Color.Black
-        Me.lblLimit.Location = New System.Drawing.Point(92, 163)
-        Me.lblLimit.Name = "lblLimit"
-        Me.lblLimit.Size = New System.Drawing.Size(0, 15)
-        Me.lblLimit.TabIndex = 10
+        Me.lblObjectives.Size = New System.Drawing.Size(302, 201)
+        Me.lblObjectives.TabIndex = 14
         '
         'lblScope
         '
-        Me.lblScope.AutoSize = True
         Me.lblScope.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblScope.ForeColor = System.Drawing.Color.Black
-        Me.lblScope.Location = New System.Drawing.Point(94, 113)
+        Me.lblScope.Location = New System.Drawing.Point(100, 164)
         Me.lblScope.Name = "lblScope"
-        Me.lblScope.Size = New System.Drawing.Size(0, 15)
+        Me.lblScope.Size = New System.Drawing.Size(302, 82)
         Me.lblScope.TabIndex = 9
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Gray
+        Me.Label4.Location = New System.Drawing.Point(12, 164)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(45, 15)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Scope:"
+        '
+        'lblTeam
+        '
+        Me.lblTeam.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTeam.ForeColor = System.Drawing.Color.Black
+        Me.lblTeam.Location = New System.Drawing.Point(97, 131)
+        Me.lblTeam.Name = "lblTeam"
+        Me.lblTeam.Size = New System.Drawing.Size(305, 21)
+        Me.lblTeam.TabIndex = 13
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Gray
+        Me.Label5.Location = New System.Drawing.Point(12, 248)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(64, 15)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Limitation:"
+        '
+        'lblLimit
+        '
+        Me.lblLimit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLimit.ForeColor = System.Drawing.Color.Black
+        Me.lblLimit.Location = New System.Drawing.Point(100, 248)
+        Me.lblLimit.Name = "lblLimit"
+        Me.lblLimit.Size = New System.Drawing.Size(302, 82)
+        Me.lblLimit.TabIndex = 10
+        '
+        'lblCategory
+        '
+        Me.lblCategory.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCategory.ForeColor = System.Drawing.Color.Black
+        Me.lblCategory.Location = New System.Drawing.Point(97, 99)
+        Me.lblCategory.Name = "lblCategory"
+        Me.lblCategory.Size = New System.Drawing.Size(309, 16)
+        Me.lblCategory.TabIndex = 11
         '
         'lblTitle
         '
-        Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.Black
-        Me.lblTitle.Location = New System.Drawing.Point(94, 61)
+        Me.lblTitle.Location = New System.Drawing.Point(97, 61)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(0, 15)
+        Me.lblTitle.Size = New System.Drawing.Size(302, 24)
         Me.lblTitle.TabIndex = 8
         '
         'Guna2Panel3
@@ -351,7 +289,7 @@ Partial Class thesis
         Me.Guna2Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
-        Me.Guna2Panel3.Size = New System.Drawing.Size(366, 36)
+        Me.Guna2Panel3.Size = New System.Drawing.Size(414, 36)
         Me.Guna2Panel3.TabIndex = 7
         '
         'Label8
@@ -371,7 +309,7 @@ Partial Class thesis
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gray
-        Me.Label7.Location = New System.Drawing.Point(10, 276)
+        Me.Label7.Location = New System.Drawing.Point(12, 131)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(79, 15)
         Me.Label7.TabIndex = 5
@@ -382,40 +320,18 @@ Partial Class thesis
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gray
-        Me.Label6.Location = New System.Drawing.Point(12, 219)
+        Me.Label6.Location = New System.Drawing.Point(12, 99)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(58, 15)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "Category:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Gray
-        Me.Label5.Location = New System.Drawing.Point(10, 163)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(64, 15)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Limitation:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Gray
-        Me.Label4.Location = New System.Drawing.Point(12, 110)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 15)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Scope:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gray
-        Me.Label3.Location = New System.Drawing.Point(10, 328)
+        Me.Label3.Location = New System.Drawing.Point(12, 338)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 15)
         Me.Label3.TabIndex = 1
@@ -486,13 +402,13 @@ Partial Class thesis
         Me.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.tbSearch.HoverState.Parent = Me.tbSearch
         Me.tbSearch.IconRight = CType(resources.GetObject("tbSearch.IconRight"), System.Drawing.Image)
-        Me.tbSearch.Location = New System.Drawing.Point(384, 12)
+        Me.tbSearch.Location = New System.Drawing.Point(432, 12)
         Me.tbSearch.Name = "tbSearch"
         Me.tbSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbSearch.PlaceholderText = "Search"
         Me.tbSearch.SelectedText = ""
         Me.tbSearch.ShadowDecoration.Parent = Me.tbSearch
-        Me.tbSearch.Size = New System.Drawing.Size(296, 36)
+        Me.tbSearch.Size = New System.Drawing.Size(248, 36)
         Me.tbSearch.TabIndex = 7
         '
         'DataGridViewImageColumn1
@@ -517,6 +433,26 @@ Partial Class thesis
         Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn2.Width = 36
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem, Me.EditToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(108, 48)
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Image = CType(resources.GetObject("DeleteToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.Image = CType(resources.GetObject("EditToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
         'thesis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -529,12 +465,11 @@ Partial Class thesis
         Me.Guna2Panel1.ResumeLayout(False)
         Me.thesisPanel.ResumeLayout(False)
         Me.Guna2ShadowPanel1.ResumeLayout(False)
-        Me.Guna2Panel2.ResumeLayout(False)
-        Me.Guna2Panel4.ResumeLayout(False)
         Me.pnlThesisDetails.ResumeLayout(False)
         Me.pnlThesisDetails.PerformLayout()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -559,19 +494,19 @@ Partial Class thesis
     Friend WithEvents lblCategory As Label
     Friend WithEvents lblLimit As Label
     Friend WithEvents lblScope As Label
-    Friend WithEvents lblObjectives As Label
     Friend WithEvents btnArchived As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
-    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label1 As Label
     Public WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
-    Public WithEvents pnlList As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label14 As Label
+    Public WithEvents ListView1 As ListView
+    Friend WithEvents Code As ColumnHeader
+    Friend WithEvents Scope As ColumnHeader
+    Friend WithEvents Limitation As ColumnHeader
+    Friend WithEvents Category As ColumnHeader
+    Friend WithEvents lblObjectives As Label
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Title As ColumnHeader
+    Friend WithEvents Objectives As ColumnHeader
 End Class

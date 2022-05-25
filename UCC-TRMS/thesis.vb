@@ -1,9 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class thesis
     Public Property SelectedRows As DataGridViewSelectedRowCollection
-
     Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
     Dim it As Integer
+    Public s1 As Boolean
     Private Sub btnAddThesis_Click(sender As Object, e As EventArgs) Handles btnAddThesis.Click
         addThesis.Label1.Text = "Add Thesis"
         addThesis.btnUpdate.Enabled = False
@@ -27,116 +27,119 @@ Public Class thesis
         End Try
     End Sub
 
-    Private Sub dgvThesis_CellClick(sender As Object, e As DataGridViewCellEventArgs)
-        Try
-            If e.RowIndex > -1 Then
-                '      dgvThesis.Rows(e.RowIndex).Selected = True
-            End If
 
-            Dim j As Integer
-            Dim s As String
-            '  j = dgvThesis.CurrentRow.Index
-            '   s = dgvThesis.Item(3, j).Value.ToString()
-            '   it = dgvThesis.CurrentRow.Index
-            Dim i As Integer
-            '   i = dgvThesis.CurrentRow.Index
-            '    lblTitle.Text = dgvThesis.Item(4, i).Value.ToString
-            '    lblScope.Text = dgvThesis.Item(6, i).Value.ToString
-            '     lblLimit.Text = dgvThesis.Item(7, i).Value.ToString
-            '     lblCategory.Text = dgvThesis.Item(11, i).Value.ToString
-            '      lblObjectives.Text = dgvThesis.Item(5, i).Value.ToString
-            '      lblTeam.Text = dgvThesis.Item(8, i).Value.ToString
-
-        Catch ex As Exception
-
-        End Try
-    End Sub
 
     Private Sub thesis_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Try
-            conn.Open()
-            Dim comm2 As New MySqlCommand("SELECT COUNT(*) FROM tblthesis", conn)
-            dr1 = comm2.ExecuteReader
-            Dim cn As Integer
-
-            While dr1.Read
-                cn = dr1(0)
-            End While
-            dr1.Close()
-            conn.Close()
-
-
-            conn.Open()
-            Dim cm As New MySqlCommand("SELECT * FROM tblthesis ORDER BY thesis_id DESC", conn)
-            dr = cm.ExecuteReader
-
-            While dr.read
-                Dim c As ThesisUC = New ThesisUC
-                c.Dock = DockStyle.Top
-
-                For i As Integer = 0 To 1000
-                    c.lblCode.Text = dr(0)
-                    c.lblTitle.Text = dr(1)
-                    c.lblLimi.Text = dr(4)
-                    c.lblScope.Text = dr(3)
-                    c.lblObjectives.Text = dr(2)
-                    c.lblCategory.Text = dr(8)
-                    pnlList.Controls.Add(c)
-
-                Next
-
-            End While
-
-
-
-
-            dr.Close()
-
-            conn.Close()
-
-            'Dim titles As String() = {"Thesis", "Student", "Management", "Record", "Alumni"}
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        loadData()
     End Sub
 
     Private Sub tbSearch_TextChanged(sender As Object, e As EventArgs) Handles tbSearch.TextChanged
-        Try
-            conn.Open()
-            Dim x As String
-            x = tbSearch.Text
-            Dim y As New MySqlCommand("SELECT `thesis_id`, `title`, `objectives`, `scope`, `limitations`, `teamname`, `members`, `panels`, `category` FROM tblthesis WHERE title Like '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%'", conn)
-            y.ExecuteNonQuery()
-            Dim da1 As New MySqlDataAdapter(y)
-            Dim dt1 As New DataTable
-            da1.Fill(dt1)
-            '   dgvThesis.DataSource = dt1
+        loadData()
 
-            conn.Close()
+
+    End Sub
+    Private Sub loadData()
+        Try
+
+            conn.Open()
+            If cbCategories.SelectedIndex = -1 Then
+
+                Dim x As String
+                x = tbSearch.Text
+                Dim da As New MySqlDataAdapter("SELECT thesis_id, title, objectives, scope, limitations, category FROM tblthesis WHERE category LIKE '%" & cbCategories.Text & "%' AND title Like '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%' ", conn)
+                Dim dt = New DataTable
+                da.Fill(dt)
+                Dim lvItem As New ListViewItem
+                Dim dr2 As DataRow
+                ListView1.Items.Clear()
+
+                For Each dr2 In dt.Rows
+
+                    lvItem = Me.ListView1.Items.Add(dr2(0).ToString())
+                    For s As Integer = 1 To 5
+                        lvItem.SubItems.Add(dr2(s).ToString())
+
+                    Next
+                Next
+                For Each lvi As ListViewItem In Me.ListView1.Items
+                    lvi.UseItemStyleForSubItems = False
+                    lvi.SubItems(0).ForeColor = Color.Gray
+                    lvi.SubItems(1).ForeColor = Color.Gray
+                    lvi.SubItems(2).ForeColor = Color.Gray
+                    lvi.SubItems(3).ForeColor = Color.Gray
+                    lvi.SubItems(4).ForeColor = Color.Gray
+                    lvi.SubItems(5).ForeColor = Color.Gray
+                Next
+
+            Else
+                    Dim x As String
+                    x = tbSearch.Text
+                    Dim da As New MySqlDataAdapter("SELECT thesis_id, title, objectives, scope, limitations, category FROM tblthesis WHERE title Like '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%' ", conn)
+                    Dim dt = New DataTable
+                    da.Fill(dt)
+                    Dim lvItem As New ListViewItem
+                    Dim dr2 As DataRow
+                    ListView1.Items.Clear()
+
+                    For Each dr2 In dt.Rows
+
+                        lvItem = Me.ListView1.Items.Add(dr2(0).ToString())
+                        For s As Integer = 1 To 5
+                            lvItem.SubItems.Add(dr2(s).ToString())
+
+                        Next
+                    Next
+                    For Each lvi As ListViewItem In Me.ListView1.Items
+                        lvi.UseItemStyleForSubItems = False
+                        lvi.SubItems(0).ForeColor = Color.Gray
+                        lvi.SubItems(1).ForeColor = Color.Gray
+                        lvi.SubItems(2).ForeColor = Color.Gray
+                        lvi.SubItems(3).ForeColor = Color.Gray
+                        lvi.SubItems(4).ForeColor = Color.Gray
+                        lvi.SubItems(5).ForeColor = Color.Gray
+
+
+                    Next
+                End If
+
 
         Catch ex As Exception
-
         End Try
+        conn.Close()
 
     End Sub
 
+
     Private Sub cbCategories_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCategories.SelectedIndexChanged
-        Try
-            conn.Open()
-            Dim x As String
-            x = cbCategories.Text
+        loadData()
+        conn.Open()
+        Dim x As String
+        x = tbSearch.Text
+        Dim da As New MySqlDataAdapter("SELECT thesis_id, title, objectives, scope, limitations, category FROM tblthesis WHERE category LIKE '%" & cbCategories.Text & "%' ", conn)
+        Dim dt = New DataTable
+        da.Fill(dt)
+        Dim lvItem As New ListViewItem
+        Dim dr2 As DataRow
+        ListView1.Items.Clear()
 
-            Dim y As New MySqlCommand("SELECT `thesis_id`, `title`, `objectives`, `scope`, `limitations`, `teamname`, `members`, `panels`, `category` FROM tblthesis WHERE category ='" & x & "'", conn)
-            y.ExecuteNonQuery()
-            Dim da1 As New MySqlDataAdapter(y)
-            Dim dt1 As New DataTable
-            da1.Fill(dt1)
-            '    dgvThesis.DataSource = dt1
-            conn.Close()
+        For Each dr2 In dt.Rows
 
-        Catch ex As Exception
+            lvItem = Me.ListView1.Items.Add(dr2(0).ToString())
+            For s As Integer = 1 To 5
+                lvItem.SubItems.Add(dr2(s).ToString())
 
-        End Try
+            Next
+        Next
+        For Each lvi As ListViewItem In Me.ListView1.Items
+            lvi.UseItemStyleForSubItems = False
+            lvi.SubItems(0).ForeColor = Color.Gray
+            lvi.SubItems(1).ForeColor = Color.Gray
+            lvi.SubItems(2).ForeColor = Color.Gray
+            lvi.SubItems(3).ForeColor = Color.Gray
+            lvi.SubItems(4).ForeColor = Color.Gray
+            lvi.SubItems(5).ForeColor = Color.Gray
+        Next
+        conn.Close()
     End Sub
 
     Private Sub dgvThesis_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs)
@@ -148,69 +151,125 @@ Public Class thesis
         '       dgvThesis.Cursor = Cursors.Hand
         '   End If
     End Sub
-    Private Sub sizeDGV(ByVal dgv As DataGridView)
-        Dim states As DataGridViewElementStates = DataGridViewElementStates.None
-        dgv.ScrollBars = ScrollBars.None
-        Dim totalHeight = dgv.Rows.GetRowsHeight(states) + dgv.ColumnHeadersHeight
-        totalHeight += dgv.Rows.Count * 4
-        Dim totalWidth = dgv.Columns.GetColumnsWidth(states) + dgv.RowHeadersWidth
-        dgv.ClientSize = New Size(totalWidth, totalHeight)
-    End Sub
 
     Private Sub btnArchived_Click(sender As Object, e As EventArgs) Handles btnArchived.Click
         thesisArchived.Show()
     End Sub
 
-    Private Sub dgvThesis_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-        conn.Open()
-        Dim j As Integer
-        Dim s As String
-        '  j = dgvThesis.CurrentRow.Index
-        '   s = dgvThesis.Item(2, j).Value.ToString()
-        '   Dim colName As String = dgvThesis.Columns(e.ColumnIndex).Name
-        If colName = "Delete" Then
-            Dim newForm As New Confirmation
-            '    newForm.SelectedRows = dgvThesis.SelectedRows
-            newForm.BackColor = Color.DarkOrange
-            newForm.PictureBox1.Image = My.Resources.Warning
-            newForm.PictureBox2.Image = My.Resources.warning__2_
-            newForm.btnNoCancel.Text = "Cancel"
-            newForm.lblmsg.Text = "Are you sure you want to delete this record?"
-            newForm.update1 = False
-            newForm.deleteStud = False
-            newForm.addTh = False
-            newForm.deleteThesis = True
-            newForm.Label2.ForeColor = Color.FromArgb(255, 66, 66)
-            newForm.btnYesOk.FillColor = Color.FromArgb(255, 66, 66)
-            newForm.Show()
+    Private Sub ListView1_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles ListView1.DrawColumnHeader
+        e.DrawDefault = True
 
-        ElseIf colName = "Edit" Then
-            '   If dgvThesis.SelectedRows.Count > 0 Then
-            '  Dim i As Integer
-            '       i = dgvThesis.CurrentRow.Index
-            ' Dim newForm As New addThesis
-            'newForm.SelectedRows = dgvThesis.SelectedRows
-            'newForm.tbTitle.Text = dgvThesis.Item(4, i).Value.ToString
-            'newForm.tbObjectives.Text = dgvThesis.Item(5, i).Value.ToString
-            'newForm.tbScope.Text = dgvThesis.Item(6, i).Value.ToString
-            'newForm.tbLimitation.Text = dgvThesis.Item(7, i).Value.ToString
-            'newForm.cbCategory.Text = dgvThesis.Item(11, i).Value.ToString
-            'newForm.tbTeam.Text = dgvThesis.Item(8, i).Value.ToString
-            'newForm.tbMembers.Text = dgvThesis.Item(9, i).Value.ToString
-            'newForm.tbPanel.Text = dgvThesis.Item(10, i).Value.ToString
-            'newForm.Label1.Text = "Update Thesis"
-            'newForm.btnSaveThesis.Enabled = False
-            'newForm.Show()
+    End Sub
+
+    Private Sub ListView1_DrawItem(sender As Object, e As DrawListViewItemEventArgs) Handles ListView1.DrawItem
+        If e.Item.Selected = False Then
+            e.DrawDefault = True
         End If
-        '  End If
+    End Sub
+
+    Private Sub ListView1_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles ListView1.DrawSubItem
+        If e.Item.Selected = True Then
+            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(76, 71, 67)), e.Bounds)
+            TextRenderer.DrawText(e.Graphics, e.SubItem.Text, New Font(ListView1.Font, Poppins), New Point(e.Bounds.Left + 0, e.Bounds.Top + 2), HighlightText)
+
+        Else
+            e.DrawDefault = True
+        End If
+
+    End Sub
+
+
+    Private Sub ListView1_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseClick
+        Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
+
+        Try
+            conn.Open()
+
+            Dim cm As New MySqlCommand("SELECT * FROM tblthesis WHERE thesis_id = '" & sa & "'", conn)
+            dr = cm.ExecuteReader
+            Dim ttl, obj, sc, li, te, ca As String
+            If dr.read() Then
+                ttl = dr(1)
+                obj = dr(2)
+                sc = dr(3)
+                li = dr(4)
+                te = dr(5)
+                ca = dr(8)
+                lblTitle.Text = ttl
+                lblObjectives.Text = obj
+                lblScope.Text = sc
+                lblLimit.Text = li
+                lblTeam.Text = te
+                lblCategory.Text = ca
+
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
         conn.Close()
     End Sub
 
-    Private Sub dgvThesis_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs)
-        If e.RowIndex >= 0 Then
-            '  Me.dgvThesis.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
-        End If
+    Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
+        ContextMenuStrip1.Show(Cursor.Position)
     End Sub
 
+    Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
+        Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
+        Dim newForm As New Confirmation
+        newForm.BackColor = Color.DarkOrange
+        newForm.PictureBox1.Image = My.Resources.Warning
+        newForm.PictureBox2.Image = My.Resources.warning__2_
+        newForm.btnNoCancel.Text = "Cancel"
+        newForm.lblmsg.Text = "Are you sure you want to delete this record?"
+        newForm.update1 = False
+        newForm.deleteStud = False
+        newForm.addTh = False
+        newForm.deleteThesis = True
+        newForm.Label2.ForeColor = Color.FromArgb(255, 66, 66)
+        newForm.btnYesOk.FillColor = Color.FromArgb(255, 66, 66)
+        newForm.ctid = sa
+        newForm.Show()
+
+    End Sub
+
+    Private Sub EditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem.Click
+        Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
+        conn.Open()
+        Try
+            Dim cm As New MySqlCommand("SELECT * FROM tblthesis WHERE thesis_id = '" & sa & "'", conn)
+            dr = cm.ExecuteReader
+            Dim ttl, obj, sc, li, te, mem, pa, ca As String
+            If dr.read() Then
+                ttl = dr(1)
+                obj = dr(2)
+                sc = dr(3)
+                li = dr(4)
+                te = dr(5)
+                mem = dr(6)
+                pa = dr(7)
+                ca = dr(8)
+                Dim newForm As New addThesis
+                newForm.tbTitle.Text = ttl
+                newForm.tbObjectives.Text = obj
+                newForm.tbScope.Text = sc
+                newForm.tbLimitation.Text = li
+                newForm.cbCategory.Text = ca
+                newForm.tbTeam.Text = te
+                newForm.tbMembers.Text = mem
+                newForm.tbPanel.Text = pa
+                newForm.Label1.Text = "Update Thesis"
+                newForm.btnSaveThesis.Enabled = False
+                newForm.sel = sa
+                newForm.Show()
+            End If
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        conn.Close()
+    End Sub
 
 End Class

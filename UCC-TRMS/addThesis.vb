@@ -2,6 +2,7 @@
 Public Class addThesis
     Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
     Public Property SelectedRows As DataGridViewSelectedRowCollection
+    Public sel As String
 
     Private Sub btnAddThesisClose_Click(sender As Object, e As EventArgs) Handles btnAddThesisClose.Click
         Me.Close()
@@ -70,13 +71,12 @@ Public Class addThesis
     End Sub
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to update this Record?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-        Dim i As String
-        i = SelectedRows(0).Cells(3).Value
+
 
         If result = DialogResult.Yes Then
 
             conn.Open()
-            Dim comm As New MySqlCommand("UPDATE tblthesis SET title=@title, objectives=@objectives, scope=@scope, limitations=@limitations, teamname=@teamname, members=@members, panels=@panels, category=@category WHERE thesis_id = '" & i & "'", conn)
+            Dim comm As New MySqlCommand("UPDATE tblthesis SET title=@title, objectives=@objectives, scope=@scope, limitations=@limitations, teamname=@teamname, members=@members, panels=@panels, category=@category WHERE thesis_id = '" & sel & "'", conn)
             With comm
                 .Parameters.AddWithValue("@title", tbTitle.Text.ToUpper())
                 .Parameters.AddWithValue("@objectives", tbObjectives.Text.ToUpper())
@@ -91,7 +91,7 @@ Public Class addThesis
             If comm.ExecuteNonQuery Then
                 mainForm.OpenChildForm(New thesis)
                 Me.Hide()
-                Me.Alert(i + " updated successfully!", notification.enmType.Success)
+                Me.Alert(sel + " updated successfully!", notification.enmType.Success)
             End If
             conn.Close()
         ElseIf result = DialogResult.No Then

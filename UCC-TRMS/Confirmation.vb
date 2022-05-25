@@ -2,6 +2,7 @@
 Public Class Confirmation
     Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
     Public Property SelectedRows As DataGridViewSelectedRowCollection
+    Public ctid As String
     Public sn As String
     Public update1 = False
     Public deleteStud = False
@@ -10,6 +11,7 @@ Public Class Confirmation
     Public updateStud = False
     Public updateThesis = False
     Public btnYes = False
+    Public rel = False
 
     Public Enum enmType
         Success
@@ -112,6 +114,7 @@ Public Class Confirmation
         addStudent.cbSection.SelectedIndex = 0
 
     End Sub
+
     Public Sub Alert(ByVal msg As String, ByVal type As notification.enmType)
         Dim frm As notification = New notification()
         frm.showAlert(msg, type)
@@ -143,24 +146,22 @@ Public Class Confirmation
                 update1 = False
                 deleteStud = False
                 deleteThesis = False
-
-                Me.Alert("New record added successfully!", notification.enmType.Success)
                 mainForm.OpenChildForm(New thesis)
+                Me.Alert("New record added successfully!", notification.enmType.Success)
                 Me.Close()
             ElseIf deleteThesis = True And addTh = False And deleteStud = False And update1 = False Then
                 update1 = False
                 deleteStud = False
                 addTh = False
-                Dim i As String
-                i = SelectedRows(0).Cells(3).Value
                 conn.Open()
-                Dim command As New MySqlCommand("INSERT INTO tblarchive (thesis_id, title, objectives, scope, limitations, teamname, members, panels, category) SELECT thesis_id, title, objectives, scope, limitations, teamname, members, panels, category FROM tblthesis WHERE thesis_id ='" & i & "'", conn)
+
+                Dim command As New MySqlCommand("INSERT INTO tblarchive (thesis_id, title, objectives, scope, limitations, teamname, members, panels, category) SELECT thesis_id, title, objectives, scope, limitations, teamname, members, panels, category FROM tblthesis WHERE thesis_id ='" & ctid & "'", conn)
                 command.ExecuteNonQuery()
-                Dim command1 As New MySqlCommand("DELETE FROM tblthesis WHERE thesis_id ='" & i & "'", conn)
+                Dim command1 As New MySqlCommand("DELETE FROM tblthesis WHERE thesis_id ='" & ctid & "'", conn)
                 command1.ExecuteNonQuery()
                 conn.Close()
                 mainForm.OpenChildForm(New thesis)
-                Me.Alert(i + " deleted successfully", notification.enmType.Success)
+                Me.Alert(ctid + " deleted successfully", notification.enmType.Success)
                 Me.Close()
             Else
                 Me.Close()
