@@ -35,8 +35,6 @@ Public Class thesis
 
     Private Sub tbSearch_TextChanged(sender As Object, e As EventArgs) Handles tbSearch.TextChanged
         loadData()
-
-
     End Sub
     Private Sub loadData()
         Try
@@ -46,7 +44,34 @@ Public Class thesis
 
                 Dim x As String
                 x = tbSearch.Text
-                Dim da As New MySqlDataAdapter("SELECT thesis_id, title, objectives, scope, limitations, category FROM tblthesis WHERE category LIKE '%" & cbCategories.Text & "%' AND title Like '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%' ", conn)
+                Dim da As New MySqlDataAdapter("SELECT thesis_id, title, objectives, scope, limitations, category FROM tblthesis WHERE category LIKE '%" & cbCategories.Text & "%' AND title Like '%" & x & "%' Or thesis_id Like '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%' ", conn)
+                Dim dt = New DataTable
+                da.Fill(dt)
+                Dim lvItem As New ListViewItem
+                Dim dr2 As DataRow
+                ListView1.Items.Clear()
+
+                For Each dr2 In dt.Rows
+
+                    lvItem = Me.ListView1.Items.Add(dr2(0).ToString())
+                    For s As Integer = 1 To 5
+                        lvItem.SubItems.Add(dr2(s).ToString())
+
+                    Next
+                Next
+                For Each lvi As ListViewItem In Me.ListView1.Items
+                    lvi.UseItemStyleForSubItems = False
+                    lvi.SubItems(0).ForeColor = Color.Gray
+                    lvi.SubItems(1).ForeColor = Color.Gray
+                    lvi.SubItems(2).ForeColor = Color.Gray
+                    lvi.SubItems(3).ForeColor = Color.Gray
+                    lvi.SubItems(4).ForeColor = Color.Gray
+                    lvi.SubItems(5).ForeColor = Color.Gray
+                Next
+            Else
+                Dim x As String
+                x = tbSearch.Text
+                Dim da As New MySqlDataAdapter("SELECT thesis_id, title, objectives, scope, limitations, category FROM tblthesis WHERE category LIKE '%" & cbCategories.Text & "%' Or title Like '%" & x & "%' Or thesis_id Like '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%' ", conn)
                 Dim dt = New DataTable
                 da.Fill(dt)
                 Dim lvItem As New ListViewItem
@@ -71,36 +96,7 @@ Public Class thesis
                     lvi.SubItems(5).ForeColor = Color.Gray
                 Next
 
-            Else
-                    Dim x As String
-                    x = tbSearch.Text
-                    Dim da As New MySqlDataAdapter("SELECT thesis_id, title, objectives, scope, limitations, category FROM tblthesis WHERE title Like '%" & x & "%' OR objectives LIKE '%" & x & "%' OR scope LIKE '%" & x & "%' OR limitations LIKE '%" & x & "%' OR teamname LIKE '%" & x & "%' OR members LIKE '%" & x & "%' OR panels LIKE '%" & x & "%' OR category LIKE '%" & x & "%' ", conn)
-                    Dim dt = New DataTable
-                    da.Fill(dt)
-                    Dim lvItem As New ListViewItem
-                    Dim dr2 As DataRow
-                    ListView1.Items.Clear()
-
-                    For Each dr2 In dt.Rows
-
-                        lvItem = Me.ListView1.Items.Add(dr2(0).ToString())
-                        For s As Integer = 1 To 5
-                            lvItem.SubItems.Add(dr2(s).ToString())
-
-                        Next
-                    Next
-                    For Each lvi As ListViewItem In Me.ListView1.Items
-                        lvi.UseItemStyleForSubItems = False
-                        lvi.SubItems(0).ForeColor = Color.Gray
-                        lvi.SubItems(1).ForeColor = Color.Gray
-                        lvi.SubItems(2).ForeColor = Color.Gray
-                        lvi.SubItems(3).ForeColor = Color.Gray
-                        lvi.SubItems(4).ForeColor = Color.Gray
-                        lvi.SubItems(5).ForeColor = Color.Gray
-
-
-                    Next
-                End If
+            End If
 
 
         Catch ex As Exception
@@ -142,16 +138,6 @@ Public Class thesis
         conn.Close()
     End Sub
 
-    Private Sub dgvThesis_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs)
-        '   Dim colname As String = dgvThesis.Columns(e.ColumnIndex).Name
-
-        ' If colname <> "Delete" AndAlso colname <> "Edit" Then
-        '       dgvThesis.Cursor = Cursors.[Default]
-        '  Else
-        '       dgvThesis.Cursor = Cursors.Hand
-        '   End If
-    End Sub
-
     Private Sub btnArchived_Click(sender As Object, e As EventArgs) Handles btnArchived.Click
         thesisArchived.Show()
     End Sub
@@ -169,9 +155,10 @@ Public Class thesis
 
     Private Sub ListView1_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles ListView1.DrawSubItem
         If e.Item.Selected = True Then
+            e.DrawDefault = False
             e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(76, 71, 67)), e.Bounds)
+            Dim lvi As ListViewItem = New ListViewItem
             TextRenderer.DrawText(e.Graphics, e.SubItem.Text, New Font(ListView1.Font, Poppins), New Point(e.Bounds.Left + 0, e.Bounds.Top + 2), HighlightText)
-
         Else
             e.DrawDefault = True
         End If
@@ -201,6 +188,7 @@ Public Class thesis
                 lblLimit.Text = li
                 lblTeam.Text = te
                 lblCategory.Text = ca
+
 
 
             End If
@@ -271,5 +259,6 @@ Public Class thesis
         End Try
         conn.Close()
     End Sub
+
 
 End Class

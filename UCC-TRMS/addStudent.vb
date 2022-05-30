@@ -2,6 +2,8 @@
 Public Class addStudent
     Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
     Public Property SelectedRows As DataGridViewSelectedRowCollection
+    Public stdId As String
+
     Private Sub btnAddStudentClose_Click(sender As Object, e As EventArgs) Handles btnAddStudentClose.Click
         Me.Close()
     End Sub
@@ -102,11 +104,9 @@ Public Class addStudent
     Private Sub btnUpdateStudent_Click(sender As Object, e As EventArgs) Handles btnUpdateStudent.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to update this Record?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If result = DialogResult.Yes Then
-            Dim i As String
-            i = SelectedRows(0).Cells(3).Value
 
             conn.Open()
-            Dim comm As New MySqlCommand("UPDATE tblstudents SET fullname=@fullname, email=@email, course=@course, section=@section, year=@year, contact=@contact WHERE studentno = '" & i & "'", conn)
+            Dim comm As New MySqlCommand("UPDATE tblstudents SET fullname=@fullname, email=@email, course=@course, section=@section, year=@year, contact=@contact WHERE studentno = '" & stdId & "'", conn)
             With comm
                 .Parameters.AddWithValue("@fullname", tbfullname.Text.ToUpper())
                 .Parameters.AddWithValue("@course", tbcourse.Text.ToUpper())
@@ -118,7 +118,7 @@ Public Class addStudent
             If comm.ExecuteNonQuery Then
                 mainForm.OpenChildForm(New borrowers)
                 Me.Hide()
-                Me.Alert(i + " updated successfuly!", notification.enmType.Success)
+                Me.Alert(stdId + " updated successfuly!", notification.enmType.Success)
             End If
             conn.Close()
         ElseIf result = DialogResult.No Then

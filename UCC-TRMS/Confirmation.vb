@@ -2,7 +2,7 @@
 Public Class Confirmation
     Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
     Public Property SelectedRows As DataGridViewSelectedRowCollection
-    Public ctid As String
+    Public ctid, id As String
     Public sn As String
     Public update1 = False
     Public deleteStud = False
@@ -128,18 +128,17 @@ Public Class Confirmation
                 deleteThesis = False
                 Me.Close()
             ElseIf deleteStud = True And update1 = False And addTh = False And deleteThesis = False Then
-                Dim i As String
-                i = SelectedRows(0).Cells(3).Value
+
                 update1 = False
                 addTh = False
                 deleteThesis = False
                 conn.Open()
-                Dim command As New MySqlCommand("INSERT INTO tblarchivedstud (studID, fullname, studentno, email, course, year, section, contact) SELECT id, fullname, studentno, email, course, year, section, contact FROM tblstudents WHERE studentno ='" & i & "'", conn)
+                Dim command As New MySqlCommand("INSERT INTO tblarchivedstud (studID, fullname, studentno, email, course, year, section, contact) SELECT id, fullname, studentno, email, course, year, section, contact FROM tblstudents WHERE studentno ='" & id & "'", conn)
                 command.ExecuteNonQuery()
-                Dim command1 As New MySqlCommand("DELETE FROM tblstudents WHERE studentno ='" & i & "'", conn)
+                Dim command1 As New MySqlCommand("DELETE FROM tblstudents WHERE studentno ='" & id & "'", conn)
                 command1.ExecuteNonQuery()
                 mainForm.OpenChildForm(New borrowers)
-                Me.Alert(i + " deleted successfully", notification.enmType.Success)
+                Me.Alert(id + " deleted successfully", notification.enmType.Success)
                 Me.Close()
             ElseIf addTh = True And deleteStud = False And update1 = False And deleteThesis = False Then
                 addThesis.add1()

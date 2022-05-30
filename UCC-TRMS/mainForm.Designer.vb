@@ -26,6 +26,7 @@ Partial Class mainForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mainForm))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.pnlSide = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnExit = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnUsers = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnReports = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnIssuing = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -44,7 +45,8 @@ Partial Class mainForm
         Me.lblUser = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnExit = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.EasyHTMLReports1 = New KimToo.EasyHTMLReports(Me.components)
         Me.pnlSide.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,6 +80,34 @@ Partial Class mainForm
         Me.pnlSide.ShadowDecoration.Parent = Me.pnlSide
         Me.pnlSide.Size = New System.Drawing.Size(248, 630)
         Me.pnlSide.TabIndex = 0
+        '
+        'btnExit
+        '
+        Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnExit.BackColor = System.Drawing.Color.Transparent
+        Me.btnExit.CheckedState.Parent = Me.btnExit
+        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExit.CustomImages.Parent = Me.btnExit
+        Me.btnExit.FillColor = System.Drawing.Color.Transparent
+        Me.btnExit.FillColor2 = System.Drawing.Color.Transparent
+        Me.btnExit.Font = New System.Drawing.Font("Poppins", 11.0!)
+        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnExit.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnExit.HoverState.Parent = Me.btnExit
+        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
+        Me.btnExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnExit.ImageOffset = New System.Drawing.Point(20, 0)
+        Me.btnExit.ImageSize = New System.Drawing.Size(23, 23)
+        Me.btnExit.Location = New System.Drawing.Point(0, 580)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.PressedColor = System.Drawing.Color.Transparent
+        Me.btnExit.ShadowDecoration.Parent = Me.btnExit
+        Me.btnExit.Size = New System.Drawing.Size(248, 50)
+        Me.btnExit.TabIndex = 8
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnExit.TextOffset = New System.Drawing.Point(40, 0)
         '
         'btnUsers
         '
@@ -382,33 +412,20 @@ Partial Class mainForm
         'Timer1
         '
         '
-        'btnExit
+        'Guna2DragControl1
         '
-        Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnExit.BackColor = System.Drawing.Color.Transparent
-        Me.btnExit.CheckedState.Parent = Me.btnExit
-        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExit.CustomImages.Parent = Me.btnExit
-        Me.btnExit.FillColor = System.Drawing.Color.Transparent
-        Me.btnExit.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnExit.Font = New System.Drawing.Font("Poppins", 11.0!)
-        Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnExit.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnExit.HoverState.Parent = Me.btnExit
-        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
-        Me.btnExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnExit.ImageOffset = New System.Drawing.Point(20, 0)
-        Me.btnExit.ImageSize = New System.Drawing.Size(23, 23)
-        Me.btnExit.Location = New System.Drawing.Point(0, 580)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.PressedColor = System.Drawing.Color.Transparent
-        Me.btnExit.ShadowDecoration.Parent = Me.btnExit
-        Me.btnExit.Size = New System.Drawing.Size(248, 50)
-        Me.btnExit.TabIndex = 8
-        Me.btnExit.Text = "Exit"
-        Me.btnExit.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnExit.TextOffset = New System.Drawing.Point(40, 0)
+        Me.Guna2DragControl1.TargetControl = Me.pnlTop
+        '
+        'EasyHTMLReports1
+        '
+        Me.EasyHTMLReports1.AlternativeRowBackgroundColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.EasyHTMLReports1.AlternativeRowGridColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.EasyHTMLReports1.HeaderBackgroundColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.EasyHTMLReports1.HeaderFontColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.EasyHTMLReports1.HeaderGridColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.EasyHTMLReports1.RowDefaultBackgroudColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EasyHTMLReports1.RowDefaultFontColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.EasyHTMLReports1.RowDefaultGridColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(65, Byte), Integer))
         '
         'mainForm
         '
@@ -459,4 +476,6 @@ Partial Class mainForm
     Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents btnExit As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
+    Friend WithEvents EasyHTMLReports1 As KimToo.EasyHTMLReports
 End Class
