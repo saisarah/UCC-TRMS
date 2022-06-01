@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2022 at 02:03 PM
+-- Generation Time: Jun 01, 2022 at 05:33 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -58,6 +58,31 @@ CREATE TABLE `tblarchivedstud` (
   `contact` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tblarchivedstud`
+--
+
+INSERT INTO `tblarchivedstud` (`ID`, `studID`, `fullname`, `studentno`, `email`, `course`, `year`, `section`, `contact`) VALUES
+(1, 2, '', 20192509, '', '', 0, 'A', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblborroweddetails`
+--
+
+CREATE TABLE `tblborroweddetails` (
+  `thesis_id` varchar(10) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `dateissue` datetime NOT NULL,
+  `studno` int(255) NOT NULL,
+  `fullname` varchar(255) NOT NULL,
+  `crsyrsec` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `dateret` datetime NOT NULL DEFAULT current_timestamp(),
+  `status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- --------------------------------------------------------
 
 --
@@ -105,7 +130,8 @@ CREATE TABLE `tblstudents` (
 --
 
 INSERT INTO `tblstudents` (`ID`, `fullname`, `studentno`, `email`, `course`, `year`, `section`, `contact`) VALUES
-(1, 'SARAH GRACE ARLYN OBEN', 20191940, 'sarah@email.com', 'BSIT', 4, 'C', '09123456789');
+(1, 'SARAH GRACE ARLYN OBEN', 20191940, 'sarahoben7@gmail.com', 'BSCS', 4, 'B', '09123456789'),
+(3, 'JESSICA JOY GAPUSAN', 20192091, 'jessicagapusan23@gmail.com', 'BSCS', 3, 'C', '09123456789');
 
 -- --------------------------------------------------------
 
@@ -114,15 +140,17 @@ INSERT INTO `tblstudents` (`ID`, `fullname`, `studentno`, `email`, `course`, `ye
 --
 
 CREATE TABLE `tblthesis` (
-  `thesis_id` varchar(10) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `objectives` varchar(255) NOT NULL,
-  `scope` varchar(255) NOT NULL,
-  `limitations` varchar(255) NOT NULL,
-  `teamname` varchar(255) NOT NULL,
-  `members` varchar(255) NOT NULL,
+  `thesis_id` varchar(15) NOT NULL,
+  `title` longtext NOT NULL,
+  `objectives` longtext NOT NULL,
+  `scope` longtext NOT NULL,
+  `limitations` longtext NOT NULL,
+  `teamname` longtext NOT NULL,
+  `members` longtext NOT NULL,
   `panels` varchar(255) NOT NULL,
-  `category` varchar(255) NOT NULL
+  `category` varchar(255) NOT NULL,
+  `course` varchar(255) NOT NULL,
+  `year` year(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -142,8 +170,7 @@ CREATE TABLE `tblusers` (
 --
 
 INSERT INTO `tblusers` (`ID`, `username`, `status`) VALUES
-(1, 'Admin', 'ACTIVE'),
-(2, 'Sarah', 'ACTIVE');
+(1, 'Admin', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -193,7 +220,7 @@ ALTER TABLE `tblarchive`
 -- AUTO_INCREMENT for table `tblarchivedstud`
 --
 ALTER TABLE `tblarchivedstud`
-  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tblenrolled`
@@ -205,13 +232,13 @@ ALTER TABLE `tblenrolled`
 -- AUTO_INCREMENT for table `tblstudents`
 --
 ALTER TABLE `tblstudents`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
 --
 ALTER TABLE `tblusers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
