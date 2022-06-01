@@ -22,10 +22,12 @@ Partial Class addStudent
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(addStudent))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.tbCourse = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.cbSection = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.tbemail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnUpdateStudent = New Guna.UI2.WinForms.Guna2Button()
@@ -36,7 +38,7 @@ Partial Class addStudent
         Me.cbyear = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.tbcontact = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbfullname = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.tbCourse = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,6 +94,29 @@ Partial Class addStudent
         Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
         Me.Guna2Panel2.Size = New System.Drawing.Size(500, 301)
         Me.Guna2Panel2.TabIndex = 3
+        '
+        'tbCourse
+        '
+        Me.tbCourse.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tbCourse.BackColor = System.Drawing.Color.Transparent
+        Me.tbCourse.BorderRadius = 5
+        Me.tbCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.tbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.tbCourse.FocusedColor = System.Drawing.Color.Empty
+        Me.tbCourse.FocusedState.Parent = Me.tbCourse
+        Me.tbCourse.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.tbCourse.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.tbCourse.FormattingEnabled = True
+        Me.tbCourse.HoverState.Parent = Me.tbCourse
+        Me.tbCourse.ItemHeight = 30
+        Me.tbCourse.Items.AddRange(New Object() {"Please select Program", "BSCS", "BSIT", "BSIS", "BSEMC"})
+        Me.tbCourse.ItemsAppearance.Parent = Me.tbCourse
+        Me.tbCourse.Location = New System.Drawing.Point(13, 167)
+        Me.tbCourse.Name = "tbCourse"
+        Me.tbCourse.ShadowDecoration.Parent = Me.tbCourse
+        Me.tbCourse.Size = New System.Drawing.Size(238, 36)
+        Me.tbCourse.TabIndex = 19
         '
         'cbSection
         '
@@ -314,29 +339,6 @@ Partial Class addStudent
         Me.tbfullname.Size = New System.Drawing.Size(475, 36)
         Me.tbfullname.TabIndex = 4
         '
-        'tbCourse
-        '
-        Me.tbCourse.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbCourse.BackColor = System.Drawing.Color.Transparent
-        Me.tbCourse.BorderRadius = 5
-        Me.tbCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.tbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.tbCourse.FocusedColor = System.Drawing.Color.Empty
-        Me.tbCourse.FocusedState.Parent = Me.tbCourse
-        Me.tbCourse.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.tbCourse.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.tbCourse.FormattingEnabled = True
-        Me.tbCourse.HoverState.Parent = Me.tbCourse
-        Me.tbCourse.ItemHeight = 30
-        Me.tbCourse.Items.AddRange(New Object() {"Please select Program", "BSCS", "BSIT", "BSIS", "BSEMC"})
-        Me.tbCourse.ItemsAppearance.Parent = Me.tbCourse
-        Me.tbCourse.Location = New System.Drawing.Point(13, 167)
-        Me.tbCourse.Name = "tbCourse"
-        Me.tbCourse.ShadowDecoration.Parent = Me.tbCourse
-        Me.tbCourse.Size = New System.Drawing.Size(238, 36)
-        Me.tbCourse.TabIndex = 19
-        '
         'addStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -369,4 +371,5 @@ Partial Class addStudent
     Friend WithEvents tbemail As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents cbSection As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents tbCourse As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
 End Class

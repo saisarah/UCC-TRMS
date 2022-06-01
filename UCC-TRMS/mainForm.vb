@@ -11,6 +11,7 @@ Public Class mainForm
     Private btnIssuingWasClicked As Boolean = False
     Private btnReportsWasClicked As Boolean = False
     Private btnUsersWasClicked As Boolean = False
+    Dim cur, cur2 As String
 
 
     Public Sub OpenChildForm(childForm As Form)
@@ -79,6 +80,8 @@ Public Class mainForm
     End Sub
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
+        Timer2.Start()
+
         Dim reader As MySqlDataReader
 
         Try
@@ -327,7 +330,7 @@ Public Class mainForm
     End Sub
 
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
-        OpenChildForm(New users)
+        OpenChildForm(New usersAcc)
         btnUsersWasClicked = True
         Label1.Text = "Users"
 
@@ -372,7 +375,11 @@ Public Class mainForm
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim CurrentDateTime As DateTime
         CurrentDateTime = DateTime.Now
+        cur = DateTime.Now.ToString("yyyy/dd/MM hh:mm:ss")
         Label3.Text = CurrentDateTime.ToString("dddd, d MMMM yyyy  |  hh:mm:ss tt")
+
+
+
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -394,5 +401,44 @@ Public Class mainForm
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
         login.Show()
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Try
+            conn.Open()
+            Dim sql As String
+            sql = "SELECT dateret FROM tblborroweddetails WHERE status = 'IN POSSESION' "
+            cmdd = New MySqlCommand(sql, conn)
+            reader = cmdd.ExecuteReader
+            If reader.read Then
+                cur2 = reader(7)
+                If cur = cur2 Then
+                    Timer2.Stop()
+                    Me.Alert("Book overdue!", notification.enmType.welcome)
+                Else
+
+                    MsgBox(cur)
+
+                End If
+            Else
+
+            End If
+            reader.Close()
+
+            'If cur = cur2 Then
+            '     Timer2.Stop()
+
+            ' End If
+
+        Catch ex As Exception
+            'MsgBox(ex.Message)
+        End Try
+        conn.Close()
+
+
+    End Sub
+
+    Private Sub MaskedTextBox1_TextChanged(sender As Object, e As EventArgs)
+
     End Sub
 End Class

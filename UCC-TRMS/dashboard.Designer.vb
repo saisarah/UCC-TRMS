@@ -28,6 +28,10 @@ Partial Class dashboard
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvRecentBorrowed = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
@@ -36,27 +40,23 @@ Partial Class dashboard
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.lblHardCopy = New System.Windows.Forms.Label()
+        Me.lblSent = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lblBorrowers = New System.Windows.Forms.Label()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.lblThesisToday = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.lblThesisToday = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         CType(Me.dgvRecentBorrowed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -75,6 +75,51 @@ Partial Class dashboard
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
         Me.Guna2Panel1.Size = New System.Drawing.Size(1190, 578)
         Me.Guna2Panel1.TabIndex = 0
+        '
+        'Panel2
+        '
+        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Controls.Add(Me.dgvRecentBorrowed)
+        Me.Panel2.Location = New System.Drawing.Point(12, 12)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(865, 499)
+        Me.Panel2.TabIndex = 4
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.Panel4)
+        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(865, 58)
+        Me.Panel3.TabIndex = 4
+        '
+        'Panel4
+        '
+        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.BackColor = System.Drawing.Color.Silver
+        Me.Panel4.Location = New System.Drawing.Point(17, 50)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(830, 2)
+        Me.Panel4.TabIndex = 5
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.DimGray
+        Me.Label1.Location = New System.Drawing.Point(19, 14)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(352, 37)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Top 10 Recently Borrowed Thesis"
         '
         'dgvRecentBorrowed
         '
@@ -179,6 +224,7 @@ Partial Class dashboard
         'lblInPosses
         '
         Me.lblInPosses.BackColor = System.Drawing.Color.Transparent
+        Me.lblInPosses.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblInPosses.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInPosses.ForeColor = System.Drawing.Color.White
         Me.lblInPosses.Location = New System.Drawing.Point(0, 0)
@@ -194,7 +240,7 @@ Partial Class dashboard
         Me.Guna2Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(120, Byte), Integer))
         Me.Guna2Panel3.Controls.Add(Me.Label8)
         Me.Guna2Panel3.Controls.Add(Me.Label6)
-        Me.Guna2Panel3.Controls.Add(Me.lblHardCopy)
+        Me.Guna2Panel3.Controls.Add(Me.lblSent)
         Me.Guna2Panel3.Location = New System.Drawing.Point(6, 152)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
@@ -213,7 +259,7 @@ Partial Class dashboard
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(140, 29)
         Me.Label8.TabIndex = 15
-        Me.Label8.Text = "HARDCOPY"
+        Me.Label8.Text = "DOCUMENTS"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label6
@@ -224,24 +270,25 @@ Partial Class dashboard
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Poppins Light", 15.0!)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(0, 86)
+        Me.Label6.Location = New System.Drawing.Point(0, 89)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(140, 35)
         Me.Label6.TabIndex = 14
-        Me.Label6.Text = "BORROWED"
+        Me.Label6.Text = "SENT"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblHardCopy
+        'lblSent
         '
-        Me.lblHardCopy.BackColor = System.Drawing.Color.Transparent
-        Me.lblHardCopy.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHardCopy.ForeColor = System.Drawing.Color.White
-        Me.lblHardCopy.Location = New System.Drawing.Point(0, 0)
-        Me.lblHardCopy.Name = "lblHardCopy"
-        Me.lblHardCopy.Size = New System.Drawing.Size(140, 140)
-        Me.lblHardCopy.TabIndex = 13
-        Me.lblHardCopy.Text = "0"
-        Me.lblHardCopy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblSent.BackColor = System.Drawing.Color.Transparent
+        Me.lblSent.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblSent.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSent.ForeColor = System.Drawing.Color.White
+        Me.lblSent.Location = New System.Drawing.Point(0, 0)
+        Me.lblSent.Name = "lblSent"
+        Me.lblSent.Size = New System.Drawing.Size(140, 140)
+        Me.lblSent.TabIndex = 13
+        Me.lblSent.Text = "0"
+        Me.lblSent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Guna2Panel2
         '
@@ -273,6 +320,7 @@ Partial Class dashboard
         'lblBorrowers
         '
         Me.lblBorrowers.BackColor = System.Drawing.Color.Transparent
+        Me.lblBorrowers.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblBorrowers.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBorrowers.ForeColor = System.Drawing.Color.White
         Me.lblBorrowers.Location = New System.Drawing.Point(0, 0)
@@ -309,21 +357,6 @@ Partial Class dashboard
         Me.Label4.Text = "AS OF TODAY"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblThesisToday
-        '
-        Me.lblThesisToday.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblThesisToday.BackColor = System.Drawing.Color.Transparent
-        Me.lblThesisToday.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblThesisToday.ForeColor = System.Drawing.Color.White
-        Me.lblThesisToday.Location = New System.Drawing.Point(0, 0)
-        Me.lblThesisToday.Name = "lblThesisToday"
-        Me.lblThesisToday.Size = New System.Drawing.Size(140, 140)
-        Me.lblThesisToday.TabIndex = 11
-        Me.lblThesisToday.Text = "0"
-        Me.lblThesisToday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'Label2
         '
         Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -339,50 +372,18 @@ Partial Class dashboard
         Me.Label2.Text = "THESIS"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'Panel2
+        'lblThesisToday
         '
-        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Controls.Add(Me.dgvRecentBorrowed)
-        Me.Panel2.Location = New System.Drawing.Point(12, 12)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(865, 499)
-        Me.Panel2.TabIndex = 4
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.DimGray
-        Me.Label1.Location = New System.Drawing.Point(19, 14)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(352, 37)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Top 10 Recently Borrowed Thesis"
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.Panel4)
-        Me.Panel3.Controls.Add(Me.Label1)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(865, 58)
-        Me.Panel3.TabIndex = 4
-        '
-        'Panel4
-        '
-        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel4.BackColor = System.Drawing.Color.Silver
-        Me.Panel4.Location = New System.Drawing.Point(17, 50)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(830, 2)
-        Me.Panel4.TabIndex = 5
+        Me.lblThesisToday.BackColor = System.Drawing.Color.Transparent
+        Me.lblThesisToday.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblThesisToday.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblThesisToday.ForeColor = System.Drawing.Color.White
+        Me.lblThesisToday.Location = New System.Drawing.Point(0, 0)
+        Me.lblThesisToday.Name = "lblThesisToday"
+        Me.lblThesisToday.Size = New System.Drawing.Size(140, 140)
+        Me.lblThesisToday.TabIndex = 11
+        Me.lblThesisToday.Text = "0"
+        Me.lblThesisToday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dashboard
         '
@@ -394,15 +395,15 @@ Partial Class dashboard
         Me.Name = "dashboard"
         Me.Text = "dashboard"
         Me.Guna2Panel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         CType(Me.dgvRecentBorrowed, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Guna2Panel4.ResumeLayout(False)
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel5.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -418,7 +419,7 @@ Partial Class dashboard
     Friend WithEvents lblThesisToday As Label
     Friend WithEvents lblBorrowers As Label
     Friend WithEvents lblInPosses As Label
-    Friend WithEvents lblHardCopy As Label
+    Friend WithEvents lblSent As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label

@@ -4,22 +4,62 @@ Public Class thesisArchived
     Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
     Private Sub thesisArchived_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            dgvThesisArchived.Rows.Clear()
+            Guna2ShadowForm1.SetShadowForm(Me)
             conn.Open()
-            Dim cm As New MySqlCommand("SELECT * FROM tblArchive", conn)
-            dr = cm.ExecuteReader
-            While dr.Read
-                dgvThesisArchived.Rows.Add(dr.Item("title").ToString, dr.Item("objectives").ToString, dr.Item("scope").ToString, dr.Item("limitations").ToString, dr.Item("teamname").ToString, dr.Item("members").ToString, dr.Item("panels").ToString, dr.Item("category").ToString)
-            End While
-            dr.close()
-            conn.Close()
-        Catch ex As Exception
 
+            Dim da As New MySqlDataAdapter("SELECT thesis_id, title, objectives, scope, limitations, category FROM tblarchive", conn)
+            Dim dt = New DataTable
+                da.Fill(dt)
+                Dim lvItem As New ListViewItem
+                Dim dr2 As DataRow
+                ListView1.Items.Clear()
+
+                For Each dr2 In dt.Rows
+
+                lvItem = Me.ListView1.Items.Add(dr2(0).ToString())
+                For s As Integer = 1 To 5
+                        lvItem.SubItems.Add(dr2(s).ToString())
+
+                    Next
+                Next
+            For Each lvi As ListViewItem In Me.ListView1.Items
+                lvi.UseItemStyleForSubItems = False
+                lvi.SubItems(0).ForeColor = Color.Gray
+                lvi.SubItems(1).ForeColor = Color.Gray
+                lvi.SubItems(2).ForeColor = Color.Gray
+                lvi.SubItems(3).ForeColor = Color.Gray
+                lvi.SubItems(4).ForeColor = Color.Gray
+                lvi.SubItems(5).ForeColor = Color.Gray
+            Next
+
+        Catch ex As Exception
         End Try
+        conn.Close()
+
     End Sub
 
     Private Sub btnArchivedClose_Click(sender As Object, e As EventArgs) Handles btnArchivedClose.Click
         Me.Close()
     End Sub
 
+    Private Sub ListView1_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles ListView1.DrawColumnHeader
+        e.DrawDefault = True
+    End Sub
+
+    Private Sub ListView1_DrawItem(sender As Object, e As DrawListViewItemEventArgs) Handles ListView1.DrawItem
+        If e.Item.Selected = False Then
+            e.DrawDefault = True
+        End If
+    End Sub
+
+    Private Sub ListView1_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles ListView1.DrawSubItem
+        If e.Item.Selected = True Then
+            e.DrawDefault = False
+            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(252, 177, 45)), e.Bounds)
+            Dim lvi As ListViewItem = New ListViewItem
+            TextRenderer.DrawText(e.Graphics, e.SubItem.Text, New Font(ListView1.Font, Poppins), New Point(e.Bounds.Left + 0, e.Bounds.Top + 2), HighlightText)
+        Else
+            e.DrawDefault = True
+        End If
+    End Sub
 End Class

@@ -26,38 +26,35 @@ Partial Class invoice
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(invoice))
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lblMembers = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.lblTeamName = New System.Windows.Forms.Label()
-        Me.lblCategory = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.lblTitle = New System.Windows.Forms.Label()
-        Me.lblScoe = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.lblObjectives = New System.Windows.Forms.Label()
-        Me.lblLimitations = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.lblCode = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.pnList = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.lblFullName = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.lblStudentNumber = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblStudentNo = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.EasyHTMLReports1 = New KimToo.EasyHTMLReports(Me.components)
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnClose = New Guna.UI2.WinForms.Guna2Button()
         Me.btnInvoiceProcess = New Guna.UI2.WinForms.Guna2Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnClosex = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.Guna2Panel3.SuspendLayout()
-        Me.Guna2Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Guna2Panel7.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Panel2
@@ -68,296 +65,205 @@ Partial Class invoice
         Me.Guna2Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
-        Me.Guna2Panel2.Size = New System.Drawing.Size(1157, 10)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(1009, 10)
         Me.Guna2Panel2.TabIndex = 25
         '
         'Guna2Panel3
         '
-        Me.Guna2Panel3.AutoScroll = True
-        Me.Guna2Panel3.Controls.Add(Me.Guna2Panel1)
+        Me.Guna2Panel3.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Controls.Add(Me.btnClosex)
+        Me.Guna2Panel3.Controls.Add(Me.Panel2)
+        Me.Guna2Panel3.Controls.Add(Me.TableLayoutPanel2)
+        Me.Guna2Panel3.Controls.Add(Me.Guna2Panel6)
+        Me.Guna2Panel3.Controls.Add(Me.Label2)
+        Me.Guna2Panel3.Controls.Add(Me.Panel3)
+        Me.Guna2Panel3.Controls.Add(Me.Panel4)
         Me.Guna2Panel3.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel3.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.Guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Enabled = True
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
-        Me.Guna2Panel3.Size = New System.Drawing.Size(1157, 967)
+        Me.Guna2Panel3.Size = New System.Drawing.Size(1009, 528)
         Me.Guna2Panel3.TabIndex = 26
         '
-        'Guna2Panel1
+        'Panel1
         '
-        Me.Guna2Panel1.AutoScroll = True
-        Me.Guna2Panel1.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel1.Controls.Add(Me.PictureBox1)
-        Me.Guna2Panel1.Controls.Add(Me.lblMembers)
-        Me.Guna2Panel1.Controls.Add(Me.Label13)
-        Me.Guna2Panel1.Controls.Add(Me.lblTeamName)
-        Me.Guna2Panel1.Controls.Add(Me.lblCategory)
-        Me.Guna2Panel1.Controls.Add(Me.Label10)
-        Me.Guna2Panel1.Controls.Add(Me.Label5)
-        Me.Guna2Panel1.Controls.Add(Me.lblTitle)
-        Me.Guna2Panel1.Controls.Add(Me.lblScoe)
-        Me.Guna2Panel1.Controls.Add(Me.Label9)
-        Me.Guna2Panel1.Controls.Add(Me.Label3)
-        Me.Guna2Panel1.Controls.Add(Me.lblObjectives)
-        Me.Guna2Panel1.Controls.Add(Me.lblLimitations)
-        Me.Guna2Panel1.Controls.Add(Me.Label8)
-        Me.Guna2Panel1.Controls.Add(Me.TableLayoutPanel1)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Panel5)
-        Me.Guna2Panel1.Controls.Add(Me.Label20)
-        Me.Guna2Panel1.Controls.Add(Me.Label6)
-        Me.Guna2Panel1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.Guna2Panel1.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(1157, 967)
-        Me.Guna2Panel1.TabIndex = 0
+        Me.Panel1.Controls.Add(Me.Guna2Panel7)
+        Me.Panel1.Controls.Add(Me.pnList)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(928, 116)
+        Me.Panel1.TabIndex = 0
         '
-        'PictureBox1
+        'Guna2Panel7
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(284, 16)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(121, 78)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 29
-        Me.PictureBox1.TabStop = False
+        Me.Guna2Panel7.Controls.Add(Me.Label15)
+        Me.Guna2Panel7.Controls.Add(Me.lblCode)
+        Me.Guna2Panel7.Controls.Add(Me.Label16)
+        Me.Guna2Panel7.Controls.Add(Me.Label17)
+        Me.Guna2Panel7.CustomBorderColor = System.Drawing.Color.Gainsboro
+        Me.Guna2Panel7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Guna2Panel7.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.Guna2Panel7.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel7.Name = "Guna2Panel7"
+        Me.Guna2Panel7.ShadowDecoration.Parent = Me.Guna2Panel7
+        Me.Guna2Panel7.Size = New System.Drawing.Size(928, 59)
+        Me.Guna2Panel7.TabIndex = 13
         '
-        'lblMembers
+        'Label15
         '
-        Me.lblMembers.BackColor = System.Drawing.Color.Transparent
-        Me.lblMembers.Font = New System.Drawing.Font("Times New Roman", 12.0!)
-        Me.lblMembers.Location = New System.Drawing.Point(166, 412)
-        Me.lblMembers.Name = "lblMembers"
-        Me.lblMembers.Size = New System.Drawing.Size(916, 28)
-        Me.lblMembers.TabIndex = 64
-        Me.lblMembers.Text = "Objectives:"
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.White
+        Me.Label15.Location = New System.Drawing.Point(127, 19)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(427, 21)
+        Me.Label15.TabIndex = 12
+        Me.Label15.Text = "THESIS TITLE"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label13
+        'lblCode
         '
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(74, 412)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(89, 28)
-        Me.Label13.TabIndex = 63
-        Me.Label13.Text = "Members:"
+        Me.lblCode.BackColor = System.Drawing.Color.Transparent
+        Me.lblCode.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCode.ForeColor = System.Drawing.Color.White
+        Me.lblCode.Location = New System.Drawing.Point(3, 19)
+        Me.lblCode.Name = "lblCode"
+        Me.lblCode.Size = New System.Drawing.Size(105, 21)
+        Me.lblCode.TabIndex = 6
+        Me.lblCode.Text = "CODE"
+        Me.lblCode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblTeamName
+        'Label16
         '
-        Me.lblTeamName.BackColor = System.Drawing.Color.Transparent
-        Me.lblTeamName.Font = New System.Drawing.Font("Times New Roman", 12.0!)
-        Me.lblTeamName.Location = New System.Drawing.Point(170, 377)
-        Me.lblTeamName.Name = "lblTeamName"
-        Me.lblTeamName.Size = New System.Drawing.Size(912, 28)
-        Me.lblTeamName.TabIndex = 62
-        Me.lblTeamName.Text = "Objectives:"
+        Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.White
+        Me.Label16.Location = New System.Drawing.Point(694, 19)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(231, 21)
+        Me.Label16.TabIndex = 11
+        Me.Label16.Text = "CATEGORY"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblCategory
+        'Label17
         '
-        Me.lblCategory.BackColor = System.Drawing.Color.Transparent
-        Me.lblCategory.Font = New System.Drawing.Font("Times New Roman", 12.0!)
-        Me.lblCategory.Location = New System.Drawing.Point(166, 444)
-        Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(916, 28)
-        Me.lblCategory.TabIndex = 60
-        Me.lblCategory.Text = "Objectives:"
+        Me.Label17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.White
+        Me.Label17.Location = New System.Drawing.Point(572, 19)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(107, 21)
+        Me.Label17.TabIndex = 8
+        Me.Label17.Text = "TEAM NAME"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label10
+        'pnList
         '
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(74, 377)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(100, 28)
-        Me.Label10.TabIndex = 61
-        Me.Label10.Text = "Team Name:"
+        Me.pnList.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnList.Location = New System.Drawing.Point(0, 59)
+        Me.pnList.Name = "pnList"
+        Me.pnList.Size = New System.Drawing.Size(928, 57)
+        Me.pnList.TabIndex = 44
         '
-        'Label5
+        'TableLayoutPanel2
         '
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(74, 444)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 28)
-        Me.Label5.TabIndex = 59
-        Me.Label5.Text = "Category:"
-        '
-        'lblTitle
-        '
-        Me.lblTitle.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(71, 299)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(1011, 28)
-        Me.lblTitle.TabIndex = 35
-        Me.lblTitle.Text = "Title:"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblScoe
-        '
-        Me.lblScoe.AutoEllipsis = True
-        Me.lblScoe.BackColor = System.Drawing.Color.Transparent
-        Me.lblScoe.Font = New System.Drawing.Font("Times New Roman", 12.0!)
-        Me.lblScoe.Location = New System.Drawing.Point(74, 654)
-        Me.lblScoe.Name = "lblScoe"
-        Me.lblScoe.Size = New System.Drawing.Size(1008, 117)
-        Me.lblScoe.TabIndex = 57
-        Me.lblScoe.Text = "Scope:"
-        '
-        'Label9
-        '
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(74, 626)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(88, 28)
-        Me.Label9.TabIndex = 56
-        Me.Label9.Text = "Scope"
-        '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(74, 476)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 28)
-        Me.Label3.TabIndex = 49
-        Me.Label3.Text = "Objectives"
-        '
-        'lblObjectives
-        '
-        Me.lblObjectives.AutoEllipsis = True
-        Me.lblObjectives.BackColor = System.Drawing.Color.Transparent
-        Me.lblObjectives.Font = New System.Drawing.Font("Times New Roman", 12.0!)
-        Me.lblObjectives.Location = New System.Drawing.Point(74, 508)
-        Me.lblObjectives.Name = "lblObjectives"
-        Me.lblObjectives.Size = New System.Drawing.Size(1008, 117)
-        Me.lblObjectives.TabIndex = 50
-        Me.lblObjectives.Text = "Objectives:"
-        '
-        'lblLimitations
-        '
-        Me.lblLimitations.AutoEllipsis = True
-        Me.lblLimitations.BackColor = System.Drawing.Color.Transparent
-        Me.lblLimitations.Font = New System.Drawing.Font("Times New Roman", 12.0!)
-        Me.lblLimitations.Location = New System.Drawing.Point(74, 805)
-        Me.lblLimitations.Name = "lblLimitations"
-        Me.lblLimitations.Size = New System.Drawing.Size(1008, 117)
-        Me.lblLimitations.TabIndex = 48
-        Me.lblLimitations.Text = "Limitations:"
-        '
-        'Label8
-        '
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(74, 776)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(88, 20)
-        Me.Label8.TabIndex = 46
-        Me.Label8.Text = "Limitations:"
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.02896!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.97105!))
-        Me.TableLayoutPanel1.Controls.Add(Me.lblFullName, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.lblStudentNumber, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(71, 209)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1011, 68)
-        Me.TableLayoutPanel1.TabIndex = 42
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.02896!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.97105!))
+        Me.TableLayoutPanel2.Controls.Add(Me.lblFullName, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label11, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.lblStudentNo, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label14, 0, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(39, 113)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(928, 68)
+        Me.TableLayoutPanel2.TabIndex = 43
         '
         'lblFullName
         '
         Me.lblFullName.BackColor = System.Drawing.Color.Transparent
         Me.lblFullName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblFullName.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFullName.Location = New System.Drawing.Point(165, 0)
+        Me.lblFullName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFullName.Location = New System.Drawing.Point(151, 0)
         Me.lblFullName.Name = "lblFullName"
-        Me.lblFullName.Size = New System.Drawing.Size(843, 34)
+        Me.lblFullName.Size = New System.Drawing.Size(774, 34)
         Me.lblFullName.TabIndex = 31
         Me.lblFullName.Text = "Sample Name"
         Me.lblFullName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label4
+        'Label11
         '
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 34)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(156, 34)
-        Me.Label4.TabIndex = 32
-        Me.Label4.Text = "Student Number:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(3, 34)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(142, 34)
+        Me.Label11.TabIndex = 32
+        Me.Label11.Text = "Student Number:"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'lblStudentNumber
+        'lblStudentNo
         '
-        Me.lblStudentNumber.BackColor = System.Drawing.Color.Transparent
-        Me.lblStudentNumber.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblStudentNumber.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStudentNumber.Location = New System.Drawing.Point(165, 34)
-        Me.lblStudentNumber.Name = "lblStudentNumber"
-        Me.lblStudentNumber.Size = New System.Drawing.Size(843, 34)
-        Me.lblStudentNumber.TabIndex = 33
-        Me.lblStudentNumber.Text = "Stundent Number"
-        Me.lblStudentNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblStudentNo.BackColor = System.Drawing.Color.Transparent
+        Me.lblStudentNo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblStudentNo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStudentNo.Location = New System.Drawing.Point(151, 34)
+        Me.lblStudentNo.Name = "lblStudentNo"
+        Me.lblStudentNo.Size = New System.Drawing.Size(774, 34)
+        Me.lblStudentNo.TabIndex = 33
+        Me.lblStudentNo.Text = "Stundent Number"
+        Me.lblStudentNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label1
+        'Label14
         '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(156, 34)
-        Me.Label1.TabIndex = 30
-        Me.Label1.Text = "Student Name:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label14.Location = New System.Drawing.Point(3, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(142, 34)
+        Me.Label14.TabIndex = 30
+        Me.Label14.Text = "Student Name:"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Guna2Panel5
+        'Guna2Panel6
         '
-        Me.Guna2Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Guna2Panel5.Location = New System.Drawing.Point(48, 287)
-        Me.Guna2Panel5.Name = "Guna2Panel5"
-        Me.Guna2Panel5.ShadowDecoration.Parent = Me.Guna2Panel5
-        Me.Guna2Panel5.Size = New System.Drawing.Size(1060, 3)
-        Me.Guna2Panel5.TabIndex = 34
-        '
-        'Label20
-        '
-        Me.Label20.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Guna2Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label20.BackColor = System.Drawing.Color.Transparent
-        Me.Label20.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(397, 13)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(363, 48)
-        Me.Label20.TabIndex = 26
-        Me.Label20.Text = "University of Caloocan City"
-        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Guna2Panel6.BackColor = System.Drawing.Color.Gray
+        Me.Guna2Panel6.Location = New System.Drawing.Point(27, 70)
+        Me.Guna2Panel6.Name = "Guna2Panel6"
+        Me.Guna2Panel6.ShadowDecoration.Parent = Me.Guna2Panel6
+        Me.Guna2Panel6.Size = New System.Drawing.Size(950, 1)
+        Me.Guna2Panel6.TabIndex = 14
         '
-        'Label6
+        'Label2
         '
-        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(397, 57)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(363, 48)
-        Me.Label6.TabIndex = 53
-        Me.Label6.Text = "Sample Address, Lorem Ipsum" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "+63 900000000" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(23, 32)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(153, 25)
+        Me.Label2.TabIndex = 13
+        Me.Label2.Text = "Issuing Details"
         '
         'EasyHTMLReports1
         '
@@ -372,22 +278,23 @@ Partial Class invoice
         '
         'Guna2Panel4
         '
+        Me.Guna2Panel4.BackColor = System.Drawing.Color.White
         Me.Guna2Panel4.Controls.Add(Me.btnClose)
         Me.Guna2Panel4.Controls.Add(Me.btnInvoiceProcess)
         Me.Guna2Panel4.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel4.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 1)
         Me.Guna2Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Guna2Panel4.Location = New System.Drawing.Point(0, 812)
+        Me.Guna2Panel4.Location = New System.Drawing.Point(0, 459)
         Me.Guna2Panel4.Name = "Guna2Panel4"
         Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
-        Me.Guna2Panel4.Size = New System.Drawing.Size(1157, 69)
+        Me.Guna2Panel4.Size = New System.Drawing.Size(1009, 69)
         Me.Guna2Panel4.TabIndex = 27
         '
         'btnClose
         '
         Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnClose.BackColor = System.Drawing.Color.Transparent
-        Me.btnClose.BorderRadius = 15
+        Me.btnClose.BorderRadius = 8
         Me.btnClose.CheckedState.Parent = Me.btnClose
         Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnClose.CustomImages.Parent = Me.btnClose
@@ -396,10 +303,10 @@ Partial Class invoice
         Me.btnClose.ForeColor = System.Drawing.Color.White
         Me.btnClose.HoverState.Parent = Me.btnClose
         Me.btnClose.ImageSize = New System.Drawing.Size(25, 25)
-        Me.btnClose.Location = New System.Drawing.Point(928, 20)
+        Me.btnClose.Location = New System.Drawing.Point(741, 15)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.ShadowDecoration.Parent = Me.btnClose
-        Me.btnClose.Size = New System.Drawing.Size(110, 37)
+        Me.btnClose.Size = New System.Drawing.Size(110, 42)
         Me.btnClose.TabIndex = 26
         Me.btnClose.Text = "Close"
         '
@@ -407,7 +314,7 @@ Partial Class invoice
         '
         Me.btnInvoiceProcess.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnInvoiceProcess.BackColor = System.Drawing.Color.Transparent
-        Me.btnInvoiceProcess.BorderRadius = 15
+        Me.btnInvoiceProcess.BorderRadius = 8
         Me.btnInvoiceProcess.CheckedState.Parent = Me.btnInvoiceProcess
         Me.btnInvoiceProcess.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnInvoiceProcess.CustomImages.Parent = Me.btnInvoiceProcess
@@ -415,19 +322,59 @@ Partial Class invoice
         Me.btnInvoiceProcess.Font = New System.Drawing.Font("Poppins", 10.0!)
         Me.btnInvoiceProcess.ForeColor = System.Drawing.Color.White
         Me.btnInvoiceProcess.HoverState.Parent = Me.btnInvoiceProcess
+        Me.btnInvoiceProcess.Image = CType(resources.GetObject("btnInvoiceProcess.Image"), System.Drawing.Image)
         Me.btnInvoiceProcess.ImageSize = New System.Drawing.Size(25, 25)
-        Me.btnInvoiceProcess.Location = New System.Drawing.Point(1044, 20)
+        Me.btnInvoiceProcess.Location = New System.Drawing.Point(857, 15)
         Me.btnInvoiceProcess.Name = "btnInvoiceProcess"
         Me.btnInvoiceProcess.ShadowDecoration.Parent = Me.btnInvoiceProcess
-        Me.btnInvoiceProcess.Size = New System.Drawing.Size(110, 37)
+        Me.btnInvoiceProcess.Size = New System.Drawing.Size(110, 42)
         Me.btnInvoiceProcess.TabIndex = 25
         Me.btnInvoiceProcess.Text = "Process"
+        '
+        'Panel2
+        '
+        Me.Panel2.Location = New System.Drawing.Point(1015, 92)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1157, 1042)
+        Me.Panel2.TabIndex = 44
+        '
+        'btnClosex
+        '
+        Me.btnClosex.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClosex.CheckedState.Parent = Me.btnClosex
+        Me.btnClosex.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClosex.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.btnClosex.HoverState.Parent = Me.btnClosex
+        Me.btnClosex.Image = CType(resources.GetObject("btnClosex.Image"), System.Drawing.Image)
+        Me.btnClosex.ImageSize = New System.Drawing.Size(15, 15)
+        Me.btnClosex.Location = New System.Drawing.Point(976, 12)
+        Me.btnClosex.Name = "btnClosex"
+        Me.btnClosex.PressedState.Parent = Me.btnClosex
+        Me.btnClosex.Size = New System.Drawing.Size(30, 27)
+        Me.btnClosex.TabIndex = 27
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel3.Controls.Add(Me.Panel1)
+        Me.Panel3.Location = New System.Drawing.Point(39, 200)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(928, 253)
+        Me.Panel3.TabIndex = 45
+        '
+        'Panel4
+        '
+        Me.Panel4.Location = New System.Drawing.Point(39, 95)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(928, 358)
+        Me.Panel4.TabIndex = 46
         '
         'invoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1157, 881)
+        Me.ClientSize = New System.Drawing.Size(1009, 528)
         Me.Controls.Add(Me.Guna2Panel4)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel3)
@@ -436,40 +383,38 @@ Partial Class invoice
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "invoice"
         Me.Guna2Panel3.ResumeLayout(False)
-        Me.Guna2Panel1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.Guna2Panel3.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Guna2Panel7.ResumeLayout(False)
+        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.Guna2Panel4.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents lblTitle As Label
-    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents lblStudentNumber As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents lblFullName As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label20 As Label
     Friend WithEvents EasyHTMLReports1 As KimToo.EasyHTMLReports
     Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnInvoiceProcess As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label3 As Label
-    Friend WithEvents lblObjectives As Label
-    Friend WithEvents lblLimitations As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents lblScoe As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents lblTeamName As Label
-    Friend WithEvents lblMembers As Label
-    Friend WithEvents lblCategory As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents lblFullName As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents lblStudentNo As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents pnList As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Guna2Panel7 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label15 As Label
+    Friend WithEvents lblCode As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents btnClosex As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
 End Class

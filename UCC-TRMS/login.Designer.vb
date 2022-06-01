@@ -24,13 +24,13 @@ Partial Class login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
         Me.Guna2GradientPanel2 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Me.btnLogin = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
-        Me.cbCredentials = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.btnCloseLogin = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnMazimized = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCloseLogin = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.cbCredentials = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.btnLogin = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2GradientPanel2.SuspendLayout()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,42 +50,60 @@ Partial Class login
         Me.Guna2GradientPanel2.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 1)
         Me.Guna2GradientPanel2.Location = New System.Drawing.Point(0, 0)
         Me.Guna2GradientPanel2.Name = "Guna2GradientPanel2"
+        Me.Guna2GradientPanel2.ShadowDecoration.Enabled = True
         Me.Guna2GradientPanel2.ShadowDecoration.Parent = Me.Guna2GradientPanel2
         Me.Guna2GradientPanel2.Size = New System.Drawing.Size(602, 254)
         Me.Guna2GradientPanel2.TabIndex = 19
         '
-        'btnLogin
+        'btnMazimized
         '
-        Me.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnLogin.CheckedState.Parent = Me.btnLogin
-        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogin.HoverState.Image = CType(resources.GetObject("btnLogin.HoverState.Image"), System.Drawing.Image)
-        Me.btnLogin.HoverState.ImageSize = New System.Drawing.Size(39, 49)
-        Me.btnLogin.HoverState.Parent = Me.btnLogin
-        Me.btnLogin.Image = CType(resources.GetObject("btnLogin.Image"), System.Drawing.Image)
-        Me.btnLogin.ImageSize = New System.Drawing.Size(39, 49)
-        Me.btnLogin.Location = New System.Drawing.Point(401, 172)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.PressedState.ImageSize = New System.Drawing.Size(38, 48)
-        Me.btnLogin.PressedState.Parent = Me.btnLogin
-        Me.btnLogin.Size = New System.Drawing.Size(39, 49)
-        Me.btnLogin.TabIndex = 16
-        Me.btnLogin.Tag = ""
+        Me.btnMazimized.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMazimized.CheckedState.Parent = Me.btnMazimized
+        Me.btnMazimized.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMazimized.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.btnMazimized.HoverState.Parent = Me.btnMazimized
+        Me.btnMazimized.Image = CType(resources.GetObject("btnMazimized.Image"), System.Drawing.Image)
+        Me.btnMazimized.ImageSize = New System.Drawing.Size(15, 15)
+        Me.btnMazimized.Location = New System.Drawing.Point(558, 15)
+        Me.btnMazimized.Name = "btnMazimized"
+        Me.btnMazimized.PressedState.Parent = Me.btnMazimized
+        Me.btnMazimized.Size = New System.Drawing.Size(15, 15)
+        Me.btnMazimized.TabIndex = 20
         '
-        'Guna2CirclePictureBox1
+        'Guna2Panel4
         '
-        Me.Guna2CirclePictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Guna2CirclePictureBox1.BackColor = System.Drawing.Color.White
-        Me.Guna2CirclePictureBox1.Image = CType(resources.GetObject("Guna2CirclePictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(40, 48)
-        Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CirclePictureBox1.ShadowDecoration.Parent = Me.Guna2CirclePictureBox1
-        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(195, 172)
-        Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2CirclePictureBox1.TabIndex = 15
-        Me.Guna2CirclePictureBox1.TabStop = False
+        Me.Guna2Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.Guna2Panel4.BorderRadius = 20
+        Me.Guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel4.Name = "Guna2Panel4"
+        Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
+        Me.Guna2Panel4.Size = New System.Drawing.Size(602, 10)
+        Me.Guna2Panel4.TabIndex = 15
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Panel1.BackColor = System.Drawing.Color.Silver
+        Me.Panel1.Location = New System.Drawing.Point(265, 36)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1, 195)
+        Me.Panel1.TabIndex = 19
+        '
+        'btnCloseLogin
+        '
+        Me.btnCloseLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCloseLogin.CheckedState.Parent = Me.btnCloseLogin
+        Me.btnCloseLogin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCloseLogin.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.btnCloseLogin.HoverState.Parent = Me.btnCloseLogin
+        Me.btnCloseLogin.Image = CType(resources.GetObject("btnCloseLogin.Image"), System.Drawing.Image)
+        Me.btnCloseLogin.ImageSize = New System.Drawing.Size(15, 15)
+        Me.btnCloseLogin.Location = New System.Drawing.Point(579, 15)
+        Me.btnCloseLogin.Name = "btnCloseLogin"
+        Me.btnCloseLogin.PressedState.Parent = Me.btnCloseLogin
+        Me.btnCloseLogin.Size = New System.Drawing.Size(15, 15)
+        Me.btnCloseLogin.TabIndex = 18
         '
         'cbCredentials
         '
@@ -107,55 +125,38 @@ Partial Class login
         Me.cbCredentials.Size = New System.Drawing.Size(288, 36)
         Me.cbCredentials.TabIndex = 17
         '
-        'btnCloseLogin
+        'Guna2CirclePictureBox1
         '
-        Me.btnCloseLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCloseLogin.CheckedState.Parent = Me.btnCloseLogin
-        Me.btnCloseLogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCloseLogin.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.btnCloseLogin.HoverState.Parent = Me.btnCloseLogin
-        Me.btnCloseLogin.Image = CType(resources.GetObject("btnCloseLogin.Image"), System.Drawing.Image)
-        Me.btnCloseLogin.ImageSize = New System.Drawing.Size(15, 15)
-        Me.btnCloseLogin.Location = New System.Drawing.Point(579, 15)
-        Me.btnCloseLogin.Name = "btnCloseLogin"
-        Me.btnCloseLogin.PressedState.Parent = Me.btnCloseLogin
-        Me.btnCloseLogin.Size = New System.Drawing.Size(15, 15)
-        Me.btnCloseLogin.TabIndex = 18
+        Me.Guna2CirclePictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Guna2CirclePictureBox1.BackColor = System.Drawing.Color.White
+        Me.Guna2CirclePictureBox1.Image = CType(resources.GetObject("Guna2CirclePictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(40, 48)
+        Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
+        Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.Guna2CirclePictureBox1.ShadowDecoration.Parent = Me.Guna2CirclePictureBox1
+        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(195, 172)
+        Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2CirclePictureBox1.TabIndex = 15
+        Me.Guna2CirclePictureBox1.TabStop = False
         '
-        'Panel1
+        'btnLogin
         '
-        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Panel1.BackColor = System.Drawing.Color.Silver
-        Me.Panel1.Location = New System.Drawing.Point(265, 36)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1, 195)
-        Me.Panel1.TabIndex = 19
-        '
-        'Guna2Panel4
-        '
-        Me.Guna2Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.Guna2Panel4.BorderRadius = 20
-        Me.Guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel4.Name = "Guna2Panel4"
-        Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
-        Me.Guna2Panel4.Size = New System.Drawing.Size(602, 10)
-        Me.Guna2Panel4.TabIndex = 15
-        '
-        'btnMazimized
-        '
-        Me.btnMazimized.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMazimized.CheckedState.Parent = Me.btnMazimized
-        Me.btnMazimized.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMazimized.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.btnMazimized.HoverState.Parent = Me.btnMazimized
-        Me.btnMazimized.Image = CType(resources.GetObject("btnMazimized.Image"), System.Drawing.Image)
-        Me.btnMazimized.ImageSize = New System.Drawing.Size(15, 15)
-        Me.btnMazimized.Location = New System.Drawing.Point(558, 15)
-        Me.btnMazimized.Name = "btnMazimized"
-        Me.btnMazimized.PressedState.Parent = Me.btnMazimized
-        Me.btnMazimized.Size = New System.Drawing.Size(15, 15)
-        Me.btnMazimized.TabIndex = 20
+        Me.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnLogin.CheckedState.Parent = Me.btnLogin
+        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLogin.HoverState.Image = CType(resources.GetObject("btnLogin.HoverState.Image"), System.Drawing.Image)
+        Me.btnLogin.HoverState.ImageSize = New System.Drawing.Size(39, 49)
+        Me.btnLogin.HoverState.Parent = Me.btnLogin
+        Me.btnLogin.Image = CType(resources.GetObject("btnLogin.Image"), System.Drawing.Image)
+        Me.btnLogin.ImageSize = New System.Drawing.Size(39, 49)
+        Me.btnLogin.Location = New System.Drawing.Point(401, 172)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.PressedState.ImageSize = New System.Drawing.Size(38, 48)
+        Me.btnLogin.PressedState.Parent = Me.btnLogin
+        Me.btnLogin.Size = New System.Drawing.Size(39, 49)
+        Me.btnLogin.TabIndex = 16
+        Me.btnLogin.Tag = ""
         '
         'login
         '

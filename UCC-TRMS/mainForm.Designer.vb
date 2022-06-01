@@ -47,6 +47,7 @@ Partial Class mainForm
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.EasyHTMLReports1 = New KimToo.EasyHTMLReports(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.pnlSide.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -427,6 +428,9 @@ Partial Class mainForm
         Me.EasyHTMLReports1.RowDefaultFontColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.EasyHTMLReports1.RowDefaultGridColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(65, Byte), Integer))
         '
+        'Timer2
+        '
+        '
         'mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -478,4 +482,5 @@ Partial Class mainForm
     Friend WithEvents btnExit As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents EasyHTMLReports1 As KimToo.EasyHTMLReports
+    Friend WithEvents Timer2 As Timer
 End Class

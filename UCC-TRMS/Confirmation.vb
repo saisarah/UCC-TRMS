@@ -179,5 +179,6 @@ Public Class Confirmation
     End Sub
 
     Private Sub Confirmation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Guna2ShadowForm1.SetShadowForm(Me)
     End Sub
 End Class

@@ -89,62 +89,8 @@ Public Class borrowers
         Dim frm As Confirmation = New Confirmation()
         frm.showAlert(msg, type)
     End Sub
-    Public Sub dgvStudent_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-        conn.Open()
-        Dim j As Integer
-        Dim s As Integer
-        '   j = dgvStudent.CurrentRow.Index
-        '   s = dgvStudent.Item(3, j).Value.ToString()
-        '     Dim colName As String = dgvStudent.Columns(e.ColumnIndex).Name
-        If colName = "Delete" Then
-            Dim newForm As New Confirmation
-            '        newForm.SelectedRows = dgvStudent.SelectedRows
-            newForm.BackColor = Color.DarkOrange
-            newForm.PictureBox1.Image = My.Resources.Warning
-            newForm.PictureBox2.Image = My.Resources.warning__2_
-            newForm.btnNoCancel.Text = "Cancel"
-            newForm.lblmsg.Text = "Are you sure you want to delete this record?"
-            newForm.Label2.ForeColor = Color.FromArgb(255, 66, 66)
-            newForm.btnYesOk.FillColor = Color.FromArgb(255, 66, 66)
-            newForm.update1 = False
-            newForm.deleteStud = True
-            newForm.addTh = False
-            newForm.deleteThesis = False
-            newForm.Show()
-        ElseIf colName = "Edit" Then
-
-            '     If dgvStudent.SelectedRows.Count > 0 Then
-            'Dim i As Integer
-            'i = dgvStudent.CurrentRow.Index
-            'Dim newForm As New addStudent
-            'newForm.SelectedRows = dgvStudent.SelectedRows
-            'newForm.tbfullname.Text = dgvStudent.Item(4, i).Value.ToString
-            'newForm.tbstudentno.Text = dgvStudent.Item(3, i).Value.ToString
-            'newForm.tbCourse.Text = dgvStudent.Item(5, i).Value.ToString
-            'newForm.cbyear.Text = dgvStudent.Item(6, i).Value.ToString
-            'newForm.cbSection.Text = dgvStudent.Item(7, i).Value.ToString
-            'newForm.tbcontact.Text = dgvStudent.Item(8, i).Value.ToString
-            'newForm.tbemail.Text = dgvStudent.Item(9, i).Value.ToString
-            'newForm.tbstudentno.Enabled = False
-
-            'newForm.Label1.Text = "Update Student"
-            'newForm.btnSaveStudent.Enabled = False
-            'newForm.Show()
-
-            '        End If
-
-        End If
-        conn.Close()
-    End Sub
-
     Private Sub btnArchived_Click(sender As Object, e As EventArgs) Handles btnArchived.Click
         studentArchive.Show()
-    End Sub
-
-    Private Sub dgvStudent_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs)
-        If e.RowIndex >= 0 Then
-            '   Me.dgvStudent.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
-        End If
     End Sub
 
     Private Sub cbYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbYear.SelectedIndexChanged
@@ -195,7 +141,7 @@ Public Class borrowers
 
     Private Sub ListView1_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles ListView1.DrawSubItem
         If e.Item.Selected = True Then
-            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(76, 71, 67)), e.Bounds)
+            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(252, 177, 45)), e.Bounds)
             TextRenderer.DrawText(e.Graphics, e.SubItem.Text, New Font(ListView1.Font, Poppins), New Point(e.Bounds.Left + 0, e.Bounds.Top + 2), HighlightText)
 
         Else

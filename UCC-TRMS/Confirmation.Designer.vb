@@ -32,6 +32,7 @@ Partial Class Confirmation
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,4 +178,5 @@ Partial Class Confirmation
     Friend WithEvents PictureBox1 As PictureBox
     Public WithEvents btnYesOk As Guna.UI2.WinForms.Guna2Button
     Public WithEvents btnNoCancel As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
 End Class

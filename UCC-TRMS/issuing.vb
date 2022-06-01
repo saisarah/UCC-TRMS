@@ -1,9 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class issuing
     Dim conn As New MySqlConnection("server=localhost;username=root;password=;database=dbtrms")
-    Private Sub loadData()
-        Try
 
+    Private Sub loadData()
+
+        Try
+            Dim CurrentDateTime As DateTime
+            CurrentDateTime = DateTime.Now
+            Guna2DateTimePicker1.Value = CurrentDateTime
             conn.Open()
             If cbCategory.SelectedIndex = -1 Then
 
@@ -33,6 +37,9 @@ Public Class issuing
                     lvi.SubItems(4).ForeColor = Color.Gray
                     lvi.SubItems(5).ForeColor = Color.Gray
                 Next
+
+
+
             Else
                 Dim x As String
                 x = tbSearchThesis.Text
@@ -70,11 +77,14 @@ Public Class issuing
 
     End Sub
     Private Sub issuing_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        loadCnt()
         loadData()
+
 
     End Sub
 
     Private Sub tbSearchThesis_TextChanged(sender As Object, e As EventArgs) Handles tbSearchThesis.TextChanged
+
         loadData()
     End Sub
 
@@ -87,11 +97,13 @@ Public Class issuing
         lblCYS.Text = ""
         lblEm.Text = ""
         lblCN.Text = ""
+        lblBorrowed.Text = "0"
 
     End Sub
     Private Sub btnSearchStud_Click(sender As Object, e As EventArgs) Handles btnSearchStud.Click
+        conn.Open()
+
         Try
-            conn.Open()
             Dim cmd As New MySqlCommand("SELECT fullname, studentno, course, year, section, contact, email FROM tblstudents WHERE studentno = '" & tbSearchStudNo.Text & "'", conn)
 
             Dim da As New MySqlDataAdapter
@@ -100,23 +112,43 @@ Public Class issuing
             da.SelectCommand = cmd
             da.Fill(dt)
             If dt.Rows.Count > 0 And cmd.ExecuteNonQuery Then
-
                 crs = dt.Rows(0).Item(3)
                 yr = dt.Rows(0).Item(4)
-
                 lblSN.Text = dt.Rows(0).Item(1)
                 lblFN.Text = dt.Rows(0).Item(0)
                 lblCYS.Text = dt.Rows(0).Item(2) + " " + crs + yr
                 lblEm.Text = dt.Rows(0).Item(6)
                 lblCN.Text = dt.Rows(0).Item(5)
+                loadCnt()
             Else
                 Me.Alert1("Student number not found!", Confirmation.enmType.Info)
                 clear()
             End If
-            conn.close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        conn.Close()
+
+    End Sub
+    Private Sub loadCnt()
+
+        Try
+            If lblSN.Text = "" Then
+                lblBorrowed.Text = 0
+            Else
+                Dim snt As Integer = 0
+                Dim cmd1 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'IN POSSESION'", conn)
+                ttl = cmd1.ExecuteScalar()
+                Dim cmd2 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'SENT'", conn)
+                snt = cmd2.ExecuteScalar()
+                lblBorrowed.Text = ttl + snt
+            End If
+
         Catch ex As Exception
 
         End Try
+
     End Sub
     Public Sub Alert1(ByVal msg As String, ByVal type As Confirmation.enmType)
         Dim frm As Confirmation = New Confirmation()
@@ -128,34 +160,45 @@ Public Class issuing
     End Sub
     Private Sub btnProcess_Click(sender As Object, e As EventArgs) Handles btnProcess.Click
         Try
-            conn.Open()
+            If cbHoS.SelectedIndex <> -1 Then
+                conn.Open()
+                Dim sele As String = cbHoS.SelectedIndex
+                Dim cmd As New MySqlCommand("SELECT * FROM tblthesis WHERE thesis_id = '" & ListView1.SelectedItems(0).SubItems(0).Text & "'", conn)
+                Dim da As New MySqlDataAdapter
+                Dim dt As New DataTable()
+                da.SelectCommand = cmd
+                da.Fill(dt)
+                Dim CurrentDateTime As DateTime
+                CurrentDateTime = DateTime.Now
+                If ListView1.SelectedItems.Count > 0 And dt.Rows.Count > 0 And cmd.ExecuteNonQuery Then
+                    Dim newForm As New invoice
+                    newForm.lblFullName.Text = lblFN.Text
+                    newForm.lblStudentNo.Text = lblSN.Text
+                    newForm.fnm = lblFN.Text
+                    newForm.sn = lblSN.Text
+                    newForm.selected = sele
+                    newForm.email = lblEm.Text
+                    newForm.sc = ListView1.SelectedItems(0).SubItems(3).Text
+                    newForm.lim = ListView1.SelectedItems(0).SubItems(4).Text
+                    newForm.ob = ListView1.SelectedItems(0).SubItems(2).Text
+                    newForm.code = ListView1.SelectedItems(0).SubItems(0).Text
+                    newForm.title = ListView1.SelectedItems(0).SubItems(1).Text
+                    newForm.cat = ListView1.SelectedItems(0).SubItems(5).Text
+                    newForm.cd = ListView1.SelectedItems(0).SubItems(0).Text
+                    newForm.tn = dt.Rows(0).Item(5)
+                    newForm.mem = dt.Rows(0).Item(6)
+                    newForm.year = dt.Rows(0).Item(10)
+                    newForm.panels = dt.Rows(0).Item(7)
+                    newForm.crs = lblCYS.Text
+                    newForm.dateToday = Guna2DateTimePicker1.Value
+                    newForm.Show()
+                Else
 
-
-            Dim cmd As New MySqlCommand("SELECT thesis_id, teamname, members FROM tblthesis WHERE thesis_id = '" & ListView1.SelectedItems(0).SubItems(0).Text & "'", conn)
-            Dim da As New MySqlDataAdapter
-            Dim dt As New DataTable()
-            da.SelectCommand = cmd
-            da.Fill(dt)
-            If ListView1.SelectedItems.Count > 0 And cbHoS.SelectedIndex = 1 And dt.Rows.Count > 0 And cmd.ExecuteNonQuery Then
-                Dim newForm As New invoice
-                newForm.lblFullName.Text = lblFN.Text
-                newForm.lblStudentNumber.Text = lblSN.Text
-                newForm.email = lblEm.Text
-                newForm.lblTitle.Text = ListView1.SelectedItems(0).SubItems(1).Text
-                newForm.lblObjectives.Text = ListView1.SelectedItems(0).SubItems(2).Text
-                newForm.lblScoe.Text = ListView1.SelectedItems(0).SubItems(3).Text
-                newForm.lblLimitations.Text = ListView1.SelectedItems(0).SubItems(4).Text
-                newForm.lblCategory.Text = ListView1.SelectedItems(0).SubItems(5).Text
-                newForm.lblTeamName.Text = dt.Rows(0).Item(1)
-                newForm.lblMembers.Text = dt.Rows(0).Item(2)
-                newForm.code = ListView1.SelectedItems(0).SubItems(0).Text
-                newForm.Show()
-            Else
-                MsgBox("HARDCOPY")
+                End If
             End If
             conn.Close()
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
 
 
@@ -174,7 +217,7 @@ Public Class issuing
 
     Private Sub ListView1_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles ListView1.DrawSubItem
         If e.Item.Selected = True Then
-            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(76, 71, 67)), e.Bounds)
+            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(252, 177, 45)), e.Bounds)
             Dim lvi As ListViewItem = New ListViewItem
             TextRenderer.DrawText(e.Graphics, e.SubItem.Text, New Font(ListView1.Font, Poppins), New Point(e.Bounds.Left + 0, e.Bounds.Top + 2), HighlightText)
 

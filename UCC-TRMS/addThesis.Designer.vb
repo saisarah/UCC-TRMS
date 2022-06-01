@@ -27,8 +27,11 @@ Partial Class addThesis
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.tbYear = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnUpdate = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnAddThesisClose = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.cbCourse = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.cbCategory = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.tbPanel = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbMembers = New Guna.UI2.WinForms.Guna2TextBox()
@@ -39,20 +42,19 @@ Partial Class addThesis
         Me.tbTitle = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnSaveThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnAddThesisClose = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Panel1
         '
-        Me.Guna2Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel1.BorderRadius = 20
+        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(500, 10)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(548, 10)
         Me.Guna2Panel1.TabIndex = 0
         '
         'Label1
@@ -74,10 +76,12 @@ Partial Class addThesis
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.Guna2Panel2.Controls.Add(Me.tbYear)
         Me.Guna2Panel2.Controls.Add(Me.btnUpdate)
         Me.Guna2Panel2.Controls.Add(Me.btnAddThesisClose)
         Me.Guna2Panel2.Controls.Add(Me.Guna2Panel3)
         Me.Guna2Panel2.Controls.Add(Me.Label1)
+        Me.Guna2Panel2.Controls.Add(Me.cbCourse)
         Me.Guna2Panel2.Controls.Add(Me.cbCategory)
         Me.Guna2Panel2.Controls.Add(Me.tbPanel)
         Me.Guna2Panel2.Controls.Add(Me.tbMembers)
@@ -89,12 +93,40 @@ Partial Class addThesis
         Me.Guna2Panel2.Controls.Add(Me.btnSaveThesis)
         Me.Guna2Panel2.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel2.CustomBorderThickness = New System.Windows.Forms.Padding(1, 0, 1, 1)
+        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2Panel2.FillColor = System.Drawing.Color.White
         Me.Guna2Panel2.Location = New System.Drawing.Point(0, 10)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
-        Me.Guna2Panel2.Size = New System.Drawing.Size(500, 384)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(548, 474)
         Me.Guna2Panel2.TabIndex = 1
+        '
+        'tbYear
+        '
+        Me.tbYear.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tbYear.BackColor = System.Drawing.Color.Transparent
+        Me.tbYear.BorderRadius = 5
+        Me.tbYear.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbYear.DefaultText = ""
+        Me.tbYear.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbYear.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbYear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbYear.DisabledState.Parent = Me.tbYear
+        Me.tbYear.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbYear.FocusedState.BorderColor = System.Drawing.Color.Gray
+        Me.tbYear.FocusedState.Parent = Me.tbYear
+        Me.tbYear.HoverState.BorderColor = System.Drawing.Color.Gray
+        Me.tbYear.HoverState.Parent = Me.tbYear
+        Me.tbYear.Location = New System.Drawing.Point(276, 340)
+        Me.tbYear.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbYear.Name = "tbYear"
+        Me.tbYear.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbYear.PlaceholderText = "Year"
+        Me.tbYear.SelectedText = ""
+        Me.tbYear.ShadowDecoration.Parent = Me.tbYear
+        Me.tbYear.Size = New System.Drawing.Size(252, 36)
+        Me.tbYear.TabIndex = 15
         '
         'btnUpdate
         '
@@ -109,12 +141,28 @@ Partial Class addThesis
         Me.btnUpdate.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
         Me.btnUpdate.HoverState.Parent = Me.btnUpdate
-        Me.btnUpdate.Location = New System.Drawing.Point(308, 340)
+        Me.btnUpdate.Location = New System.Drawing.Point(319, 428)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.ShadowDecoration.Parent = Me.btnUpdate
-        Me.btnUpdate.Size = New System.Drawing.Size(87, 34)
+        Me.btnUpdate.Size = New System.Drawing.Size(100, 34)
         Me.btnUpdate.TabIndex = 14
         Me.btnUpdate.Text = "Update"
+        '
+        'btnAddThesisClose
+        '
+        Me.btnAddThesisClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAddThesisClose.CheckedState.Parent = Me.btnAddThesisClose
+        Me.btnAddThesisClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddThesisClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.btnAddThesisClose.HoverState.Parent = Me.btnAddThesisClose
+        Me.btnAddThesisClose.Image = CType(resources.GetObject("btnAddThesisClose.Image"), System.Drawing.Image)
+        Me.btnAddThesisClose.ImageSize = New System.Drawing.Size(15, 15)
+        Me.btnAddThesisClose.Location = New System.Drawing.Point(455, 6)
+        Me.btnAddThesisClose.Name = "btnAddThesisClose"
+        Me.btnAddThesisClose.PressedState.Parent = Me.btnAddThesisClose
+        Me.btnAddThesisClose.Size = New System.Drawing.Size(131, 15)
+        Me.btnAddThesisClose.TabIndex = 13
         '
         'Guna2Panel3
         '
@@ -124,8 +172,31 @@ Partial Class addThesis
         Me.Guna2Panel3.Location = New System.Drawing.Point(16, 62)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
-        Me.Guna2Panel3.Size = New System.Drawing.Size(467, 1)
+        Me.Guna2Panel3.Size = New System.Drawing.Size(512, 1)
         Me.Guna2Panel3.TabIndex = 12
+        '
+        'cbCourse
+        '
+        Me.cbCourse.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbCourse.BackColor = System.Drawing.Color.Transparent
+        Me.cbCourse.BorderRadius = 5
+        Me.cbCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbCourse.FocusedColor = System.Drawing.Color.Empty
+        Me.cbCourse.FocusedState.Parent = Me.cbCourse
+        Me.cbCourse.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cbCourse.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cbCourse.FormattingEnabled = True
+        Me.cbCourse.HoverState.Parent = Me.cbCourse
+        Me.cbCourse.ItemHeight = 30
+        Me.cbCourse.Items.AddRange(New Object() {"BSCS", "BSIT", "BSIS", "BSEMC"})
+        Me.cbCourse.ItemsAppearance.Parent = Me.cbCourse
+        Me.cbCourse.Location = New System.Drawing.Point(13, 383)
+        Me.cbCourse.Name = "cbCourse"
+        Me.cbCourse.ShadowDecoration.Parent = Me.cbCourse
+        Me.cbCourse.Size = New System.Drawing.Size(253, 36)
+        Me.cbCourse.TabIndex = 11
         '
         'cbCategory
         '
@@ -144,10 +215,10 @@ Partial Class addThesis
         Me.cbCategory.ItemHeight = 30
         Me.cbCategory.Items.AddRange(New Object() {"WEB DEVELOPMENT", "APPLICATION DEVELOPMENT", "MOBILE DEVELOPMENT", "GAME DEVELOPMENT"})
         Me.cbCategory.ItemsAppearance.Parent = Me.cbCategory
-        Me.cbCategory.Location = New System.Drawing.Point(247, 298)
+        Me.cbCategory.Location = New System.Drawing.Point(272, 383)
         Me.cbCategory.Name = "cbCategory"
         Me.cbCategory.ShadowDecoration.Parent = Me.cbCategory
-        Me.cbCategory.Size = New System.Drawing.Size(241, 36)
+        Me.cbCategory.Size = New System.Drawing.Size(253, 36)
         Me.cbCategory.TabIndex = 11
         '
         'tbPanel
@@ -167,14 +238,14 @@ Partial Class addThesis
         Me.tbPanel.FocusedState.Parent = Me.tbPanel
         Me.tbPanel.HoverState.BorderColor = System.Drawing.Color.Gray
         Me.tbPanel.HoverState.Parent = Me.tbPanel
-        Me.tbPanel.Location = New System.Drawing.Point(13, 298)
+        Me.tbPanel.Location = New System.Drawing.Point(13, 340)
         Me.tbPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.tbPanel.Name = "tbPanel"
         Me.tbPanel.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbPanel.PlaceholderText = "Panel"
         Me.tbPanel.SelectedText = ""
         Me.tbPanel.ShadowDecoration.Parent = Me.tbPanel
-        Me.tbPanel.Size = New System.Drawing.Size(226, 36)
+        Me.tbPanel.Size = New System.Drawing.Size(252, 36)
         Me.tbPanel.TabIndex = 10
         '
         'tbMembers
@@ -194,14 +265,14 @@ Partial Class addThesis
         Me.tbMembers.FocusedState.Parent = Me.tbMembers
         Me.tbMembers.HoverState.BorderColor = System.Drawing.Color.Gray
         Me.tbMembers.HoverState.Parent = Me.tbMembers
-        Me.tbMembers.Location = New System.Drawing.Point(247, 254)
+        Me.tbMembers.Location = New System.Drawing.Point(276, 296)
         Me.tbMembers.Margin = New System.Windows.Forms.Padding(4)
         Me.tbMembers.Name = "tbMembers"
         Me.tbMembers.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbMembers.PlaceholderText = "Members"
         Me.tbMembers.SelectedText = ""
         Me.tbMembers.ShadowDecoration.Parent = Me.tbMembers
-        Me.tbMembers.Size = New System.Drawing.Size(241, 36)
+        Me.tbMembers.Size = New System.Drawing.Size(252, 36)
         Me.tbMembers.TabIndex = 9
         '
         'tbTeam
@@ -221,14 +292,14 @@ Partial Class addThesis
         Me.tbTeam.FocusedState.Parent = Me.tbTeam
         Me.tbTeam.HoverState.BorderColor = System.Drawing.Color.Gray
         Me.tbTeam.HoverState.Parent = Me.tbTeam
-        Me.tbTeam.Location = New System.Drawing.Point(13, 254)
+        Me.tbTeam.Location = New System.Drawing.Point(13, 296)
         Me.tbTeam.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTeam.Name = "tbTeam"
         Me.tbTeam.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbTeam.PlaceholderText = "Team Name"
         Me.tbTeam.SelectedText = ""
         Me.tbTeam.ShadowDecoration.Parent = Me.tbTeam
-        Me.tbTeam.Size = New System.Drawing.Size(226, 36)
+        Me.tbTeam.Size = New System.Drawing.Size(252, 36)
         Me.tbTeam.TabIndex = 8
         '
         'tbLimitation
@@ -248,14 +319,15 @@ Partial Class addThesis
         Me.tbLimitation.FocusedState.Parent = Me.tbLimitation
         Me.tbLimitation.HoverState.BorderColor = System.Drawing.Color.Gray
         Me.tbLimitation.HoverState.Parent = Me.tbLimitation
-        Me.tbLimitation.Location = New System.Drawing.Point(247, 210)
+        Me.tbLimitation.Location = New System.Drawing.Point(276, 210)
         Me.tbLimitation.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbLimitation.Multiline = True
         Me.tbLimitation.Name = "tbLimitation"
         Me.tbLimitation.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbLimitation.PlaceholderText = "Limitation"
         Me.tbLimitation.SelectedText = ""
         Me.tbLimitation.ShadowDecoration.Parent = Me.tbLimitation
-        Me.tbLimitation.Size = New System.Drawing.Size(241, 36)
+        Me.tbLimitation.Size = New System.Drawing.Size(252, 78)
         Me.tbLimitation.TabIndex = 7
         '
         'tbScope
@@ -277,12 +349,13 @@ Partial Class addThesis
         Me.tbScope.HoverState.Parent = Me.tbScope
         Me.tbScope.Location = New System.Drawing.Point(13, 210)
         Me.tbScope.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbScope.Multiline = True
         Me.tbScope.Name = "tbScope"
         Me.tbScope.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbScope.PlaceholderText = "Scope"
         Me.tbScope.SelectedText = ""
         Me.tbScope.ShadowDecoration.Parent = Me.tbScope
-        Me.tbScope.Size = New System.Drawing.Size(226, 36)
+        Me.tbScope.Size = New System.Drawing.Size(252, 78)
         Me.tbScope.TabIndex = 6
         '
         'tbObjectives
@@ -310,7 +383,7 @@ Partial Class addThesis
         Me.tbObjectives.PlaceholderText = "Objectives"
         Me.tbObjectives.SelectedText = ""
         Me.tbObjectives.ShadowDecoration.Parent = Me.tbObjectives
-        Me.tbObjectives.Size = New System.Drawing.Size(475, 80)
+        Me.tbObjectives.Size = New System.Drawing.Size(515, 80)
         Me.tbObjectives.TabIndex = 5
         '
         'tbTitle
@@ -337,7 +410,7 @@ Partial Class addThesis
         Me.tbTitle.PlaceholderText = "Title"
         Me.tbTitle.SelectedText = ""
         Me.tbTitle.ShadowDecoration.Parent = Me.tbTitle
-        Me.tbTitle.Size = New System.Drawing.Size(475, 36)
+        Me.tbTitle.Size = New System.Drawing.Size(515, 36)
         Me.tbTitle.TabIndex = 4
         '
         'btnSaveThesis
@@ -353,34 +426,18 @@ Partial Class addThesis
         Me.btnSaveThesis.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSaveThesis.ForeColor = System.Drawing.Color.White
         Me.btnSaveThesis.HoverState.Parent = Me.btnSaveThesis
-        Me.btnSaveThesis.Location = New System.Drawing.Point(401, 340)
+        Me.btnSaveThesis.Location = New System.Drawing.Point(425, 428)
         Me.btnSaveThesis.Name = "btnSaveThesis"
         Me.btnSaveThesis.ShadowDecoration.Parent = Me.btnSaveThesis
-        Me.btnSaveThesis.Size = New System.Drawing.Size(87, 34)
+        Me.btnSaveThesis.Size = New System.Drawing.Size(100, 34)
         Me.btnSaveThesis.TabIndex = 3
         Me.btnSaveThesis.Text = "Save"
-        '
-        'btnAddThesisClose
-        '
-        Me.btnAddThesisClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddThesisClose.CheckedState.Parent = Me.btnAddThesisClose
-        Me.btnAddThesisClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddThesisClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.btnAddThesisClose.HoverState.Parent = Me.btnAddThesisClose
-        Me.btnAddThesisClose.Image = CType(resources.GetObject("btnAddThesisClose.Image"), System.Drawing.Image)
-        Me.btnAddThesisClose.ImageSize = New System.Drawing.Size(15, 15)
-        Me.btnAddThesisClose.Location = New System.Drawing.Point(455, 6)
-        Me.btnAddThesisClose.Name = "btnAddThesisClose"
-        Me.btnAddThesisClose.PressedState.Parent = Me.btnAddThesisClose
-        Me.btnAddThesisClose.Size = New System.Drawing.Size(42, 15)
-        Me.btnAddThesisClose.TabIndex = 13
         '
         'addThesis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(500, 394)
+        Me.ClientSize = New System.Drawing.Size(548, 484)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -396,7 +453,6 @@ Partial Class addThesis
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents btnSaveThesis As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents tbTitle As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbObjectives As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbLimitation As Guna.UI2.WinForms.Guna2TextBox
@@ -407,6 +463,10 @@ Partial Class addThesis
     Friend WithEvents cbCategory As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnAddThesisClose As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSaveThesis As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents cbCourse As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents tbYear As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
 End Class

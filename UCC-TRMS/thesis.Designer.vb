@@ -37,6 +37,10 @@ Partial Class thesis
         Me.Category = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnArchived = New Guna.UI2.WinForms.Guna2Button()
         Me.pnlThesisDetails = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblCourse = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblYear = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.lblObjectives = New System.Windows.Forms.Label()
         Me.lblScope = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -54,11 +58,11 @@ Partial Class thesis
         Me.btnAddThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.cbCategories = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.tbSearch = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Guna2Panel1.SuspendLayout()
         Me.thesisPanel.SuspendLayout()
         Me.Guna2ShadowPanel1.SuspendLayout()
@@ -80,7 +84,7 @@ Partial Class thesis
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(1190, 578)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1190, 635)
         Me.Guna2Panel1.TabIndex = 2
         '
         'thesisPanel
@@ -95,7 +99,7 @@ Partial Class thesis
         Me.thesisPanel.Location = New System.Drawing.Point(0, 0)
         Me.thesisPanel.Name = "thesisPanel"
         Me.thesisPanel.ShadowDecoration.Parent = Me.thesisPanel
-        Me.thesisPanel.Size = New System.Drawing.Size(1190, 578)
+        Me.thesisPanel.Size = New System.Drawing.Size(1190, 635)
         Me.thesisPanel.TabIndex = 9
         '
         'Guna2ShadowPanel1
@@ -105,20 +109,21 @@ Partial Class thesis
         Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2ShadowPanel1.Controls.Add(Me.ListView1)
         Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(432, 54)
+        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(445, 54)
         Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
         Me.Guna2ShadowPanel1.Padding = New System.Windows.Forms.Padding(5)
         Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black
-        Me.Guna2ShadowPanel1.ShadowDepth = 40
-        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(746, 387)
+        Me.Guna2ShadowPanel1.ShadowDepth = 50
+        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(733, 387)
         Me.Guna2ShadowPanel1.TabIndex = 11
         '
         'ListView1
         '
         Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Code, Me.Title, Me.Objectives, Me.Scope, Me.Limitation, Me.Category})
+        Me.ListView1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListView1.Font = New System.Drawing.Font("Poppins SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.ForeColor = System.Drawing.Color.Black
         Me.ListView1.FullRowSelect = True
         Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
@@ -126,7 +131,7 @@ Partial Class thesis
         Me.ListView1.Location = New System.Drawing.Point(5, 5)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.OwnerDraw = True
-        Me.ListView1.Size = New System.Drawing.Size(736, 377)
+        Me.ListView1.Size = New System.Drawing.Size(723, 377)
         Me.ListView1.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListView1.TabIndex = 12
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -134,32 +139,37 @@ Partial Class thesis
         '
         'Code
         '
-        Me.Code.Text = "Code"
+        Me.Code.Text = "CODE"
         Me.Code.Width = 150
         '
         'Title
         '
-        Me.Title.Text = "Title"
+        Me.Title.Text = "TITLE"
+        Me.Title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Title.Width = 275
         '
         'Objectives
         '
-        Me.Objectives.Text = "Objectives"
+        Me.Objectives.Text = "OBJECTIVES"
+        Me.Objectives.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Objectives.Width = 250
         '
         'Scope
         '
-        Me.Scope.Text = "Scope"
+        Me.Scope.Text = "SCOPE"
+        Me.Scope.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Scope.Width = 200
         '
         'Limitation
         '
-        Me.Limitation.Text = "Limitation"
+        Me.Limitation.Text = "LIMITATION"
+        Me.Limitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Limitation.Width = 200
         '
         'Category
         '
-        Me.Category.Text = "Category"
+        Me.Category.Text = "CATEGORY"
+        Me.Category.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Category.Width = 200
         '
         'btnArchived
@@ -187,6 +197,10 @@ Partial Class thesis
         Me.pnlThesisDetails.BackColor = System.Drawing.Color.White
         Me.pnlThesisDetails.BorderColor = System.Drawing.Color.Gainsboro
         Me.pnlThesisDetails.BorderThickness = 1
+        Me.pnlThesisDetails.Controls.Add(Me.lblCourse)
+        Me.pnlThesisDetails.Controls.Add(Me.Label10)
+        Me.pnlThesisDetails.Controls.Add(Me.lblYear)
+        Me.pnlThesisDetails.Controls.Add(Me.Label9)
         Me.pnlThesisDetails.Controls.Add(Me.lblObjectives)
         Me.pnlThesisDetails.Controls.Add(Me.lblScope)
         Me.pnlThesisDetails.Controls.Add(Me.Label4)
@@ -203,25 +217,65 @@ Partial Class thesis
         Me.pnlThesisDetails.Location = New System.Drawing.Point(12, 12)
         Me.pnlThesisDetails.Name = "pnlThesisDetails"
         Me.pnlThesisDetails.ShadowDecoration.Parent = Me.pnlThesisDetails
-        Me.pnlThesisDetails.Size = New System.Drawing.Size(414, 554)
+        Me.pnlThesisDetails.Size = New System.Drawing.Size(427, 611)
         Me.pnlThesisDetails.TabIndex = 5
+        '
+        'lblCourse
+        '
+        Me.lblCourse.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCourse.ForeColor = System.Drawing.Color.Black
+        Me.lblCourse.Location = New System.Drawing.Point(97, 126)
+        Me.lblCourse.Name = "lblCourse"
+        Me.lblCourse.Size = New System.Drawing.Size(321, 24)
+        Me.lblCourse.TabIndex = 18
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Gray
+        Me.Label10.Location = New System.Drawing.Point(12, 126)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(49, 15)
+        Me.Label10.TabIndex = 17
+        Me.Label10.Text = "Course:"
+        '
+        'lblYear
+        '
+        Me.lblYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblYear.ForeColor = System.Drawing.Color.Black
+        Me.lblYear.Location = New System.Drawing.Point(97, 91)
+        Me.lblYear.Name = "lblYear"
+        Me.lblYear.Size = New System.Drawing.Size(321, 24)
+        Me.lblYear.TabIndex = 16
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Gray
+        Me.Label9.Location = New System.Drawing.Point(12, 91)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(35, 15)
+        Me.Label9.TabIndex = 15
+        Me.Label9.Text = "Year:"
         '
         'lblObjectives
         '
         Me.lblObjectives.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblObjectives.ForeColor = System.Drawing.Color.Black
-        Me.lblObjectives.Location = New System.Drawing.Point(97, 344)
+        Me.lblObjectives.Location = New System.Drawing.Point(94, 402)
         Me.lblObjectives.Name = "lblObjectives"
-        Me.lblObjectives.Size = New System.Drawing.Size(302, 201)
+        Me.lblObjectives.Size = New System.Drawing.Size(324, 201)
         Me.lblObjectives.TabIndex = 14
         '
         'lblScope
         '
         Me.lblScope.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblScope.ForeColor = System.Drawing.Color.Black
-        Me.lblScope.Location = New System.Drawing.Point(100, 164)
+        Me.lblScope.Location = New System.Drawing.Point(97, 222)
         Me.lblScope.Name = "lblScope"
-        Me.lblScope.Size = New System.Drawing.Size(302, 82)
+        Me.lblScope.Size = New System.Drawing.Size(321, 82)
         Me.lblScope.TabIndex = 9
         '
         'Label4
@@ -229,7 +283,7 @@ Partial Class thesis
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gray
-        Me.Label4.Location = New System.Drawing.Point(12, 164)
+        Me.Label4.Location = New System.Drawing.Point(12, 222)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 15)
         Me.Label4.TabIndex = 2
@@ -239,9 +293,9 @@ Partial Class thesis
         '
         Me.lblTeam.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTeam.ForeColor = System.Drawing.Color.Black
-        Me.lblTeam.Location = New System.Drawing.Point(97, 131)
+        Me.lblTeam.Location = New System.Drawing.Point(97, 193)
         Me.lblTeam.Name = "lblTeam"
-        Me.lblTeam.Size = New System.Drawing.Size(305, 21)
+        Me.lblTeam.Size = New System.Drawing.Size(321, 24)
         Me.lblTeam.TabIndex = 13
         '
         'Label5
@@ -249,7 +303,7 @@ Partial Class thesis
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gray
-        Me.Label5.Location = New System.Drawing.Point(12, 248)
+        Me.Label5.Location = New System.Drawing.Point(12, 312)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 15)
         Me.Label5.TabIndex = 3
@@ -259,27 +313,27 @@ Partial Class thesis
         '
         Me.lblLimit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLimit.ForeColor = System.Drawing.Color.Black
-        Me.lblLimit.Location = New System.Drawing.Point(100, 248)
+        Me.lblLimit.Location = New System.Drawing.Point(97, 312)
         Me.lblLimit.Name = "lblLimit"
-        Me.lblLimit.Size = New System.Drawing.Size(302, 82)
+        Me.lblLimit.Size = New System.Drawing.Size(321, 82)
         Me.lblLimit.TabIndex = 10
         '
         'lblCategory
         '
         Me.lblCategory.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCategory.ForeColor = System.Drawing.Color.Black
-        Me.lblCategory.Location = New System.Drawing.Point(97, 99)
+        Me.lblCategory.Location = New System.Drawing.Point(97, 160)
         Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(309, 16)
+        Me.lblCategory.Size = New System.Drawing.Size(321, 24)
         Me.lblCategory.TabIndex = 11
         '
         'lblTitle
         '
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.Black
-        Me.lblTitle.Location = New System.Drawing.Point(97, 61)
+        Me.lblTitle.Location = New System.Drawing.Point(97, 57)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(302, 24)
+        Me.lblTitle.Size = New System.Drawing.Size(321, 24)
         Me.lblTitle.TabIndex = 8
         '
         'Guna2Panel3
@@ -290,7 +344,7 @@ Partial Class thesis
         Me.Guna2Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
-        Me.Guna2Panel3.Size = New System.Drawing.Size(414, 36)
+        Me.Guna2Panel3.Size = New System.Drawing.Size(427, 36)
         Me.Guna2Panel3.TabIndex = 7
         '
         'Label8
@@ -310,7 +364,7 @@ Partial Class thesis
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gray
-        Me.Label7.Location = New System.Drawing.Point(12, 131)
+        Me.Label7.Location = New System.Drawing.Point(12, 193)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(79, 15)
         Me.Label7.TabIndex = 5
@@ -321,7 +375,7 @@ Partial Class thesis
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gray
-        Me.Label6.Location = New System.Drawing.Point(12, 99)
+        Me.Label6.Location = New System.Drawing.Point(12, 160)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(58, 15)
         Me.Label6.TabIndex = 4
@@ -332,7 +386,7 @@ Partial Class thesis
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gray
-        Me.Label3.Location = New System.Drawing.Point(12, 338)
+        Me.Label3.Location = New System.Drawing.Point(10, 402)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 15)
         Me.Label3.TabIndex = 1
@@ -343,7 +397,7 @@ Partial Class thesis
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gray
-        Me.Label2.Location = New System.Drawing.Point(12, 61)
+        Me.Label2.Location = New System.Drawing.Point(12, 57)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(33, 15)
         Me.Label2.TabIndex = 0
@@ -382,10 +436,10 @@ Partial Class thesis
         Me.cbCategories.ItemHeight = 30
         Me.cbCategories.Items.AddRange(New Object() {"WEB DEVELOPMENT", "APPLICATION DEVELOPMENT", "MOBILE DEVELOPMENT", "GAME DEVELOPMENT"})
         Me.cbCategories.ItemsAppearance.Parent = Me.cbCategories
-        Me.cbCategories.Location = New System.Drawing.Point(686, 12)
+        Me.cbCategories.Location = New System.Drawing.Point(699, 12)
         Me.cbCategories.Name = "cbCategories"
         Me.cbCategories.ShadowDecoration.Parent = Me.cbCategories
-        Me.cbCategories.Size = New System.Drawing.Size(256, 36)
+        Me.cbCategories.Size = New System.Drawing.Size(243, 36)
         Me.cbCategories.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbCategories.TabIndex = 8
         '
@@ -403,7 +457,7 @@ Partial Class thesis
         Me.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.tbSearch.HoverState.Parent = Me.tbSearch
         Me.tbSearch.IconRight = CType(resources.GetObject("tbSearch.IconRight"), System.Drawing.Image)
-        Me.tbSearch.Location = New System.Drawing.Point(432, 12)
+        Me.tbSearch.Location = New System.Drawing.Point(445, 12)
         Me.tbSearch.Name = "tbSearch"
         Me.tbSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbSearch.PlaceholderText = "Search"
@@ -411,6 +465,26 @@ Partial Class thesis
         Me.tbSearch.ShadowDecoration.Parent = Me.tbSearch
         Me.tbSearch.Size = New System.Drawing.Size(248, 36)
         Me.tbSearch.TabIndex = 7
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem, Me.EditToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(108, 48)
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Image = CType(resources.GetObject("DeleteToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.Image = CType(resources.GetObject("EditToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.EditToolStripMenuItem.Text = "Edit"
         '
         'DataGridViewImageColumn1
         '
@@ -434,31 +508,11 @@ Partial Class thesis
         Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn2.Width = 36
         '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem, Me.EditToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(108, 48)
-        '
-        'DeleteToolStripMenuItem
-        '
-        Me.DeleteToolStripMenuItem.Image = CType(resources.GetObject("DeleteToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
-        Me.DeleteToolStripMenuItem.Text = "Delete"
-        '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.Image = CType(resources.GetObject("EditToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
-        Me.EditToolStripMenuItem.Text = "Edit"
-        '
         'thesis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1190, 578)
+        Me.ClientSize = New System.Drawing.Size(1190, 635)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "thesis"
@@ -510,4 +564,8 @@ Partial Class thesis
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Title As ColumnHeader
     Friend WithEvents Objectives As ColumnHeader
+    Friend WithEvents lblYear As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents lblCourse As Label
+    Friend WithEvents Label10 As Label
 End Class

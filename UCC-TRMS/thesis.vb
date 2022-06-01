@@ -10,24 +10,6 @@ Public Class thesis
         addThesis.BringToFront()
         addThesis.Show()
     End Sub
-    Sub LoadRecords()
-        Try
-            '  dgvThesis.Rows.Clear()
-            cbCategories.SelectedIndex = 0
-            conn.Open()
-            Dim cm As New MySqlCommand("SELECT * FROM tblthesis", conn)
-            dr = cm.ExecuteReader
-            While dr.Read
-                '      dgvThesis.Rows.Add(dr.Item("thesis_id").ToString, dr.Item("title").ToString, dr.Item("objectives").ToString, dr.Item("scope").ToString, dr.Item("limitations").ToString, dr.Item("teamname").ToString, dr.Item("members").ToString, dr.Item("panels").ToString, dr.Item("category").ToString)
-            End While
-            dr.close()
-            conn.Close()
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-
 
     Private Sub thesis_Load(sender As Object, e As EventArgs) Handles Me.Load
         loadData()
@@ -144,7 +126,6 @@ Public Class thesis
 
     Private Sub ListView1_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles ListView1.DrawColumnHeader
         e.DrawDefault = True
-
     End Sub
 
     Private Sub ListView1_DrawItem(sender As Object, e As DrawListViewItemEventArgs) Handles ListView1.DrawItem
@@ -156,7 +137,7 @@ Public Class thesis
     Private Sub ListView1_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles ListView1.DrawSubItem
         If e.Item.Selected = True Then
             e.DrawDefault = False
-            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(76, 71, 67)), e.Bounds)
+            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(252, 177, 45)), e.Bounds)
             Dim lvi As ListViewItem = New ListViewItem
             TextRenderer.DrawText(e.Graphics, e.SubItem.Text, New Font(ListView1.Font, Poppins), New Point(e.Bounds.Left + 0, e.Bounds.Top + 2), HighlightText)
         Else
@@ -174,7 +155,7 @@ Public Class thesis
 
             Dim cm As New MySqlCommand("SELECT * FROM tblthesis WHERE thesis_id = '" & sa & "'", conn)
             dr = cm.ExecuteReader
-            Dim ttl, obj, sc, li, te, ca As String
+            Dim ttl, obj, sc, li, te, ca, yr, crs As String
             If dr.read() Then
                 ttl = dr(1)
                 obj = dr(2)
@@ -182,14 +163,16 @@ Public Class thesis
                 li = dr(4)
                 te = dr(5)
                 ca = dr(8)
+                crs = dr(9)
+                yr = dr(10)
                 lblTitle.Text = ttl
                 lblObjectives.Text = obj
                 lblScope.Text = sc
                 lblLimit.Text = li
                 lblTeam.Text = te
                 lblCategory.Text = ca
-
-
+                lblCourse.Text = crs
+                lblYear.Text = yr
 
             End If
 
@@ -228,7 +211,7 @@ Public Class thesis
         Try
             Dim cm As New MySqlCommand("SELECT * FROM tblthesis WHERE thesis_id = '" & sa & "'", conn)
             dr = cm.ExecuteReader
-            Dim ttl, obj, sc, li, te, mem, pa, ca As String
+            Dim ttl, obj, sc, li, te, mem, pa, ca, yr, cr As String
             If dr.read() Then
                 ttl = dr(1)
                 obj = dr(2)
@@ -238,6 +221,9 @@ Public Class thesis
                 mem = dr(6)
                 pa = dr(7)
                 ca = dr(8)
+                cr = dr(9)
+                yr = dr(10)
+
                 Dim newForm As New addThesis
                 newForm.tbTitle.Text = ttl
                 newForm.tbObjectives.Text = obj
@@ -247,6 +233,8 @@ Public Class thesis
                 newForm.tbTeam.Text = te
                 newForm.tbMembers.Text = mem
                 newForm.tbPanel.Text = pa
+                newForm.cbCourse.Text = cr
+                newForm.tbYear.Text = yr
                 newForm.Label1.Text = "Update Thesis"
                 newForm.btnSaveThesis.Enabled = False
                 newForm.sel = sa
@@ -259,6 +247,5 @@ Public Class thesis
         End Try
         conn.Close()
     End Sub
-
 
 End Class

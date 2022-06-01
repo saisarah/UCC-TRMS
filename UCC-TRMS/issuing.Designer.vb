@@ -50,22 +50,23 @@ Partial Class issuing
         Me.tbSearchThesis = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnProcess = New Guna.UI2.WinForms.Guna2Button()
         Me.cbHoS = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblCleared = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblPending = New System.Windows.Forms.Label()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lblBorrowed = New System.Windows.Forms.Label()
         Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.btnProcess = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblOverDue = New System.Windows.Forms.Label()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel7.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
@@ -276,7 +277,7 @@ Partial Class issuing
         Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Code, Me.Title, Me.Objectives, Me.Scope, Me.Limitation, Me.Category})
         Me.ListView1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.ForeColor = System.Drawing.Color.Black
         Me.ListView1.FullRowSelect = True
         Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
@@ -372,14 +373,14 @@ Partial Class issuing
         'Guna2DateTimePicker1
         '
         Me.Guna2DateTimePicker1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2DateTimePicker1.BorderRadius = 10
+        Me.Guna2DateTimePicker1.BorderRadius = 8
         Me.Guna2DateTimePicker1.CheckedState.Parent = Me.Guna2DateTimePicker1
         Me.Guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(120, Byte), Integer))
         Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2DateTimePicker1.ForeColor = System.Drawing.Color.White
         Me.Guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
         Me.Guna2DateTimePicker1.HoverState.Parent = Me.Guna2DateTimePicker1
-        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(981, 445)
+        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(981, 366)
         Me.Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
@@ -392,36 +393,41 @@ Partial Class issuing
         '
         Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label15.Location = New System.Drawing.Point(1101, 422)
+        Me.Label15.Location = New System.Drawing.Point(1082, 335)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(67, 19)
+        Me.Label15.Size = New System.Drawing.Size(90, 26)
         Me.Label15.TabIndex = 18
         Me.Label15.Text = "Issue Date"
         '
-        'Guna2Panel1
+        'btnProcess
         '
-        Me.Guna2Panel1.BackColor = System.Drawing.SystemColors.Control
-        Me.Guna2Panel1.Controls.Add(Me.cbHoS)
-        Me.Guna2Panel1.Controls.Add(Me.Panel1)
-        Me.Guna2Panel1.Controls.Add(Me.btnProcess)
-        Me.Guna2Panel1.Controls.Add(Me.Label15)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2DateTimePicker1)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Panel7)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Panel2)
-        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(1190, 578)
-        Me.Guna2Panel1.TabIndex = 4
+        Me.btnProcess.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnProcess.BackColor = System.Drawing.Color.Transparent
+        Me.btnProcess.BorderRadius = 8
+        Me.btnProcess.CheckedState.Parent = Me.btnProcess
+        Me.btnProcess.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnProcess.CustomImages.Parent = Me.btnProcess
+        Me.btnProcess.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.btnProcess.Font = New System.Drawing.Font("Poppins", 10.0!)
+        Me.btnProcess.ForeColor = System.Drawing.Color.White
+        Me.btnProcess.HoverState.Parent = Me.btnProcess
+        Me.btnProcess.ImageSize = New System.Drawing.Size(25, 25)
+        Me.btnProcess.Location = New System.Drawing.Point(1073, 529)
+        Me.btnProcess.Name = "btnProcess"
+        Me.btnProcess.ShadowDecoration.Parent = Me.btnProcess
+        Me.btnProcess.Size = New System.Drawing.Size(110, 37)
+        Me.btnProcess.TabIndex = 20
+        Me.btnProcess.Text = "Proceed"
         '
         'cbHoS
         '
         Me.cbHoS.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbHoS.BackColor = System.Drawing.Color.Transparent
-        Me.cbHoS.BorderRadius = 10
+        Me.cbHoS.BorderColor = System.Drawing.Color.Gray
+        Me.cbHoS.BorderRadius = 1
+        Me.cbHoS.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.cbHoS.BorderThickness = 0
         Me.cbHoS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbHoS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -435,12 +441,42 @@ Partial Class issuing
         Me.cbHoS.ItemHeight = 30
         Me.cbHoS.Items.AddRange(New Object() {"HARD COPY", "SOFT COPY"})
         Me.cbHoS.ItemsAppearance.Parent = Me.cbHoS
-        Me.cbHoS.Location = New System.Drawing.Point(975, 487)
+        Me.cbHoS.Location = New System.Drawing.Point(975, 452)
         Me.cbHoS.Name = "cbHoS"
         Me.cbHoS.ShadowDecoration.Parent = Me.cbHoS
         Me.cbHoS.Size = New System.Drawing.Size(205, 36)
         Me.cbHoS.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbHoS.TabIndex = 25
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2Panel1.Controls.Add(Me.Panel1)
+        Me.Guna2Panel1.Controls.Add(Me.Label8)
+        Me.Guna2Panel1.Controls.Add(Me.cbHoS)
+        Me.Guna2Panel1.Controls.Add(Me.btnProcess)
+        Me.Guna2Panel1.Controls.Add(Me.Label15)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2DateTimePicker1)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Panel7)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Panel2)
+        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1190, 578)
+        Me.Guna2Panel1.TabIndex = 4
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label8.Location = New System.Drawing.Point(1050, 423)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(130, 26)
+        Me.Label8.TabIndex = 26
+        Me.Label8.Text = "Document Type"
         '
         'Panel1
         '
@@ -453,14 +489,14 @@ Partial Class issuing
         Me.Panel1.Location = New System.Drawing.Point(883, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(297, 299)
-        Me.Panel1.TabIndex = 21
+        Me.Panel1.TabIndex = 27
         '
         'Guna2Panel4
         '
         Me.Guna2Panel4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
         Me.Guna2Panel4.Controls.Add(Me.Label9)
-        Me.Guna2Panel4.Controls.Add(Me.Label7)
+        Me.Guna2Panel4.Controls.Add(Me.lblCleared)
         Me.Guna2Panel4.Location = New System.Drawing.Point(151, 152)
         Me.Guna2Panel4.Name = "Guna2Panel4"
         Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
@@ -469,39 +505,34 @@ Partial Class issuing
         '
         'Label9
         '
-        Me.Label9.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Poppins", 10.0!)
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(2, 96)
+        Me.Label9.Location = New System.Drawing.Point(2, 103)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(137, 25)
+        Me.Label9.Size = New System.Drawing.Size(137, 37)
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "CLEARED PAYMENT"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label7
+        'lblCleared
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(38, 26)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(67, 85)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "0"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCleared.BackColor = System.Drawing.Color.Transparent
+        Me.lblCleared.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCleared.ForeColor = System.Drawing.Color.White
+        Me.lblCleared.Location = New System.Drawing.Point(38, 26)
+        Me.lblCleared.Name = "lblCleared"
+        Me.lblCleared.Size = New System.Drawing.Size(67, 85)
+        Me.lblCleared.TabIndex = 15
+        Me.lblCleared.Text = "0"
+        Me.lblCleared.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Guna2Panel3
         '
         Me.Guna2Panel3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(120, Byte), Integer))
         Me.Guna2Panel3.Controls.Add(Me.Label1)
-        Me.Guna2Panel3.Controls.Add(Me.Label10)
+        Me.Guna2Panel3.Controls.Add(Me.lblPending)
         Me.Guna2Panel3.Location = New System.Drawing.Point(6, 152)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
@@ -510,39 +541,34 @@ Partial Class issuing
         '
         'Label1
         '
-        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Poppins", 10.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(2, 96)
+        Me.Label1.Location = New System.Drawing.Point(4, 103)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(137, 25)
+        Me.Label1.Size = New System.Drawing.Size(137, 37)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "PENDING PAYMENT"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label10
+        'lblPending
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(41, 26)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(67, 85)
-        Me.Label10.TabIndex = 13
-        Me.Label10.Text = "0"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblPending.BackColor = System.Drawing.Color.Transparent
+        Me.lblPending.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPending.ForeColor = System.Drawing.Color.White
+        Me.lblPending.Location = New System.Drawing.Point(43, 26)
+        Me.lblPending.Name = "lblPending"
+        Me.lblPending.Size = New System.Drawing.Size(67, 85)
+        Me.lblPending.TabIndex = 13
+        Me.lblPending.Text = "0"
+        Me.lblPending.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Guna2Panel5
         '
         Me.Guna2Panel5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.Guna2Panel5.Controls.Add(Me.Label11)
-        Me.Guna2Panel5.Controls.Add(Me.Label12)
+        Me.Guna2Panel5.Controls.Add(Me.lblBorrowed)
         Me.Guna2Panel5.Location = New System.Drawing.Point(151, 6)
         Me.Guna2Panel5.Name = "Guna2Panel5"
         Me.Guna2Panel5.ShadowDecoration.Parent = Me.Guna2Panel5
@@ -551,38 +577,33 @@ Partial Class issuing
         '
         'Label11
         '
-        Me.Label11.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Poppins", 15.0!)
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(10, 91)
+        Me.Label11.Location = New System.Drawing.Point(10, 93)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(127, 35)
+        Me.Label11.Size = New System.Drawing.Size(127, 47)
         Me.Label11.TabIndex = 14
         Me.Label11.Text = "BORROWED"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label12
+        'lblBorrowed
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(38, 22)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(67, 85)
-        Me.Label12.TabIndex = 13
-        Me.Label12.Text = "0"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblBorrowed.BackColor = System.Drawing.Color.Transparent
+        Me.lblBorrowed.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBorrowed.ForeColor = System.Drawing.Color.White
+        Me.lblBorrowed.Location = New System.Drawing.Point(38, 34)
+        Me.lblBorrowed.Name = "lblBorrowed"
+        Me.lblBorrowed.Size = New System.Drawing.Size(67, 85)
+        Me.lblBorrowed.TabIndex = 13
+        Me.lblBorrowed.Text = "0"
+        Me.lblBorrowed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Guna2Panel6
         '
         Me.Guna2Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.Guna2Panel6.Controls.Add(Me.Label14)
-        Me.Guna2Panel6.Controls.Add(Me.Label16)
+        Me.Guna2Panel6.Controls.Add(Me.lblOverDue)
         Me.Guna2Panel6.Location = New System.Drawing.Point(6, 6)
         Me.Guna2Panel6.Name = "Guna2Panel6"
         Me.Guna2Panel6.ShadowDecoration.Parent = Me.Guna2Panel6
@@ -591,56 +612,27 @@ Partial Class issuing
         '
         'Label14
         '
-        Me.Label14.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Poppins", 15.0!)
         Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(21, 91)
+        Me.Label14.Location = New System.Drawing.Point(24, 93)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(105, 35)
+        Me.Label14.Size = New System.Drawing.Size(105, 47)
         Me.Label14.TabIndex = 12
         Me.Label14.Text = "OVERDUE"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label16
+        'lblOverDue
         '
-        Me.Label16.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(41, 19)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(67, 85)
-        Me.Label16.TabIndex = 11
-        Me.Label16.Text = "0"
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnProcess
-        '
-        Me.btnProcess.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnProcess.BackColor = System.Drawing.Color.Transparent
-        Me.btnProcess.BorderRadius = 15
-        Me.btnProcess.CheckedState.Parent = Me.btnProcess
-        Me.btnProcess.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnProcess.CustomImages.Parent = Me.btnProcess
-        Me.btnProcess.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.btnProcess.Font = New System.Drawing.Font("Poppins", 10.0!)
-        Me.btnProcess.ForeColor = System.Drawing.Color.White
-        Me.btnProcess.HoverState.Parent = Me.btnProcess
-        Me.btnProcess.Image = CType(resources.GetObject("btnProcess.Image"), System.Drawing.Image)
-        Me.btnProcess.ImageSize = New System.Drawing.Size(25, 25)
-        Me.btnProcess.Location = New System.Drawing.Point(1073, 529)
-        Me.btnProcess.Name = "btnProcess"
-        Me.btnProcess.ShadowDecoration.Parent = Me.btnProcess
-        Me.btnProcess.Size = New System.Drawing.Size(110, 37)
-        Me.btnProcess.TabIndex = 20
-        Me.btnProcess.Text = "Process"
+        Me.lblOverDue.BackColor = System.Drawing.Color.Transparent
+        Me.lblOverDue.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOverDue.ForeColor = System.Drawing.Color.White
+        Me.lblOverDue.Location = New System.Drawing.Point(43, 34)
+        Me.lblOverDue.Name = "lblOverDue"
+        Me.lblOverDue.Size = New System.Drawing.Size(67, 85)
+        Me.lblOverDue.TabIndex = 11
+        Me.lblOverDue.Text = "0"
+        Me.lblOverDue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'issuing
         '
@@ -658,50 +650,19 @@ Partial Class issuing
         Me.Guna2Panel1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Guna2Panel4.ResumeLayout(False)
-        Me.Guna2Panel4.PerformLayout()
         Me.Guna2Panel3.ResumeLayout(False)
-        Me.Guna2Panel3.PerformLayout()
         Me.Guna2Panel5.ResumeLayout(False)
-        Me.Guna2Panel5.PerformLayout()
         Me.Guna2Panel6.ResumeLayout(False)
-        Me.Guna2Panel6.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label16 As Label
+    Friend WithEvents cbHoS As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents btnProcess As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label15 As Label
     Friend WithEvents Guna2DateTimePicker1 As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Guna2Panel7 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents tbSearchThesis As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents btnSearchStud As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents cbCategory As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents lblCN As Label
-    Friend WithEvents lblEm As Label
-    Friend WithEvents lblCYS As Label
-    Friend WithEvents lblFN As Label
-    Friend WithEvents lblSN As Label
-    Friend WithEvents tbSearchStudNo As Guna.UI2.WinForms.Guna2TextBox
     Public WithEvents ListView1 As ListView
     Friend WithEvents Code As ColumnHeader
     Friend WithEvents Title As ColumnHeader
@@ -709,5 +670,33 @@ Partial Class issuing
     Friend WithEvents Scope As ColumnHeader
     Friend WithEvents Limitation As ColumnHeader
     Friend WithEvents Category As ColumnHeader
-    Friend WithEvents cbHoS As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cbCategory As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents tbSearchThesis As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents tbSearchStudNo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents lblCN As Label
+    Friend WithEvents lblEm As Label
+    Friend WithEvents lblCYS As Label
+    Friend WithEvents lblFN As Label
+    Friend WithEvents lblSN As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents btnSearchStud As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents lblCleared As Label
+    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblPending As Label
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label11 As Label
+    Friend WithEvents lblBorrowed As Label
+    Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label14 As Label
+    Friend WithEvents lblOverDue As Label
 End Class

@@ -134,6 +134,8 @@ Public Class addStudent
     End Sub
 
     Private Sub addStudent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Guna2ShadowForm1.SetShadowForm(Me)
+
         If Label1.Text <> "Update Student" Then
             cbyear.Text = cbyear.Items.Item(0).ToString()
             cbSection.SelectedIndex = 0

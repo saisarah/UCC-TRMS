@@ -173,7 +173,8 @@ Partial Class borrowers
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.studno, Me.full, Me.crs, Me.yr, Me.sec, Me.em})
-        Me.ListView1.Font = New System.Drawing.Font("Poppins SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.ListView1.HideSelection = False
@@ -188,32 +189,37 @@ Partial Class borrowers
         '
         'studno
         '
-        Me.studno.Text = "Student Number"
+        Me.studno.Text = "STUDENT NUMBER"
         Me.studno.Width = 205
         '
         'full
         '
-        Me.full.Text = "Full Name"
+        Me.full.Text = "FULL NAME"
+        Me.full.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.full.Width = 300
         '
         'crs
         '
-        Me.crs.Text = "Course"
+        Me.crs.Text = "COURSE"
+        Me.crs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.crs.Width = 160
         '
         'yr
         '
-        Me.yr.Text = "Year"
+        Me.yr.Text = "YEAR"
+        Me.yr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.yr.Width = 150
         '
         'sec
         '
-        Me.sec.Text = "Section"
+        Me.sec.Text = "SECTION"
+        Me.sec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.sec.Width = 150
         '
         'em
         '
-        Me.em.Text = "Email"
+        Me.em.Text = "EMAIL"
+        Me.em.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.em.Width = 255
         '
         'btnArchived

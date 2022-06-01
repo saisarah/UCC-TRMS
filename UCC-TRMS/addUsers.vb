@@ -20,7 +20,7 @@ Public Class addUsers
                 .ExecuteNonQuery()
             End With
             With borrowers
-                mainForm.OpenChildForm(New users)
+                mainForm.OpenChildForm(New usersAcc)
             End With
             Me.Alert("New record added successfully!", notification.enmType.Success)
             Me.Close()
@@ -29,5 +29,9 @@ Public Class addUsers
         End Try
         conn.Close()
 
+    End Sub
+
+    Private Sub addUsers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Guna2ShadowForm1.SetShadowForm(Me)
     End Sub
 End Class
