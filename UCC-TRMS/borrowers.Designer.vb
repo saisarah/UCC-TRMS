@@ -62,6 +62,7 @@ Partial Class borrowers
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.thesisPanel.SuspendLayout()
         Me.Guna2ShadowPanel1.SuspendLayout()
         Me.pnlThesisDetails.SuspendLayout()
@@ -99,42 +100,38 @@ Partial Class borrowers
         '
         'contact
         '
-        Me.contact.AutoSize = True
         Me.contact.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.contact.ForeColor = System.Drawing.Color.Black
-        Me.contact.Location = New System.Drawing.Point(129, 265)
+        Me.contact.Location = New System.Drawing.Point(131, 251)
         Me.contact.Name = "contact"
-        Me.contact.Size = New System.Drawing.Size(0, 15)
+        Me.contact.Size = New System.Drawing.Size(254, 29)
         Me.contact.TabIndex = 13
         '
         'year
         '
-        Me.year.AutoSize = True
         Me.year.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.year.ForeColor = System.Drawing.Color.Black
-        Me.year.Location = New System.Drawing.Point(129, 178)
+        Me.year.Location = New System.Drawing.Point(131, 164)
         Me.year.Name = "year"
-        Me.year.Size = New System.Drawing.Size(0, 15)
+        Me.year.Size = New System.Drawing.Size(254, 29)
         Me.year.TabIndex = 11
         '
         'course
         '
-        Me.course.AutoSize = True
         Me.course.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.course.ForeColor = System.Drawing.Color.Black
-        Me.course.Location = New System.Drawing.Point(129, 140)
+        Me.course.Location = New System.Drawing.Point(129, 126)
         Me.course.Name = "course"
-        Me.course.Size = New System.Drawing.Size(0, 15)
+        Me.course.Size = New System.Drawing.Size(254, 29)
         Me.course.TabIndex = 10
         '
         'studentno
         '
-        Me.studentno.AutoSize = True
         Me.studentno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.studentno.ForeColor = System.Drawing.Color.Black
-        Me.studentno.Location = New System.Drawing.Point(129, 100)
+        Me.studentno.Location = New System.Drawing.Point(129, 86)
         Me.studentno.Name = "studentno"
-        Me.studentno.Size = New System.Drawing.Size(0, 15)
+        Me.studentno.Size = New System.Drawing.Size(254, 29)
         Me.studentno.TabIndex = 9
         '
         'thesisPanel
@@ -195,31 +192,26 @@ Partial Class borrowers
         'full
         '
         Me.full.Text = "FULL NAME"
-        Me.full.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.full.Width = 300
         '
         'crs
         '
         Me.crs.Text = "COURSE"
-        Me.crs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.crs.Width = 160
         '
         'yr
         '
         Me.yr.Text = "YEAR"
-        Me.yr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.yr.Width = 150
         '
         'sec
         '
         Me.sec.Text = "SECTION"
-        Me.sec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.sec.Width = 150
         '
         'em
         '
         Me.em.Text = "EMAIL"
-        Me.em.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.em.Width = 255
         '
         'btnArchived
@@ -270,22 +262,20 @@ Partial Class borrowers
         '
         'email
         '
-        Me.email.AutoSize = True
         Me.email.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.email.ForeColor = System.Drawing.Color.Black
-        Me.email.Location = New System.Drawing.Point(131, 311)
+        Me.email.Location = New System.Drawing.Point(131, 297)
         Me.email.Name = "email"
-        Me.email.Size = New System.Drawing.Size(0, 15)
+        Me.email.Size = New System.Drawing.Size(254, 29)
         Me.email.TabIndex = 16
         '
         'section
         '
-        Me.section.AutoSize = True
         Me.section.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.section.ForeColor = System.Drawing.Color.Black
-        Me.section.Location = New System.Drawing.Point(129, 223)
+        Me.section.Location = New System.Drawing.Point(131, 209)
         Me.section.Name = "section"
-        Me.section.Size = New System.Drawing.Size(0, 15)
+        Me.section.Size = New System.Drawing.Size(254, 29)
         Me.section.TabIndex = 15
         '
         'Label1
@@ -301,12 +291,11 @@ Partial Class borrowers
         '
         'fullname
         '
-        Me.fullname.AutoSize = True
         Me.fullname.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fullname.ForeColor = System.Drawing.Color.Black
-        Me.fullname.Location = New System.Drawing.Point(129, 61)
+        Me.fullname.Location = New System.Drawing.Point(129, 47)
         Me.fullname.Name = "fullname"
-        Me.fullname.Size = New System.Drawing.Size(0, 15)
+        Me.fullname.Size = New System.Drawing.Size(254, 29)
         Me.fullname.TabIndex = 8
         '
         'Guna2Panel3
@@ -562,4 +551,5 @@ Partial Class borrowers
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
 End Class

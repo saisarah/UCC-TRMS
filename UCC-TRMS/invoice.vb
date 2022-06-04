@@ -36,10 +36,11 @@ Public Class invoice
 
     Private Sub btnInvoiceProcess_Click_2(sender As Object, e As EventArgs) Handles btnInvoiceProcess.Click
         Try
+
             If selected = 1 Then
 
                 Dim pdfFile As New Document
-                Dim createPdf As PdfWriter = PdfWriter.GetInstance(pdfFile, New FileStream("C://Users//Asus//Documents//Pdf//" & lblStudentNo.Text & " Request - " & title & ".pdf", FileMode.Create))
+                Dim createPdf As PdfWriter = PdfWriter.GetInstance(pdfFile, New FileStream("C://Users//Sarah//Documents//Pdf//" & lblStudentNo.Text & " Request - " & title & ".pdf", FileMode.Create))
                 pdfFile.Open()
 
                 Dim bmp As New Bitmap(Panel2.Width, Panel2.Height)
@@ -56,7 +57,7 @@ Public Class invoice
                 mail.To.Add(email)
                 mail.Subject = "Approval of Requested Copy"
                 Dim nm, nm1 As String
-                nm = lblFullName.Text.Substring(0, lblFullName.Text.IndexOf(" "))
+                nm = lblFullName.Text.Substring(0, lblFullName.Text.IndexOf(""))
                 nm1 = nm.ToLower()
                 Dim htmlString As String = "
 Dear " & UppercaseFirstLetter(nm1) & ",
@@ -67,10 +68,10 @@ We have attached the said document title with Code " & code & " as a PDF file.
 
 Kind Regards,
 Student Assistant, MIS"
-
+                conn.Open()
                 mail.Body = htmlString
                 Dim attach As System.Net.Mail.Attachment
-                attach = New System.Net.Mail.Attachment("C:\Users\Asus\Documents\Pdf\" & lblStudentNo.Text & " REQUEST - " & title & ".pdf")
+                attach = New System.Net.Mail.Attachment("C:\Users\Sarah\Documents\Pdf\" & lblStudentNo.Text & " REQUEST - " & title & ".pdf")
                 mail.Attachments.Add(attach)
                 smtpServer.Port = 587
                 smtpServer.Credentials = New System.Net.NetworkCredential("thesisrecordmanagement@gmail.com", "TRMS.GLOCSP")
@@ -78,15 +79,15 @@ Student Assistant, MIS"
                 smtpServer.Send(mail)
                 Dim CurrentDateTime As DateTime
                 CurrentDateTime = DateTime.Now
-                cur = DateTime.Now.AddDays(1)
+                cur = DateTime.Now.AddDays(1).ToString("yyyy-dd-MM hh:mm:ss")
+
                 Dim stat As String = "SENT"
-                conn.Open()
                 Dim comm As New MySqlCommand("INSERT INTO tblborroweddetails(thesis_id, title, dateissue, studno, fullname, crsyrsec, email, dateret, status) VALUES (@thesis_id, @title, @dateissue, @studno, @fullname, @course, @email, @dateret, @status)", conn)
                 With comm
 
                     .Parameters.AddWithValue("@thesis_id", cd)
                     .Parameters.AddWithValue("@title", title.ToUpper())
-                    .Parameters.AddWithValue("@dateissue", dateToday)
+                    .Parameters.AddWithValue("@dateissue", dateToday.ToString("yyyy-dd-MM hh:mm:ss"))
                     .Parameters.AddWithValue("@studno", sn)
                     .Parameters.AddWithValue("@fullname", fnm)
                     .Parameters.AddWithValue("@course", crs.ToUpper())
@@ -99,18 +100,22 @@ Student Assistant, MIS"
                 End With
                 Me.Close()
                 Me.Alert("Attachment has been sent!", notification.enmType.Success)
+                conn.Close()
             Else
+                conn.Open()
+
                 Dim CurrentDateTime As DateTime
                 CurrentDateTime = DateTime.Now
                 cur = DateTime.Now.AddDays(1)
                 Dim stat As String = "IN POSSESION"
-                conn.Open()
+                cur = DateTime.Now.AddDays(1).ToString("yyyy-dd-MM hh:mm:ss")
+
                 Dim comm As New MySqlCommand("INSERT INTO tblborroweddetails(thesis_id, title, dateissue, studno, fullname, crsyrsec, email, dateret, status) VALUES (@thesis_id, @title, @dateissue, @studno, @fullname, @course, @email, @dateret, @status)", conn)
                 With comm
 
                     .Parameters.AddWithValue("@thesis_id", cd)
                     .Parameters.AddWithValue("@title", title.ToUpper())
-                    .Parameters.AddWithValue("@dateissue", dateToday)
+                    .Parameters.AddWithValue("@dateissue", dateToday.ToString("yyyy-dd-MM hh:mm:ss"))
                     .Parameters.AddWithValue("@studno", sn)
                     .Parameters.AddWithValue("@fullname", fnm)
                     .Parameters.AddWithValue("@course", crs.ToUpper())
@@ -122,12 +127,14 @@ Student Assistant, MIS"
                     .ExecuteNonQuery()
                 End With
                 Me.Close()
+                conn.Close()
+
                 Me.Alert("Borrowed Successful!", notification.enmType.Success)
             End If
 
 
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
 

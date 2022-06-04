@@ -150,11 +150,10 @@ Public Class borrowers
     End Sub
 
     Private Sub ListView1_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseClick
-        Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
 
         Try
             conn.Open()
-
+            Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
             Dim cm As New MySqlCommand("SELECT * FROM tblstudents WHERE studentno = '" & sa & "'", conn)
             dr = cm.ExecuteReader
             Dim fn, sn, cr, yrs, se, eme, con As String
@@ -202,9 +201,9 @@ Public Class borrowers
     End Sub
 
     Private Sub EditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem.Click
-        Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
         conn.Open()
         Try
+            Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
             Dim cm As New MySqlCommand("SELECT * FROM tblstudents WHERE studentno = '" & sa & "'", conn)
             dr = cm.ExecuteReader
             Dim fn, sn, cr, yrs, se, eme, con As String
@@ -242,5 +241,38 @@ Public Class borrowers
 
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
         ContextMenuStrip1.Show(Cursor.Position)
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
+        Try
+            conn.Open()
+            Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
+            Dim cm As New MySqlCommand("SELECT * FROM tblstudents WHERE studentno = '" & sa & "'", conn)
+            dr = cm.ExecuteReader
+            Dim fn, sn, cr, yrs, se, eme, con As String
+            If dr.read() Then
+                fn = dr(1)
+                sn = dr(2)
+                cr = dr(4)
+                yrs = dr(5)
+                se = dr(6)
+                eme = dr(3)
+                con = dr(7)
+
+                fullname.Text = fn
+                studentno.Text = sn
+                course.Text = cr
+                year.Text = yrs
+                section.Text = se
+                email.Text = eme
+                contact.Text = con
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
+        conn.Close()
     End Sub
 End Class

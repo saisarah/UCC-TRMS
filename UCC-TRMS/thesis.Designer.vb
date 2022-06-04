@@ -35,7 +35,6 @@ Partial Class thesis
         Me.Scope = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Limitation = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Category = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.btnArchived = New Guna.UI2.WinForms.Guna2Button()
         Me.pnlThesisDetails = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblCourse = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -55,10 +54,11 @@ Partial Class thesis
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnAddThesis = New Guna.UI2.WinForms.Guna2Button()
         Me.cbCategories = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.tbSearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.btnArchived = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnAddThesis = New Guna.UI2.WinForms.Guna2Button()
+        Me.tbSearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
@@ -145,25 +145,21 @@ Partial Class thesis
         'Title
         '
         Me.Title.Text = "TITLE"
-        Me.Title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Title.Width = 275
         '
         'Objectives
         '
         Me.Objectives.Text = "OBJECTIVES"
-        Me.Objectives.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Objectives.Width = 250
         '
         'Scope
         '
         Me.Scope.Text = "SCOPE"
-        Me.Scope.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Scope.Width = 200
         '
         'Limitation
         '
         Me.Limitation.Text = "LIMITATION"
-        Me.Limitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Limitation.Width = 200
         '
         'Category
@@ -171,26 +167,6 @@ Partial Class thesis
         Me.Category.Text = "CATEGORY"
         Me.Category.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Category.Width = 200
-        '
-        'btnArchived
-        '
-        Me.btnArchived.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnArchived.BorderRadius = 5
-        Me.btnArchived.CheckedState.Parent = Me.btnArchived
-        Me.btnArchived.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnArchived.CustomImages.Parent = Me.btnArchived
-        Me.btnArchived.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.btnArchived.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnArchived.ForeColor = System.Drawing.Color.White
-        Me.btnArchived.HoverState.Parent = Me.btnArchived
-        Me.btnArchived.Image = CType(resources.GetObject("btnArchived.Image"), System.Drawing.Image)
-        Me.btnArchived.ImageSize = New System.Drawing.Size(18, 18)
-        Me.btnArchived.Location = New System.Drawing.Point(948, 12)
-        Me.btnArchived.Name = "btnArchived"
-        Me.btnArchived.ShadowDecoration.Parent = Me.btnArchived
-        Me.btnArchived.Size = New System.Drawing.Size(112, 36)
-        Me.btnArchived.TabIndex = 10
-        Me.btnArchived.Text = "Archived"
         '
         'pnlThesisDetails
         '
@@ -224,7 +200,7 @@ Partial Class thesis
         '
         Me.lblCourse.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCourse.ForeColor = System.Drawing.Color.Black
-        Me.lblCourse.Location = New System.Drawing.Point(97, 126)
+        Me.lblCourse.Location = New System.Drawing.Point(97, 131)
         Me.lblCourse.Name = "lblCourse"
         Me.lblCourse.Size = New System.Drawing.Size(321, 24)
         Me.lblCourse.TabIndex = 18
@@ -234,7 +210,7 @@ Partial Class thesis
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Gray
-        Me.Label10.Location = New System.Drawing.Point(12, 126)
+        Me.Label10.Location = New System.Drawing.Point(12, 131)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(49, 15)
         Me.Label10.TabIndex = 17
@@ -244,7 +220,7 @@ Partial Class thesis
         '
         Me.lblYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblYear.ForeColor = System.Drawing.Color.Black
-        Me.lblYear.Location = New System.Drawing.Point(97, 91)
+        Me.lblYear.Location = New System.Drawing.Point(97, 96)
         Me.lblYear.Name = "lblYear"
         Me.lblYear.Size = New System.Drawing.Size(321, 24)
         Me.lblYear.TabIndex = 16
@@ -254,7 +230,7 @@ Partial Class thesis
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Gray
-        Me.Label9.Location = New System.Drawing.Point(12, 91)
+        Me.Label9.Location = New System.Drawing.Point(12, 96)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(35, 15)
         Me.Label9.TabIndex = 15
@@ -264,7 +240,7 @@ Partial Class thesis
         '
         Me.lblObjectives.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblObjectives.ForeColor = System.Drawing.Color.Black
-        Me.lblObjectives.Location = New System.Drawing.Point(94, 402)
+        Me.lblObjectives.Location = New System.Drawing.Point(94, 406)
         Me.lblObjectives.Name = "lblObjectives"
         Me.lblObjectives.Size = New System.Drawing.Size(324, 201)
         Me.lblObjectives.TabIndex = 14
@@ -273,7 +249,7 @@ Partial Class thesis
         '
         Me.lblScope.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblScope.ForeColor = System.Drawing.Color.Black
-        Me.lblScope.Location = New System.Drawing.Point(97, 222)
+        Me.lblScope.Location = New System.Drawing.Point(97, 231)
         Me.lblScope.Name = "lblScope"
         Me.lblScope.Size = New System.Drawing.Size(321, 82)
         Me.lblScope.TabIndex = 9
@@ -283,7 +259,7 @@ Partial Class thesis
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gray
-        Me.Label4.Location = New System.Drawing.Point(12, 222)
+        Me.Label4.Location = New System.Drawing.Point(12, 231)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 15)
         Me.Label4.TabIndex = 2
@@ -293,7 +269,7 @@ Partial Class thesis
         '
         Me.lblTeam.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTeam.ForeColor = System.Drawing.Color.Black
-        Me.lblTeam.Location = New System.Drawing.Point(97, 193)
+        Me.lblTeam.Location = New System.Drawing.Point(97, 198)
         Me.lblTeam.Name = "lblTeam"
         Me.lblTeam.Size = New System.Drawing.Size(321, 24)
         Me.lblTeam.TabIndex = 13
@@ -303,7 +279,7 @@ Partial Class thesis
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gray
-        Me.Label5.Location = New System.Drawing.Point(12, 312)
+        Me.Label5.Location = New System.Drawing.Point(12, 316)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 15)
         Me.Label5.TabIndex = 3
@@ -313,7 +289,7 @@ Partial Class thesis
         '
         Me.lblLimit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLimit.ForeColor = System.Drawing.Color.Black
-        Me.lblLimit.Location = New System.Drawing.Point(97, 312)
+        Me.lblLimit.Location = New System.Drawing.Point(97, 316)
         Me.lblLimit.Name = "lblLimit"
         Me.lblLimit.Size = New System.Drawing.Size(321, 82)
         Me.lblLimit.TabIndex = 10
@@ -322,7 +298,7 @@ Partial Class thesis
         '
         Me.lblCategory.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCategory.ForeColor = System.Drawing.Color.Black
-        Me.lblCategory.Location = New System.Drawing.Point(97, 160)
+        Me.lblCategory.Location = New System.Drawing.Point(97, 165)
         Me.lblCategory.Name = "lblCategory"
         Me.lblCategory.Size = New System.Drawing.Size(321, 24)
         Me.lblCategory.TabIndex = 11
@@ -331,9 +307,9 @@ Partial Class thesis
         '
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.Black
-        Me.lblTitle.Location = New System.Drawing.Point(97, 57)
+        Me.lblTitle.Location = New System.Drawing.Point(97, 51)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(321, 24)
+        Me.lblTitle.Size = New System.Drawing.Size(321, 39)
         Me.lblTitle.TabIndex = 8
         '
         'Guna2Panel3
@@ -364,7 +340,7 @@ Partial Class thesis
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gray
-        Me.Label7.Location = New System.Drawing.Point(12, 193)
+        Me.Label7.Location = New System.Drawing.Point(12, 198)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(79, 15)
         Me.Label7.TabIndex = 5
@@ -375,7 +351,7 @@ Partial Class thesis
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gray
-        Me.Label6.Location = New System.Drawing.Point(12, 160)
+        Me.Label6.Location = New System.Drawing.Point(12, 165)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(58, 15)
         Me.Label6.TabIndex = 4
@@ -386,7 +362,7 @@ Partial Class thesis
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gray
-        Me.Label3.Location = New System.Drawing.Point(10, 402)
+        Me.Label3.Location = New System.Drawing.Point(10, 406)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 15)
         Me.Label3.TabIndex = 1
@@ -397,30 +373,11 @@ Partial Class thesis
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gray
-        Me.Label2.Location = New System.Drawing.Point(12, 57)
+        Me.Label2.Location = New System.Drawing.Point(12, 51)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(33, 15)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Title:"
-        '
-        'btnAddThesis
-        '
-        Me.btnAddThesis.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddThesis.BorderRadius = 5
-        Me.btnAddThesis.CheckedState.Parent = Me.btnAddThesis
-        Me.btnAddThesis.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddThesis.CustomImages.Parent = Me.btnAddThesis
-        Me.btnAddThesis.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.btnAddThesis.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddThesis.ForeColor = System.Drawing.Color.White
-        Me.btnAddThesis.HoverState.Parent = Me.btnAddThesis
-        Me.btnAddThesis.Image = CType(resources.GetObject("btnAddThesis.Image"), System.Drawing.Image)
-        Me.btnAddThesis.Location = New System.Drawing.Point(1066, 12)
-        Me.btnAddThesis.Name = "btnAddThesis"
-        Me.btnAddThesis.ShadowDecoration.Parent = Me.btnAddThesis
-        Me.btnAddThesis.Size = New System.Drawing.Size(112, 36)
-        Me.btnAddThesis.TabIndex = 2
-        Me.btnAddThesis.Text = "Add Thesis"
         '
         'cbCategories
         '
@@ -442,6 +399,51 @@ Partial Class thesis
         Me.cbCategories.Size = New System.Drawing.Size(243, 36)
         Me.cbCategories.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbCategories.TabIndex = 8
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem, Me.EditToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(108, 48)
+        '
+        'btnArchived
+        '
+        Me.btnArchived.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnArchived.BorderRadius = 5
+        Me.btnArchived.CheckedState.Parent = Me.btnArchived
+        Me.btnArchived.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnArchived.CustomImages.Parent = Me.btnArchived
+        Me.btnArchived.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.btnArchived.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnArchived.ForeColor = System.Drawing.Color.White
+        Me.btnArchived.HoverState.Parent = Me.btnArchived
+        Me.btnArchived.Image = CType(resources.GetObject("btnArchived.Image"), System.Drawing.Image)
+        Me.btnArchived.ImageSize = New System.Drawing.Size(18, 18)
+        Me.btnArchived.Location = New System.Drawing.Point(948, 12)
+        Me.btnArchived.Name = "btnArchived"
+        Me.btnArchived.ShadowDecoration.Parent = Me.btnArchived
+        Me.btnArchived.Size = New System.Drawing.Size(112, 36)
+        Me.btnArchived.TabIndex = 10
+        Me.btnArchived.Text = "Archived"
+        '
+        'btnAddThesis
+        '
+        Me.btnAddThesis.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAddThesis.BorderRadius = 5
+        Me.btnAddThesis.CheckedState.Parent = Me.btnAddThesis
+        Me.btnAddThesis.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddThesis.CustomImages.Parent = Me.btnAddThesis
+        Me.btnAddThesis.FillColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.btnAddThesis.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddThesis.ForeColor = System.Drawing.Color.White
+        Me.btnAddThesis.HoverState.Parent = Me.btnAddThesis
+        Me.btnAddThesis.Image = CType(resources.GetObject("btnAddThesis.Image"), System.Drawing.Image)
+        Me.btnAddThesis.Location = New System.Drawing.Point(1066, 12)
+        Me.btnAddThesis.Name = "btnAddThesis"
+        Me.btnAddThesis.ShadowDecoration.Parent = Me.btnAddThesis
+        Me.btnAddThesis.Size = New System.Drawing.Size(112, 36)
+        Me.btnAddThesis.TabIndex = 2
+        Me.btnAddThesis.Text = "Add Thesis"
         '
         'tbSearch
         '
@@ -465,12 +467,6 @@ Partial Class thesis
         Me.tbSearch.ShadowDecoration.Parent = Me.tbSearch
         Me.tbSearch.Size = New System.Drawing.Size(248, 36)
         Me.tbSearch.TabIndex = 7
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem, Me.EditToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(108, 48)
         '
         'DeleteToolStripMenuItem
         '

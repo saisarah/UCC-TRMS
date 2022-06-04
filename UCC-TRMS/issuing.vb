@@ -38,8 +38,6 @@ Public Class issuing
                     lvi.SubItems(5).ForeColor = Color.Gray
                 Next
 
-
-
             Else
                 Dim x As String
                 x = tbSearchThesis.Text
@@ -80,7 +78,6 @@ Public Class issuing
         loadCnt()
         loadData()
 
-
     End Sub
 
     Private Sub tbSearchThesis_TextChanged(sender As Object, e As EventArgs) Handles tbSearchThesis.TextChanged
@@ -90,6 +87,33 @@ Public Class issuing
 
     Private Sub cbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCategory.SelectedIndexChanged
         loadData()
+        conn.Open()
+        Dim x As String
+        x = tbSearchThesis.Text
+        Dim da As New MySqlDataAdapter("SELECT thesis_id, title, objectives, scope, limitations, category FROM tblthesis WHERE category LIKE '%" & cbCategory.Text & "%' ", conn)
+        Dim dt = New DataTable
+        da.Fill(dt)
+        Dim lvItem As New ListViewItem
+        Dim dr2 As DataRow
+        ListView1.Items.Clear()
+
+        For Each dr2 In dt.Rows
+
+            lvItem = Me.ListView1.Items.Add(dr2(0).ToString())
+            For s As Integer = 1 To 5
+                lvItem.SubItems.Add(dr2(s).ToString())
+            Next
+        Next
+        For Each lvi As ListViewItem In Me.ListView1.Items
+            lvi.UseItemStyleForSubItems = False
+            lvi.SubItems(0).ForeColor = Color.Gray
+            lvi.SubItems(1).ForeColor = Color.Gray
+            lvi.SubItems(2).ForeColor = Color.Gray
+            lvi.SubItems(3).ForeColor = Color.Gray
+            lvi.SubItems(4).ForeColor = Color.Gray
+            lvi.SubItems(5).ForeColor = Color.Gray
+        Next
+        conn.Close()
     End Sub
     Sub clear()
         lblSN.Text = ""
@@ -132,6 +156,7 @@ Public Class issuing
 
     End Sub
     Private Sub loadCnt()
+        Timer1.Start()
 
         Try
             If lblSN.Text = "" Then
@@ -143,6 +168,16 @@ Public Class issuing
                 Dim cmd2 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'SENT'", conn)
                 snt = cmd2.ExecuteScalar()
                 lblBorrowed.Text = ttl + snt
+                Dim cmd3 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'OVERDUE'", conn)
+                due = cmd3.ExecuteScalar()
+                lblOverDue.Text = due
+                Dim cmd4 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'CLEARED'", conn)
+                cleared = cmd4.ExecuteScalar()
+                lblCleared.Text = cleared
+                Dim cmd5 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'PENDING'", conn)
+                pending = cmd5.ExecuteScalar()
+                lblPending.Text = pending
+
             End If
 
         Catch ex As Exception
@@ -198,7 +233,7 @@ Public Class issuing
             End If
             conn.Close()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            'MsgBox(ex.Message)
         End Try
 
 
@@ -224,5 +259,25 @@ Public Class issuing
         Else
             e.DrawDefault = True
         End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        conn.Open()
+        Dim snt As Integer = 0
+        Dim cmd1 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'IN POSSESION'", conn)
+        ttl = cmd1.ExecuteScalar()
+        Dim cmd2 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'SENT'", conn)
+        snt = cmd2.ExecuteScalar()
+        lblBorrowed.Text = ttl + snt
+        Dim cmd3 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'OVERDUE'", conn)
+        due = cmd3.ExecuteScalar()
+        lblOverDue.Text = due
+        Dim cmd4 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'CLEARED'", conn)
+        cleared = cmd4.ExecuteScalar()
+        lblCleared.Text = cleared
+        Dim cmd5 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'PENDING'", conn)
+        pending = cmd5.ExecuteScalar()
+        lblPending.Text = pending
+        conn.Close()
     End Sub
 End Class

@@ -23,16 +23,12 @@ Partial Class dashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.dgvRecentBorrowed = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -48,15 +44,23 @@ Partial Class dashboard
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblThesisToday = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.lblBorrower = New System.Windows.Forms.Label()
+        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.lblCode = New System.Windows.Forms.Label()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.dgvRecentBorrowed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
+        Me.Guna2ShadowPanel1.SuspendLayout()
+        Me.Guna2Panel6.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -81,11 +85,11 @@ Partial Class dashboard
         Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.Guna2ShadowPanel1)
         Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Controls.Add(Me.dgvRecentBorrowed)
         Me.Panel2.Location = New System.Drawing.Point(12, 12)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(865, 499)
+        Me.Panel2.Size = New System.Drawing.Size(865, 563)
         Me.Panel2.TabIndex = 4
         '
         'Panel3
@@ -113,73 +117,13 @@ Partial Class dashboard
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DimGray
         Me.Label1.Location = New System.Drawing.Point(19, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(352, 37)
+        Me.Label1.Size = New System.Drawing.Size(336, 25)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Top 10 Recently Borrowed Thesis"
-        '
-        'dgvRecentBorrowed
-        '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgvRecentBorrowed.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvRecentBorrowed.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvRecentBorrowed.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvRecentBorrowed.BackgroundColor = System.Drawing.Color.White
-        Me.dgvRecentBorrowed.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvRecentBorrowed.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvRecentBorrowed.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRecentBorrowed.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvRecentBorrowed.ColumnHeadersHeight = 4
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvRecentBorrowed.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvRecentBorrowed.EnableHeadersVisualStyles = False
-        Me.dgvRecentBorrowed.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvRecentBorrowed.Location = New System.Drawing.Point(3, 64)
-        Me.dgvRecentBorrowed.Name = "dgvRecentBorrowed"
-        Me.dgvRecentBorrowed.RowHeadersVisible = False
-        Me.dgvRecentBorrowed.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRecentBorrowed.Size = New System.Drawing.Size(856, 427)
-        Me.dgvRecentBorrowed.TabIndex = 3
-        Me.dgvRecentBorrowed.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
-        Me.dgvRecentBorrowed.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.dgvRecentBorrowed.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.dgvRecentBorrowed.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.dgvRecentBorrowed.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.dgvRecentBorrowed.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dgvRecentBorrowed.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.dgvRecentBorrowed.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvRecentBorrowed.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvRecentBorrowed.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvRecentBorrowed.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.dgvRecentBorrowed.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dgvRecentBorrowed.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgvRecentBorrowed.ThemeStyle.HeaderStyle.Height = 4
-        Me.dgvRecentBorrowed.ThemeStyle.ReadOnly = False
-        Me.dgvRecentBorrowed.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.dgvRecentBorrowed.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvRecentBorrowed.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.dgvRecentBorrowed.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.dgvRecentBorrowed.ThemeStyle.RowsStyle.Height = 22
-        Me.dgvRecentBorrowed.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvRecentBorrowed.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
         'Panel1
         '
@@ -212,11 +156,11 @@ Partial Class dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Poppins Light", 14.0!)
+        Me.Label9.Font = New System.Drawing.Font("Poppins SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(0, 96)
+        Me.Label9.Location = New System.Drawing.Point(9, 96)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(140, 44)
+        Me.Label9.Size = New System.Drawing.Size(128, 44)
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "IN POSSESION"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -225,7 +169,7 @@ Partial Class dashboard
         '
         Me.lblInPosses.BackColor = System.Drawing.Color.Transparent
         Me.lblInPosses.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblInPosses.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInPosses.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInPosses.ForeColor = System.Drawing.Color.White
         Me.lblInPosses.Location = New System.Drawing.Point(0, 0)
         Me.lblInPosses.Name = "lblInPosses"
@@ -253,11 +197,11 @@ Partial Class dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Poppins Light", 10.0!)
+        Me.Label8.Font = New System.Drawing.Font("Poppins SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(0, 111)
+        Me.Label8.Location = New System.Drawing.Point(12, 111)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(140, 29)
+        Me.Label8.Size = New System.Drawing.Size(117, 29)
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "DOCUMENTS"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -268,11 +212,11 @@ Partial Class dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Poppins Light", 15.0!)
+        Me.Label6.Font = New System.Drawing.Font("Poppins SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(0, 89)
+        Me.Label6.Location = New System.Drawing.Point(36, 92)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(140, 35)
+        Me.Label6.Size = New System.Drawing.Size(69, 22)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "SENT"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -281,7 +225,7 @@ Partial Class dashboard
         '
         Me.lblSent.BackColor = System.Drawing.Color.Transparent
         Me.lblSent.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblSent.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSent.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSent.ForeColor = System.Drawing.Color.White
         Me.lblSent.Location = New System.Drawing.Point(0, 0)
         Me.lblSent.Name = "lblSent"
@@ -308,11 +252,11 @@ Partial Class dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Poppins Light", 15.0!)
+        Me.Label5.Font = New System.Drawing.Font("Poppins SemiBold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(0, 91)
+        Me.Label5.Location = New System.Drawing.Point(3, 104)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(140, 49)
+        Me.Label5.Size = New System.Drawing.Size(134, 27)
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "BORROWERS"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -321,7 +265,7 @@ Partial Class dashboard
         '
         Me.lblBorrowers.BackColor = System.Drawing.Color.Transparent
         Me.lblBorrowers.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblBorrowers.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBorrowers.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBorrowers.ForeColor = System.Drawing.Color.White
         Me.lblBorrowers.Location = New System.Drawing.Point(0, 0)
         Me.lblBorrowers.Name = "lblBorrowers"
@@ -348,11 +292,11 @@ Partial Class dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Poppins Light", 10.0!)
+        Me.Label4.Font = New System.Drawing.Font("Poppins SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(0, 114)
+        Me.Label4.Location = New System.Drawing.Point(2, 114)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(140, 26)
+        Me.Label4.Size = New System.Drawing.Size(137, 26)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "AS OF TODAY"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -363,11 +307,11 @@ Partial Class dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Poppins Light", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Poppins SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(0, 85)
+        Me.Label2.Location = New System.Drawing.Point(29, 93)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(140, 42)
+        Me.Label2.Size = New System.Drawing.Size(83, 24)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "THESIS"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -376,7 +320,7 @@ Partial Class dashboard
         '
         Me.lblThesisToday.BackColor = System.Drawing.Color.Transparent
         Me.lblThesisToday.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblThesisToday.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblThesisToday.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblThesisToday.ForeColor = System.Drawing.Color.White
         Me.lblThesisToday.Location = New System.Drawing.Point(0, 0)
         Me.lblThesisToday.Name = "lblThesisToday"
@@ -384,6 +328,95 @@ Partial Class dashboard
         Me.lblThesisToday.TabIndex = 11
         Me.lblThesisToday.Text = "0"
         Me.lblThesisToday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel5.Location = New System.Drawing.Point(5, 60)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(820, 425)
+        Me.Panel5.TabIndex = 18
+        '
+        'Guna2ShadowPanel1
+        '
+        Me.Guna2ShadowPanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Guna2Panel6)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Panel5)
+        Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(17, 64)
+        Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
+        Me.Guna2ShadowPanel1.Padding = New System.Windows.Forms.Padding(5)
+        Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black
+        Me.Guna2ShadowPanel1.ShadowDepth = 40
+        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(830, 490)
+        Me.Guna2ShadowPanel1.TabIndex = 24
+        '
+        'lblBorrower
+        '
+        Me.lblBorrower.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblBorrower.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBorrower.ForeColor = System.Drawing.Color.White
+        Me.lblBorrower.Location = New System.Drawing.Point(692, 17)
+        Me.lblBorrower.Name = "lblBorrower"
+        Me.lblBorrower.Size = New System.Drawing.Size(251, 21)
+        Me.lblBorrower.TabIndex = 13
+        Me.lblBorrower.Text = "BORROWER"
+        Me.lblBorrower.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblTitle
+        '
+        Me.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.ForeColor = System.Drawing.Color.White
+        Me.lblTitle.Location = New System.Drawing.Point(95, 17)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(313, 21)
+        Me.lblTitle.TabIndex = 12
+        Me.lblTitle.Text = "TITLE"
+        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblCode
+        '
+        Me.lblCode.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblCode.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCode.ForeColor = System.Drawing.Color.White
+        Me.lblCode.Location = New System.Drawing.Point(-97, 17)
+        Me.lblCode.Name = "lblCode"
+        Me.lblCode.Size = New System.Drawing.Size(161, 21)
+        Me.lblCode.TabIndex = 6
+        Me.lblCode.Text = "CODE"
+        Me.lblCode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblDate
+        '
+        Me.lblDate.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblDate.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.ForeColor = System.Drawing.Color.White
+        Me.lblDate.Location = New System.Drawing.Point(434, 17)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(232, 21)
+        Me.lblDate.TabIndex = 11
+        Me.lblDate.Text = "DATE ISSUED"
+        Me.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Guna2Panel6
+        '
+        Me.Guna2Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Guna2Panel6.Controls.Add(Me.lblBorrower)
+        Me.Guna2Panel6.Controls.Add(Me.lblTitle)
+        Me.Guna2Panel6.Controls.Add(Me.lblCode)
+        Me.Guna2Panel6.Controls.Add(Me.lblDate)
+        Me.Guna2Panel6.CustomBorderColor = System.Drawing.Color.Gainsboro
+        Me.Guna2Panel6.CustomBorderThickness = New System.Windows.Forms.Padding(0, 0, 0, 1)
+        Me.Guna2Panel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Guna2Panel6.Location = New System.Drawing.Point(5, 5)
+        Me.Guna2Panel6.Name = "Guna2Panel6"
+        Me.Guna2Panel6.ShadowDecoration.Parent = Me.Guna2Panel6
+        Me.Guna2Panel6.Size = New System.Drawing.Size(820, 55)
+        Me.Guna2Panel6.TabIndex = 19
         '
         'dashboard
         '
@@ -398,12 +431,13 @@ Partial Class dashboard
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.dgvRecentBorrowed, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Guna2Panel4.ResumeLayout(False)
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel5.ResumeLayout(False)
+        Me.Guna2ShadowPanel1.ResumeLayout(False)
+        Me.Guna2Panel6.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -415,7 +449,6 @@ Partial Class dashboard
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents dgvRecentBorrowed As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents lblThesisToday As Label
     Friend WithEvents lblBorrowers As Label
     Friend WithEvents lblInPosses As Label
@@ -423,11 +456,18 @@ Partial Class dashboard
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Panel5 As Panel
+    Public WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblBorrower As Label
+    Friend WithEvents lblTitle As Label
+    Friend WithEvents lblCode As Label
+    Friend WithEvents lblDate As Label
 End Class

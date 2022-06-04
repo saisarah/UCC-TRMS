@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblreport" msprop:Generator_RowEvHandlerName="tblreportRowChangeEventHandler" msprop:Generator_RowDeletedName="tblreportRowDeleted" msprop:Generator_RowDeletingName="tblreportRowDeleting" msprop:Generator_RowEvArgName="tblreportRowChangeEvent" msprop:Generator_TablePropName="tblreport" msprop:Generator_RowChangedName="tblreportRowChanged" msprop:Generator_RowChangingName="tblreportRowChanging" msprop:Generator_TableClassName="tblreportDataTable" msprop:Generator_RowClassName="tblreportRow" msprop:Generator_TableVarName="tabletblreport" msprop:Generator_UserTableName="tblreport">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Number_of_Thesis" msprop:Generator_ColumnPropNameInRow="Number_of_Thesis" msprop:Generator_ColumnPropNameInTable="Number_of_ThesisColumn" msprop:Generator_ColumnVarNameInTable="columnNumber_of_Thesis" msprop:Generator_UserColumnName="Number_of_Thesis" type="xs:short" minOccurs="0" />
+              <xs:element name="Student_Registered" msprop:Generator_ColumnPropNameInRow="Student_Registered" msprop:Generator_ColumnPropNameInTable="Student_RegisteredColumn" msprop:Generator_ColumnVarNameInTable="columnStudent_Registered" msprop:Generator_UserColumnName="Student_Registered" type="xs:short" minOccurs="0" />
+              <xs:element name="Borrowed_Hardcopy" msprop:Generator_ColumnPropNameInRow="Borrowed_Hardcopy" msprop:Generator_ColumnPropNameInTable="Borrowed_HardcopyColumn" msprop:Generator_ColumnVarNameInTable="columnBorrowed_Hardcopy" msprop:Generator_UserColumnName="Borrowed_Hardcopy" type="xs:short" minOccurs="0" />
+              <xs:element name="Thesis_in_Sent" msprop:Generator_ColumnPropNameInRow="Thesis_in_Sent" msprop:Generator_ColumnPropNameInTable="Thesis_in_SentColumn" msprop:Generator_ColumnVarNameInTable="columnThesis_in_Sent" msprop:Generator_UserColumnName="Thesis_in_Sent" type="xs:short" minOccurs="0" />
+              <xs:element name="Cleared_Payment" msprop:Generator_ColumnPropNameInRow="Cleared_Payment" msprop:Generator_ColumnPropNameInTable="Cleared_PaymentColumn" msprop:Generator_ColumnVarNameInTable="columnCleared_Payment" msprop:Generator_UserColumnName="Cleared_Payment" type="xs:short" minOccurs="0" />
+              <xs:element name="Overdue" msprop:Generator_ColumnPropNameInRow="Overdue" msprop:Generator_ColumnPropNameInTable="OverdueColumn" msprop:Generator_ColumnVarNameInTable="columnOverdue" msprop:Generator_UserColumnName="Overdue" type="xs:short" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="_Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

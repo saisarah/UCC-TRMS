@@ -5,7 +5,7 @@ Public Class studentArchive
     Private Sub studentArchive_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Guna2ShadowForm1.SetShadowForm(Me)
-            Dim da As New MySqlDataAdapter("SELECT studentno, fullname,  course, year, section, email FROM tblstudents", conn)
+            Dim da As New MySqlDataAdapter("SELECT studentno, fullname,  course, year, section, email FROM tblarchivedstud", conn)
             Dim dt = New DataTable
                 da.Fill(dt)
                 Dim lvItem As New ListViewItem

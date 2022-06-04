@@ -9,67 +9,32 @@ Public Class usersAcc
     End Sub
 
     Private Sub users_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Timer1.Start()
+        load()
+    End Sub
+    Public Sub load()
         Try
             conn.Open()
-            Dim y As New MySqlCommand("SELECT * FROM tblusers", conn)
+            Dim y As New MySqlCommand("SELECT * FROM tblusers Order by id desc", conn)
             Dim dr As MySqlDataReader
-            Dim id, user, stat As String
             dr = y.ExecuteReader
-            If dr.Read() Then
-                id = dr(0)
-                user = dr(1)
-                stat = dr(1)
+            While dr.Read
+                Dim c As userSA = New userSA
+                Dim a As Integer = 1
+                c.Dock = DockStyle.Top
+                For f As Integer = 0 To 1000
+                    c.lblID.Text = dr(0)
+                    c.lblUsername.Text = dr(1)
+                    c.lblStat.Text = dr(2)
+                    Panel1.Controls.Add(c)
+                Next
+                a = a + 1
 
-            End If
-            Dim c As userSA = New userSA
-            c.Dock = DockStyle.Top
-
-            For i As Integer = 0 To 1000
-                c.lblID.Text = id
-                c.lblUsername.Text = user
-                c.lblStat.Text = stat
-                Panel1.Controls.Add(c)
-
-            Next
+            End While
+            conn.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-    End Sub
-
-
-    Private Sub dgvUsers_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs)
-        '   Dim colname As String = dgvUsers.Columns(e.ColumnIndex).Name
-
-        If colname <> "Delete" AndAlso colname <> "Edit" Then
-            '      dgvUsers.Cursor = Cursors.[Default]
-        Else
-            '       dgvUsers.Cursor = Cursors.Hand
-        End If
-    End Sub
-
-    Private Sub dgvUsers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-        conn.Open()
-        Dim j As Integer
-        Dim s As String
-        '  j = dgvUsers.CurrentRow.Index
-        ' s = dgvUsers.Item(3, j).Value.ToString()
-        'Dim colName As String = dgvUsers.Columns(e.ColumnIndex).Name
-        '  If colName = "Delete" Then
-
-        '   ElseIf colName = "Edit" Then
-        '    If dgvUsers.SelectedRows.Count > 0 Then
-        '   Dim i As Integer
-        '  i = dgvUsers.CurrentRow.Index
-        ' Dim newForm As New addUsers
-        '   newForm.SelectedRows = dgvUsers.SelectedRows
-        '    newForm.tbName.Text = dgvUsers.Item(1, i).Value.ToString
-        'newForm.Label1.Text = "Update User"
-        '  newForm.btnSaveUser.Enabled = False
-        '    newForm.Show()
-
-        '        End If
-        '       End If
-        conn.Close()
     End Sub
 
     Private Sub ListView1_DrawItem(sender As Object, e As DrawListViewItemEventArgs)
@@ -107,10 +72,6 @@ Public Class usersAcc
         newForm.btnYesOk.FillColor = Color.FromArgb(255, 66, 66)
         newForm.ctid = sa
         newForm.Show()
-
-    End Sub
-
-    Private Sub EditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem.Click
 
     End Sub
 End Class

@@ -59,6 +59,7 @@ Partial Class userSA
         Me.Guna2Panel4.Controls.Add(Me.lblID)
         Me.Guna2Panel4.Controls.Add(Me.lblStat)
         Me.Guna2Panel4.CustomBorderColor = System.Drawing.Color.Gainsboro
+        Me.Guna2Panel4.CustomBorderThickness = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.Guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel4.Name = "Guna2Panel4"

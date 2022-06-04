@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.UCC_TRMS.usersAcc
+            Me.MainForm = Global.UCC_TRMS.mainForm
         End Sub
     End Class
 End Namespace

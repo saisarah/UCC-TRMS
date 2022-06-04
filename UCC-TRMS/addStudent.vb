@@ -38,10 +38,11 @@ Public Class addStudent
 
     Public Sub add()
         conn.Open()
-
         Try
             Dim StudentNumber, fn As String
             Dim sn As Integer
+            Dim Dg As String
+            Dg = DateTime.Now.ToString("yyyy-dd-MM")
             StudentNumber = tbstudentno.Text
             If namedontexist(StudentNumber) Then
                 Me.Alert1("Student number not enrolled!", Confirmation.enmType.Info)
@@ -57,12 +58,12 @@ Public Class addStudent
                 If sn = tbstudentno.Text Or fn = tbfullname.Text And fn <> "" Then
                     Me.Alert1("Student number already existed!", Confirmation.enmType.Info)
                 Else
-                    Dim comm As New MySqlCommand("INSERT INTO tblstudents(fullname, studentno, email, course, year, section, contact) VALUES (@fullname, @studentno, @email, @course, @year, @section, @contact)", conn)
+                    Dim comm As New MySqlCommand("INSERT INTO tblstudents(fullname, studentno, email, course, year, section, contact, dateReg) VALUES (@fullname, @studentno, @email, @course, @year, @section, @contact, '" & Dg & "')", conn)
                     With comm
                         .Parameters.AddWithValue("@fullname", tbfullname.Text.ToUpper())
                         .Parameters.AddWithValue("@studentno", tbstudentno.Text.ToUpper())
                         .Parameters.AddWithValue("@email", tbemail.Text)
-                        .Parameters.AddWithValue("@course", tbcourse.Text.ToUpper())
+                        .Parameters.AddWithValue("@course", tbCourse.Text.ToUpper())
                         .Parameters.AddWithValue("@year", cbyear.Text.ToUpper())
                         .Parameters.AddWithValue("@section", cbSection.Text.ToUpper())
                         .Parameters.AddWithValue("@contact", tbcontact.Text)

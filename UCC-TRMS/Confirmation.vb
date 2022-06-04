@@ -133,7 +133,7 @@ Public Class Confirmation
                 addTh = False
                 deleteThesis = False
                 conn.Open()
-                Dim command As New MySqlCommand("INSERT INTO tblarchivedstud (studID, fullname, studentno, email, course, year, section, contact) SELECT id, fullname, studentno, email, course, year, section, contact FROM tblstudents WHERE studentno ='" & id & "'", conn)
+                Dim command As New MySqlCommand("INSERT INTO tblarchivedstud (fullname, studentno, email, course, year, section, contact) SELECT fullname, studentno, email, course, year, section, contact FROM tblstudents WHERE studentno ='" & id & "'", conn)
                 command.ExecuteNonQuery()
                 Dim command1 As New MySqlCommand("DELETE FROM tblstudents WHERE studentno ='" & id & "'", conn)
                 command1.ExecuteNonQuery()

@@ -19,9 +19,7 @@ Public Class addUsers
                 .Parameters.AddWithValue("@status", stat.ToUpper())
                 .ExecuteNonQuery()
             End With
-            With borrowers
-                mainForm.OpenChildForm(New usersAcc)
-            End With
+            mainForm.OpenChildForm(New usersAcc)
             Me.Alert("New record added successfully!", notification.enmType.Success)
             Me.Close()
         Catch ex As Exception

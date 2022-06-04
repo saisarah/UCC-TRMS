@@ -148,10 +148,10 @@ Public Class thesis
 
 
     Private Sub ListView1_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseClick
-        Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
 
         Try
             conn.Open()
+            Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
 
             Dim cm As New MySqlCommand("SELECT * FROM tblthesis WHERE thesis_id = '" & sa & "'", conn)
             dr = cm.ExecuteReader
@@ -247,5 +247,40 @@ Public Class thesis
         End Try
         conn.Close()
     End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
+        Try
+            conn.Open()
+            Dim sa As String = ListView1.SelectedItems(0).ToString().Substring(15).Replace("}", "")
+            Dim cm As New MySqlCommand("SELECT * FROM tblthesis WHERE thesis_id = '" & sa & "'", conn)
+            dr = cm.ExecuteReader
+            Dim ttl, obj, sc, li, te, ca, yr, crs As String
+            If dr.read() Then
+                ttl = dr(1)
+                obj = dr(2)
+                sc = dr(3)
+                li = dr(4)
+                te = dr(5)
+                ca = dr(8)
+                crs = dr(9)
+                yr = dr(10)
+                lblTitle.Text = ttl
+                lblObjectives.Text = obj
+                lblScope.Text = sc
+                lblLimit.Text = li
+                lblTeam.Text = te
+                lblCategory.Text = ca
+                lblCourse.Text = crs
+                lblYear.Text = yr
+
+            End If
+
+        Catch ex As Exception
+            '   MsgBox(ex.Message)
+        End Try
+        conn.Close()
+    End Sub
+
 
 End Class

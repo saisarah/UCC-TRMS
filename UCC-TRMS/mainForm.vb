@@ -79,8 +79,9 @@ Public Class mainForm
         frm.showAlert(msg, type)
     End Sub
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Timer1.Start()
         Timer2.Start()
+
+        Timer1.Start()
 
         Dim reader As MySqlDataReader
 
@@ -99,7 +100,7 @@ Public Class mainForm
                 btnUsers.Enabled = False
             End If
             Me.Alert("Welcome back, " + login.cbCredentials.Text + "!", notification.enmType.welcome)
-
+            reader.Close()
         Catch ex As Exception
 
 
@@ -375,9 +376,8 @@ Public Class mainForm
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim CurrentDateTime As DateTime
         CurrentDateTime = DateTime.Now
-        cur = DateTime.Now.ToString("yyyy/dd/MM hh:mm:ss")
+        cur = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt")
         Label3.Text = CurrentDateTime.ToString("dddd, d MMMM yyyy  |  hh:mm:ss tt")
-
 
 
     End Sub
@@ -405,35 +405,28 @@ Public Class mainForm
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Try
-            conn.Open()
+
             Dim sql As String
-            sql = "SELECT dateret FROM tblborroweddetails WHERE status = 'IN POSSESION' "
-            cmdd = New MySqlCommand(sql, conn)
-            reader = cmdd.ExecuteReader
-            If reader.read Then
-                cur2 = reader(7)
+            Dim comm4 As New MySqlCommand("SELECT dateret FROM tblborroweddetails WHERE status = 'IN POSSESION'", conn)
+
+            Dim da As New MySqlDataAdapter
+            Dim dt As New DataTable()
+            da.SelectCommand = comm4
+            da.Fill(dt)
+            If dt.Rows.Count > 0 And comm4.ExecuteNonQuery Then
+                cur2 = dt.Rows(0).Item(0)
                 If cur = cur2 Then
-                    Timer2.Stop()
                     Me.Alert("Book overdue!", notification.enmType.welcome)
+                    Timer2.Stop()
                 Else
 
-                    MsgBox(cur)
-
                 End If
-            Else
-
+                conn.Close()
             End If
-            reader.Close()
-
-            'If cur = cur2 Then
-            '     Timer2.Stop()
-
-            ' End If
 
         Catch ex As Exception
-            'MsgBox(ex.Message)
+            ' MsgBox(ex.Message)
         End Try
-        conn.Close()
 
 
     End Sub
