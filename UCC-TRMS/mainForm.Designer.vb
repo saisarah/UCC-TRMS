@@ -26,20 +26,6 @@ Partial Class mainForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mainForm))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.pnlSide = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.pnlBody = New Guna.UI2.WinForms.Guna2Panel()
-        Me.pnlTop = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.lblUser = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        Me.EasyHTMLReports1 = New KimToo.EasyHTMLReports(Me.components)
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.btnClose = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.btnMaximize = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.btnMinimize = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.btnExit = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnUsers = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnReports = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -47,17 +33,30 @@ Partial Class mainForm
         Me.btnBorrowers = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnThesis = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnDashboard = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.pnlBody = New Guna.UI2.WinForms.Guna2Panel()
+        Me.pnlTop = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.btnClose = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.btnMaximize = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.btnMinimize = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblUser = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.EasyHTMLReports1 = New KimToo.EasyHTMLReports(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.pnlSide.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlBody.SuspendLayout()
         Me.pnlTop.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMaximize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -82,153 +81,6 @@ Partial Class mainForm
         Me.pnlSide.ShadowDecoration.Parent = Me.pnlSide
         Me.pnlSide.Size = New System.Drawing.Size(248, 630)
         Me.pnlSide.TabIndex = 0
-        '
-        'Guna2Panel5
-        '
-        Me.Guna2Panel5.Controls.Add(Me.PictureBox1)
-        Me.Guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2Panel5.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel5.Name = "Guna2Panel5"
-        Me.Guna2Panel5.ShadowDecoration.Parent = Me.Guna2Panel5
-        Me.Guna2Panel5.Size = New System.Drawing.Size(248, 280)
-        Me.Guna2Panel5.TabIndex = 2
-        '
-        'pnlBody
-        '
-        Me.pnlBody.BackColor = System.Drawing.Color.White
-        Me.pnlBody.Controls.Add(Me.pnlTop)
-        Me.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlBody.Location = New System.Drawing.Point(248, 0)
-        Me.pnlBody.Name = "pnlBody"
-        Me.pnlBody.ShadowDecoration.Parent = Me.pnlBody
-        Me.pnlBody.Size = New System.Drawing.Size(955, 630)
-        Me.pnlBody.TabIndex = 0
-        '
-        'pnlTop
-        '
-        Me.pnlTop.BackColor = System.Drawing.Color.White
-        Me.pnlTop.Controls.Add(Me.Label2)
-        Me.pnlTop.Controls.Add(Me.Guna2PictureBox1)
-        Me.pnlTop.Controls.Add(Me.btnClose)
-        Me.pnlTop.Controls.Add(Me.btnMaximize)
-        Me.pnlTop.Controls.Add(Me.btnMinimize)
-        Me.pnlTop.Controls.Add(Me.Label3)
-        Me.pnlTop.Controls.Add(Me.lblUser)
-        Me.pnlTop.Controls.Add(Me.Label1)
-        Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlTop.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTop.Name = "pnlTop"
-        Me.pnlTop.ShadowDecoration.Parent = Me.pnlTop
-        Me.pnlTop.Size = New System.Drawing.Size(955, 134)
-        Me.pnlTop.TabIndex = 5
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Poppins Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.DimGray
-        Me.Label3.Location = New System.Drawing.Point(656, 81)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(240, 23)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = """dddd, d MMMM yyyy  |  hh:mm:ss tt"""
-        '
-        'lblUser
-        '
-        Me.lblUser.AutoSize = True
-        Me.lblUser.BackColor = System.Drawing.Color.Transparent
-        Me.lblUser.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.ForeColor = System.Drawing.Color.Black
-        Me.lblUser.Location = New System.Drawing.Point(31, 3)
-        Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(38, 23)
-        Me.lblUser.TabIndex = 4
-        Me.lblUser.Text = "user"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Poppins Medium", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(2, 81)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(92, 37)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Label 1"
-        '
-        'Timer1
-        '
-        '
-        'Guna2DragControl1
-        '
-        Me.Guna2DragControl1.TargetControl = Me.pnlTop
-        '
-        'EasyHTMLReports1
-        '
-        Me.EasyHTMLReports1.AlternativeRowBackgroundColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.EasyHTMLReports1.AlternativeRowGridColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.EasyHTMLReports1.HeaderBackgroundColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.EasyHTMLReports1.HeaderFontColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.EasyHTMLReports1.HeaderGridColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.EasyHTMLReports1.RowDefaultBackgroudColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.EasyHTMLReports1.RowDefaultFontColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.EasyHTMLReports1.RowDefaultGridColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(65, Byte), Integer))
-        '
-        'Timer2
-        '
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(2, 3)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.ShadowDecoration.Parent = Me.Guna2PictureBox1
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(23, 22)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 9
-        Me.Guna2PictureBox1.TabStop = False
-        '
-        'btnClose
-        '
-        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(930, 2)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.ShadowDecoration.Parent = Me.btnClose
-        Me.btnClose.Size = New System.Drawing.Size(23, 22)
-        Me.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnClose.TabIndex = 8
-        Me.btnClose.TabStop = False
-        '
-        'btnMaximize
-        '
-        Me.btnMaximize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMaximize.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMaximize.Image = CType(resources.GetObject("btnMaximize.Image"), System.Drawing.Image)
-        Me.btnMaximize.Location = New System.Drawing.Point(905, 2)
-        Me.btnMaximize.Name = "btnMaximize"
-        Me.btnMaximize.ShadowDecoration.Parent = Me.btnMaximize
-        Me.btnMaximize.Size = New System.Drawing.Size(23, 22)
-        Me.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMaximize.TabIndex = 7
-        Me.btnMaximize.TabStop = False
-        '
-        'btnMinimize
-        '
-        Me.btnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMinimize.Image = CType(resources.GetObject("btnMinimize.Image"), System.Drawing.Image)
-        Me.btnMinimize.Location = New System.Drawing.Point(880, 2)
-        Me.btnMinimize.Name = "btnMinimize"
-        Me.btnMinimize.ShadowDecoration.Parent = Me.btnMinimize
-        Me.btnMinimize.Size = New System.Drawing.Size(23, 22)
-        Me.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMinimize.TabIndex = 6
-        Me.btnMinimize.TabStop = False
         '
         'btnExit
         '
@@ -420,6 +272,16 @@ Partial Class mainForm
         Me.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnDashboard.TextOffset = New System.Drawing.Point(40, 0)
         '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.Controls.Add(Me.PictureBox1)
+        Me.Guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.ShadowDecoration.Parent = Me.Guna2Panel5
+        Me.Guna2Panel5.Size = New System.Drawing.Size(248, 280)
+        Me.Guna2Panel5.TabIndex = 2
+        '
         'PictureBox1
         '
         Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -433,14 +295,138 @@ Partial Class mainForm
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Label2
+        'pnlBody
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(140, 81)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Label2"
+        Me.pnlBody.BackColor = System.Drawing.Color.White
+        Me.pnlBody.Controls.Add(Me.pnlTop)
+        Me.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlBody.Location = New System.Drawing.Point(248, 0)
+        Me.pnlBody.Name = "pnlBody"
+        Me.pnlBody.ShadowDecoration.Parent = Me.pnlBody
+        Me.pnlBody.Size = New System.Drawing.Size(955, 630)
+        Me.pnlBody.TabIndex = 0
+        '
+        'pnlTop
+        '
+        Me.pnlTop.BackColor = System.Drawing.Color.White
+        Me.pnlTop.Controls.Add(Me.Guna2PictureBox1)
+        Me.pnlTop.Controls.Add(Me.btnClose)
+        Me.pnlTop.Controls.Add(Me.btnMaximize)
+        Me.pnlTop.Controls.Add(Me.btnMinimize)
+        Me.pnlTop.Controls.Add(Me.Label3)
+        Me.pnlTop.Controls.Add(Me.lblUser)
+        Me.pnlTop.Controls.Add(Me.Label1)
+        Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlTop.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTop.Name = "pnlTop"
+        Me.pnlTop.ShadowDecoration.Parent = Me.pnlTop
+        Me.pnlTop.Size = New System.Drawing.Size(955, 134)
+        Me.pnlTop.TabIndex = 5
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(2, 3)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.ShadowDecoration.Parent = Me.Guna2PictureBox1
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(23, 22)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 9
+        Me.Guna2PictureBox1.TabStop = False
+        '
+        'btnClose
+        '
+        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
+        Me.btnClose.Location = New System.Drawing.Point(930, 2)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.ShadowDecoration.Parent = Me.btnClose
+        Me.btnClose.Size = New System.Drawing.Size(23, 22)
+        Me.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnClose.TabIndex = 8
+        Me.btnClose.TabStop = False
+        '
+        'btnMaximize
+        '
+        Me.btnMaximize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMaximize.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMaximize.Image = CType(resources.GetObject("btnMaximize.Image"), System.Drawing.Image)
+        Me.btnMaximize.Location = New System.Drawing.Point(905, 2)
+        Me.btnMaximize.Name = "btnMaximize"
+        Me.btnMaximize.ShadowDecoration.Parent = Me.btnMaximize
+        Me.btnMaximize.Size = New System.Drawing.Size(23, 22)
+        Me.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMaximize.TabIndex = 7
+        Me.btnMaximize.TabStop = False
+        '
+        'btnMinimize
+        '
+        Me.btnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMinimize.Image = CType(resources.GetObject("btnMinimize.Image"), System.Drawing.Image)
+        Me.btnMinimize.Location = New System.Drawing.Point(880, 2)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.ShadowDecoration.Parent = Me.btnMinimize
+        Me.btnMinimize.Size = New System.Drawing.Size(23, 22)
+        Me.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMinimize.TabIndex = 6
+        Me.btnMinimize.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Poppins Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.DimGray
+        Me.Label3.Location = New System.Drawing.Point(656, 81)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(240, 23)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = """dddd, d MMMM yyyy  |  hh:mm:ss tt"""
+        '
+        'lblUser
+        '
+        Me.lblUser.AutoSize = True
+        Me.lblUser.BackColor = System.Drawing.Color.Transparent
+        Me.lblUser.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.ForeColor = System.Drawing.Color.Black
+        Me.lblUser.Location = New System.Drawing.Point(31, 3)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(38, 23)
+        Me.lblUser.TabIndex = 4
+        Me.lblUser.Text = "user"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Poppins Medium", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(2, 81)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(92, 37)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Label 1"
+        '
+        'Timer1
+        '
+        '
+        'Guna2DragControl1
+        '
+        Me.Guna2DragControl1.TargetControl = Me.pnlTop
+        '
+        'EasyHTMLReports1
+        '
+        Me.EasyHTMLReports1.AlternativeRowBackgroundColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.EasyHTMLReports1.AlternativeRowGridColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.EasyHTMLReports1.HeaderBackgroundColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.EasyHTMLReports1.HeaderFontColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.EasyHTMLReports1.HeaderGridColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.EasyHTMLReports1.RowDefaultBackgroudColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EasyHTMLReports1.RowDefaultFontColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.EasyHTMLReports1.RowDefaultGridColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(65, Byte), Integer))
         '
         'mainForm
         '
@@ -458,6 +444,7 @@ Partial Class mainForm
         Me.Text = "Thesis Record Management System"
         Me.pnlSide.ResumeLayout(False)
         Me.Guna2Panel5.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlBody.ResumeLayout(False)
         Me.pnlTop.ResumeLayout(False)
         Me.pnlTop.PerformLayout()
@@ -465,7 +452,6 @@ Partial Class mainForm
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMaximize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -494,5 +480,4 @@ Partial Class mainForm
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents EasyHTMLReports1 As KimToo.EasyHTMLReports
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents Label2 As Label
 End Class

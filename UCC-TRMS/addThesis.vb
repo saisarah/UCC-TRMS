@@ -18,13 +18,11 @@ Public Class addThesis
         Try
             dn = Date.Now().ToString("MMddyy000")
 
-            Dim rest As String = cbCourse.Text.Remove(0, 2)
             conn.Open()
-            Dim y As New MySqlCommand("SELECT RIGHT(thesis_id,8) as yourvalue FROM tblthesis ORDER BY thesis_id DESC LIMIT 1 ", conn)
+            Dim y As New MySqlCommand("SELECT thesis_id FROM tblthesis ORDER BY thesis_id DESC LIMIT 1;", conn)
             Dim dr As MySqlDataReader
             Dim f As Integer
             Dim tid, id As Integer
-            Dim tid1, cs, it, is1, emc As String
             id = 1
             dr = y.ExecuteReader
             If dr.Read() Then
@@ -33,19 +31,11 @@ Public Class addThesis
             Else
                 f = dn.ToString() + tid + id
             End If
-            If rest = "CS" Then
-                cs = rest
-            ElseIf rest = "IT" Then
-                it = rest
-            ElseIf rest = "IS" Then
-                is1 = rest
-            ElseIf rest = "EMC" Then
-                emc = rest
-            End If
             dr.Close()
+
             Dim comm As New MySqlCommand("INSERT INTO tblthesis(thesis_id, title, objectives, scope, limitations, teamname, members, panels, category, course, year) VALUES (@thesis_id, @title, @objectives, @scope, @limitations, @teamname, @members, @panels, @category, @course, @year)", conn)
             With comm
-                .Parameters.AddWithValue("@thesis_id", String.Concat(cs & it & is1 & emc & f))
+                .Parameters.AddWithValue("@thesis_id", f)
                 .Parameters.AddWithValue("@title", tbTitle.Text.ToUpper())
                 .Parameters.AddWithValue("@objectives", tbObjectives.Text.ToUpper())
                 .Parameters.AddWithValue("@scope", tbScope.Text.ToUpper())
@@ -65,6 +55,7 @@ Public Class addThesis
             clear()
                 conn.Close()
 
+            conn.Close()
 
         Catch ex As Exception
             MsgBox(ex.Message)

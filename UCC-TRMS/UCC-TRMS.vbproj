@@ -18,7 +18,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Asus\Desktop\</PublishUrl>
+    <PublishUrl>C:\Users\Sarah\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -28,7 +28,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -187,6 +188,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="borrowedThesis.Designer.vb">
+      <DependentUpon>borrowedThesis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="borrowedThesis.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="borrowers.Designer.vb">
       <DependentUpon>borrowers.vb</DependentUpon>
     </Compile>
@@ -286,6 +293,12 @@
     <Compile Include="notification.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Pendingvb.Designer.vb">
+      <DependentUpon>Pendingvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pendingvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="reports.Designer.vb">
       <DependentUpon>reports.vb</DependentUpon>
     </Compile>
@@ -339,6 +352,9 @@
     <EmbeddedResource Include="addUsers.resx">
       <DependentUpon>addUsers.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="borrowedThesis.resx">
+      <DependentUpon>borrowedThesis.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="borrowers.resx">
       <DependentUpon>borrowers.vb</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="notification.resx">
       <DependentUpon>notification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pendingvb.resx">
+      <DependentUpon>Pendingvb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reports.resx">
       <DependentUpon>reports.vb</DependentUpon>

@@ -125,9 +125,10 @@ Public Class issuing
 
     End Sub
     Private Sub btnSearchStud_Click(sender As Object, e As EventArgs) Handles btnSearchStud.Click
-        conn.Open()
 
         Try
+            conn.Open()
+
             Dim cmd As New MySqlCommand("SELECT fullname, studentno, course, year, section, contact, email FROM tblstudents WHERE studentno = '" & tbSearchStudNo.Text & "'", conn)
 
             Dim da As New MySqlDataAdapter
@@ -148,11 +149,10 @@ Public Class issuing
                 Me.Alert1("Student number not found!", Confirmation.enmType.Info)
                 clear()
             End If
-
+            conn.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        conn.Close()
 
     End Sub
     Private Sub loadCnt()
@@ -262,22 +262,115 @@ Public Class issuing
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        conn.Open()
-        Dim snt As Integer = 0
-        Dim cmd1 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'IN POSSESION'", conn)
-        ttl = cmd1.ExecuteScalar()
-        Dim cmd2 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'SENT'", conn)
-        snt = cmd2.ExecuteScalar()
-        lblBorrowed.Text = ttl + snt
-        Dim cmd3 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'OVERDUE'", conn)
-        due = cmd3.ExecuteScalar()
-        lblOverDue.Text = due
-        Dim cmd4 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'CLEARED'", conn)
-        cleared = cmd4.ExecuteScalar()
-        lblCleared.Text = cleared
-        Dim cmd5 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & tbSearchStudNo.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'PENDING'", conn)
-        pending = cmd5.ExecuteScalar()
-        lblPending.Text = pending
-        conn.Close()
+        Try
+            conn.Open()
+            Dim snt As Integer = 0
+            Dim cmd1 As New MySqlCommand("SELECT count(*) FROM tblborroweddetails WHERE studno = '" & lblSN.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'IN POSSESION'", conn)
+            ttl = cmd1.ExecuteScalar()
+            lblBorrowed.Text = ttl
+            Dim cmd3 As New MySqlCommand("SELECT SUM(overdue) FROM tblborroweddetails WHERE studno = '" & lblSN.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'OVERDUE'", conn)
+            due = cmd3.ExecuteScalar()
+            lblOverDue.Text = "₱" & due & ".00"
+            Dim cmd4 As New MySqlCommand("SELECT SUM(cleared) FROM tblborroweddetails WHERE studno = '" & lblSN.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'CLEARED'", conn)
+            cleared = cmd4.ExecuteScalar()
+            lblCleared.Text = "₱" & cleared & ".00"
+            Dim cmd5 As New MySqlCommand("SELECT SUM(overdue) FROM tblborroweddetails WHERE studno = '" & lblSN.Text & "' AND fullname = '" & lblFN.Text & "' AND status = 'OVERDUE'", conn)
+            pending = cmd5.ExecuteScalar()
+            lblPending.Text = "₱" & pending & ".00"
+            conn.Close()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles lblBorrowed.Click, Label7.Click
+        Try
+            conn.Open()
+            If lblSN.Text = "" Then
+                MessageBox.Show("Enter Student Number to View Borrowed List", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+
+                Dim da As New MySqlDataAdapter("SELECT thesis_id, title, dateret FROM tblborroweddetails WHERE status = 'IN POSSESION' AND studno ='" & lblSN.Text & "'", conn)
+                Dim dt = New DataTable
+                da.Fill(dt)
+                Dim lvItem As New ListViewItem
+                Dim dr2 As DataRow
+                Dim newForm As New borrowedThesis
+
+                newForm.ListView1.Items.Clear()
+                For Each dr2 In dt.Rows
+
+                    newForm.lvItem = newForm.ListView1.Items.Add(dr2(0).ToString())
+                    For s As Integer = 1 To 2
+                        newForm.lvItem.SubItems.Add(dr2(s).ToString())
+
+                    Next
+                Next
+                For Each lvi As ListViewItem In borrowedThesis.ListView1.Items
+                    newForm.lvItem.UseItemStyleForSubItems = False
+                    newForm.lvItem.SubItems(0).ForeColor = Color.Gray
+                    newForm.lvItem.SubItems(1).ForeColor = Color.Gray
+                    newForm.lvItem.SubItems(2).ForeColor = Color.Gray
+                    newForm.sn = lblSN.Text
+                Next
+                newForm.code1 = dt.Rows(0).Item(0)
+                If dt.Rows.Count >= 0 Then
+                    newForm.Show()
+
+                End If
+            End If
+            conn.Close()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub lblPending_Click(sender As Object, e As EventArgs) Handles lblPending.Click, Label1.Click
+        Try
+            conn.Open()
+            If lblSN.Text = "" Then
+                MessageBox.Show("Enter Student Number to View Borrowed List", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+
+                Dim da As New MySqlDataAdapter("SELECT thesis_id, title, dateret FROM tblborroweddetails WHERE status = 'OVERDUE' AND studno ='" & lblSN.Text & "'", conn)
+                Dim dt = New DataTable
+                da.Fill(dt)
+                Dim lvItem As New ListViewItem
+                Dim dr2 As DataRow
+                Dim newForm As New Pendingvb
+
+                newForm.ListView1.Items.Clear()
+                For Each dr2 In dt.Rows
+
+                    newForm.lvItem = newForm.ListView1.Items.Add(dr2(0).ToString())
+                    For s As Integer = 1 To 2
+                        newForm.lvItem.SubItems.Add(dr2(s).ToString())
+
+                    Next
+                Next
+                For Each lvi As ListViewItem In newForm.ListView1.Items
+                    newForm.lvItem.UseItemStyleForSubItems = False
+                    newForm.lvItem.SubItems(0).ForeColor = Color.Gray
+                    newForm.lvItem.SubItems(1).ForeColor = Color.Gray
+                    newForm.lvItem.SubItems(2).ForeColor = Color.Gray
+                    newForm.sn = lblSN.Text
+                Next
+                newForm.code1 = dt.Rows(0).Item(0)
+                If dt.Rows.Count >= 0 Then
+                    newForm.Show()
+
+                End If
+            End If
+            conn.Close()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+
 End Class

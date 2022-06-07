@@ -79,8 +79,6 @@ Public Class mainForm
         frm.showAlert(msg, type)
     End Sub
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Timer2.Start()
-
         Timer1.Start()
 
         Dim reader As MySqlDataReader
@@ -376,7 +374,6 @@ Public Class mainForm
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim CurrentDateTime As DateTime
         CurrentDateTime = DateTime.Now
-        cur = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt")
         Label3.Text = CurrentDateTime.ToString("dddd, d MMMM yyyy  |  hh:mm:ss tt")
 
 
@@ -403,35 +400,4 @@ Public Class mainForm
         login.Show()
     End Sub
 
-    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Try
-
-            Dim sql As String
-            Dim comm4 As New MySqlCommand("SELECT dateret FROM tblborroweddetails WHERE status = 'IN POSSESION'", conn)
-
-            Dim da As New MySqlDataAdapter
-            Dim dt As New DataTable()
-            da.SelectCommand = comm4
-            da.Fill(dt)
-            If dt.Rows.Count > 0 And comm4.ExecuteNonQuery Then
-                cur2 = dt.Rows(0).Item(0)
-                If cur = cur2 Then
-                    Me.Alert("Book overdue!", notification.enmType.welcome)
-                    Timer2.Stop()
-                Else
-
-                End If
-                conn.Close()
-            End If
-
-        Catch ex As Exception
-            ' MsgBox(ex.Message)
-        End Try
-
-
-    End Sub
-
-    Private Sub MaskedTextBox1_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
 End Class

@@ -61,7 +61,7 @@ Partial Class issuing
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblPending = New System.Windows.Forms.Label()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.lblBorrowed = New System.Windows.Forms.Label()
         Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -507,7 +507,7 @@ Partial Class issuing
         '
         Me.lblCleared.BackColor = System.Drawing.Color.Transparent
         Me.lblCleared.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblCleared.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCleared.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCleared.ForeColor = System.Drawing.Color.White
         Me.lblCleared.Location = New System.Drawing.Point(0, 0)
         Me.lblCleared.Name = "lblCleared"
@@ -530,6 +530,7 @@ Partial Class issuing
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label1.Font = New System.Drawing.Font("Poppins SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(1, 103)
@@ -542,8 +543,9 @@ Partial Class issuing
         'lblPending
         '
         Me.lblPending.BackColor = System.Drawing.Color.Transparent
+        Me.lblPending.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblPending.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblPending.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPending.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPending.ForeColor = System.Drawing.Color.White
         Me.lblPending.Location = New System.Drawing.Point(0, 0)
         Me.lblPending.Name = "lblPending"
@@ -555,7 +557,7 @@ Partial Class issuing
         'Guna2Panel5
         '
         Me.Guna2Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(68, Byte), Integer))
-        Me.Guna2Panel5.Controls.Add(Me.Label11)
+        Me.Guna2Panel5.Controls.Add(Me.Label7)
         Me.Guna2Panel5.Controls.Add(Me.lblBorrowed)
         Me.Guna2Panel5.Location = New System.Drawing.Point(151, 6)
         Me.Guna2Panel5.Name = "Guna2Panel5"
@@ -563,23 +565,28 @@ Partial Class issuing
         Me.Guna2Panel5.Size = New System.Drawing.Size(140, 140)
         Me.Guna2Panel5.TabIndex = 1
         '
-        'Label11
+        'Label7
         '
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(7, 93)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(127, 29)
-        Me.Label11.TabIndex = 14
-        Me.Label11.Text = "BORROWED"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label7.Font = New System.Drawing.Font("Poppins SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(9, 93)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(128, 44)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "IN POSSESION"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblBorrowed
         '
         Me.lblBorrowed.BackColor = System.Drawing.Color.Transparent
+        Me.lblBorrowed.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblBorrowed.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblBorrowed.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBorrowed.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBorrowed.ForeColor = System.Drawing.Color.White
         Me.lblBorrowed.Location = New System.Drawing.Point(0, 0)
         Me.lblBorrowed.Name = "lblBorrowed"
@@ -602,7 +609,7 @@ Partial Class issuing
         'Label14
         '
         Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Font = New System.Drawing.Font("Poppins SemiBold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(18, 93)
         Me.Label14.Name = "Label14"
@@ -615,7 +622,7 @@ Partial Class issuing
         '
         Me.lblOverDue.BackColor = System.Drawing.Color.Transparent
         Me.lblOverDue.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblOverDue.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOverDue.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOverDue.ForeColor = System.Drawing.Color.White
         Me.lblOverDue.Location = New System.Drawing.Point(0, 0)
         Me.lblOverDue.Name = "lblOverDue"
@@ -699,10 +706,10 @@ Partial Class issuing
     Friend WithEvents Label1 As Label
     Friend WithEvents lblPending As Label
     Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label11 As Label
     Friend WithEvents lblBorrowed As Label
     Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label14 As Label
     Friend WithEvents lblOverDue As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label7 As Label
 End Class

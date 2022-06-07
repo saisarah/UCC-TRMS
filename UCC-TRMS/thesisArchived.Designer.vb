@@ -32,12 +32,12 @@ Partial Class thesisArchived
         Me.Title = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Objectives = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Scope = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Limitation = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Category = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.btnArchivedClose = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
+        Me.btnArchivedClose = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.Category = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Limitation = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2ShadowPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -127,32 +127,6 @@ Partial Class thesisArchived
         Me.Scope.Text = "SCOPE"
         Me.Scope.Width = 150
         '
-        'Limitation
-        '
-        Me.Limitation.Text = "LIMITATION"
-        Me.Limitation.Width = 150
-        '
-        'Category
-        '
-        Me.Category.Text = "CATEGORY"
-        Me.Category.Width = 150
-        '
-        'btnArchivedClose
-        '
-        Me.btnArchivedClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnArchivedClose.CheckedState.Parent = Me.btnArchivedClose
-        Me.btnArchivedClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnArchivedClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.btnArchivedClose.HoverState.Parent = Me.btnArchivedClose
-        Me.btnArchivedClose.Image = CType(resources.GetObject("btnArchivedClose.Image"), System.Drawing.Image)
-        Me.btnArchivedClose.ImageSize = New System.Drawing.Size(15, 15)
-        Me.btnArchivedClose.Location = New System.Drawing.Point(777, 3)
-        Me.btnArchivedClose.Name = "btnArchivedClose"
-        Me.btnArchivedClose.PressedState.Parent = Me.btnArchivedClose
-        Me.btnArchivedClose.Size = New System.Drawing.Size(43, 27)
-        Me.btnArchivedClose.TabIndex = 13
-        '
         'Guna2Panel3
         '
         Me.Guna2Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -177,6 +151,32 @@ Partial Class thesisArchived
         Me.Label1.Size = New System.Drawing.Size(97, 25)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Archived"
+        '
+        'btnArchivedClose
+        '
+        Me.btnArchivedClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnArchivedClose.CheckedState.Parent = Me.btnArchivedClose
+        Me.btnArchivedClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnArchivedClose.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.btnArchivedClose.HoverState.Parent = Me.btnArchivedClose
+        Me.btnArchivedClose.Image = CType(resources.GetObject("btnArchivedClose.Image"), System.Drawing.Image)
+        Me.btnArchivedClose.ImageSize = New System.Drawing.Size(15, 15)
+        Me.btnArchivedClose.Location = New System.Drawing.Point(777, 3)
+        Me.btnArchivedClose.Name = "btnArchivedClose"
+        Me.btnArchivedClose.PressedState.Parent = Me.btnArchivedClose
+        Me.btnArchivedClose.Size = New System.Drawing.Size(43, 27)
+        Me.btnArchivedClose.TabIndex = 13
+        '
+        'Category
+        '
+        Me.Category.Text = "CATEGORY"
+        Me.Category.Width = 150
+        '
+        'Limitation
+        '
+        Me.Limitation.Text = "LIMITATION"
+        Me.Limitation.Width = 150
         '
         'thesisArchived
         '
@@ -210,7 +210,7 @@ Partial Class thesisArchived
     Friend WithEvents Title As ColumnHeader
     Friend WithEvents Objectives As ColumnHeader
     Friend WithEvents Scope As ColumnHeader
-    Friend WithEvents Limitation As ColumnHeader
-    Friend WithEvents Category As ColumnHeader
     Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
+    Friend WithEvents Category As ColumnHeader
+    Friend WithEvents Limitation As ColumnHeader
 End Class

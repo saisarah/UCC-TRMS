@@ -87,7 +87,7 @@ Student Assistant, MIS"
 
                     .Parameters.AddWithValue("@thesis_id", cd)
                     .Parameters.AddWithValue("@title", title.ToUpper())
-                    .Parameters.AddWithValue("@dateissue", dateToday.ToString("yyyy-dd-MM hh:mm:ss"))
+                    .Parameters.AddWithValue("@dateissue", dateToday.ToString("yyyy-dd-MM"))
                     .Parameters.AddWithValue("@studno", sn)
                     .Parameters.AddWithValue("@fullname", fnm)
                     .Parameters.AddWithValue("@course", crs.ToUpper())
@@ -115,7 +115,7 @@ Student Assistant, MIS"
 
                     .Parameters.AddWithValue("@thesis_id", cd)
                     .Parameters.AddWithValue("@title", title.ToUpper())
-                    .Parameters.AddWithValue("@dateissue", dateToday.ToString("yyyy-dd-MM hh:mm:ss"))
+                    .Parameters.AddWithValue("@dateissue", dateToday.ToString("yyyy-dd-MM"))
                     .Parameters.AddWithValue("@studno", sn)
                     .Parameters.AddWithValue("@fullname", fnm)
                     .Parameters.AddWithValue("@course", crs.ToUpper())
